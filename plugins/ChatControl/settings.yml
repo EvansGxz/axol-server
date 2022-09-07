@@ -1,0 +1,454 @@
+# !-------------------------------------------------------------------------------------------------!
+#                       Welcome to the main configuration of ChatControl PRO
+# !-------------------------------------------------------------------------------------------------!
+# 
+#    For support and documentation, please visit:
+#    - https://github.com/kangarko/ChatControl-Pro/wiki
+# 
+# !-------------------------------------------------------------------------------------------------!
+# 
+#    1) COLOR CODES are supported with the '&' character. See
+#       - http://minecraftwiki.net/wiki/Formatting_codes
+#       [!] When you use them, omit the message with " " or ' '.
+# 
+#    2) TO HIDE a message, set it to 'none'.
+# 
+#    3) For UNICODE CHARACTERS (smileys, symbols, ..), save the file in UTF-8 encoding. See
+#       - https://github.com/kangarko/ChatControl-Pro/wiki/Use-Right-Encoding
+# 
+#    4) JSON is supported. For usage, see:
+#       - https://github.com/kangarko/ChatControl-Pro/wiki/JSON
+# 
+#    5) SOUND NAMES had changed as per Minecraft 1.9, compare:
+#       - 1.9 and newer: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Sound.html
+#       - 1.8 and older: https://goo.gl/ArzbZA
+# 
+#    PS: The information above applies for all files within the ChatControl folder.
+# 
+#    !! Messages (e.g. 'Please wait 2 seconds [...]') are stored in localization, see:
+#       - https://github.com/kangarko/ChatControl-Pro/wiki/Localization
+# 
+# !-------------------------------------------------------------------------------------------------!
+# 
+# -------------------------------------------------------------------------------------------------
+# Reduce impact of spamming bots
+# -------------------------------------------------------------------------------------------------
+
+Anti_Bot:
+  Cooldown:
+    Rejoin: 4
+    Chat_After_Login: 1
+    Command_After_Login: 1
+  Join_Flood:
+    Enabled: false
+    Join_Threshold: 5 seconds
+    Min_Players: 5
+    Min_Equal_Messages: 4
+    Commands:
+    - "/kick {player} &4You have been kicked because your message \nmatched the message of recently joined player(s)."
+  Block_Chat_Until_Moved: true
+  Block_Commands_Until_Moved:
+  - /afk
+  - /me
+  Show_Quit_Message_Only_If_Logged: true
+  Block_Signs_With_Same_Text: true
+  Disallowed_Nicknames:
+  - (f+(\W|\d|_)*u+(\W|\d|_)*c+(\W|\d|_)*k+(\W|\d|_)*)
+  - bitch
+  - asshole
+Anti_Caps:
+  Enabled: true
+  Enabled_In_Commands: false
+  Commands_To_Apply:
+  - /msg
+  - /tell
+  Points:
+    Warn_Set: spam
+    Amount: 4 * ({capsPercentage} / 2)
+  Ignore_Usernames: false
+  Min_Message_Length: 5
+  Min_Caps_Percentage: 50
+  Min_Caps_In_A_Row: 5
+  Warn_If_Caps_Above_Percent: 50
+  Whitelist:
+  - OMG
+  - LOL
+  - WTF
+  - WOW
+  - ROFL
+Anti_Spam:
+  Similarity_Check:
+    Ignore_Special_Characters: true
+    Ignore_Duplicate_Characters: false
+  Regex_In_Whitelists: false
+  Commands:
+    Command_Delay: 2
+    Limit:
+      Period: 10 seconds
+      Max_Commands: 8
+      Whitelist_Limit:
+      - chatcontrol
+      - chc
+    Delay_Points:
+      Warn_Set: fastmessages
+      Amount: 3 - {delay}
+    Similar_Percentage_Block: 80
+    Similarity_Points:
+      Warn_Set: spam
+      Amount: 4 * ({similarityPercentage} / 2)
+    Whitelist_Works_Like_Blacklist: false
+    Whitelist_Similarity:
+    - /tell
+    - /pm
+    - /t
+    - /w
+    - /r
+    - /togglepm
+    - /togglebroadcast
+    Whitelist_Delay:
+    - /spawn
+    - /hello
+    Handle_As_Chat:
+    - /me
+  Chat:
+    Message_Delay: 1
+    Limit:
+      Period: 10 seconds
+      Max_Messages: 8
+      Points:
+        Warn_Set: fastmessages
+        Amount: 3
+    Parrot:
+      Enabled: true
+      Delay: 20 ticks
+      Minimum_Similarity: 85
+      Whitelist:
+      - hello
+      - hey
+    Delay_Points:
+      Warn_Set: fastmessages
+      Amount: 3 - {delay}
+    Similar_Percentage_Block: 80
+    Similarity_Message_Check_Count: 2
+    Similarity_Points:
+      Warn_Set: spam
+      Amount: 4 * ({similarityPercentage} / 2)
+    Whitelist_Similarity:
+    - hello
+    - hey
+    Whitelist_Delay:
+    - test
+Grammar:
+  Insert_Dot:
+    Enabled: true
+    Min_Message_Length: 5
+  Capitalize:
+    Enabled: true
+    Min_Message_Length: 5
+  Lowercase_Second:
+    Enabled: false
+Clear:
+  Broadcast: true
+  Do_Not_Clear_For_Staff: true
+  Console_Lines: 300
+Mute:
+  Broadcast: true
+  Apply_Limits_For_Essentials_Mute: true
+  Prevent:
+    Writing_Books: false
+    Placing_Signs: true
+  Silence:
+    Join_Messages: true
+    Quit_Messages: true
+    Death_Messages: true
+  Disabled_Commands:
+  - /me
+  - /tell
+  - /msg
+  - /r
+  - /w
+Newcomer:
+  Threshold: 0 minutes
+  Worlds:
+  - '*'
+  Warn_Points_Multiplier: 1.0
+  Restrict_Chat:
+    Enabled: true
+    Whitelist: []
+  Restrict_Seeing_Chat:
+    Enabled: true
+  Restrict_Commands:
+    Enabled: true
+    Blacklist: false
+    Whitelist:
+    - /login
+    - /l
+    - /register
+    - /reg
+    - /helpop
+    - /help
+    - /?
+Announcer:
+  Bungee: true
+  Ignore_Self: false
+  Log_To_Console: true
+  Sound: ENTITY_ARROW_HIT_PLAYER, 1.0, 0.1
+Admin_Chat:
+  Enabled: false
+  Bungee: true
+  Log_To_Console: true
+  Write_To_File: true
+  Shortcut: none
+  Discord_Channel: admin
+Bungee_Chat:
+  Enabled: false
+  Enabled_By_Default: false
+  Log_To_Console: true
+  Write_To_File: true
+  Shortcut: '!'
+  Discord_Channel: global
+Private_Messages:
+  Enabled: false
+  Bungee: false
+  Deny_Message_Self: false
+  Register_Reply_To_Self: true
+  Register_Reply_To_Receiver: true
+  Reply_Change_Timeout: 3 seconds
+  Toast:
+    Enabled: false
+    Format: '&6[{sender} &8-> &6you]{dynamic_spaces}&7{message}'
+  Auto_Start:
+    Enabled: true
+    Start_For_Empty_Tell_Command: false
+    Prefix: '@'
+    End: exit
+  Aliases:
+    Tell:
+    - tell
+    - msg
+    - whisper
+    Reply:
+    - reply
+    - r
+    TogglePM:
+    - togglepm
+    - ignorepm
+  Format_Sender: Private_Message_Sender
+  Format_Receiver: Private_Message_Receiver
+Toggle_Broadcast:
+  Enabled: false
+  Aliases:
+  - togglebroadcast
+  - togglebc
+  - toggletm
+Ignore:
+  Enabled: true
+  Aliases:
+  - ignore
+  - ign
+  Chat: true
+  Private_Messages: true
+Me:
+  Enabled: true
+  Aliases:
+  - me
+  - shout
+  - status
+  Bungee: true
+Packets:
+  Enabled: true
+  Replace_Unicode_In_Books: false
+  Tab_Complete:
+    Hide_Vanished_Players:
+      Enabled: true
+      Maximum_Length: 20
+    Enabled: false
+    Only_In_Commands: true
+    Require_Arguments: 1
+    Require_Length: -1
+Rules:
+  Verbose: true
+  Bungee: true
+  Chat: true
+  Commands: true
+  Packets: true
+  Signs:
+    Check: true
+    Block: true
+    Drop: true
+  Books:
+    Check: true
+    Replace: true
+  Anvil:
+    Check: true
+    Replace: true
+  Chat_Ignorer:
+    Enabled: false
+    Sets:
+      swear:
+        Ignored_By_Default: false
+Console_Filter:
+  Enabled: false
+  Log: false
+  Filter_Console_Messages:
+  - Reached end of stream for
+  - Connection reset
+Sound_Notify:
+  Enabled: true
+  Cooldown: 10 seconds
+  Require_Afk: false
+  Require_Prefix: '@'
+  Sound: ENTITY_CHICKEN_EGG, 1F, 1.5F
+  Color: '&a'
+  Use_Sender_Group_Color: false
+  Enabled_In_Commands:
+  - /msg
+  - /tell
+  - /t
+  - /w
+  - /r
+Groups:
+  Enabled: false
+  List:
+    vip:
+      Message_Delay: 0
+      Command_Delay: 0
+Points:
+  Enabled: false
+  Smart_Warnings: true
+  Reset_Task:
+    Repeat_Every_Seconds: 20
+    Remove:
+      global: 5
+      spam: 1
+  Warn_Sets:
+    global:
+      '5':
+      - warn &7Please obey the &2rules &7otherwise you will be &4punished&7.
+      '15':
+      - |-
+        warn &c**** &lHey &c{player} ****
+         &7-> &cThis is your &6final &cwarning!
+      '30':
+      - kick {player} &cKicked for breaking the rules
+    swear:
+      '4':
+      - warn &cYou have received first warning for swearing.
+      '6':
+      - warn &cPlease do not swear, otherwise an action will be taken!
+      '8':
+      - kick {player} &cInappropriate language (last warning)
+    spam:
+      '6':
+      - warn &cPlease do not act like spammer.
+      '10':
+      - warn &cPlease do not spam, otherwise you will be banned.
+      '12':
+      - kick {player} &cSpamming the chat (last warning)
+    fastmessages:
+      '6':
+      - warn &cPlease slow down chat messages.
+      '10':
+      - warn &cSlow down chat, otherwise you will be banned.
+      '14':
+      - kick {player} &cSlow down chat (last warning)
+Writer:
+  Enabled: true
+  Ignore_Players:
+  - ignoredAdmin
+  Commands:
+  - /me
+  - /msg
+  - /m
+  - /tell
+  - /t
+  - /reply
+  - /r
+  - /mail
+Motd:
+  Enabled: false
+  Delay_Ticks: 2
+  Command_Aliases:
+  - motd
+  - welcome
+  Sound: ENTITY_FIREWORK_LAUNCH, 1F, 0.1F
+  Message:
+  - '&8*--------------------------------------------------*'
+  - '&fHello {player}, we kindly welcome you to &e{server_name}&f and wish you great experience :)'
+  - ''
+  - '&6Version: &f{nms_version}'
+  - '&6Changelog:'
+  - ' &7- &fAdded ChatControl Pro plugin'
+  - ''
+  - '&6Help &7- &f/help &6Settings &7- &f/menu &6Web &7- &f/web'
+  - '&8*--------------------------------------------------*'
+  Message_First_Time: []
+  Message_Newcomer: []
+Color_Menu:
+  Title: Chat Color & Decoration
+  Icon:
+    No_Permission: BARRIER
+    Reset_Decoration: WHITE_CARPET
+    Reset_All: FEATHER
+    Color: WHITE_SHULKER_BOX
+    Decoration: WHITE_CARPET
+Spy:
+  Enabled: true
+  Bungee: true
+  Command_Aliases:
+  - spy
+  - socialspy
+  Format: '&8[&5spy&8] &7{player}: &7{message}'
+  Format_PM: '&8[&5spy&8] &7[{player}] -> [{receiver}]: &7{message}'
+  Format_Sign: '&8SPY: &7 [{location}] {player} placed a sign: [&8{text}&7]'
+  Format_TownyChat: '&8[&5spy&8] &7[{townychat_channel}] &7{player}: &7{message}'
+  Channel_Prefix: '&8[&5spy&8] '
+  Command_List_Works_Like_Blacklist: false
+  McMMO: true
+  Log_McMMO: false
+  Books: true
+  Signs: false
+  Command_List:
+  - /tell
+  - /msg
+  - /t
+  - /whisper
+  - /r
+  - /reply
+BungeeCord:
+  Enabled: false
+  Prefix: '&8[&5Bungee/{server_name}&8] &7'
+MySQL:
+  Enabled: false
+  Connection:
+    Host: localhost
+    Database: minecraft
+    Port: '3306'
+    User: ''
+    Password: ''
+    Table_Prefix: ChatControl_
+    Connector_Advanced: jdbc:mysql://{host}:{port}/{database}?autoReconnect=true&useSSL=false
+Listener_Priority:
+  Checker: NORMAL
+  Formatter: HIGH
+  Signs: HIGHEST
+Command_Aliases:
+- chatcontrol
+- chc
+- cc
+Locale: en
+Prefix: '&8[&3ChatControl&8]&7 '
+Server_Name: My ChatControl Server
+Translate_Diacritical_Marks: true
+Clear_Data_If_Inactive: 30 days
+Regex_Timeout_Milis: 100
+Regex_Strip_Colors: true
+Regex_Case_Insensitive: true
+Log_Lag_Over_Milis: 100
+Silent_Startup: false
+Enforce_New_Line: false
+Notify_Updates: true
+Notify_Promotions: true
+Debug: []
+Serialization: ''
+Version: 24

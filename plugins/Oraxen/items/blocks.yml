@@ -1,0 +1,259 @@
+# Material list for latest spigot version: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
+# EntityType list for latest spigot version: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html
+# Attribute list for latest spigot version: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/attribute/Attribute.html
+# Potion effects list for latest spigot version: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/potion/PotionEffectType.html
+# Random UUID generator: https://www.uuidgenerator.net/
+# Color codes: https://docs.adventure.kyori.net/minimessage.html#format
+
+
+caveblock:
+  displayname: <#D5D6D8>Cave Block
+  material: PAPER
+  Pack:
+    generate_model: false # because this is a block, a 2nd model pointing to specified one will be generated anyway
+    model: default/caveblock
+    custom_model_data: 1
+  Mechanics:
+    noteblock:
+      break_sound: block.glass.break
+      place_sound: block.glass.place
+      custom_variation: 0
+      model: default/caveblock
+      hardness: 1
+      drop:
+        silktouch: false # enable if you want to cancel loots and drop the block when a silktouch pickaxe is used
+        loots:
+        - oraxen_item: caveblock
+          probability: 1.0
+
+amethyst_ore:
+  displayname: <gradient:#4B36B1:#6699FF>Amethyst Ore
+  material: PAPER
+  Pack:
+    generate_model: true
+    parent_model: block/cube_all
+    textures:
+    - default/amethyst_ore
+    custom_model_data: 2
+  Mechanics:
+    noteblock:
+      break_sound: block.stone.break
+      place_sound: block.stone.place
+      custom_variation: 1
+      model: amethyst_ore
+      hardness: 6
+      drop:
+        silktouch: true
+        fortune: true
+        minimal_type: IRON
+        best_tools:
+        - PICKAXE
+        loots:
+        - oraxen_item: amethyst
+          probability: 1.0
+
+ruby_ore:
+  displayname: <gradient:#FA7CBB:#F14658>Ruby Ore
+  material: PAPER
+  Pack:
+    generate_model: true
+    parent_model: block/cube_all
+    textures:
+    - default/ruby_ore
+    custom_model_data: 3
+  Mechanics:
+    noteblock:
+      break_sound: block.stone.break
+      place_sound: block.stone.place
+      custom_variation: 2
+      model: ruby_ore
+      hardness: 7
+      drop:
+        silktouch: true
+        fortune: true
+        minimal_type: IRON
+        best_tools:
+        - PICKAXE
+        loots:
+        - oraxen_item: ruby
+          probability: 1.0
+
+
+onyx_ore:
+  displayname: <#6f737d>Onyx Ore
+  material: PAPER
+  Pack:
+    generate_model: true
+    parent_model: block/cube_all
+    textures:
+    - default/onyx_ore
+    custom_model_data: 4
+  Mechanics:
+    noteblock:
+      break_sound: block.stone.break
+      place_sound: block.stone.place
+      custom_variation: 3
+      model: onyx_ore
+      hardness: 8
+      drop:
+        silktouch: true
+        fortune: true
+        minimal_type: IRON
+        best_tools:
+        - PICKAXE
+        loots:
+        - oraxen_item: onyx
+          probability: 1.0
+
+orax_ore:
+  displayname: <gradient:#3685EC:#72C1E4>Orax Ore
+  material: PAPER
+  Pack:
+    generate_model: true
+    parent_model: block/cube_all
+    textures:
+    - default/orax_ore
+    custom_model_data: 5
+  Mechanics:
+    noteblock:
+      break_sound: block.stone.break
+      place_sound: block.stone.place
+      custom_variation: 4
+      model: orax_ore
+      hardness: 8
+      drop:
+        silktouch: true
+        fortune: true
+        minimal_type: IRON
+        best_tools:
+        - PICKAXE
+        loots:
+        - oraxen_item: orax
+          probability: 1.0
+
+table:
+  displayname: <gray>Table
+  material: PAPER
+  Mechanics:
+    furniture:
+      facing: UP
+      barrier: true
+      light: 5
+      drop: # useless if you are not using a barrier
+        silktouch: false
+        loots:
+        - oraxen_item: table
+          probability: 1.0
+  Pack:
+    generate_model: false
+    model: default/table
+    custom_model_data: 6
+
+cart:
+  displayname: <gray>Cart
+  material: PAPER
+  Mechanics:
+    furniture:
+      facing: UP
+      barrier: true
+      drop: # useless if you are not using a barrier
+        silktouch: false
+        loots:
+        - oraxen_item: cart
+          probability: 1.0
+  Pack:
+    generate_model: false
+    model: default/cart
+    custom_model_data: 7
+
+chair:
+  displayname: <gray>Chair
+  material: PAPER
+  Mechanics:
+    furniture:
+      facing: UP
+      barrier: true
+      # this option requires barrier: true
+      seat:
+        height: 0
+        yaw: 0
+      # this option requires barrier: true
+      drop:
+        silktouch: false
+        loots:
+        - oraxen_item: chair
+          probability: 1.0
+  Pack:
+    generate_model: false
+    model: default/chair
+    custom_model_data: 8
+
+coach:
+  displayname: <gray>Coach
+  material: PAPER
+  Mechanics:
+    furniture:
+      facing: UP
+      barriers:
+      - x: 0
+        y: 0
+        z: 0
+      - x: 0
+        y: 0
+        z: 1
+      - x: 0
+        y: 0
+        z: 2
+      - x: 1
+        y: 0
+        z: 0
+      - x: 1
+        y: 0
+        z: 1
+      - x: 1
+        y: 0
+        z: 2
+      drop: # useless if you are not using a barrier
+        silktouch: false
+        loots:
+        - oraxen_item: coach
+          probability: 1.0
+  Pack:
+    generate_model: false
+    model: default/coach
+    custom_model_data: 9
+
+shelf:
+  displayname: <gray>Shelf
+  material: PAPER
+  Mechanics:
+    furniture:
+      rotation: NONE
+      barrier: false
+      drop: # useless if you are not using a barrier
+        silktouch: false
+        loots:
+        - oraxen_item: shelf
+          probability: 1.0
+  Pack:
+    generate_model: false
+    model: default/shelf
+    custom_model_data: 10
+
+example_click_action:
+  displayname: <gray>Recycle Bin
+  material: PAPER
+  Mechanics:
+    furniture:
+      facing: UP
+      barrier: true
+      drop:
+        silktouch: false
+        loots:
+        - oraxen_item: recycle_bin
+          probability: 1.0
+      clickActions:
+      - conditions:
+        - '#player.hasPermission("permission.to.use.the.disposal.command")'
+        actions:
+        - '[player] disposal'
