@@ -38,3 +38,7 @@
 /world/*
 /world_nether/*
 /world_the_end/*
+server.properties
+/plugins/ProtocolLib/*
+/plugins/Multiverse-Core/*
+/plugins/dynmap/*
