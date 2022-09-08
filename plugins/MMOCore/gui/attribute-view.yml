@@ -24,30 +24,30 @@ items:
         slots: [11]
         function: attribute_strength
         name: '&a{name}'
-        item: GOLDEN_APPLE
+        item: IRON_SWORD
         lore: # {buffs} returns amount of buffs
             - ''
             - '&7Puntos gastados: &6{spent}&7/&6{max}'
             - '&7Actual {name}: &6&l{current}'
             - ''
-            - '&8Cuando subes de nivel:'
+            - '&8Al subir de nivel:'
             - '&7  +{buff_weapon_damage}% Daño de arma (&a+{total_weapon_damage}%&7)'
             - '&7  +{buff_max_health} Vida máxima (&a+{total_max_health}&7)'
             - ''
             - '&eClicpara subir de nivel por 1 punto de atributo.'
             - '&e◆ Puntos de atributo actuales: {attribute_points}'
     dex:
-        slots: [13]
+        slots: [12]
         function: attribute_dexterity
         name: '&a{name}'
-        item: LEATHER_BOOTS
+        item: GOLDEN_PICKAXE
         hide-flags: true
         lore:
             - ''
             - '&7Puntos gastados: &6{spent}&7/&6{max}'
             - '&7Actuales {name}: &6&l{current}'
             - ''
-            - '&8Cuando subes de nivel:'
+            - '&8Al subir de nivel:'
             - '&7  +{buff_physical_damage}% Daño físico (&a+{total_physical_damage}%&7)'
             - '&7  +{buff_projectile_damage}% Daño de proyectiles (&a+{total_projectile_damage}%&7)'
             - '&7  +{buff_attack_speed} Velocidad de ataque (&a+{total_attack_speed}&7)'
@@ -55,7 +55,7 @@ items:
             - '&eClic para subir de nivel por 1 punto de atributo.'
             - '&e◆ Puntos de atributo actuales: {attribute_points}'
     int:
-        slots: [15]
+        slots: [13]
         function: attribute_intelligence
         name: '&a{name}'
         item: BOOK
@@ -64,9 +64,40 @@ items:
             - '&7Puntos gastados: &6{spent}&7/&6{max}'
             - '&7Actuales {name}: &6&l{current}'
             - ''
-            - '&8Cuando subes de nivel:'
+            - '&8Al subir de nivel:'
             - '&7  +{buff_magic_damage}% Poder mágico (&a+{total_magic_damage}%&7)'
             - '&7  +{buff_cooldown_reduction}% Reducción de enfriamiento (&a+{total_cooldown_reduction}%&7)'
             - ''
             - '&eClic para subir de nivel por 1 punto de atributo.'
             - '&e◆ Puntos de atributo actuales: {attribute_points}'
+    vit:
+        slots: [14]
+        function: attribute_vitality
+        name: '&a{name}'
+        item: GOLDEN_APPLE
+        lore:
+        - ''
+        - '&7Puntos gastados: &6{spent}&7/&6{max}'
+        - '&7Actuales {name}: &6&l{current}'
+        - ''
+        - '&8Al subir de nivel:'
+        - '&7  +{buff_max_health} Vida Máxima (&a+{total_max_health}&7)'
+        - '&7  +{buff_armor} Armadura (&a+{total_armor}&7)'
+        - ''
+        - '&eClic para subir de nivel por 1 punto de atributo.'
+        - '&e◆ Puntos de atributo actuales: {attribute_points}'
+    mob:
+        slots: [15]
+        function: attribute_mobility
+        name: '&a{name}'
+        item: LEATHER_BOOTS
+        lore:
+        - ''
+        - '&7Puntos gastados: &6{spent}&7/&6{max}'
+        - '&7Actuales {name}: &6&l{current}'
+        - ''
+        - '&8Al subir de nivel:'
+        - '&7  +{buff_movement_speed} Velocidad de Movimiento (&a+{total_movement_speed}&7)'
+        - ''
+        - '&eClic para subir de nivel por 1 punto de atributo.'
+        - '&e◆ Puntos de atributo actuales: {attribute_points}'
