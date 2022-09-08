@@ -1,421 +1,535 @@
-LONG_SWORD:
+'2':
   base:
     material: IRON_SWORD
-    name: '&fLong Sword'
-    attack-speed: 1.6
-    attack-damage:
-      base: 6
-      scale: 1.2
-      spread: 0.1
-      max-spread: 0.3
-    required-level:
-      base: 0
-      scale: 1
-    element:
-      fire:
-        damage: 10
-  modifiers:
-    sharp:
-      chance: 0.5
-    fiery:
-      chance: 0.5
-CUTLASS:
+    custom-model-data: 2.0
+    custom-nbt: []
+    name: '&7&lSKIN: &6Wood Sword'
+III_POWERFULSWORD:
   base:
-    material: IRON_SWORD
+    material: NETHERITE_SWORD
+    name: <#3498DB>Azeroth
     attack-damage:
-      base: 7.0
-      spread: 0.04
-      max-spread: 0.13
-    attack-speed:
-      base: 1.7
-      spread: 0.02
-      max-spread: 0.05
-    lore:
-    - '&7Slightly better than an iron sword.'
-    required-level: 3.0
-    tier: COMMON
-    name: '&fSharp Cutlass'
-    max-durability: 300.0
-FALCON_BLADE:
-  base:
-    material: GOLDEN_SWORD
-    required-level: 10.0
-    attack-damage:
-      base: 8.0
-      spread: 0.04
-      max-spread: 0.11
-      maxSpread: 0.11
-    attack-speed:
-      base: 1.8
+      base: 9.5
+      scale: 0.1
       spread: 0.03
-      max-spread: 0.1
+      maxSpread: 0.08
+    physical-damage:
+      base: 3.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    weapon-damage:
+      base: 1.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
     critical-strike-chance:
-      base: 60.0
-      spread: 0.05
-      max-spread: 0.14
-    gem-sockets:
-    - Blue
-    - Green
-    ability:
-      on-hit:
-        type: LIFE_ENDER
-        mode: ATTACK
-        damage:
-          base: 10.0
-          scale: 1
-          spread: 0.1
-          max-spread: 0.2
-    unbreakable: true
-    perm-effects:
-      SPEED: 1
-    disable-enchanting: true
-    tier: EPIC
-    crafting:
-      shaped:
-        '1':
-        - AIR MATERIAL.EPIC_WEAPON_ESSENCE AIR
-        - MATERIAL.EPIC_WEAPON_ESSENCE GOLDEN_SWORD MATERIAL.EPIC_WEAPON_ESSENCE
-        - AIR MATERIAL.EPIC_WEAPON_ESSENCE AIR
-    disable-repairing: true
-    name: '&eFalcon Blade'
-    upgrade:
-      workbench: false
-    hide-enchants: true
-KATANA:
-  base:
-    material: IRON_SWORD
-    attack-damage: 7.0
-    lore:
-    - '&7&oA very sharp & light sword'
-    - '&7&oforged by a hundred years'
-    - '&7&oof smithing mastery.'
-    attack-speed: 2.0
+      base: 3.5
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-power:
+      base: 1.5
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    attack-speed: 1.6
     tier: RARE
-    movement-speed: 0.02
-    critical-strike-chance: 10.0
-    name: '&fKatana'
-    max-durability: 800.0
-SOULSTEALER:
-  base:
-    material: IRON_SWORD
-    enchants:
-      unbreaking: 9
-    name: '&cThe Soulstealer'
-    attack-damage:
-      base: 10.0
-      spread: 10.0
-      max-spread: 0.03
-      scale: 10.0
-      maxSpread: 10.0
-    attack-speed:
-      base: 1.65
-      spread: 0.01
-      max-spread: 0.03
-    mana-cost: 2.0
-    critical-strike-chance: 30.0
-    max-health: 2.0
-    required-level: 10.0
+    lore:
+    - '&8║ &eAturde &8&o(Al golpear)'
+    - '&8║ &7Inmoviliza al enemigo por &c1.5 segundos&7.'
+    - '&8║ &7&oEnfriamiento: &3&o10 segundos&7&o.'
     ability:
       ability1:
-        type: VAMPIRISM
-        mode: ATTACK
-        cooldown: 7.0
-    crafting:
-      shaped:
-        '1':
-        - MISCELLANEOUS.HUMAN_SOUL MISCELLANEOUS.HUMAN_SOUL MISCELLANEOUS.HUMAN_SOUL
-        - MISCELLANEOUS.HUMAN_SOUL SWORD.SILVER_SWORD MISCELLANEOUS.HUMAN_SOUL
-        - MISCELLANEOUS.HUMAN_SOUL MISCELLANEOUS.HUMAN_SOUL MISCELLANEOUS.HUMAN_SOUL
-    lore:
-    - '&7Drains &c10%&7 of the damage'
-    - '&7dealt as health points.'
-STEEL_SWORD:
+        type: STUN
+        mode: ON_HIT
+        duration: 1.5
+    max-durability: 4500.0
+    required-level: 30.0
+    required-class:
+    - GUERRERO
+IV_INFERNALSWORD:
   base:
-    material: IRON_SWORD
-    name: '&fSteel Sword'
+    material: NETHERITE_SWORD
+    name: <#5B2C6F>Infernos
     attack-damage:
-      base: 6.5
-      spread: 0.02
-      max-spread: 0.07
-    attack-speed:
-      base: 1.625
-      spread: 0.006
-      max-spread: 0.02
-    lore:
-    - '&7May be upgraded.'
-    required-level: 6.0
-    upgrade:
-      template: weapon-default
-SILVER_SWORD:
-  base:
-    material: IRON_SWORD
-    name: '&fSilver Sword'
-    attack-damage: 6.0
-    attack-speed: 1.6
-    lore:
-    - '&7May be upgraded.'
-    required-level: 4.0
-    crafting:
-      shaped:
-        '1':
-        - AIR MATERIAL.SILVER_INGOT AIR
-        - AIR MATERIAL.SILVER_INGOT AIR
-        - AIR STICK AIR
-        '2':
-        - MATERIAL.SILVER_INGOT AIR AIR
-        - MATERIAL.SILVER_INGOT AIR AIR
-        - STICK AIR AIR
-        '3':
-        - AIR AIR MATERIAL.SILVER_INGOT
-        - AIR AIR MATERIAL.SILVER_INGOT
-        - AIR AIR STICK
-AMETHYST_SWORD:
-  base:
-    material: IRON_SWORD
-    name: §9§l§oAmethyst Sword
-    lore:
-      - §dA quite magical component
-      - §dmakes this sword special.
-    enchants:
-      sharpness: 3.0
-    max-durability: 2200.0
-    item-particles:
-      type: DOUBLE_RINGS
-      particle: REDSTONE
-      color:
-        red: 128
-        green: 0
-        blue: 128
-    attack-damage:
-      base: 30.0
-      scale: 0.08
-      spread: 0.1
-      max-spread: 0.15
+      base: 11.5
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    physical-damage:
+      base: 4.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    weapon-damage:
+      base: 2.25
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
     critical-strike-chance:
       base: 4.0
-      spread: 0.1
-      max-spread: 0.3
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
     critical-strike-power:
-      base: 15.0
-      scale: 0.1
-      spread: 0.1
-      max-spread: 0.3
-    required-level: 50.0
-    tier: LEGENDARY
-    magic-damage:
-      base: 60.0
-      scale: 0.15
-      spread: 0.15
-      max-spread: 0.25
+      base: 2.75
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
     parry-rating:
-      base: 10.0
-      spread: 0.1
-      max-spread: 0.2
-    parry-cooldown-reduction:
-      base: 15.0
-      spread: 0.04
-      max-spread: 0.08
-    weapon-damage:
-      base: 15.0
-      scale: 0.04
-      spread: 0.09
-      max-spread: 0.16
+      base: 1.5
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    pvp-damage:
+      base: 2.0
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    attack-speed: 1.6
+    tier: EPIC
+    lore:
+    - '&8║ &eQuemadura &8&o(Clic-derecho)'
+    - '&8║ &cQuema&7 por &c2 segundos&7 a todos las entidades'
+    - '&8║ &7en un radio de &c6 bloques&7.'
+    - '&8║ &7&oEnfriamiento: &3&o10 segundos&7&o, usa &c&o8 furia&7&o.'
     element:
+      fire:
+        damage:
+          base: 15.0
+          scale: 0.0
+          spread: 0.02
+          max-spread: 0.06
+    ability:
+      ability1:
+        type: BURN
+        mode: RIGHT_CLICK
+        duration: 2.0
+        cooldown: 6.0
+        mana: 8.0
+    max-durability: 6000.0
+    required-level: 40.0
+    required-class:
+    - GUERRERO
+V_HELLISHSWORD:
+  base:
+    material: NETHERITE_SWORD
+    name: <#F39C12>Escalar
+    attack-damage:
+      base: 14.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    physical-damage:
+      base: 5.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    weapon-damage:
+      base: 3.5
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-chance:
+      base: 6.0
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-power:
+      base: 4.75
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    parry-rating:
+      base: 3.5
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    pvp-damage:
+      base: 3.5
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    pve-damage:
+      base: 1.0
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    skill-damage:
+      base: 2.0
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    attack-speed: 1.6
+    tier: LEGENDARY
+    lore:
+    - '&8║ &eQuemar &8&o(Al golpear)'
+    - '&8║ &7Quemas por &c2 segundos&7 las entidades que golpeas.'
+    - '&8║ &7&oEnfriamiento: &3&o6 segundos&7&o.'
+    - '&8║ &eManos ardientes &8&o(Clic-derecho)'
+    - '&8║ &7Quemas como un lanza llamas a las entidades'
+    - '&8║ &7en frente de ti por &c3 segundos&7.'
+    - '&8║ &7&oEnfriamiento: &3&o16 segundos&7&o, usa &c&o10 furia&7&o.'
+    element:
+      fire:
+        damage:
+          base: 30.0
+          scale: 0.0
+          spread: 0.03
+          max-spread: 0.08
+    ability:
+      ability1:
+        type: IGNITE
+        cooldown: 6.0
+        duration: 40.0
+        mode: ON_HIT
+        radius: 3.0
+      ability2:
+        type: BURNING_HANDS
+        cooldown: 16.0
+        mana: 10.0
+        mode: RIGHT_CLICK
+    max-durability: 8500.0
+    required-level: 50.0
+    required-class:
+    - GUERRERO
+VI_BEESWORD:
+  base:
+    material: GOLD_SWORD
+    attack-damage:
+      base: 17.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    physical-damage:
+      base: 6.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    magic-damage:
+      base: 1.5
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    weapon-damage:
+      base: 4.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-chance:
+      base: 7.0
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-power:
+      base: 6.0
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    parry-rating:
+      base: 4.0
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    pvp-damage:
+      base: 4.0
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    pve-damage:
+      base: 2.0
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    skill-damage:
+      base: 2.5
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    attack-speed: 1.65
+    tier: MYTHICAL
+    element:
+      fire:
+        damage:
+          base: 40.0
+          scale: 0.0
+          spread: 0.03
+          max-spread: 0.08
       earth:
         damage:
           base: 10.0
           scale: 0.0
-          spread: 0.02
-          max-spread: 0.3
-      water:
-        damage:
-          base: 20.0
-          scale: 0.0
-          spread: 0.02
-          max-spread: 0.3
-    perm-effects:
-      REGENERATION: 1.0
-    ability:
-      ability1:
-        type: GRAND_HEAL
-        mode: RIGHT_CLICK
-        mana: 5.0
-        cooldown: 20.0
-        heal: 60.0
-        radius: 8.0
-    crafting:
-      supershaped:
-        '1':
-          input:
-            - v AIR 0 1..|v amethyst_block - 1.0..|v diamond_block - 1.0..|v amethyst_block
-              - 1.0..|v AIR 0 1..
-            - v amethyst_shard - 1.0..|v amethyst_block - 1.0..|v nether_star - 1.0..|v
-              amethyst_block - 1.0..|v amethyst_shard - 1.0..
-            - v AIR 0 1..|v amethyst_block - 1.0..|v diamond_block - 1.0..|v amethyst_block
-              - 1.0..|v AIR 0 1..
-            - v AIR 0 1..|v stick - 1.0..|v blaze_rod - 1.0..|v stick - 1.0..|v AIR
-              0 1..
-            - v AIR 0 1..|v AIR 0 1..|v blaze_rod - 1.0..|v AIR 0 1..|v AIR 0 1..
-      shaped:
-        '1':
-          input:
-            - v amethyst_block - 1.0..|v nether_star - 1.0..|v amethyst_block - 1.0..
-            - v amethyst_block - 1.0..|v amethyst_shard - 1.0..|v amethyst_block - 1.0..
-            - v AIR 0 1..|v stick - 1.0..|v AIR 0 1..
-    attack-speed: 1.6
-FROZEN_BLADE:
-  base:
-    material: DIAMOND_SWORD
+          spread: 0.03
+          max-spread: 0.08
     lore:
-      - §bMade from ice so cold that
-      - §bit will never melt.
-    max-durability: 15000.0
-    tier: MYTHICAL
-    name: §b§lEternal Frozen Blade
-    weapon-damage:
-      base: 30.0
-      scale: 0.1
-      spread: 0.1
-      max-spread: 0.25
-    attack-damage:
-      base: 70.0
-      scale: 0.15
-      spread: 0.1
-      max-spread: 0.2
-    stamina-cost: 12.0
-    attack-speed: 1.6
-    critical-strike-chance:
-      base: 5.0
-      scale: 0.05
-      spread: 0.2
-      max-spread: 0.4
-    critical-strike-power:
-      base: 25.0
-      scale: 0.1
-      spread: 0.15
-      max-spread: 0.25
-    parry-rating:
-      base: 30.0
-      spread: 0.1
-      max-spread: 0.4
-    required-level: 70.0
-    element:
-      ice:
-        damage:
-          base: 60.0
-          scale: 0.0
-          spread: 0.1
-          max-spread: 0.2
-    gem-sockets:
-      - Blue
-      - Blue
+    - '&8║ &eAtaque Rapido&8&o (Passive)'
+    - '&8║ &7Tiene +0.05 Velolcidad de Ataque.'
+    - '&8║ &eQuema &8&o(Al Golpear)'
+    - '&8║ &7Quemas por 3 las entidades que golpeas.'
+    - '&8║ &7&oEnfriamiento: &3&o6 segundos&7&o.'
+    - '&8║ &eMeteoro de fuego &8&o(Clic-derecho)'
+    - '&8║ &7Invoca un metero del cielo, haciendo &c30 de daño&7.'
+    - '&8║ &7&oEnfriamiento: &3&o20 segundos&7&o, usa &c&o15 &f&ode &c&ofuria&7&o.'
     ability:
       ability1:
-        type: FROZEN_AURA
+        type: IGNITE
+        duration: 60.0
+        max-ignite: 200.0
+        cooldown: 6.0
+        mode: ON_HIT
+      ability2:
+        type: FIRE_METEOR
+        mana: 15.0
+        cooldown: 20.0
+        damage: 30.0
         mode: RIGHT_CLICK
-        duration: 8.0
-        cooldown: 12.0
-        amplifier: 2.0
-        radius: 10.0
-    magic-damage:
-      base: 25.0
-      spread: 0.25
-      max-spread: 0.4
-    upgrade:
-      reference: weapon-default
-    disable-death-drop: true
-    two-handed: true
-    movement-speed: -0.01
-OMNIELEMENTAL_SWORD:
+    max-durability: 11000.0
+    required-level: 60.0
+    required-class:
+    - GUERRERO
+    custom-model-data: 3.0
+    name: §4§lDeshuesador
+MIDAS:
   base:
     material: IRON_SWORD
-    name: §c§lO§6§lm§e§ln§a§li§2§lE§3§ll§9§le§b§lm§f§le§e§ln§a§lt§6§la§c§ll §6§lS§e§lw§a§lo§2§lr§3§ld
+    disable-repairing: true
+    disable-enchanting: true
+    disable-smithing: true
+    disable-crafting: true
+    durability: 247.0
+    will-break: true
+    lore:
+    - Espada del evento exclusivo hecho por Dark, el dia 07/02/21
+    displayed-type: MIDAS
+    name: '&e&l Midas'
+    required-level: 2.0
+    health-regeneration: 1.0
+    item-particles:
+      type: GALAXY
+    pve-damage: 33.0
+    max-health: 1.0
+    physical-damage-reduction: 5.0
+    defense: 5.0
+    sounds:
+      on-attack:
+        sound: mob.ghast.death
+        volume: 5.0
+        pitch: 2.0
+      on-pickup:
+        sound: mob.fox.hurt
+        volume: 3.0
+        pitch: 1.0
+    ability:
+      ability1: {}
+PUNCH_MAN:
+  base:
+    material: WOODEN_SWORD
+    disable-enchanting: true
+    disable-repairing: true
+    item-particles:
+      type: GALAXY
+      particle: SOUL_FIRE_FLAME
+    name: '&6Punch Man'
+    enchants:
+      knockback: 8.0
+    disable-attack-passive: true
+    lore:
+    - '&6Poderosa arma capaz de lanzar a sus enemigos'
+    - '&6a una ubicacion lejana'
+    - '&6&lLK Industries'
+    required-level: 15.0
+base:
+  material: IRON_SWORD
+'&6DESEO_DE_LOS_DIOSES':
+  base:
+    material: IRON_SWORD
+    required-level: 100.0
+    required-class:
+    - GUERRERO
+    attack-damage: 70.0
+    ability:
+      ability2:
+        type: OVERLOAD
+        radius: 15.0
+        mode: RIGHT_CLICK
+        damage: 20.0
+        cooldown: 180.0
+        mana: 20.0
+      ability3:
+        type: FIRE_METEOR
+        mode: RIGHT_CLICK
+        radius: 15.0
+        cooldown: 180.0
+        knockback: 2.5
+        damage: 20.0
+        mana: 20.0
+      ability4:
+        type: SMITE
+        mode: RIGHT_CLICK
+        cooldown: 180.0
+        damage: 20.0
+        mana: 20.0
+      ability5:
+        type: SMITE
+        mode: RIGHT_CLICK
+        cooldown: 180.0
+        damage: 20.0
+        mana: 20.0
+      ability6:
+        type: CIRCULAR_SLASH
+        mode: LEFT_CLICK
+        damage: 25.0
+        cooldown: 80.0
+        radius: 4.0
+        mana: 15.0
+      ability7:
+        type: SKY_SMASH
+        mode: LEFT_CLICK
+        knock-up: 2.5
+        cooldown: 80.0
+        damage: 25.0
+        mana: 15.0
+      ability1:
+        type: LIGHTNING_BEAM
+        mode: RIGHT_CLICK
+        damage: 20.0
+        cooldown: 180.0
+        radius: 15.0
+        mana: 20.0
+    lore:
+    - '&eVoluntad De Dios &8(Click Derecho)'
+    - '&7Invoca un ataque caotico, que hace mas de &3150 daño'
+    - '&7en un radio de &315 bloques&7, ademas consume'
+    - '&3100 de furia&7, y posee un cooldown de &3180 segundos.'
+    - '&eLeyes Del Caos &8(Click Izquierdo)'
+    - '&7Lanza un ataque, que hace &370 de daño&7, en un radio de'
+    - '&34 bloques, &7y consume &330 de furia&7, posee un cooldown'
+    - '&7de &380 segundos.'
+    - '&eOmnipresencia &8(Pasiva)'
+    - '&7Al sostener la espada, otorga &3Apsorcion &61'
+    - '&7y &3Lentitud &62.'
+    - '&8『&6Nota&8』: &7Al morir con la espada, ella desaparecera.'
+    - '&8『&6Nota&8』: &7Este item es &6&oIndestructible'
+    - '&6Forjada con los ultimos deseos de los dioses antiguos'
+    - '&6&lLK Industries'
+    custom-model-data: 5.0
+    item-particles:
+      type: FIREFLIES
+      particle: LAVA
+    perm-effects:
+      ABSORPTION: 1.0
+      SLOW: 2.0
+    two-handed: true
+    element:
+      thunder:
+        damage: 12.4
+    disable-crafting: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    will-break: true
+    attack-speed: 1.2
+    critical-strike-chance: 8.32
+    critical-strike-power: 13.5
+    block-power: 3.45
+    block-rating: 2.12
+    pvp-damage: 12.3
+    weapon-damage: 11.3
+    skill-damage: 7.54
+    physical-damage: 9.34
+    max-health: 20.0
+    unbreakable: true
+    undead-damage: 12.8
+    enchants:
+      power: 1.0
+    hide-enchants: true
+    additional-experience: 12.3
+    tier: MYTHICAL
+    name: §8『§6§lExterminador De Dioses§8』
+GLADIUS:
+  base:
+    material: IRON_SWORD
+    name: §8『§6§oGladius§8』
+    tier: LEGENDARY
+    element:
+      fire:
+        damage: 35.0
+    attack-speed: 6.4
     attack-damage:
-      base: 30.0
-      scale: 0.12
-      spread: 0.1
-      max-spread: 0.2
-    attack-speed: 1.6
-    required-level: 34.0
-    magic-damage:
-      base: 70.0
-      scale: 0.08
-      spread: 0.08
-      max-spread: 0.15
+      base: 600.0
+      scale: 700.0
+    set: CENTURION
+    max-durability: 20000.0
+RAMA:
+  base:
+    material: STICK
+    name: §6§lRama Seca
+    tier: LEGENDARY
+    attack-damage: 8.0
+    attack-speed: 1.2
+    disable-repairing: true
+    disable-enchanting: true
+    disable-smithing: true
+    disable-smelting: true
+    disable-crafting: true
+    disable-interaction: true
+    unstackable: true
+A:
+  base:
+    material: IRON_SWORD
+    attack-damage: 1.0E8
+DROPDEARAÑA:
+  base:
+    material: WOODEN_SWORD
+    attack-damage: 15.0
+    required-level: 3.0
+    max-durability: 2000.0
+    tier: COMMON
+    name: '&7Pata De Araña'
+    lore:
+    - '&8Gigantesca pata de un aracnido venenoso'
+DROPBOSS1:
+  base:
+    material: WOODEN_SWORD
+    name: '&1Estaca De Madera'
+    enchants:
+      power: 1.0
+    hide-enchants: true
+    lore:
+    - '&8Arma muy efectiva contra vampiros poderosos'
+    attack-damage: 30.0
+    required-level: 10.0
     tier: VERY_RARE
-    gem-sockets:
-      - Uncolored
-      - Uncolored
-      - Uncolored
+    critical-strike-power: 20.0
+    physical-damage: 10.0
     ability:
       ability1:
-        type: FIREBOLT
-        mode: RIGHT_CLICK
-        damage: 15.0
-        ignite: 3.0
-        cooldown: 5.0
-      ability2:
-        type: ICE_CRYSTAL
-        mode: RIGHT_CLICK
-        damage: 3.0
-        cooldown: 5.0
-        amplifier: 2.0
-        duration: 3.0
-      ability4:
-        type: CURSED_BEAM
-        duration: 3.0
-        cooldown: 5.0
-        damage: 12.0
-        mode: RIGHT_CLICK
-      ability3:
-        type: HOLY_MISSILE
-        duration: 4.0
-        mode: RIGHT_CLICK
-        damage: 5.0
-        cooldown: 5.0
-    element:
-      darkness:
-        damage: 25.0
-      lightness:
-        damage: 25.0
-      fire:
-        damage: 25.0
-      ice:
-        damage: 25.0
-    lore:
-      - §7Why limit yourself to one element?
-    hide-enchants: true
-    enchants:
-      luck_of_the_sea: 1.0
-YANISDARK_SWORD:
+        type: VAMPIRISM
+        cooldown: 10.0
+        mana: 10.0
+        mode: ON_HIT
+    attack-speed: 1.3
+    max-durability: 2000.0
+ESPADAEJEMPLO:
   base:
-    material: GOLDEN_SWORD
-    name: §e§lYanisDark's Sword
-    magic-damage: 25.0
-    attack-damage: 12.0
-    attack-speed: 1.6
-    critical-strike-chance:
-      base: 5.0
-      scale: 0.1
-      spread: 0.1
-      max-spread: 0.2
-    critical-strike-power:
-      base: 5.0
-      scale: 0.1
-      spread: 0.1
-      max-spread: 0.2
-    required-level: 10.0
-    enchants:
-      fortune: 5.0
-      looting: 5.0
-    additional-experience: 30.0
-    element:
-      lightness:
-        damage: 30.0
-    gem-sockets:
-      - Yellow
-    tier: RARE
-    lore:
-      - §eHere's a special gift!
-      - §2It won't break!
-    unbreakable: true
+    material: IRON_SWORD
+    name: tumama
+    attack-damage: 1.0
+    attack-speed: 1.0
+    critical-strike-power: 1.0
+    cooldown-reduction: 1.0
+    pve-damage: 1.0
+    pvp-damage: 1.0
+    weapon-damage: 1.0
+    skill-damage: 1.0
+    magic-damage: 1.0
+    physical-damage: 1.0
+    movement-speed: 1.0
+    mana-regeneration: 1.0
+    additional-experience: 1.0
+S:
+  base:
+    material: IRON_SWORD
+    attack-damage: 1000.0

@@ -1,24 +1,21 @@
 PALADIN_SHIELD:
   base:
     material: SHIELD
-    name: §e§lShield of the Sun
-    tier: MAGICAL
+    name: '&f&m--[&e Escudo de Paladín &f&m]--'
+    tier: RARE
     two-handed: false
+    max-health: 8.0
     armor: 6.0
     armor-toughness: 3.0
     unbreakable: true
     block-power: 50.0
-    block-rating:
-      base: 20.0
-      scale: 0.02
-      spread: 0.09
-      max-spread: 0.17
+    block-rating: 20.0
     perm-effects:
       SLOW: 3
     gem-sockets:
-      - Yellow
-      - Yellow
-    required-level: 25.0
+    - Red
+    - Red
+    required-level: 15.0
     shield-pattern:
       color: YELLOW
       '0':
@@ -27,20 +24,6 @@ PALADIN_SHIELD:
       '1':
         pattern: STRIPE_MIDDLE
         color: YELLOW
-    attack-damage:
-      base: 6.0
-      scale: 0.05
-      spread: 0.1
-      max-spread: 0.2
-    attack-speed:
-      base: 1.4
-      spread: 0.06
-      max-spread: 0.14
-    block-cooldown-reduction:
-      base: 10.0
-      scale: 0.02
-      spread: 0.09
-      max-spread: 0.17
 MAGICAL_SHIELD:
   base:
     material: SHIELD
@@ -50,8 +33,8 @@ MAGICAL_SHIELD:
       SLOW: 4
       DAMAGE_RESISTANCE: 4
     gem-sockets:
-      - Red
-      - Red
+    - Red
+    - Red
     shield-pattern:
       color: WHITE
       '0':
@@ -63,10 +46,10 @@ MAGICAL_SHIELD:
       '2':
         pattern: BORDER
         color: YELLOW
-    name: '&fMagical Shield'
+    name: '&fEscudo Magico'
     lore:
-      - '&7A rudimentary shield to'
-      - '&7carry your gem stones.'
+    - '&7Un escudo rudimentario para'
+    - '&7lleva tus piedras preciosas.'
     block-rating: 5.0
     block-power:
       base: 6.0
@@ -78,7 +61,7 @@ ABSORBING_SHIELD:
     required-level: 15.0
     shield-pattern:
       color: BLUE
-    name: '&9Absorbing Shield'
+    name: '&9Escudo absorbente'
     unbreakable: true
     damage-reduction:
       base: 55.0
@@ -88,85 +71,189 @@ ABSORBING_SHIELD:
     two-handed: true
     disable-smelting: false
     disable-crafting: true
-OBSIDIAN_SHIELD:
+SHIELD_ELIPTIK07:
   base:
     material: SHIELD
-    name: §8Obsidian Shield
-    lore:
-      - §cThis shield is even stronger than
-      - §cdiamond.
-    crafting:
-      shaped:
-        '1':
-          input:
-            - v obsidian - 1.0..|v diamond - 1.0..|v obsidian - 1.0..
-            - v obsidian - 1.0..|v obsidian - 1.0..|v obsidian - 1.0..
-            - v AIR 0 1..|v obsidian - 1.0..|v AIR 0 1..
-    attack-damage:
+    max-durability: 10000.0
+    name: '&6Prototype Eliptik07'
+    enchants:
+      protection: 10.0
+    item-particles: {}
+    required-level: 100.0
+    attack-damage: 30.0
+    critical-strike-chance: 40.0
+    critical-strike-power: 40.0
+    block-power: 250.0
+    block-rating: 30.0
+    parry-rating: 15.0
+    pvp-damage: 20.0
+    damage-reduction: 20.0
+    unbreakable: true
+    armor: 20.0
+    max-health: 50.0
+    knockback-resistance: 1.0
+    perm-effects:
+      JUMP: 5.0
+      HEAL: 5.0
+      INCREASE_DAMAGE: 5.0
+      HERO_OF_THE_VILLAGE: 5.0
+      NIGHT_VISION: 5.0
+      REGENERATION: 5.0
+      ABSORPTION: 5.0
+    gem-sockets:
+    - Gem
+    - Red
+    - Blue
+    - Green
+    health-regeneration: 20.0
+    mana-regeneration: 20.0
+    max-stamina: 20.0
+    stamina-regeneration: 20.0
+IV_CHARGEWARSHIELD:
+  base:
+    material: SHIELD
+    name: <#5B2C6F>Escudo Blindado
+    block-power:
+      base: 8.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    block-rating:
+      base: 7.5
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    block-cooldown-reduction:
       base: 6.0
-      scale: 0.2
-      spread: 0.1
-      max-spread: 0.18
-    block-rating:
-      base: 20.0
-      scale: 0.15
-      spread: 0.11
-      max-spread: 0.19
-    block-power: 100.0
-    tier: UNCOMMON
-    physical-damage-reduction:
-      base: 20.0
-      scale: 0.05
-      spread: 0.2
-      max-spread: 0.3
-    defense:
-      base: 10.0
-      spread: 0.1
-      max-spread: 0.2
-    shield-pattern:
-      color: BLACK
-    handworn: true
-SUPREME_SHIELD:
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    parry-rating:
+      base: 4.5
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    parry-cooldown-reduction:
+      base: 4.5
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    dodge-rating:
+      base: 5.75
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    dodge-cooldown-reduction:
+      base: 8.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    projectile-damage-reduction:
+      base: 6.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    ability:
+      ability1:
+        type: HEAVY_CHARGE
+        mode: SHIFT_RIGHT_CLICK
+        damage: 10.0
+        mana: 25.0
+        cooldown: 20.0
+        knockback: 2.0
+    tier: EPIC
+    max-durability: 4500.0
+    required-level: 55.0
+    lore:
+    - '&8║ &eCarga pesada &8&o(Shift Clic-Derecho)'
+    - '&8║ &7Carga a plazo y hace &c10 daño&7 luego &cempuja&7.'
+    - '&8║ &7&oEnfriamiento: &3&o20 segundos&7&o, usa &9&o25 de mana&7&o.'
+    required-class:
+    - GUERRERO
+II_REINFORCEDSHIELD:
   base:
     material: SHIELD
-    tier: LEGENDARY
-    block-power: 100.0
+    name: '&fEscudo reforzado'
+    block-power:
+      base: 4.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
     block-rating:
-      base: 60.0
+      base: 3.5
       scale: 0.1
-      spread: 0.1
-      max-spread: 0.2
-    attack-damage:
-      base: 25.0
-      scale: 0.05
-      spread: 0.1
-      max-spread: 0.2
+      spread: 0.03
+      maxSpread: 0.08
+    tier: COMMON
+    max-durability: 3200.0
+    required-level: 8.0
     required-class:
-      - Warrior
-    name: §9§l§oSupreme Shield
-    lore:
-      - §7The mightiest of all §eshields§7.
-    movement-speed: -0.03
-    shield-pattern:
-      color: PURPLE
-    element:
-      earth:
-        defense: 25.0
-      lightness:
-        defense: 25.0
-      wind:
-        defense: 25.0
-      fire:
-        defense: 25.0
-    pve-damage-reduction:
-      base: 30.0
+    - GUERRERO
+III_OBSIDIANSHIELD:
+  base:
+    material: SHIELD
+    name: <#3498DB>Escudo de Obsidiana
+    block-power:
+      base: 6.0
       scale: 0.1
-      spread: 0.2
-      max-spread: 0.3
-    armor-toughness: 2.0
-    armor: 8.0
+      spread: 0.03
+      maxSpread: 0.08
+    block-rating:
+      base: 5.5
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    block-cooldown-reduction:
+      base: 4.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    parry-rating:
+      base: 1.5
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    parry-cooldown-reduction:
+      base: 1.5
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    dodge-rating:
+      base: 3.75
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    dodge-cooldown-reduction:
+      base: 4.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
     projectile-damage-reduction:
-      base: 100.0
+      base: 4.0
       scale: 0.1
-      spread: 0.2
-      max-spread: 0.3
+      spread: 0.03
+      maxSpread: 0.08
+    element:
+      water:
+        damage:
+          base: 10.0
+          scale: 0.0
+          spread: 0.03
+          max-spread: 0.08
+      fire:
+        damage:
+          base: 10.0
+          scale: 0.0
+          spread: 0.03
+          max-spread: 0.08
+      earth:
+        damage:
+          base: 10.0
+          scale: 0.0
+          spread: 0.03
+          max-spread: 0.08
+    tier: EPIC
+    max-durability: 6000.0
+    required-level: 25.0
+    required-class:
+    - GUERRERO

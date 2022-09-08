@@ -1,36 +1,79 @@
-FIGHTING_GAUNTLETS:
+FROSTDRAGON:
   base:
-    material: IRON_HORSE_ARMOR
+    material: DIAMOND_HORSE_ARMOR
+    item-particles:
+      type: AURA
+      particle: FLAME
+    required-level: 100.0
+    attack-speed: 15.0
+    dodge-rating: 38.0
+    unbreakable: true
+    armor: 10.0
+    attack-damage: 24.0
+    critical-strike-chance: 24.0
+    critical-strike-power: 3.41
+    movement-speed: 0.01
+    perm-effects:
+      JUMP: 2.0
+    element:
+      fire:
+        damage: 30.0
+      ice:
+        damage: 30.0
+      wind:
+        damage: 30.0
+      earth:
+        damage: 30.0
+      thunder:
+        damage: 30.0
+      water:
+        damage: 30.0
+    name: '&4Ancestral Mythic &6Guantlet Elemental'
+    physical-damage: 8.0
+    pve-damage: 4.0
+    pvp-damage: 2.0
+    commands: {}
+    ability:
+      ability1:
+        type: ICE_CRYSTAL
+        mode: ON_HIT
+        duration: 5.0
+        amplifier: 3.0
+        cooldown: 10.0
+      ability2:
+        type: WITHER
+        mode: ON_HIT
+        duration: 5.0
+        cooldown: 10.0
+        amplifier: 3.0
+      ability3:
+        type: BURN
+        mode: ON_HIT
+        duration: 5.0
+        cooldown: 10.0
+      ability4:
+        type: CONFUSE
+        cooldown: 10.0
+        mode: ON_HIT
+      ability5:
+        type: BLIND
+        cooldown: 10.0
+        duration: 5.0
+        mode: ON_HIT
+      ability6:
+        type: STARFALL
+        damage: 5.0
+        cooldown: 10.0
+        mode: ON_HIT
+      ability7:
+        type: SHOCKWAVE
+        cooldown: 10.0
+        knock-up: 6.0
+        mode: ON_HIT
+        length: 5.0
     lore:
-      - §7Tired of breaking your bones when
-      - §7doing hand-to-hand combat?
-      - §eThis is your solution!
-    name: §eFighting gauntlets
-    attack-damage:
-      base: 3.0
-      scale: 0.15
-      spread: 0.05
-      max-spread: 0.1
-    blunt-power: 2.0
-    blunt-rating: 25.0
-    pve-damage:
-      base: 15.0
-      scale: 0.05
-      spread: 0.1
-      max-spread: 0.12
-    pvp-damage:
-      base: 20.0
-      scale: 0.05
-      spread: 0.1
-      max-spread: 0.12
-    tier: RARE
-    required-level: 15.0
-    critical-strike-chance:
-      base: 10.0
-      spread: 0.1
-      max-spread: 0.5
-    physical-damage:
-      base: 10.0
-      scale: 0.06
-      spread: 0.1
-      max-spread: 0.2
+    - '&5Arma creada por los Dioses con el fin'
+    - '&5de destruir a quien se le interpusiera'
+    - '&5tan poderosa que contiene todos'
+    - '&5los elementos de la galaxia'
+    - '&6&lLK Industries'

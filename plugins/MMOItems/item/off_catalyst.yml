@@ -71,3 +71,25 @@ CHARM_OF_LEVITATION:
     max-stellium: 10.0
     tier: RARE
     unstackable: true
+FUERZA_ARMONICA:
+  base:
+    material: PRISMARINE_CRYSTALS
+    name: '&b&lFuerza Armonica'
+    disable-repairing: true
+    disable-enchanting: true
+    disable-smithing: true
+    disable-smelting: true
+    disable-crafting: true
+    max-health: 25.0
+    perm-effects:
+      REGENERATION: 3.0
+    ability:
+      ability1:
+        type: HEAL
+        cooldown: 180.0
+        heal: 100.0
+        mode: RIGHT_CLICK
+    lore:
+    - '&bPerlas encontradas en lo mas profundo del mar'
+    - '&4&lMade by Dwz'
+    handworn: true

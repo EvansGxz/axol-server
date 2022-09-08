@@ -1,0 +1,104 @@
+PRUEBA:
+  base:
+    material: DIAMOND_HOE
+    name: '&3Laud De Cristal'
+    attack-damage: 15.3
+    disable-enchanting: true
+    disable-smithing: true
+    disable-smelting: true
+    disable-repairing: true
+    critical-strike-chance: 3.21
+    critical-strike-power: 4.23
+    two-handed: true
+    perm-effects:
+      SPEED: 2.0
+    lute-attack-effect: CIRCULAR
+    note-weight: 1.0
+    pvp-damage: 3.54
+    pve-damage: 5.78
+    required-level: 15.0
+    lore:
+    - '&6Es un instrumento de cuerda pulsada, esta creada por'
+    - '&6una base de hielo petrificado, capaz de emitir sonidos congelantes'
+    - '&6&lLK Industries'
+    element:
+      ice:
+        damage: 8.2
+    enchants:
+      frost_walker: 2.0
+FLAUTADEFUEGO:
+  base:
+    material: BLAZE_ROD
+    enchants:
+      fire_aspect: 2.0
+    name: '&4Flauta Del Fenix Ardiente'
+    pve-damage: 3.41
+    pvp-damage: 5.86
+    lute-attack-sound: flame
+    lute-attack-effect: WAVE
+    fire-damage-reduction: 11.4
+    ability:
+      ability1:
+        type: IGNITE
+        mode: ON_HIT
+    attack-speed: -0.001
+    lore:
+    - '&eFuego De Fenix &8(Al Atacar)'
+    - '&7Al atacar a alguien, crea una explosion ardiente'
+    - '&7en un radio de &35 bloques&7, y tiene un cooldown de'
+    - '&310 segundos.'
+    - '&6Flauta creada a base de huesos de un Fenix Celestial'
+    - '&6&lLK Industries'
+    item-particles:
+      particle: FLAME
+      type: AURA
+    critical-strike-chance: 3.21
+    critical-strike-power: 6.73
+    element:
+      fire:
+        damage: 12.3
+    two-handed: true
+    required-level: 35.0
+    attack-damage: 29.5
+ARPA:
+  base:
+    material: FEATHER
+    name: '&6Arpa Arcangel Leviatan'
+    attack-damage: 40.6
+    attack-speed: -0.001
+    critical-strike-chance: 5.34
+    critical-strike-power: 9.21
+    pve-damage: 8.98
+    pvp-damage: 8.76
+    magic-damage-reduction: 13.4
+    max-health: 20.0
+    unstackable: true
+    two-handed: true
+    perm-effects:
+      ABSORPTION: 2.0
+    enchants:
+      respiration: 5.0
+    element:
+      water:
+        damage: 17.3
+        defense: 20.1
+    lute-attack-sound: water
+    lute-attack-effect: SLASH
+    ability:
+      ability1:
+        type: GRAND_HEAL
+        mode: LEFT_CLICK
+        mana: 35.0
+        heal: 20.0
+        cooldown: 65.0
+        radius: 8.0
+    lore:
+    - '&eVoluntad De Los Mares &8(Click Izquierdo)'
+    - '&7Pides la ayuda de los mares para invocar una onda'
+    - '&7curativa, que te cura&3 15 de vida&7, a ti y a tus aliados'
+    - '&7en un radio de &38 bloques&7, consume &335 de mana'
+    - '&7y posee un cooldown de &365 segundos.'
+    - '&6Creada a partir de escamas y piel convertidas en finos hilos'
+    - '&6para crear este arpa mitica, que posee el poder de los mares.'
+    - '&6&lLK Industries'
+    required-level: 70.0

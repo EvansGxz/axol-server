@@ -28,155 +28,488 @@ BLAZE_WAND:
     hide-enchants: true
     enchants:
       unbreaking: 1
-    required-level: 38.0
+    required-level: 45.0
     attack-damage:
-      base: 14.0
-      spread: 0.11
-      scale: 0.04
-    attack-speed: 1.5
-    critical-strike-chance:
-      base: 5.0
-      scale: 0.04
-      spread: 0.06
-    range: 28.0
-    tier: LEGENDARY
+      base: 15.0
+      spread: 0.08
+      max-spread: 0.25
+    attack-speed:
+      base: 1.2
+      spread: 0.05
+      max-spread: 0.14
+    critical-strike-chance: 20.0
+    range:
+      base: 22.5
+      spread: 0.03
+      max-spread: 0.1
+    tier: VERY_RARE
     perm-effects:
       FIRE_RESISTANCE: 1
     ability:
+      on-hit:
+        type: BURN
+        mode: ON_HIT
+        cooldown: 40.0
+        duration: 5.0
       right-click:
         type: FIREBOLT
         mode: RIGHT_CLICK
         damage: 5.0
         ignite: 3.0
-        cooldown: 10.0
-      ability1:
-        type: BURNING_HANDS
-        mode: SHIFT_RIGHT_CLICK
-        duration: 3.0
-        damage: 4.0
-        cooldown: 5.0
+        cooldown: 20.0
     gem-sockets:
-      - Nether
-      - Nether
+    - Red
+    - Red
+    - Blue
     name: '&c&lBlaze Wand'
     disable-crafting: true
-    lore:
-      - §eAh yeah, that's hot.
-    crafting:
-      shaped:
-        '1':
-          input:
-            - v nether_star - 1.0..|v magma_cream - 1.0..|v nether_star - 1.0..
-            - v AIR 0 1..|v blaze_rod - 1.0..|v AIR 0 1..
-            - v AIR 0 1..|v blaze_rod - 1.0..|v AIR 0 1..
-    staff-spirit: NETHER_SPIRIT
-    critical-strike-power:
-      base: 12.1
-      scale: 0.04
-      spread: 0.06
-    undead-damage:
-      base: 60.0
-      scale: 0.1
-      spread: 0.19
-COSMOS_WAND:
+I_WIZARDWAND:
   base:
     material: STICK
-    gem-sockets:
-      - Blue
-    staff-spirit: VOID_SPIRIT
-    attack-speed: 1.9
-    crafting:
-      shapeless:
-        '1':
-          input:
-            - m catalyst perfect_ender_pearl 1.0..
-            - v nether_star - 1.0..
-            - m catalyst enchanted_shulker_shell 1.0..
-            - v AIR - 1.0..
-            - v stick - 1.0..
-            - v AIR - 1.0..
-            - v AIR - 1.0..
-            - v stick - 1.0..
-            - v AIR - 1.0..
-    unbreakable: true
-    tier: EPIC
-    magic-damage:
-      base: 35.0
+    name: '&fVara de aprendíz'
+    range: 10.0
+    attack-damage:
+      base: 6.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    attack-speed: 1.5
+    critical-strike-chance:
+      base: 2.0
+      scale: 0.02
       spread: 0.05
-      max-spread: 0.19
-    attack-damage:
-      base: 5.0
-      scale: 0.14
-      spread: 0.04
-      max-spread: 0.08
-    range: 20.0
-    ability:
-      ability2:
-        type: LIFE_ENDER
-        mode: SHIFT_RIGHT_CLICK
-        damage: 15.0
-        knockback: 1.5
-        cooldown: 14.0
-        radius: 5.0
-      ability1:
-        type: BLINK
-        timer: 1.0
-        range: 45.0
-        mode: RIGHT_CLICK
-        cooldown: 8.0
-    lore:
-      - §b§l§o"The stars are yours!"
-    name: §5§lCosmic Wand
-    upgrade:
-      max: 10
-      template: weapon-default
-    critical-strike-chance:
-      base: 10.0
-      scale: 0.02
-      spread: 0.15
-      max-spread: 0.26
-    critical-strike-power:
-      base: 6.0
-      scale: 0.02
-      spread: 0.15
-      max-spread: 0.26
-    required-level: 14.0
-SPELLCASTER_WAND:
+    magic-damage:
+      base: 4.0
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    tier: COMMON
+    max-durability: 1250.0
+    required-level: 2.0
+    required-class:
+    - MAGO
+II_INFUSEDWAND:
   base:
     material: STICK
-    name: §dSpellcaster Wand
-    required-level: 1.0
-    required-class:
-      - Mage
-    range: 16.0
+    name: '&aALASTOR MOODY'
+    range: 15.0
     attack-damage:
-      base: 6.0
+      base: 7.5
       scale: 0.1
-      spread: 0.1
-      max-spread: 0.2
-    attack-speed: 1.4
+      spread: 0.03
+      maxSpread: 0.08
+    attack-speed: 1.6
+    critical-strike-chance:
+      base: 3.5
+      scale: 0.02
+      spread: 0.05
+    critical-strike-power:
+      base: 2.0
+      scale: 0.02
+      spread: 0.05
+    magic-damage:
+      base: 5.5
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    tier: UNCOMMON
+    max-durability: 3200.0
+    required-level: 12.0
+    required-class:
+    - MAGO
+II_CURSINGWAND:
+  base:
+    material: STICK
+    name: '&aNYMPHADORA'
+    range: 15.0
+    attack-damage:
+      base: 8.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    attack-speed: 1.6
+    critical-strike-chance:
+      base: 3.25
+      scale: 0.02
+      spread: 0.05
+    critical-strike-power:
+      base: 2.5
+      scale: 0.02
+      spread: 0.05
+    magic-damage:
+      base: 5.0
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    tier: UNCOMMON
+    max-durability: 3200.0
+    required-level: 15.0
+    required-class:
+    - MAGO
+III_ELEMENTALWAND:
+  base:
+    material: STICK
+    name: '<#3498DB>LUCIUS'
+    range: 15.0
+    attack-damage:
+      base: 8.5
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    attack-speed: 1.6
+    critical-strike-chance:
+      base: 4.5
+      scale: 0.02
+      spread: 0.05
+    critical-strike-power:
+      base: 3.0
+      scale: 0.02
+      spread: 0.05
+    magic-damage:
+      base: 6.5
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    element:
+      thunder:
+        damage:
+          base: 10.0
+          scale: 0.0
+          spread: 0.03
+          max-spread: 0.08
+      fire:
+        damage:
+          base: 10.0
+          scale: 0.0
+          spread: 0.03
+          max-spread: 0.08
+      ice:
+        damage:
+          base: 10.0
+          scale: 0.0
+          spread: 0.03
+          max-spread: 0.08
+    tier: RARE
+    max-durability: 4500.0
+    required-level: 30.0
+    required-class:
+    - MAGO
+III_WITHERINGWAND:
+  base:
+    material: STICK
+    name: '<#3498DB>Vara de Wither'
+    range: 15.0
+    attack-damage:
+      base: 9.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    attack-speed: 1.6
+    critical-strike-chance:
+      base: 4.75
+      scale: 0.02
+      spread: 0.05
+    critical-strike-power:
+      base: 3.75
+      scale: 0.02
+      spread: 0.05
+    magic-damage:
+      base: 6.0
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    element:
+      wind:
+        damage:
+          base: 20.0
+          scale: 0.0
+          spread: 0.03
+          max-spread: 0.08
+      earth:
+        damage:
+          base: 10.0
+          scale: 0.0
+          spread: 0.03
+          max-spread: 0.08
+    tier: RARE
+    max-durability: 4500.0
+    required-level: 33.0
+    required-class:
+    - MAGO
+    ability:
+      ability1:
+        type: WITHER
+        duration: 5.0
+        amplifier: 2.5
+        cooldown: 10.0
+        mana: 0.0
+        mode: ON_HIT
+    lore:
+    - '&8║ &eWither &8&o(Al golpear)'
+    - '&8║ &7Da Wither II al objetivo por &c5 segundos&7.'
+    - '&8║ &7niega &c40%&7 de daño.'
+    - '&8║ &7&oEnfriamiento: &3&o10 segundos&7&o,'
+IV_AQUAWAND:
+  base:
+    material: STICK
+    name: '<#5B2C6F>Varita de Durentius'
+    range: 20.0
+    attack-damage:
+      base: 9.5
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    attack-speed: 1.7
     critical-strike-chance:
       base: 6.0
-      spread: 0.1
-      max-spread: 0.15
+      scale: 0.02
+      spread: 0.05
     critical-strike-power:
-      base: 12.0
-      spread: 0.1
-      max-spread: 0.15
+      base: 4.5
+      scale: 0.02
+      spread: 0.05
     magic-damage:
-      base: 15.0
+      base: 6.5
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    skill-damage:
+      base: 6.0
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    element:
+      water:
+        damage:
+          base: 30.0
+          scale: 0.0
+          spread: 0.03
+          max-spread: 0.08
+    tier: EPIC
+    max-durability: 6000.0
+    required-level: 40.0
+    required-class:
+    - MAGO
+    ability:
+      ability1:
+        type: HOLY_MISSILE
+        duration: 5.0
+        damage: 10.0
+        mana: 12.0
+        cooldown: 15.0
+        mode: RIGHT_CLICK
+    lore:
+    - '&8║ &eMisil santo &8&o(Clic-Derecho)'
+    - '&8║ &7Proyecta un rayo de luz que hace&c10 de daño&7.'
+    - '&8║ &7&oEnfriamiento: &3&o15 segundos&7&o, usa &912 de mana&7&o.'
+IV_LIFEENDERWAND:
+  base:
+    material: STICK
+    name: '&9Life Ender Wand'
+    range: 20.0
+    attack-damage:
+      base: 10.0
       scale: 0.1
-      spread: 0.08
-      max-spread: 0.12
-    tier: UNCOMMON
+      spread: 0.03
+      maxSpread: 0.08
+    attack-speed: 1.7
+    critical-strike-chance:
+      base: 6.5
+      scale: 0.02
+      spread: 0.05
+    critical-strike-power:
+      base: 4.25
+      scale: 0.02
+      spread: 0.05
+    magic-damage:
+      base: 6.25
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    skill-damage:
+      base: 6.75
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    element:
+      thunder:
+        damage:
+          base: 30.0
+          scale: 0.0
+          spread: 0.03
+          max-spread: 0.08
+    tier: EPIC
+    max-durability: 6000.0
+    required-level: 44.0
+    required-class:
+    - MAGO
+    ability:
+      ability1:
+        type: LIFE_ENDER
+        damage: 10.0
+        mana: 8.0
+        cooldown: 15.0
+        knockback: 2.0
+        radius: 5.0
+        mode: RIGHT_CLICK
+    lore:
+    - '&8║ &eLife Ender &8&o(Clic-Derecho)'
+    - '&8║ &7Llama a un proyectil autoguiado desde el cielo'
+    - '&8║ &7que &cempuja&7 y hace &c10 daño&7.'
+    - '&8║ &7&oEnfriamiento: &3&o1.5 segundos&7&7&o, usa &98 de mana&7&o.'
+V_OCEANWAND:
+  base:
+    material: STICK
+    name: '<#F39C12>Albus'
+    range: 25.0
+    attack-damage:
+      base: 10.5
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    attack-speed: 1.7
+    critical-strike-chance:
+      base: 7.0
+      scale: 0.02
+      spread: 0.05
+    critical-strike-power:
+      base: 5.5
+      scale: 0.02
+      spread: 0.05
+    magic-damage:
+      base: 7.0
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    skill-damage:
+      base: 7.0
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    pvp-damage:
+      base: 3.0
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    pve-damage:
+      base: 1.0
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    tier: LEGENDARY
     element:
       water:
         damage:
           base: 20.0
           scale: 0.0
-          spread: 0.2
-          max-spread: 0.3
-    mana-cost: 3.0
-    set: SPELLCASTER
+          spread: 0.03
+          max-spread: 0.08
+    max-durability: 8500.0
+    required-level: 50.0
+    required-class:
+    - MAGO
+    ability:
+    ability:
+      ability1:
+        type: FROZEN_AURA
+        duration: 7.0
+        mana: 15.0
+        cooldown: 15.0
+        amplifier: 2.0
+        radius: 6.0
+        mode: RIGHT_CLICK
     lore:
-      - §7§o"You're a wizard, Harry."
+    - '&8║ &eAura Helada &8&o(Clic-Derecho)'
+    - '&8║ &7Crea un aura a tu alrededor que ralentiza a las entidades.'
+    - '&8║ &7por &c7 segundos&7&7.'
+    - '&8║ &7&oEnfriamiento: &3&o15 segundos&7&7&o, usa &915 de mana&7&o.'
+VI_BEEWAND:
+  base:
+    material: STICK
+    name: '<#FFFF60>Calamidad'
+    range: 30.0
+    attack-damage:
+      base: 11.5
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    attack-speed: 1.7
+    critical-strike-chance:
+      base: 7.5
+      scale: 0.02
+      spread: 0.05
+    critical-strike-power:
+      base: 6.5
+      scale: 0.02
+      spread: 0.05
+    magic-damage:
+      base: 14.0
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    skill-damage:
+      base: 8.0
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    pvp-damage:
+      base: 4.5
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    pve-damage:
+      base: 2.5
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    tier: MYTHICAL
+    element:
+      fire:
+        damage:
+          base: 20.0
+          scale: 0.0
+          spread: 0.03
+          max-spread: 0.08
+      earth:
+        damage:
+          base: 35.0
+          scale: 0.0
+          spread: 0.03
+          max-spread: 0.08
+    max-durability: 11000.0
+    required-level: 60.0
+    required-class:
+    - MAGO
+    ability:
+      ability1:
+        type: MAGICAL_SHIELD
+        duration: 6.0
+        mana: 20.0
+        cooldown: 30.0
+        power: 40.0
+        radius: 4.0
+        mode: RIGHT_CLICK
+      ability2:
+        type: FREEZE
+        duration: 5.0
+        mana: 0.0
+        cooldown: 12.0
+        amplifier: 4.0
+        radius: 3.0
+        mode: ON_HIT
+    lore:
+    - '&8║ &eMagia superior (Passive)'
+    - '&8║ &7Esta varita tiene 6% de daño mágico.'
+    - '&8║ &eEscudo mágico &8&o(Clic-Derecho)'
+    - '&8║ &7Crea un escudo a tu alrededor por &c6 segundos&7'
+    - '&8║ &7Niega &c40%&7 de daño.'
+    - '&8║ &7&oEnfriamiento: &3&o30 segundos&7&o, usa &920 de mana&7&o.'
+    - '&8║ &eCongela &8&o(Al Golpear)'
+    - '&8║ &7Congela el objetivo durante &c5 segundos&7&7.'
+    - '&8║ &7&oEnfriamiento: &3&o12 segundos&7&7&o'
+HEELING:
+  base:
+    material: STICK
+    name: '&lHeeling'
+    lore:
+    - Todo para curar

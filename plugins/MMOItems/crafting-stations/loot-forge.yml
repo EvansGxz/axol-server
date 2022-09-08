@@ -1,0 +1,101 @@
+
+# Name which will be displayed
+# when opening the station
+name: 'Forja de Esencia (#page#/#max#)'
+
+# The maximum amount of items in the crafting queue ie. the
+# max number of items players are able to craft simultaneously.
+# Must be between 1 and 64.
+max-queue-size: 10
+
+# The sound that plays whenever an action is
+# completed in the crafting station.
+# GET SOUND NAMES HERE:
+# https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Sound.html
+sound: ENTITY_EXPERIENCE_ORB_PICKUP
+
+# This is how the gui looks. You can define your own
+# in crafting-stations/layouts by creating a new
+# file with the name of the file as the id.
+layout: default
+
+# Configure GUI items here
+items:
+    fill:
+        material: AIR
+    no-recipe:
+        material: GRAY_STAINED_GLASS_PANE
+        name: '&aSin receta'
+    no-queue-item:
+        material: GRAY_STAINED_GLASS_PANE
+        name: '&aNo Item en cola'
+
+# Station recipes
+recipes:
+    hunter-essence:
+        output:
+            type: MATERIAL
+            id: HSOUL
+            amount: 1
+        crafting-time: 10
+        conditions:
+        - 'level{level=6}'
+        - 'class{list=CAZADOR}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=RARE_DIAMOND,amount=3,display="Diamante Raro"}
+    assassin-essence:
+        output:
+            type: MATERIAL
+            id: ASOUL
+            amount: 1
+        crafting-time: 10
+        conditions:
+        - 'level{level=6}'
+        - 'class{list=ASESINO}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=RARE_DIAMOND,amount=3,display="Diamante Raro"}
+    dragoon-essence:
+        output:
+            type: MATERIAL
+            id: DSOUL
+            amount: 1
+        crafting-time: 10
+        conditions:
+        - 'level{level=6}'
+        - 'class{list=DRAGON}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=RARE_DIAMOND,amount=3,display="Diamante Raro"}
+    necro-essence:
+        output:
+            type: MATERIAL
+            id: NSOUL
+            amount: 1
+        crafting-time: 10
+        conditions:
+        - 'level{level=6}'
+        - 'class{list=NECROMANCER}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=RARE_DIAMOND,amount=3,display="Diamante Raro"}
+    warrior-essence:
+        output:
+            type: MATERIAL
+            id: WASOUL
+            amount: 1
+        crafting-time: 10
+        conditions:
+        - 'level{level=6}'
+        - 'class{list=GUERRERO}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=RARE_DIAMOND,amount=3,display="Diamante Raro"}
+    wizard-essence:
+        output:
+            type: MATERIAL
+            id: WISOUL
+            amount: 1
+        crafting-time: 10
+        conditions:
+        - 'level{level=6}'
+        - 'class{list=MAGO}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=RARE_DIAMOND,amount=3,display="Diamante Raro"}
+    

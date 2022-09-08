@@ -1,57 +1,51 @@
-MEDIEVAL_CROSSBOW:
+VALGENSIN:
   base:
-    material: WOODEN_PICKAXE
-    name: §6§lMedieval Crossbow
-    lore:
-      - §6Like in the old times.
-      - §eFor more realism, it also poisons
-      - §eand makes a different sound!
-    tier: UNCOMMON
-    weapon-damage:
-      base: 15.0
-      scale: 0.05
-      spread: 0.1
-      max-spread: 0.2
-    attack-damage:
-      base: 9.0
-      scale: 0.1
-      spread: 0.05
-      max-spread: 0.1
-    arrow-velocity: 2.0
-    arrow-potion-effects:
-      POISON:
-        duration: 10.0
-        amplifier: 1
-    projectile-damage:
-      base: 20.0
-      scale: 0.05
-      spread: 0.05
-      max-spread: 0.2
-    sounds:
-      on-right-click:
-        sound: item.crossbow.hit
-        volume: 2.0
-        pitch: 0.0
-HANDGUN:
-  base:
-    material: IRON_HORSE_ARMOR
-    name: §7Hand Gun
+    material: IRON_PICKAXE
+    disable-enchanting: true
+    disable-smithing: true
+    disable-smelting: true
+    disable-crafting: true
+    disable-interaction: true
+    two-handed: true
+    name: '&6Horton Crossbow'
     attack-damage: 30.0
-    required-biomes:
-      - plains
+    required-level: 75.0
+    attack-speed: -15.0
+    critical-strike-chance: 3.21
+    critical-strike-power: 5.61
+    perm-effects:
+      NIGHT_VISION: 2.0
+      SPEED: 2.0
+      REGENERATION: 1.0
+    element:
+      wind:
+        damage: 12.0
+    physical-damage: 7.89
+    pve-damage: 14.5
+    pvp-damage: 9.21
+    required-class:
+    - CAZADOR
+    enchants:
+      piercing: 5.0
+    ability:
+      ability1:
+        type: ARCANE_HAIL
+        mode: LEFT_CLICK
+        duration: 3.0
+        damage: 10.0
+        mana: 27.0
+        cooldown: 35.0
     lore:
-      - §cFor security reasons, this gun
-      - §cis only usable in §3plains§c.
-    attack-speed: 1.4
-    arrow-velocity: 4.0
-    required-level: 20.0
-    weapon-damage:
-      base: 15.0
-      scale: 0.06
-      spread: 0.08
-      max-spread: 0.15
-    gem-sockets:
-      - Red
-      - Red
-    max-durability: 2650.0
-    tier: RARE
+    - '&eCastigo Para Los Monstruos &8(Click Izquierdo)'
+    - '&7Invoca desde el cielo una rafaga de flechas magicas'
+    - '&7que dura &33 segundos&7, y por cada flecha impactada hace'
+    - '&310 de daño&7, consume &327 de mana&7 y posee un'
+    - '&7cooldown de &335 segundos.'
+    - '&e&lColeccion De &4Val Helsing'
+    - '&6&lLK Industries'
+    arrow-particles:
+      particle: CRIT
+      amount: 10
+      offset: 0.05
+      speed: 0.08
+    undead-damage: 56.8

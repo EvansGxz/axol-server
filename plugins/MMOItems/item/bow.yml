@@ -1,7 +1,7 @@
 COMPOSITE_BOW:
   base:
     material: BOW
-    name: '&fComposite Bow'
+    name: '&fArco Compuesto'
     critical-strike-chance: 30.0
     attack-damage:
       base: 7
@@ -27,7 +27,7 @@ HELL_BOW:
       infinity: 1
     hide-enchants: true
     unbreakable: true
-    tier: RARE
+    tier: '&6Rare'
     attack-damage:
       base: 11.5
       spread: 0.038
@@ -51,10 +51,10 @@ HELL_BOW:
         damage: 4.0
         ignite: 6.0
     gem-sockets:
-      - Red
-      - Red
-      - Green
-    name: '&cHell Bow'
+    - Red
+    - Red
+    - Green
+    name: '&cArco Infernal'
     pve-damage:
       base: 25.0
       spread: 0.06
@@ -78,91 +78,464 @@ MARKING_BOW:
     ability:
       ability1:
         type: WEAKEN_TARGET
-        mode: ATTACK
+        mode: ON_HIT
         extra-damage: 60.0
     dodge-rating: 10.0
     damage-reduction: -5.0
     required-level: 10.0
     lore:
-      - '&7Shoot an entity to &cmark &7it. The'
-      - '&7next attack against this entity'
-      - '&7will deal &c60%&7 extra damage.'
-NETHERITE_BOW:
+    - '&7Dispara a un enemigo y lo &cmarca. &7El'
+    - '&7próximo ataque contra esta entidad'
+    - '&7dará &c60%&7 daño extra.'
+MACHINEGUN:
   base:
     material: BOW
-    max-durability: 8500.0
-    name: §c§lDark Netherite Bow
-    lore:
-      - §6§o"Bows made of metal can't work."
-      - §8§oBut it's a video game!
-    attack-damage: 25.0
-    arrow-velocity: 1.5
-    pvp-damage:
-      base: 25.0
+    critical-strike-chance: 30.0
+    critical-strike-power: 25.0
+    arrow-velocity: 25.0
+    attack-damage: 8.0
+    two-handed: true
+    pvp-damage: 3.2
+    arrow-particles:
+      particle: FLAME
+      amount: 5
+      speed: 0.08
+      offset: 0.05
+    required-level: 10.0
+I_STARTERHUNTERSWORD:
+  base:
+    material: BOW
+    name: '&fArco de madera'
+    attack-damage:
+      base: 8.0
       scale: 0.1
-      spread: 0.2
-    projectile-damage:
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-power:
+      base: 1.0
+      scale: 0.02
+      spread: 0.05
+    critical-strike-chance:
+      base: 1.0
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    tier: COMMON
+    max-durability: 1250.0
+    required-level: 2.0
+    required-class:
+    - CAZADOR
+II_PRECISIONBOW:
+  base:
+    material: BOW
+    name: '&aArco de precisión'
+    attack-damage:
       base: 10.0
-      scale: 0.08
-      spread: 0.14
-    tier: RARE
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-power:
+      base: 3.0
+      scale: 0.02
+      spread: 0.05
+    critical-strike-chance:
+      base: 3.5
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    arrow-velocity:
+      base: 1.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    projectile-damage:
+      base: 1.75
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
     ability:
       ability1:
-        type: WITHER
-        mode: ATTACK
-        duration: 6.0
-        cooldown: 5.0
-        amplifier: 1.0
-    element:
-      darkness:
-        damage:
-          base: 60.0
-          scale: 0.2
-          spread: 0.35
-          max-spread: 0.0
-      fire:
-        damage:
-          base: 20.0
-          scale: 0.05
-          spread: 0.1
-          max-spread: 0.0
-    gem-sockets:
-      - Nether
-      - Nether
-    crafting:
-      smithing:
-        '1':
-          input: v bow - 1.0..|m material dark_netherite 1.0..
-    required-level: 14.0
-PRECISION_BOW:
+        type: POISON
+        mode: ON_HIT
+        mana: 1.5
+        cooldown: 8.0
+        duration: 4.0
+    tier: UNCOMMON
+    max-durability: 3200.0
+    required-level: 12.0
+    required-class:
+    - CAZADOR
+III_EARTHBOW:
   base:
     material: BOW
-    name: §7§lPrecision Bow
-    lore:
-      - §7The precision bow shoots much farther.
-    critical-strike-chance:
-      base: 15.0
-      scale: 0.05
-      spread: 0.1
-      max-spread: 0.2
-    critical-strike-power:
-      base: 40.0
-      scale: 0.05
-      spread: 0.1
-      max-spread: 0.2
-    required-level: 5.0
-    arrow-velocity: 2.0
+    name: <#3498DB>Liches
     attack-damage:
-      base: 16.0
+      base: 12.0
       scale: 0.1
-      spread: 0.1
-      max-spread: 0.2
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-chance:
+      base: 4.5
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-power:
+      base: 4.0
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    arrow-velocity:
+      base: 1.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
     projectile-damage:
-      base: 5.0
-      scale: 0.2
-      spread: 0.2
-      max-spread: 0.4
+      base: 3.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    element:
+      earth:
+        damage:
+          base: 15.0
+          scale: 0.0
+          spread: 0.02
+          max-spread: 0.06
     tier: RARE
-    max-durability: 2400.0
+    max-durability: 4500.0
+    required-level: 30.0
     required-class:
-      - Archer
+    - CAZADOR
+    ability:
+      ability1:
+        type: HEAL
+        mana: 3.0
+        cooldown: 15.0
+        mode: ON_HIT
+        heal: 2.0
+IV_INFERNALBOW:
+  base:
+    material: BOW
+    name: <#5B2C6F>Arco Infernal
+    attack-damage:
+      base: 13.5
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-chance:
+      base: 5.0
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-power:
+      base: 5.0
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    arrow-velocity:
+      base: 2.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    projectile-damage:
+      base: 4.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    pvp-damage:
+      base: 3.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    tier: EPIC
+    element:
+      fire:
+        damage:
+          base: 15.0
+          scale: 0.0
+          spread: 0.02
+          max-spread: 0.06
+      ability1:
+        type: BURN
+        mode: ON_HIT
+        duration: 5.0
+        mana: 1.0
+        cooldown: 8.0
+    max-durability: 6000.0
+    required-level: 40.0
+    required-class:
+    - CAZADOR
+V_WORLDBOW:
+  base:
+    material: BOW
+    name: <#F39C12>Asirio
+    attack-damage:
+      base: 15.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-chance:
+      base: 5.75
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-power:
+      base: 6.0
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    pvp-damage:
+      base: 3.5
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    pve-damage:
+      base: 2.0
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    skill-damage:
+      base: 2.5
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    arrow-velocity:
+      base: 2.5
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    projectile-damage:
+      base: 4.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    tier: LEGENDARY
+    element:
+      thunder:
+        damage:
+          base: 20.0
+          scale: 0.0
+          spread: 0.03
+          max-spread: 0.08
+      fire:
+        damage:
+          base: 10.0
+          scale: 0.0
+          spread: 0.03
+          max-spread: 0.08
+    max-durability: 8500.0
+    required-level: 50.0
+    required-class:
+    - CAZADOR
+    ability:
+      ability2:
+        type: CORRUPT
+        mode: LEFT_CLICK
+        duration: 5.0
+        damage: 10.0
+        amplifier: 2.0
+        cooldown: 15.0
+        mana: 10.0
+      ability1:
+        type: BLIND
+        mode: ON_HIT
+        duration: 5.0
+        mana: 1.0
+        cooldown: 8.0
+VI_BEEBOW:
+  base:
+    material: BOW
+    name: <#FFFF60>TERMINADESEOS
+    attack-damage:
+      base: 17.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    magic-damage:
+      base: 1.5
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-chance:
+      base: 7.0
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-power:
+      base: 7.5
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    pvp-damage:
+      base: 4.0
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    pve-damage:
+      base: 3.5
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    skill-damage:
+      base: 3.0
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    arrow-velocity:
+      base: 3.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    projectile-damage:
+      base: 4.5
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    tier: MYTHICAL
+    element:
+      thunder:
+        damage:
+          base: 25.0
+          scale: 0.0
+          spread: 0.03
+          max-spread: 0.08
+      earth:
+        damage:
+          base: 25.0
+          scale: 0.0
+          spread: 0.03
+          max-spread: 0.08
+    max-durability: 11000.0
+    required-level: 60.0
+    required-class:
+    - CAZADOR
+    ability:
+      ability1:
+        type: FREEZE
+        mode: ON_HIT
+        duration: 5.0
+        mana: 1.0
+        amplifier: 4.0
+        cooldown: 10.0
+      ability2:
+        type: ARCANE_RIFT
+        duration: 3.0
+        damage: 8.0
+        cooldown: 20.0
+        amplifier: 2.5
+        mode: ON_HIT
+SEPHIRO:
+  base:
+    material: BOW
+    name: '&b&l Sephiro'
+    arrow-particles:
+      particle: WHITE_ASH
+      amount: 20
+    disable-enchanting: 0.01
+    arrow-velocity: 1.2
+    projectile-damage: 25.0
+    dodge-rating: 15.0
+    dodge-cooldown-reduction: 3.0
+    fall-damage-reduction: 35.0
+    two-handed: true
+    critical-strike-chance: 5.0
+    critical-strike-power: 50.0
+    pvp-damage: 5.0
+    projectile-damage-reduction: 20.0
+    lore:
+    - '&b Forjado entre ramas y viento'
+    - '&4&lMade by Dwz'
+ELIPTIK07:
+  base:
+    material: BOW
+    element:
+      fire:
+        damage: 40.0
+      ice:
+        damage: 40.0
+      wind:
+        damage: 40.0
+      earth:
+        damage: 40.0
+      water:
+        damage: 40.0
+      thunder:
+        damage: 40.0
+    name: '&4๖ۣۣۜDragon&6 ๖ۣۣۜFlor ๖ۣۣۜDe ๖ۣۣۜLoto &46 ๖ۣۣۜEstrellas'
+    required-level: 100.0
+    required-class:
+    - CAZADOR
+    attack-speed: 50.0
+    critical-strike-chance: 7.34
+    critical-strike-power: 27.1
+    item-particles:
+      particle: END_ROD
+      type: GALAXY
+    arrow-particles:
+      particle: END_ROD
+      offset: 0.2
+      speed: 0.16
+      amount: 30
+    commands:
+      cmd0:
+        format: heal
+        delay: 0.0
+      cmd1:
+        format: give Eliptik07 arrow 1
+        delay: 0.0
+    movement-speed: 0.1
+    arrow-velocity: 3.5
+    arrow-potion-effects:
+      POISON:
+        duration: 3.0
+        amplifier: 3
+      WITHER:
+        duration: 3.0
+        amplifier: 3
+      HUNGER:
+        duration: 3.0
+        amplifier: 3
+      CONFUSION:
+        duration: 3.0
+        amplifier: 3
+      BLINDNESS:
+        duration: 3.0
+        amplifier: 3
+      SLOW:
+        duration: 3.0
+        amplifier: 3
+    pve-damage: 12.4
+    pvp-damage: 12.4
+    unbreakable: true
+    attack-damage: 120.0
+    gem-sockets:
+    - '&6Loto De Buda'
+    - '&4Dios Dragon Montaña Celestial'
+    - '&3Luna De Escarcha Esmeralda'
+    max-mana: 1000.0
+    mana-regeneration: 150.0
+    lore:
+    - '&5Ꮸ &6Cada flecha que se dispara da como efecto:'
+    - '&6『&3Poison&6』&6『&3Wither&6』&6『&3Hunger&6』&6『&3Confusion&6』&6『&3Blindnes&6』&6『&3Slow&6』'
+    - '&eBlack Hole &8(Click Izquierdo)'
+    - '&7Crea un Agujero Negro que dura &36 segundos&7 en un radio'
+    - '&3de 4 &7y consume &3100 de mana&7 con un cooldown de &340 segundos'
+    - '&8『&6Arma &4&lAncestral &6creada solo para el uso de los mismos Dioses&8』'
+    - '&5『&6&lPropietario actual:&5』 『&6&lEliptik07&5』'
+    ability:
+      ability1:
+        type: BLACK_HOLE
+        duration: 6.0
+        radius: 4.0
+        mana: 100.0
+        cooldown: 40.0
+        mode: LEFT_CLICK
+    skill-damage: 24.7
+    projectile-damage: 11.2
+    perm-effects:
+      ABSORPTION: 5.0
+    mana-cost: 20.0
+    disable-smithing: true
+    disable-smelting: true
+    disable-repairing: true
+    disable-enchanting: true

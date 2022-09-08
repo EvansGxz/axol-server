@@ -1,11 +1,11 @@
 STEEL_PICKAXE:
   base:
     material: IRON_PICKAXE
-    name: '&fSteel Pickaxe'
+    name: '&fPico de Metal'
     max-durability: 1000
     tier: COMMON
     lore:
-    - '&7A much more durable iron pick.'
+    - '&7Un pico de hierro mucho más duradero.'
     will-break: true
     unbreakable: true
 STEEL_SHOVEL:
@@ -15,52 +15,69 @@ STEEL_SHOVEL:
     max-durability: 1000
     tier: COMMON
     lore:
-    - '&7A much more durable iron spade.'
+    - '&7Una pala de hierro mucho más duradera.'
     will-break: true
     unbreakable: true
-CRACK_PICKAXE:
-  base:
-    material: DIAMOND_PICKAXE
-    name: §7§lCrack Pickaxe
-    enchants:
-      fortune: 2.0
-      efficiency: 1.0
-    max-durability: 3650.0
-    tier: RARE
-    attack-damage: 6.0
-    attack-speed: 1.5
-    pickaxe-power: 4.0
-    bouncing-crack: true
-    lore:
-      - §cWill break adjacent blocks!
-AUTOSMELT_PICKAXE:
+DIAMOND_AXE:
   base:
     material: NETHERITE_PICKAXE
-    name: §cAutosmelt pickaxe
+    max-durability: 1600.0
+    name: §6Taladradora HyperSonico
+    two-handed: true
+    perm-effects:
+      FAST_DIGGING: 3.0
+    pickaxe-power: 20.0
+    ability:
+      ability1: {}
+    disable-enchanting: true
+    disable-repairing: true
+    disable-smithing: true
+    bouncing-crack: true
+    required-level: 25.0
     lore:
-      - §7Will §csmelt§7 ores, like it
-      - §7implies. Works with enchantments.
-    attack-damage: 7.5
-    attack-speed: 1.6
-    tier: UNCOMMON
-    required-level: 5.0
-    pickaxe-power: 5.0
-    autosmelt: true
-    crafting:
-      shaped:
-        '1':
-          input:
-            - v magma_cream - 1.0..|v netherite_block - 1.0..|v magma_cream - 1.0..
-            - v AIR 0 1..|v stick - 1.0..|v AIR 0 1..
-            - v AIR 0 1..|v stick - 1.0..|v AIR 0 1..
-UNBREAKABLE_SHEARS:
-  base:
-    material: SHEARS
+    - '&6Capaz de vacias montañas en tan'
+    - '&6solo solo minutos con esta poderosa'
+    - '&6maquina de picar'
+    - '&6&lLK Industries'
     enchants:
-      silk_touch: 1.0
-    lore:
-      - §7If you're tired to craft new shears,
-      - §7try out this one! It can also
-      - §7pick up §9glass§7 or §2grass§7!
-    tier: UNCOMMON
+      unbreaking: 5.0
+      efficiency: 10.0
+    disable-smelting: true
+    disable-crafting: true
+FORTUNA:
+  base:
+    material: DIAMOND_PICKAXE
+    durability: 1561.0
+    disable-repairing: true
+    disable-enchanting: true
+    disable-smithing: true
+    enchants:
+      fortune: 10.0
+    disable-smelting: true
     required-level: 5.0
+    pickaxe-power: 10.0
+    lore:
+    - '&6Depende de tu suerte, si consigues algo bueno'
+    - '&6&lLK Industries'
+    name: '&3Pico De Lagrimas De Fortuna'
+FUNDIDORA:
+  base:
+    material: NETHERITE_PICKAXE
+    name: '&5Fundidora Espacial'
+    enchants:
+      unbreaking: 3.0
+      efficiency: 5.0
+    autosmelt: true
+    pickaxe-power: 15.0
+    perm-effects:
+      NIGHT_VISION: 2.0
+      FAST_DIGGING: 3.0
+    lore:
+    - '&6&lLK Industries'
+    disable-repairing: true
+    disable-enchanting: true
+    disable-smithing: true
+    disable-smelting: true
+    disable-crafting: true
+    additional-experience: 10.0
+    required-level: 15.0

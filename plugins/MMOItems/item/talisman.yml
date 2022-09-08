@@ -1,15 +1,334 @@
-THUNDER_BLESSING:
+SHIELD:
   base:
-    material: BIRCH_SAPLING
-    disable-interaction: true
-    name: §bThunder's Blessing
-    attack-damage: 3.0
-    weapon-damage: 10.0
-    skill-damage: 50.0
-    tier: EPIC
-    perm-effects:
-      SPEED: 1.0
+    material: DIAMOND
+    ability:
+      ability1:
+        type: MAGICAL_SHIELD
+        duration: 8.0
+        cooldown: 45.0
+        power: 100.0
+        radius: 6.0
+        mana: 20.0
+        mode: RIGHT_CLICK
+    name: '&1Escudo Magico Asfhigot'
     lore:
-      - §bThis talisman, when held in offhand,
-      - §ballows the user to greatly increase
-      - §bhis skill damage. §3It also gives Speed I.
+    - '&3Un artefacto poderoso capaz de crear un escudo'
+    - '&3magico por unos segundos'
+    - '&6&lLK Industries'
+    - '&eEscudo Magico &8(click derecho)'
+    - '&7Crea un escudo magico que te protege hasta'
+    - '&3100 de daño&7, en un radio de &36 bloques&7, te consume'
+    - '&320 de mana&7 y dura &38 segundos'
+    magic-damage-reduction: 10.0
+    projectile-damage-reduction: 10.0
+    physical-damage-reduction: 14.0
+    armor: 3.1
+    max-health: 20.0
+    required-level: 25.0
+    fire-damage-reduction: 10.0
+    tier: RARE
+    enchants:
+      power: 1.0
+    hide-enchants: true
+DIVINESHIELD:
+  base:
+    material: DIAMOND
+    name: '&6Escudo Magico Del Emperador Divino'
+    required-level: 60.0
+    dodge-rating: 15.0
+    parry-rating: 15.0
+    projectile-damage-reduction: 13.0
+    physical-damage-reduction: 14.6
+    fire-damage-reduction: 20.0
+    magic-damage-reduction: 17.9
+    max-health: 10.0
+    armor: 15.0
+    skill-damage: 5.6
+    projectile-damage: 7.2
+    magic-damage: 8.5
+    ability:
+      ability1:
+        type: MAGICAL_SHIELD
+        mode: RIGHT_CLICK
+        duration: 12.0
+        mana: 80.0
+        cooldown: 160.0
+        radius: 12.0
+        power: 1000.0
+    lore:
+    - '&eEscudo Magico Divino &8(click derecho)'
+    - '&7Crea un escudo magico que te protege hasta'
+    - '&31000 de daño&7, en un radio de &312 bloques&7, te consume'
+    - '&380 de mana&7 y dura &312 segundos'
+    - '&6&lLK Industries'
+    enchants:
+      power: 1.0
+    hide-enchants: true
+    tier: LEGENDARY
+MANAMA:
+  base:
+    material: DIAMOND
+    name: '&5Adaptador De Mana Ninfia'
+    max-mana: 300.0
+    mana-regeneration: 12.0
+    armor: 5.54
+    pve-damage: 5.0
+    pvp-damage: 7.0
+    skill-damage: 20.0
+    projectile-damage: 8.0
+    magic-damage: 20.0
+    required-level: 33.0
+    unstackable: true
+    max-health: 10.0
+    lore:
+    - '&6&lLK Industries'
+    enchants:
+      power: 1.0
+    hide-enchants: true
+    tier: EPIC
+MUSULMAN:
+  base:
+    material: DIAMOND
+    name: '&1Refuerzos Musulmanes'
+    ability:
+      ability1:
+        type: EXPLOSIVE_TURKEY
+        mode: RIGHT_CLICK
+        damage: 65.0
+        radius: 8.0
+        knockback: 4.0
+        cooldown: 40.0
+    handworn: true
+    required-level: 27.0
+    block-power: 15.0
+    block-rating: 5.0
+    dodge-rating: 5.0
+    fire-damage-reduction: 9.0
+    physical-damage-reduction: 10.0
+    lore:
+    - '&ePollo Explosivo &8(Click Derecho)'
+    - '&7Dispara un pollo con una trayectoria de &34 segundos'
+    - '&7haciendo &365 de daño&7, en un radio de &38 bloques'
+    - '&7con un cooldown de &340 segundos'
+    - '&6&lLK Industries'
+    enchants:
+      power: 1.0
+    hide-enchants: true
+    tier: RARE
+TORRETAS:
+  base:
+    material: DIAMOND
+    ability:
+      ability1:
+        type: SNOWMAN_TURRET
+        duration: 20.0
+        damage: 30.0
+        mana: 80.0
+        cooldown: 180.0
+        mode: RIGHT_CLICK
+    name: '&6&oLlamado A Escena'
+    handworn: true
+    mana-regeneration: 5.0
+    max-mana: 100.0
+    projectile-damage: 15.0
+    magic-damage: 30.0
+    skill-damage: 12.0
+    weapon-damage: 25.0
+    physical-damage: 10.0
+    pve-damage: 20.0
+    pvp-damage: 20.0
+    lore:
+    - '&eLlamado A Escena &8(Click Derecho)'
+    - '&7Invoca una torreta que dura &320 segundo&7, y cada disparo'
+    - '&7hace &330 de daño&7, consume &380 de mana&7, y tiene un'
+    - '&7cooldown de &3180 segundos'
+    - '&6Artefacto magico portable, creado solo para la guerra'
+    - '&6capaz de matar pelotones de soldados completos en tan'
+    - '&6solo segundos'
+    - '&6&lLK Industries'
+    required-level: 100.0
+    enchants:
+      power: 1.0
+    hide-enchants: true
+    tier: MYTHICAL
+TALISMAN_AVENTURERO:
+  base:
+    material: DIAMOND
+    name: '&3Un Compañero De Aventuras'
+    enchants:
+      power: 1.0
+    hide-enchants: true
+    item-particles:
+      particle: REDSTONE
+    required-level: 10.0
+    block-power: 5.0
+    block-rating: 5.0
+    damage-reduction: 3.0
+    tier: COMMON
+    max-health: 7.0
+    max-mana: 20.0
+    perm-effects:
+      DAMAGE_RESISTANCE: 1.0
+DEFENSA:
+  base:
+    material: DIAMOND
+    enchants:
+      power: 1.0
+    hide-enchants: true
+    name: '&3Un Guia En La Noche'
+    required-level: 10.0
+    block-power: 5.0
+    block-rating: 4.0
+    cooldown-reduction: 5.0
+    damage-reduction: 5.0
+    projectile-damage: 3.0
+    tier: COMMON
+    health-regeneration: 5.0
+DEFENSA2:
+  base:
+    material: DIAMOND
+    enchants:
+      power: 1.0
+    hide-enchants: true
+    name: '&3Piedra Preciosa'
+    block-power: 4.0
+    block-rating: 7.0
+    dodge-rating: 3.0
+    cooldown-reduction: 10.0
+    physical-damage-reduction: 5.0
+    movement-speed: 0.02
+    tier: COMMON
+DEFENSA3:
+  base:
+    material: DIAMOND
+    name: '&3Buena Roca'
+    enchants:
+      power: 1.0
+    hide-enchants: true
+    required-level: 10.0
+    block-power: 20.0
+    block-rating: 18.0
+    magic-damage-reduction: 15.0
+    damage-reduction: 5.0
+    tier: COMMON
+DEFENSA4:
+  base:
+    material: DIAMOND
+    name: '&3Rocky'
+    enchants:
+      power: 1.0
+    hide-enchants: true
+    magic-damage-reduction: 8.0
+    tier: COMMON
+    pvp-damage-reduction: 10.0
+    armor-toughness: 10.0
+    physical-damage-reduction: 5.0
+    projectile-damage-reduction: 4.0
+    required-level: 10.0
+    block-power: 3.0
+    block-rating: 5.0
+ATAQUE:
+  base:
+    material: DIAMOND
+    enchants:
+      power: 1.0
+    hide-enchants: true
+    name: '&3Rompe Dedos'
+    required-level: 10.0
+    attack-damage: 30.0
+    attack-speed: 3.0
+    critical-strike-chance: 10.0
+    cooldown-reduction: 15.0
+ATAQUE2:
+  base:
+    material: DIAMOND
+    enchants:
+      power: 1.0
+    hide-enchants: true
+    name: '&3Roca Afilada'
+    critical-strike-power: 10.0
+    critical-strike-chance: 10.0
+    attack-speed: 2.0
+    physical-damage: 5.0
+    pvp-damage: 5.0
+    tier: COMMON
+    required-level: 10.0
+ATAQUE3:
+  base:
+    material: DIAMOND
+    enchants:
+      power: 1.0
+    cooldown-reduction: 7.0
+    critical-strike-chance: 7.0
+    attack-damage: 5.0
+    projectile-damage: 10.0
+    required-level: 10.0
+    tier: COMMON
+ATAQUE_4:
+  base:
+    material: DIAMOND
+    enchants:
+      power: 1.0
+    hide-enchants: true
+    name: '&3Parte Piernas'
+    critical-strike-power: 13.0
+    required-level: 10.0
+    physical-damage: 7.0
+    magic-damage: 5.0
+    projectile-damage: 5.0
+    tier: COMMON
+ATAQUE_5:
+  base:
+    material: DIAMOND
+    enchants:
+      power: 1.0
+    hide-enchants: true
+    name: '&3Punta De Flecha'
+    projectile-damage: 5.0
+    skill-damage: 8.0
+    weapon-damage: 5.0
+    cooldown-reduction: 8.0
+    pvp-damage: 5.0
+    required-level: 10.0
+    tier: COMMON
+UTILIDAD1:
+  base:
+    material: DIAMOND
+    enchants:
+      power: 1.0
+    hide-enchants: true
+    name: '&3Pixy'
+    required-level: 10.0
+    max-mana: 50.0
+    max-health: 10.0
+    max-stamina: 7.0
+    health-regeneration: 3.0
+    movement-speed: 0.05
+    tier: COMMON
+UTILIDAD2:
+  base:
+    material: DIAMOND
+    name: '&3Polvo De Adas'
+    enchants:
+      power: 1.0
+    hide-enchants: true
+    max-mana: 70.0
+    max-health: 7.0
+    tier: COMMON
+    required-level: 10.0
+    stamina-regeneration: 10.0
+    mana-regeneration: 10.0
+    health-regeneration: 5.0
+AYUDA3:
+  base:
+    material: DIAMOND
+    enchants:
+      power: 1.0
+    hide-enchants: true
+    name: '&3Piedra Filosofal Deteriorada'
+    stamina-regeneration: 5.0
+    health-regeneration: 5.0
+    mana-regeneration: 5.0
+    movement-speed: 0.05
+    required-level: 10.0
+    tier: COMMON

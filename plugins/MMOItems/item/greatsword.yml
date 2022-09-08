@@ -1,12 +1,9 @@
 HARDENED_STEEL_CLAYMORE:
   base:
     material: IRON_SWORD
-    name: '&fHardened Steel Claymore'
+    name: '&fClaymore de acero endurecido'
     required-level: 13.0
     tier: RARE
-    required-class:
-      - Warrior
-      - Paladin
     attack-damage:
       base: 5.5
       spread: 0.03
@@ -23,8 +20,8 @@ HARDENED_STEEL_CLAYMORE:
       sharpness: 4
       knockback: 2
     gem-sockets:
-      - Red
-      - Blue
+    - Red
+    - Blue
     perm-effects:
       FAST_DIGGING: 3
     ability:
@@ -35,10 +32,12 @@ HARDENED_STEEL_CLAYMORE:
         cooldown: 19.0
       on-hit:
         type: SHOCK
-        mode: ATTACK
+        mode: ON_HIT
         duration: 1.3
         cooldown: 25.0
     max-durability: 1000.0
+    required-class:
+    - GUERRERO
 CANDY_CANE_SWORD:
   base:
     material: WOODEN_SWORD
@@ -50,49 +49,53 @@ CANDY_CANE_SWORD:
       spread: 0.02
       max-spread: 0.06
     lore:
-      - '&7This sword embodies the christmas spirit.'
-      - '&7Hit a monster to release it!'
-      - ''
-      - '&eEarned during X-Mas 2018!'
+    - '&7Esta espada encarna el espíritu navideño.'
+    - '&7Golpea a un monstruo para liberarlo!'
+    - ''
+    - '&eGanada en navidad 2020!'
     critical-strike-chance: 20.0
     critical-strike-power: 60.0
     ability:
       on-hit:
         type: DEATH_MARK
-        mode: ATTACK
+        mode: ON_HIT
         cooldown: 10.0
+    required-class:
+    - GUERRERO
 MOLTEN_BLADE:
   base:
     material: GOLDEN_SWORD
     enchants:
       knockback: 2
-    name: '&cMolten Blade'
+    name: '&cHoja fundida'
     attack-speed: 1.3
     attack-damage: 11.0
     crafting:
       shaped:
         '1':
-          - AIR MATERIAL.FIRE_ESSENCE AIR
-          - MATERIAL.FIRE_ESSENCE MATERIAL.FIRE_ESSENCE MATERIAL.FIRE_ESSENCE
-          - AIR BLAZE_ROD AIR
+        - AIR MATERIAL.FIRE_ESSENCE AIR
+        - MATERIAL.FIRE_ESSENCE MATERIAL.FIRE_ESSENCE MATERIAL.FIRE_ESSENCE
+        - AIR BLAZE_ROD AIR
     ability:
       ability1:
         type: MAGMA_FISSURE
-        mode: ATTACK
+        mode: ON_HIT
         cooldown: 13.0
     lore:
-      - '&7Every 13s, your next melee'
-      - '&7attack summons a devastating'
-      - '&cmagma fissure&7 that dashes to'
-      - '&7your target, &cigniting &7it and'
-      - '&7dealing &cdamage&7 upon landing.'
+    - '&7Cada 13s, tu siguiente ataque cuerpo-cuerpo'
+    - '&7ataque convoca un devastador'
+    - '&cfisura de magma&7 que se precipita a'
+    - '&7tu objetivo, &cencendiéndolo &7y'
+    - '&7infligir &cdaño&7 al aterrizar.'
     magic-damage: 30.0
     unbreakable: true
     two-handed: true
+    required-class:
+    - GUERRERO
 TWO_HANDED_STEEL_SWORD:
   base:
     material: IRON_SWORD
-    name: '&fTwo Handed Steel Sword'
+    name: '&fEspada de acero de dos manos'
     enchants:
       sharpness: 4
       knockback: 1
@@ -120,8 +123,8 @@ TWO_HANDED_STEEL_SWORD:
       ice:
         damage: 7.0
     gem-sockets:
-      - Blue
-      - Blue
+    - Blue
+    - Blue
     tier: UNCOMMON
     ability:
       right-click:
@@ -130,48 +133,511 @@ TWO_HANDED_STEEL_SWORD:
         cooldown: 8.0
         damage: 4.0
     lore:
-      - '&7Right click to &c&nsmash&7 nearby'
-      - '&7enemies for &c4&7 damage.'
+    - '&7Haga clic derecho para &c&ngolpea&7 enemigos'
+    - '&7cercanos para &c4&7 dañarlos.'
     hide-enchants: true
-EARTHLY_GREATSWORD:
-  base:
-    material: STONE_SWORD
-    max-durability: 8400.0
-    required-level: 30.0
-    attack-damage:
-      base: 32.0
-      scale: 0.1
-      spread: 0.1
-      max-spread: 0.2
-    critical-strike-chance:
-      base: 10.0
-      scale: 0.1
-      spread: 0.2
-    critical-strike-power:
-      base: 60.0
-      scale: 0.1
-      spread: 0.2
     required-class:
-      - Warrior
-    tier: EPIC
-    name: §2Earthly Greatsword
-    gem-sockets:
-      - Green
-    element:
-      earth:
-        damage: 50.0
-    attack-speed: 1.45
-    perm-effects:
-      SLOW: 1.0
-    two-handed: true
-    lore:
-      - §7Grants §cslowness I§7 when held.
-      - §7Needs to be §ctwo-handed§7.
+    - GUERRERO
+I_STARTERNECROMANCERSCYTHE:
+  base:
+    material: DIAMOND_HOE
+    name: '&fGuadaña'
+    attack-damage:
+      base: 6.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    attack-speed: 1.6
+    critical-strike-power:
+      base: 1.5
+      scale: 0.02
+      spread: 0.05
+    critical-strike-chance:
+      base: 2.0
+      scale: 0.02
+      spread: 0.05
+    tier: COMMON
+    max-durability: 1250.0
+    required-level: 2.0
+    required-class:
+    - NECROMANCER
+II_REINFORCEDSCYTHE:
+  base:
+    material: DIAMOND_HOE
+    name: '&aSariel'
+    attack-damage:
+      base: 7.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-power:
+      base: 2.5
+      scale: 0.02
+      spread: 0.05
+    critical-strike-chance:
+      base: 3.0
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    attack-speed: 1.6
     ability:
       ability1:
         type: CIRCULAR_SLASH
-        damage: 15.0
-        cooldown: 3.0
-        knockback: 2.0
-        radius: 4.0
         mode: RIGHT_CLICK
+        mana: 8.0
+        cooldown: 15.0
+        damage: 10.0
+    tier: UNCOMMON
+    max-durability: 3200.0
+    required-level: 12.0
+    required-class:
+    - NECROMANCER
+III_UNDEADSCYTHE:
+  base:
+    material: NETHERITE_HOE
+    name: <#3498DB>Guadaña Sombría
+    attack-damage:
+      base: 9.5
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    physical-damage:
+      base: 3.5
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    weapon-damage:
+      base: 2.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-chance:
+      base: 2.5
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-power:
+      base: 2.0
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    attack-speed: 1.6
+    tier: RARE
+    ability:
+      ability1:
+        type: BLOODBATH
+        mode: ON_HIT
+        cooldown: 15.0
+        amount: 2.5
+    max-durability: 4500.0
+    required-level: 30.0
+    required-class:
+    - NECROMANCER
+IV_SHADOWSCYTHE:
+  base:
+    material: NETHERITE_HOE
+    name: <#5B2C6F>Darkin
+    attack-damage:
+      base: 11.5
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    physical-damage:
+      base: 4.5
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    weapon-damage:
+      base: 3.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-chance:
+      base: 3.5
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-power:
+      base: 2.0
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    parry-rating:
+      base: 2.5
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    pvp-damage:
+      base: 3.0
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    attack-speed: 1.6
+    tier: EPIC
+    element:
+      fire:
+        earth:
+          base: 10.0
+          scale: 0.0
+          spread: 0.02
+          max-spread: 0.06
+    perm-effects:
+      INVISIBILITY: 1.0
+    max-durability: 6000.0
+    required-level: 40.0
+    required-class:
+    - NECROMANCER
+    ability:
+      ability1:
+        type: OVERLOAD
+        damage: 12.0
+        mana: 8.0
+        cooldown: 12.0
+        radius: 6.0
+        mode: RIGHT_CLICK
+V_IMMORTALSCYTHE:
+  base:
+    material: NETHERITE_HOE
+    name: <#F39C12>Roba Almas
+    attack-damage:
+      base: 13.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    physical-damage:
+      base: 5.5
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    weapon-damage:
+      base: 3.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-chance:
+      base: 6.5
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-power:
+      base: 5.0
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    parry-rating:
+      base: 4.0
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    pvp-damage:
+      base: 3.0
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    pve-damage:
+      base: 1.25
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    skill-damage:
+      base: 2.5
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    attack-speed: 1.6
+    tier: LEGENDARY
+    element:
+      fire:
+        damage:
+          base: 20.0
+          scale: 0.0
+          spread: 0.03
+          max-spread: 0.08
+      water:
+        damage:
+          base: 10.0
+          scale: 0.0
+          spread: 0.03
+          max-spread: 0.08
+    max-durability: 8500.0
+    required-level: 50.0
+    required-class:
+    - NECROMANCER
+    ability:
+      ability1:
+        type: VAMPIRISM
+        drain: 4.0
+        mana: 1.0
+        cooldown: 8.0
+        mode: ON_HIT
+      ability2:
+        type: SHADOW_VEIL
+        duration: 5.0
+        mana: 10.0
+        cooldown: 20.0
+        mode: RIGHT_CLICK
+VI_BEESCYTHE:
+  base:
+    material: NETHERITE_HOE
+    name: <#FFFF60>Ratzor
+    attack-damage:
+      base: 16.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    physical-damage:
+      base: 7.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    magic-damage:
+      base: 2.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    weapon-damage:
+      base: 4.5
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-chance:
+      base: 6.5
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-power:
+      base: 6.0
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    parry-rating:
+      base: 4.5
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    pvp-damage:
+      base: 3.0
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    pve-damage:
+      base: 2.5
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    skill-damage:
+      base: 2.75
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    attack-speed: 1.6
+    tier: MYTHICAL
+    element:
+      ice:
+        damage:
+          base: 20.0
+          scale: 0.0
+          spread: 0.03
+          max-spread: 0.08
+      earth:
+        damage:
+          base: 20.0
+          scale: 0.0
+          spread: 0.03
+          max-spread: 0.08
+    max-durability: 11000.0
+    required-level: 60.0
+    required-class:
+    - NECROMANCER
+    ability:
+      ability1:
+        type: GRAND_HEAL
+        mana: 15.0
+        heal: 6.0
+        cooldown: 20.0
+        radius: 3.0
+        mode: RIGHT_CLICK
+    perm-effects:
+      DAMAGE_RESISTANCE: 1.0
+II_HEAVYGREATSWORD:
+  base:
+    material: DIAMOND_SWORD
+    name: '&aGran Espada'
+    attack-damage:
+      base: 6.5
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-power:
+      base: 2.5
+      scale: 0.02
+      spread: 0.05
+    critical-strike-chance:
+      base: 2.25
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    attack-speed: 1.6
+    tier: UNCOMMON
+    max-durability: 3200.0
+    required-level: 12.0
+    required-class:
+    - GUERRERO
+III_POWERFULGREATSWORD:
+  base:
+    material: DIAMOND_SWORD
+    name: '<#3498DB>Cimitarra '
+    attack-damage:
+      base: 9.5
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    physical-damage:
+      base: 4.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    weapon-damage:
+      base: 3.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-chance:
+      base: 3.0
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-power:
+      base: 2.5
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    attack-speed: 1.6
+    tier: RARE
+    max-durability: 4500.0
+    required-level: 30.0
+    required-class:
+    - GUERRERO
+    ability:
+      ability1:
+        type: SWIFTNESS
+        duration: 5.0
+        mana: 5.0
+        cooldown: 15.0
+        amplifier: 3.0
+        mode: RIGHT_CLICK
+IV_UNBREAKABLEGREATSWORD:
+  base:
+    material: NETHERITE_SWORD
+    name: <#5B2C6F>Claymore
+    attack-damage:
+      base: 11.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    physical-damage:
+      base: 3.5
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    weapon-damage:
+      base: 2.75
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-chance:
+      base: 4.5
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-power:
+      base: 3.0
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    parry-rating:
+      base: 2.5
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    pvp-damage:
+      base: 2.5
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    attack-speed: 1.6
+    tier: EPIC
+    element:
+      fire:
+        damage:
+          base: 10.0
+          scale: 0.0
+          spread: 0.02
+          max-spread: 0.06
+      thunder:
+        damage:
+          base: 10.0
+          scale: 0.0
+          spread: 0.02
+          max-spread: 0.06
+    max-durability: 6000.0
+    required-level: 40.0
+    required-class:
+    - GUERRERO
+    ability:
+      ability1:
+        type: DEATH_MARK
+        duration: 5.0
+        damage: 10.0
+        mana: 5.0
+        cooldown: 10.0
+        amplifier: 2.0
+        mode: RIGHT_CLICK
+ZACRAMENTO:
+  base:
+    material: NETHERITE_SWORD
+    name: '&0&m&lZacramento'
+    lore:
+    - Abre el suelo mientras caminas
+    - '&4&lMade by Dwz'
+    disable-crafting: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    attack-damage: 35.0
+    stamina-cost: 0.0
+    magic-damage-reduction: 25.0
+    auto-soulbind: true
+    two-handed: true
+    ability:
+      ability1:
+        type: HEAVY_CHARGE
+        damage: 20.0
+        cooldown: 70.0
+        mode: RIGHT_CLICK
+    gem-sockets:
+    - Black
+    element:
+      fire:
+        damage: 50.0
+      thunder:
+        damage: 50.0
+    additional-experience: 15.0
+    pvp-damage: 25.0
+    sounds:
+      on-attack:
+        sound: mob.wither.spawn
+        volume: 10.0
+        pitch: 1.0
+    unbreakable: true
+    perm-effects:
+      SLOW: 3.0
+      INCREASE_DAMAGE: 2.0
+    item-particles:
+      type: AURA
+      particle: SQUID_INK
+      rotation-speed: 0.5
+    attack-speed: 0.25
+    required-class:
+    - GUERRERO

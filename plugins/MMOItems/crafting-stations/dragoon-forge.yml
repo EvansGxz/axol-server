@@ -1,0 +1,186 @@
+
+# Name which will be displayed
+# when opening the station
+name: 'Forja Dragón (#page#/#max#)'
+
+# The maximum amount of items in the crafting queue ie. the
+# max number of items players are able to craft simultaneously.
+# Must be between 1 and 64.
+max-queue-size: 10
+
+# The sound that plays whenever an action is
+# completed in the crafting station.
+# GET SOUND NAMES HERE:
+# https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Sound.html
+sound: ENTITY_EXPERIENCE_ORB_PICKUP
+
+# This is how the gui looks. You can define your own
+# in crafting-stations/layouts by creating a new
+# file with the name of the file as the id.
+layout: default
+
+# Configure GUI items here
+items:
+    fill:
+        material: AIR
+    no-recipe:
+        material: GRAY_STAINED_GLASS_PANE
+        name: '&aSin receta'
+    no-queue-item:
+        material: GRAY_STAINED_GLASS_PANE
+        name: '&aNo Item en cola'
+
+# Station recipes
+recipes:
+    dragoon-helmet:
+        output:
+            type: ARMOR
+            id: I_DRAGOONHELMET
+            amount: 1
+        crafting-time: 25
+        conditions:
+        - 'level{level=4}'
+        - 'class{list=DRAGON}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=DSOUL,amount=6,display="Esencia de Dragón"}
+    dragoon-chestplate:
+        output:
+            type: ARMOR
+            id: I_DRAGOONCHESTPLATE
+            amount: 1
+        crafting-time: 40
+        conditions:
+        - 'level{level=4}'
+        - 'class{list=DRAGON}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=DSOUL,amount=9,display="Esencia de Dragón"}
+    dragoon-leggings:
+        output:
+            type: ARMOR
+            id: I_DRAGOONLEGGINGS
+            amount: 1
+        crafting-time: 30
+        conditions:
+        - 'level{level=4}'
+        - 'class{list=DRAGON}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=DSOUL,amount=8,display="Esencia de Dragón"}
+    dragoon-boots:
+        output:
+            type: ARMOR
+            id: I_DRAGOONBOOTS
+            amount: 1
+        crafting-time: 20
+        conditions:
+        - 'level{level=4}'
+        - 'class{list=DRAGON}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=DSOUL,amount=5,display="Esencia de Dragón"}
+    dragoon-lance:
+        output:
+            type: LANCE
+            id: I_STARTERDRAGOONLANCE
+            amount: 1
+        crafting-time: 50
+        conditions:
+        - 'level{level=2}'
+        - 'class{list=DRAGON}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=DSOUL,amount=5,display="Esencia de Dragón"}
+        - 'vanilla{type=DIAMOND_SWORD,amount=1,display="Espada de diamante"}'
+    dragoon-shield:
+        output:
+            type: SHIELD
+            id: II_REINFORCEDSHIELD
+            amount: 1
+        crafting-time: 50
+        conditions:
+        - 'level{level=10}'
+        - 'class{list=DRAGON}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=DSOUL,amount=10,display="Esencia de Dragón"}
+        - 'vanilla{type=SHIELD,amount=1,display="Escudo"}'
+    dragoon-shield2:
+        output:
+            type: SHIELD
+            id: III_OBSIDIANSHIELD
+            amount: 1
+        crafting-time: 50
+        conditions:
+        - 'level{level=10}'
+        - 'class{list=DRAGON}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=DSOUL,amount=15,display="Esencia de Dragón"}
+        - mmoitem{type=SHIELD,id=II_REINFORCEDSHIELD,amount=2}
+    dragoon-shield3:
+        output:
+            type: SHIELD
+            id: IV_CHARGEWARSHIELD
+            amount: 1
+        crafting-time: 50
+        conditions:
+        - 'level{level=10}'
+        - 'class{list=DRAGON}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=DSOUL,amount=20,display="Esencia de Dragón"}
+        - mmoitem{type=SHIELD,id=III_OBSIDIANSHIELD,amount=2}
+    dragoon-lance2:
+        output:
+            type: LANCE
+            id: II_REINFORCEDLANCE
+            amount: 1
+        crafting-time: 110
+        conditions:
+        - 'level{level=15}'
+        - 'class{list=DRAGON}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=DSOUL,amount=15,display="Esencia de Dragón"}
+        - 'vanilla{type=DIAMOND_SWORD,amount=1,display="Espada de diamante"}'
+    dragoon-lance3:
+        output:
+            type: LANCE
+            id: III_OBSIDIANLANCE
+            amount: 1
+        crafting-time: 220
+        conditions:
+        - 'level{level=40}'
+        - 'class{list=DRAGON}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=DSOUL,amount=25,display="Esencia de Dragón"}
+        - mmoitem{type=LANCE,id=II_REINFORCEDLANCE,amount=2,display="&aÉgida"}
+    dragoon-lance4:
+        output:
+            type: LANCE
+            id: IV_OVERWHELMINGLANCHE
+            amount: 1
+        crafting-time: 330
+        conditions:
+        - 'level{level=50}'
+        - 'class{list=DRAGON}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=DSOUL,amount=35,display="Esencia de Dragón"}
+        - mmoitem{type=LANCE,id=III_OBSIDIANLANCE,amount=2,display="<#3498DB>Lanza Sagrada"}
+    dragoon-lance5:
+        output:
+            type: LANCE
+            id: V_BEDROCKLANCE
+            amount: 1
+        crafting-time: 440
+        conditions:
+        - 'level{level=60}'
+        - 'class{list=DRAGON}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=DSOUL,amount=45,display="Esencia de Dragón"}
+        - mmoitem{type=LANCE,id=IV_OVERWHELMINGLANCHE,amount=2,display="<#5B2C6F>Lanza de Longinus"}
+    dragoon-lance6:
+        output:
+            type: LANCE
+            id: VI_BEELANCE
+            amount: 1
+        crafting-time: 550
+        conditions:
+        - 'level{level=70}'
+        - 'class{list=DRAGON}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=DSOUL,amount=55,display="Esencia de Dragón"}
+        - mmoitem{type=LANCE,id=V_BEDROCKLANCE,amount=2,display="<#F39C12>Lanza Perforanubes"}

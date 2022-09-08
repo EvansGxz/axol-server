@@ -1,0 +1,187 @@
+
+# Name which will be displayed
+# when opening the station
+name: 'Forja Mago (#page#/#max#)'
+
+# The maximum amount of items in the crafting queue ie. the
+# max number of items players are able to craft simultaneously.
+# Must be between 1 and 64.
+max-queue-size: 10
+
+# The sound that plays whenever an action is
+# completed in the crafting station.
+# GET SOUND NAMES HERE:
+# https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Sound.html
+sound: ENTITY_EXPERIENCE_ORB_PICKUP
+
+# This is how the gui looks. You can define your own
+# in crafting-stations/layouts by creating a new
+# file with the name of the file as the id.
+layout: default
+
+# Configure GUI items here
+items:
+    fill:
+        material: AIR
+    no-recipe:
+        material: GRAY_STAINED_GLASS_PANE
+        name: '&aSin receta'
+    no-queue-item:
+        material: GRAY_STAINED_GLASS_PANE
+        name: '&aNo Item en cola'
+
+# Station recipes
+recipes:
+    wizard-helmet:
+        output:
+            type: ARMOR
+            id: I_WIZARDHELMET
+            amount: 1
+        crafting-time: 25
+        conditions:
+        - 'level{level=4}'
+        - 'class{list=MAGO}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=WISOUL,amount=6,display="Esencia de Mago"}
+    wizard-chestplate:
+        output:
+            type: ARMOR
+            id: I_WIZARDCHESTPLATE
+            amount: 1
+        crafting-time: 40
+        conditions:
+        - 'level{level=4}'
+        - 'class{list=MAGO}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=WISOUL,amount=9,display="Esencia de Mago"}
+    wizard-leggings:
+        output:
+            type: ARMOR
+            id: I_WIZARDLEGGINGS
+            amount: 1
+        crafting-time: 30
+        conditions:
+        - 'level{level=4}'
+        - 'class{list=MAGO}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=WISOUL,amount=8,display="Esencia de Mago"}
+    wizard-boots:
+        output:
+            type: ARMOR
+            id: I_WIZARDBOOTS
+            amount: 1
+        crafting-time: 20
+        conditions:
+        - 'level{level=4}'
+        - 'class{list=MAGO}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=WISOUL,amount=5,display="Esencia de Mago"}
+    wizard-wand:
+        output:
+            type: WAND
+            id: I_WIZARDWAND
+            amount: 1
+        crafting-time: 50
+        conditions:
+        - 'level{level=4}'
+        - 'class{list=MAGO}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=WISOUL,amount=5,display="Esencia de Mago"}
+        - 'vanilla{type=stcik,amount=1,display="palo"}'
+    wizard-wand2:
+        output:
+            type: WAND
+            id: II_INFUSEDWAND
+            amount: 1
+        crafting-time: 110
+        conditions:
+        - 'level{level=15}'
+        - 'class{list=MAGO}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=WISOUL,amount=15,display="Esencia de Mago"}
+        - mmoitem{type=WAND,id=I_WIZARDWAND,amount=2}
+    wizard-wand2-2:
+        output:
+            type: WAND
+            id: II_CURSINGWAND
+            amount: 1
+        crafting-time: 120
+        conditions:
+        - 'level{level=22}'
+        - 'class{list=MAGO}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=WISOUL,amount=17,display="Esencia de Mago"}
+        - mmoitem{type=WAND,id=I_WIZARDWAND,amount=2}
+    wizard-wand3:
+        output:
+            type: WAND
+            id: III_ELEMENTALWAND
+            amount: 1
+        crafting-time: 220
+        conditions:
+        - 'level{level=40}'
+        - 'class{list=MAGO}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=WISOUL,amount=25,display="Esencia de Mago"}
+        - mmoitem{type=WAND,id=II_INFUSEDWAND,amount=2}
+    wizard-wand3-3:
+        output:
+            type: WAND
+            id: III_WITHERINGWAND
+            amount: 1
+        crafting-time: 230
+        conditions:
+        - 'level{level=45}'
+        - 'class{list=MAGO}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=WISOUL,amount=27,display="Esencia de Mago"}
+        - mmoitem{type=WAND,id=II_CURSINGWAND,amount=2}
+    wizard-wand4:
+        output:
+            type: WAND
+            id: IV_AQUAWAND
+            amount: 1
+        crafting-time: 330
+        conditions:
+        - 'level{level=50}'
+        - 'class{list=MAGO}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=WISOUL,amount=35,display="Esencia de Mago"}
+        - mmoitem{type=WAND,id=III_WITHERINGWAND,amount=2}
+    wizard-wand4-4:
+        output:
+            type: WAND
+            id: IV_LIFEENDERWAND
+            amount: 1
+        crafting-time: 340
+        conditions:
+        - 'level{level=55}'
+        - 'class{list=MAGO}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=WISOUL,amount=37,display="Esencia de Mago"}
+        - mmoitem{type=WAND,id=III_ELEMENTALWAND,amount=2}
+    wizard-wand5:
+        output:
+            type: WAND
+            id: V_OCEANWAND
+            amount: 1
+        crafting-time: 440
+        conditions:
+        - 'level{level=60}'
+        - 'class{list=MAGO}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=WISOUL,amount=45,display="Esencia de Mago"}
+        - mmoitem{type=WAND,id=IV_LIFEENDERWAND,amount=1}
+        - mmoitem{type=WAND,id=IV_AQUAWAND,amount=1}
+    wizard-wand6:
+        output:
+            type: WAND
+            id: VI_BEEWAND
+            amount: 1
+        crafting-time: 550
+        conditions:
+        - 'level{level=70}'
+        - 'class{list=MAGO}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=WISOUL,amount=55,display="Esencia de Mago"}
+        - mmoitem{type=WAND,id=V_OCEANWAND,amount=2}

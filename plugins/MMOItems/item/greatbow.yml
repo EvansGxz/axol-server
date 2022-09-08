@@ -1,0 +1,129 @@
+II_HEAVYGREATBOW:
+  base:
+    material: BOW
+    name: '&aArco Grande'
+    attack-damage:
+      base: 9.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-power:
+      base: 3.5
+      scale: 0.02
+      spread: 0.05
+    critical-strike-chance:
+      base: 4.0
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    arrow-velocity:
+      base: 1.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    projectile-damage:
+      base: 2.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    tier: UNCOMMON
+    max-durability: 3200.0
+    required-level: 15.0
+    required-class:
+    - CAZADOR
+III_WARBOW:
+  base:
+    material: BOW
+    name: '<#3498DB>Apolo'
+    attack-damage:
+      base: 12.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-chance:
+      base: 4.75
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-power:
+      base: 4.25
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    arrow-velocity:
+      base: 1.25
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    projectile-damage:
+      base: 2.5
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    element:
+      ice:
+        damage:
+          base: 15.0
+          scale: 0.0
+          spread: 0.02
+          max-spread: 0.06
+    tier: RARE
+    max-durability: 4500.0
+    ability:
+      ability1:
+        type: STUN
+        duration: 5.0
+        cooldown: 10.0
+        mana: 5.0
+        mode: ON_HIT
+IV_PLANETARYGREATBOW:
+  base:
+    material: BOW
+    name: '<#5B2C6F>Iris'
+    attack-damage:
+      base: 13.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-chance:
+      base: 6.0
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-power:
+      base: 5.5
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    arrow-velocity:
+      base: 1.5
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    projectile-damage:
+      base: 4.25
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    pvp-damage:
+      base: 3.25
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    tier: EPIC
+    element:
+      wind:
+        damage:
+          base: 12.0
+          scale: 0.0
+          spread: 0.02
+          max-spread: 0.06
+    max-durability: 6000.0
+    ability:
+      ability1:
+        type: SHOCKWAVE
+        mode: ON_HIT
+        mana: 10.0
+        cooldown: 10.0
+        length: 4.0
+        knock-up: 2.0

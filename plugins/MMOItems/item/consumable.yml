@@ -1,30 +1,22 @@
 SANDWITCH:
   base:
     material: BREAD
-    name: '&cSand&6witch'
+    name: '&6Bruja de &cArena'
     effects:
       POISON:
         duration: 10
         amplifier: 2
     lore:
-      - '&7Are you really that hungry?!'
+    - '&7¿De verdad tienes tanta hambre?!'
     item-cooldown: 15
     restore-food: 5.0
-A_BIG_CARROT:
-  base:
-    material: CARROT
-    lore:
-      - '&7&oThere will always be carrot left'
-    disable-right-click-consume: true
-    vanilla-eating: true
-    restore-food: 1.0
 ROCK:
   base:
     material: COBBLESTONE
-    name: '&fRock'
+    name: '&fRoca'
     lore:
-      - '&7Use it to sharpen your weapons,'
-      - '&7or &ndamage&7 your enemies.'
+    - '&7Úselo para afilar sus armas,'
+    - '&7o &ndañar&7 a tus enemigos.'
     tier: TRASH
     item-cooldown: 3
     repair: 3.0
@@ -37,29 +29,29 @@ ROCK:
 SCROLL_OF_IDENTIFICATION:
   base:
     material: PAPER
-    name: '&fScroll of Identification'
+    name: '&fPergamino de identificación'
     tier: UNCOMMON
     can-identify: true
     crafting:
       shaped:
         '1':
-          - AIR AIR AIR
-          - PAPER DIAMOND PAPER
-          - AIR AIR AIR
+        - AIR AIR AIR
+        - PAPER DIAMOND PAPER
+        - AIR AIR AIR
     inedible: true
 ITEM_CRUSHER:
   base:
     material: IRON_AXE
     required-level: 3.0
     can-deconstruct: true
-    name: '&f&lItem Crusher'
+    name: '&f&lTrituradora de artículos'
 RECALL_POTION:
   base:
     material: POTION
     hide-potion-effects: true
-    name: '&9Recall Potion'
+    name: '&9Poción de recuperación'
     lore:
-      - '&7Brings you back home.'
+    - '&7Te trae de vuelta a casa.'
     potion-color: 100 100 255
     commands:
       '1':
@@ -78,7 +70,7 @@ FIREBALL_SCROLL:
         damage: 5.0
         cooldown: 0.0
         ignite: 3.0
-    name: '&cFireball Scroll I'
+    name: '&cPergamino de bola de fuego I'
 FIREBALL_SCROLL_II:
   base:
     material: PAPER
@@ -92,7 +84,7 @@ FIREBALL_SCROLL_II:
         damage: 10.0
         cooldown: 0.0
         ignite: 5.0
-    name: '&cFireball Scroll II'
+    name: '&cPergamino de bola de fuego II'
 FIREBALL_SCROLL_III:
   base:
     material: PAPER
@@ -106,12 +98,12 @@ FIREBALL_SCROLL_III:
         damage: 15.0
         cooldown: 0.0
         ignite: 7.0
-    name: '&cFireball Scroll III'
+    name: '&cPergamino de bola de fuego III'
 APPLE_OF_DISCORD:
   base:
     material: GOLDEN_APPLE
     durability: 1.0
-    name: '&6[ Apple of Discord ]'
+    name: '&6[ Manzana de la discordia ]'
     required-level: 4.0
     item-cooldown: 50.0
     effects:
@@ -130,15 +122,15 @@ APPLE_OF_DISCORD:
 SHARP_FLINT:
   base:
     material: FLINT
-    name: '&fSharp Flint'
+    name: '&fPedernal afilado'
     tier: COMMON
     repair: 20.0
 DEATH_STEW:
   base:
     material: MUSHROOM_STEW
-    name: '&fDeath Soup'
+    name: '&fSopa de muerte'
     lore:
-      - '&8&oDon''t you dare drinking that...'
+    - '&8&oNo te atreves a beber eso...'
     tier: UNIQUE
     effects:
       HARM:
@@ -152,7 +144,7 @@ KARTOFFELSALAT:
     restore-stamina: 10.0
     item-cooldown: 30.0
     lore:
-      - '&7Very punchy, yet hard to finish.'
+    - '&7Muy contundente, pero difícil de terminar.'
     restore-food: 3.0
     restore-saturation: 10.0
 LARGE_HEALTH_POTION:
@@ -164,7 +156,7 @@ LARGE_HEALTH_POTION:
     name: '&fLarge Health Potion'
     item-cooldown: 10.0
     sounds:
-      on-consume: entity.generic.drink
+      on-consume: ENTITY_GENERIC_DRINK
     restore-health: 10.0
 LARGE_MANA_POTION:
   base:
@@ -179,7 +171,7 @@ LARGE_MANA_POTION:
       max-spread: 0.13
     item-cooldown: 15.0
     sounds:
-      on-consume: entity.generic.drink
+      on-consume: ENTITY_GENERIC_DRINK
 TACO:
   base:
     material: PLAYER_HEAD
@@ -189,7 +181,7 @@ TACO:
     name: '&fTaco'
     item-cooldown: 2.0
     lore:
-      - '&7&oA hot & tasty taco!'
+    - '&7&oUn caliente y rico taco!'
     restore-health: 3.0
     restore-food: 8.0
     restore-saturation: 10.0
@@ -203,7 +195,7 @@ BURGER:
     restore-stamina: 30.0
     name: '&fTasty Burger'
     lore:
-      - '&7&oMmmmh, yummy!'
+    - '&7&oMmmmh, rico!'
     restore-health: 4.0
     restore-food: 10.0
     restore-saturation: 9.0
@@ -213,7 +205,7 @@ WEIRD_CANDY_BAG:
     skull-texture:
       value: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODdmNTA0Y2RiZjViMjExMjFiODIxODUyOGRjZTU2NzUwNWQ0NTY3ZDdlNzJjZDQzYTQ2M2NkNTFjODAxM2E2In19fQ==
       uuid: efdf121e-209f-49a2-9c56-d0bf058f33ae
-    name: '&9Weird Candy Bag'
+    name: '&9Bolsa de caramelos extraña'
     item-cooldown: 3.0
     effects:
       CONFUSION:
@@ -228,8 +220,7 @@ SUSHI_ROLL:
       uuid: b7c55ea2-d4cc-467e-85c7-dd8052c1675b
     name: '&fSushi Roll'
     lore:
-      - '&7&oSushis are leggit the'
-      - '&7&obest food on Earth.'
+    - '&7&oMejor comida en el mundo.'
     item-cooldown: 0.5
     effects:
       SPEED:
@@ -241,42 +232,42 @@ SUSHI_ROLL:
 SOULBINDER1:
   base:
     material: ENDER_EYE
-    name: '&fApprentice Soulbinder'
+    name: '&fAprendiz vinculador de almas'
     disable-interaction: true
     soulbound-level: 1.0
     soulbinding-chance: 70.0
 SOULCRUSHER1:
   base:
     material: ENDER_PEARL
-    name: '&fNovice Soulcrusher'
+    name: '&fTriturador de almas novato'
     disable-interaction: true
     soulbound-level: 1.0
     soulbound-break-chance: 30.0
 SOULBINDER2:
   base:
     material: ENDER_EYE
-    name: '&fIntermediate Soulbinder'
+    name: '&fVinculador de almas intermedio'
     disable-interaction: true
     soulbound-level: 2.0
     soulbinding-chance: 80.0
 SOULCRUSHER2:
   base:
     material: ENDER_PEARL
-    name: '&fIntermediate Soulcrusher'
+    name: '&fRompealmas intermedio'
     disable-interaction: true
     soulbound-level: 2.0
     soulbound-break-chance: 40.0
 SOULBINDER3:
   base:
     material: ENDER_EYE
-    name: '&fArcane Soulbinder'
+    name: '&fVinculador de almas Arcano'
     disable-interaction: true
     soulbound-level: 3.0
     soulbinding-chance: 90.0
 SOULCRUSHER3:
   base:
     material: ENDER_PEARL
-    name: '&fArcane Soulcrusher'
+    name: '&fTriturador de almas Arcane'
     disable-interaction: true
     soulbound-level: 3.0
     soulbound-break-chance: 50.0
@@ -293,9 +284,9 @@ SANTA_COOKIE:
     material: COOKIE
     name: '&cS&fa&cn&ft&ca''&fs &cC&fo&co&fk&ci&fe'
     lore:
-      - '&7&oWhere are the darn cookies!'
+    - '&7&oDonde están mis galletas!'
     sounds:
-      on-consume: entity.player.burp
+      on-consume: ENTITY_PLAYER_BURP
     item-cooldown: 2.0
     effects:
       SPEED:
@@ -314,9 +305,9 @@ ENDER_NOTE:
     name: '&5Ender Tome'
     item-cooldown: 180
     sounds:
-      on-consume: entity.enderman.teleport
+      on-consume: ENTITY_ENDERMAN_TELEPORT
     lore:
-      - '&7Teleports you &5miles&7 away.'
+    - '&7Te teletransporta a &5millas&7 de distancia.'
     effects:
       HARM:
         duration: 1
@@ -330,14 +321,14 @@ THROW_COAL:
         cooldown: 3.0
         damage: 3.0
         mode: RIGHT_CLICK
-    name: '&fThrowable Coal'
+    name: '&fCarbón arrojadizo'
     lore:
-      - '&fChuck them at your friends'
+    - '&fTirarlos a tus amigos'
     item-cooldown: 3.0
 EGGNOG:
   base:
     material: EGG
-    name: '&6Eggnog'
+    name: '&6Ponche de huevo'
     disable-interaction: true
     item-cooldown: 3.0
     commands:
@@ -345,20 +336,20 @@ EGGNOG:
         format: me Mmmmmh!
         cooldown: 3.0
     lore:
-      - '&eEarned during X-Mas 2018!'
-      - '&e&oA fresh & cold eggnog!'
+    - '&eGanado en navidad 2020!'
+    - '&e&oFresco & frio ponche de huevo!'
     crafting:
       shapeless:
         '1':
-          - EGG
-          - SUGAR
-          - AIR
-          - AIR
-          - AIR
-          - AIR
-          - AIR
-          - AIR
-          - AIR
+        - EGG
+        - SUGAR
+        - AIR
+        - AIR
+        - AIR
+        - AIR
+        - AIR
+        - AIR
+        - AIR
     restore-health: 2.0
     restore-food: 2.0
     restore-saturation: 4.0
@@ -371,7 +362,7 @@ MANGO:
       uuid: 1c6aa7d0-582e-4111-8376-74a2a2f74a58
     tier: COMMON
     lore:
-      - '&7&oSweet and sour, hmm. Perfect combination'
+    - '&7&oDulce y agrio, hmm. Combinación perfecta'
     effects:
       REGENERATION:
         duration: 20
@@ -379,27 +370,328 @@ MANGO:
     vanilla-eating: false
     restore-food: 8
     restore-saturation: 10
-RECALL_STAR:
+TOTEM_MANA:
+  base:
+    material: POTION
+    name: '&1Totem De Mana'
+    restore-mana: 150.0
+    item-cooldown: 180.0
+    hide-potion-effects: true
+    required-level: 3.0
+    lore:
+    - '&6&lLK Industries'
+TOTEM_VIDA:
+  base:
+    material: POTION
+    name: '&2Totem De La Vida'
+    restore-health: 150.0
+    hide-potion-effects: true
+    restore-saturation: 10.0
+    required-level: 3.0
+    item-cooldown: 180.0
+    potion-effects:
+      INCREASE_DAMAGE: 30.0,2
+    lore:
+    - '&6&lLK Industries'
+base:
+  material: APPLE
+II_STAMINAPOTION:
+  base:
+    material: POTION
+    name: '&aStamina Potion'
+    restore-stamina:
+      base: 65.0
+      spread: 0.03
+      max-spread: 0.06
+    item-cooldown: 3.0
+    tier: UNCOMMON
+II_MANAPOTION:
+  base:
+    material: POTION
+    name: '&aMana Potion'
+    restore-mana:
+      base: 40.0
+      spread: 0.03
+      max-spread: 0.06
+    item-cooldown: 3.0
+    tier: UNCOMMON
+II_REPLENISHINGBREAD:
+  base:
+    material: BREAD
+    name: '&aReplenishing Bread'
+    restore-food:
+      base: 6.0
+      spread: 0.03
+      max-spread: 0.06
+    restore-saturation: 12.0
+    item-cooldown: 0.5
+    tier: COMMON
+II_POWERFULRECHARGE:
   base:
     material: NETHER_STAR
-    name: §f§lRecall Star
+    name: '&aPowerful Recharge'
+    restore-food:
+      base: 8.0
+      spread: 0.03
+      max-spread: 0.06
+    restore-mana:
+      base: 55.0
+      spread: 0.03
+      max-spread: 0.06
+    restore-stamina:
+      base: 75.0
+      spread: 0.03
+      max-spread: 0.06
+    tier: RARE
+    restore-saturation: 12.0
+    item-cooldown: 30.0
+    disable-crafting: true
+ULTIMO_ALIENTO:
+  base:
+    material: ENCHANTED_GOLDEN_APPLE
+    name: '&e&lUltimo Aliento'
     lore:
-      - §aExecuted §2/spawn§a when right-clicked.
-      - §bOtherwise, you could §9identify§b items with it.
-    max-consume: 5.0
-    can-identify: true
-    tier: EPIC
+    - '&4&lMade by Dwz'
+    required-level: 1.0
+    item-cooldown: 5.0
+    effects:
+      ABSORPTION:
+        duration: 5.0
+        amplifier: 20.0
+      SPEED:
+        duration: 5.0
+        amplifier: 5.0
+      NIGHT_VISION:
+        duration: 60.0
+        amplifier: 1.0
+      GLOWING:
+        duration: 15.0
+        amplifier: 15.0
+CHUTE:
+  base:
+    material: POTION
+    potion-color: 15 0 130
     commands:
       cmd0:
-        format: spawn
+        format: effect clear
         delay: 0.0
-        op: true
-    item-cooldown: 5.0
-GEM_REMOVER:
-  base:
-    material: SHEARS
+    name: '&3Pildora &2Escarlata &4Carmesi'
     lore:
-      - §7Removes a random gem applied on any item.
-    name: §6Gem Remover
+    - '&3'
+    - '&6Poderosa pildora capaz de remover todos los efectos'
+    - '&6en el cuerpo de uno, al instante'
+    - '&6&lLK Industries'
+    unstackable: true
+FEED:
+  base:
+    material: BLAZE_ROD
+    commands:
+      cmd0:
+        format: feed
+        delay: 0.0
+    max-consume: 6.0
+    name: '&3Set De Comida Portatil'
+    lore:
+    - '&6Comida portatil que se puede llevar'
+    - '&6y adaptarse a cualquier entorno'
+    - '&6&lLK Industries'
+MAXVIDA:
+  base:
+    material: APPLE
+    name: '&1Cacique Cristalino'
+    lore:
+    - '&6Fruta que al ser consumida, le otorgara, mas puntos'
+    - '&6de vida por un lapso de tiempo'
+    - '&6&lLK Industries'
+    effects:
+      HEALTH_BOOST:
+        duration: 15.0
+        amplifier: 2.0
+MAXVIDA2:
+  base:
+    material: GOLDEN_APPLE
+    name: '&6Coral Dorado Milagroso'
+    effects:
+      HEALTH_BOOST:
+        duration: 30.0
+        amplifier: 4.0
+    lore:
+    - '&6Coral encontrado en la profundidad de una cueva'
+    - '&6acuatica, que da efectos de mucha vitalidad'
+    - '&6&lLK Industries'
+MAXVIDA3:
+  base:
+    material: ENCHANTED_GOLDEN_APPLE
+    name: '&eManzana De Oro Dorado Magica'
+    effects:
+      HEALTH_BOOST:
+        duration: 60.0
+        amplifier: 6.0
+    lore:
+    - '&6Manzana creada por el mejor mago herrero de toda'
+    - '&6el antiguo continente BeePosting'
+    - '&6&lLK Industries'
+XP:
+  base:
+    material: SWEET_BERRIES
+    enchants:
+      power: 1.0
+    hide-enchants: true
+    name: '&2Bayas Melancolicas De Xp'
+    unstackable: true
+    commands:
+      cmd0:
+        format: xp give %player% 15l
+        delay: 0.0
+    disable-repairing: true
+    disable-enchanting: true
+    disable-smithing: true
+    disable-smelting: true
+    disable-crafting: true
+    max-consume: 1.0
+    lore:
+    - '&6&lLK Industries'
+GRANADACONGELANTE:
+  base:
+    material: SPLASH_POTION
+    effects:
+      SLOW:
+        duration: 10.0
+        amplifier: 10.0
+      DAMAGE_RESISTANCE:
+        duration: 10.0
+        amplifier: 10.0
+    name: '&2Berserker'
+    required-level: 40.0
+    potion-color: 75 0 130
+    hide-potion-effects: true
+    disable-repairing: true
+    disable-enchanting: true
+    disable-smithing: true
+    disable-smelting: true
+    disable-crafting: true
+    lore:
+    - '&6Inmovible como una edifico, resistente como la bedrock'
+    - '&6&lLK Industries'
+    max-consume: 2.0
+    required-class:
+    - GUERRERO
+FUERZAOP:
+  base:
+    material: APPLE
+    name: '&2Faccion De Los Asesinos'
+    effects:
+      INCREASE_DAMAGE:
+        duration: 10.0
+        amplifier: 10.0
+      BLINDNESS:
+        duration: 10.0
+        amplifier: 10.0
+    lore:
+    - '&6Cegado por su deseo asesino, obtendras la'
+    - '&6fuerza para matar a cualquiera'
+    - '&6&lLK Industries'
+    enchants:
+      power: 1.0
+    hide-enchants: true
+    required-class:
+    - ASESINO
+    required-level: 40.0
+ESCUDO:
+  base:
+    material: POTION
+    potion-color: 2 40 10
+    max-consume: 1.0
+    hide-potion-effects: true
+    ability:
+      ability1:
+        type: MAGICAL_SHIELD
+        mode: RIGHT_CLICK
+        radius: 3.0
+    name: '&2Pocion De Escudo Magico'
+    lore:
+    - '&eMagical Shield &8(Click Derecho)'
+    - '&7Invoca un escudo que soporta &340 de daño'
+    - '&7que dura &35 segundos&7, y posee un cooldown'
+    - '&7de &345 segundos'
+    - '&6&lLK Industries'
+    disable-repairing: true
+    disable-enchanting: true
+    disable-smithing: true
+    disable-smelting: true
+    disable-crafting: true
+    required-level: 10.0
+COMPASS:
+  base:
+    material: CLOCK
+    name: '&6&lOLOCAUSTO NUCLEAR'
+    ability:
+      ability1:
+        type: FIRE_METEOR
+        damage: 10000.0
+        knockback: 100.0
+        radius: 100.0
+        mode: RIGHT_CLICK
+        cooldown: 3600.0
+    item-particles:
+      particle: FLAME
+      type: DOUBLE_RINGS
+    required-level: 80.0
+    unstackable: true
+    disable-repairing: true
+    disable-enchanting: true
+    disable-smithing: true
+    disable-smelting: true
+    disable-crafting: true
     disable-interaction: true
-    random-unsocket: 1.0
+    lore:
+    - '&eMuerte Instantea &8(Click Derecho)'
+    - '&7Invoca un misil seleccionado por el puntero'
+    - '&7que hace &310000 de daño&7, consume &3350 de mana'
+    - '&7y tiene un cooldown de &31 hora.'
+    - '&6&lLK Industries'
+    max-consume: 1.0
+INVULNERABILIDAD:
+  base:
+    material: BEETROOT
+    ability:
+      ability1:
+        type: SHADOW_VEIL
+        mode: RIGHT_CLICK
+    enchants:
+      power: 1.0
+    hide-enchants: true
+    name: '&4Raices Maswood'
+    disable-crafting: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    max-consume: 1.0
+    effects:
+      SPEED:
+        duration: 5.0
+        amplifier: 3.0
+    lore:
+    - '&eAhora me ves, ahora no me ves &8(Click Derecho)'
+    - '&7Invoca una cortina de humo a tu alrededor'
+    - '&7que te hara desaparecer por &35 segundos&7,'
+    - '&7y posee un cooldown de &335 segundos.'
+    - '&6&lLK Industries'
+RANA:
+  base:
+    material: DRIED_KELP
+    name: '&1Algas Secas De Rana Cristalina'
+    ability:
+      ability1:
+        type: FROG_MODE
+        mode: RIGHT_CLICK
+        jump-force: 1.5
+        speed: 1.5
+    max-consume: 1.0
+    lore:
+    - '&eComo Una Rana &8(Click Derecho)'
+    - '&7Obtienes la habilidad de saltar en el agua'
+    - '&7como una rana, que dura &320 segundos'
+    - '&7y posee un cooldown de &350 segundos.'
+    - '&6&lLK Industries'

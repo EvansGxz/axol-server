@@ -7,18 +7,18 @@ FIRE_GREATLANCE:
       spread: 0.01
       max-spread: 0.03
     attack-speed: 1.1
-    name: '&fFire Greatlance'
+    name: '&fGran Lanza de Fuego'
     ability:
       on-hit:
         type: LIFE_ENDER
-        mode: ATTACK
+        mode: ON_HIT
         damage: 10.0
         cooldown: 30.0
     lore:
-    - '&7Every 40s in combat, casts'
-    - '&7a devastating &6fire comet'
-    - '&7that wipes out any life form'
-    - '&7nearby whenever it lands.'
+    - '&7Cada 40s en combate, castea'
+    - '&7un devastador &6cometa de fuego'
+    - '&7que aniquila cualquier forma de vida'
+    - '&7cerca cada vez que aterriza.'
     item-particles:
       type: DOUBLE_RINGS
       particle: FLAME
@@ -26,3 +26,342 @@ FIRE_GREATLANCE:
       rotation-speed: 0.4
     disable-crafting: true
     two-handed: true
+I_STARTERDRAGOONLANCE:
+  base:
+    material: DIAMOND_SWORD
+    name: '&fLanza'
+    attack-speed: 1.3
+    attack-damage:
+      base: 6.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-power:
+      base: 1.0
+      scale: 0.02
+      spread: 0.05
+    tier: COMMON
+    max-durability: 1250.0
+    required-level: 2.0
+    required-class:
+    - DRAGON
+II_REINFORCEDLANCE:
+  base:
+    material: DIAMOND_SWORD
+    name: '&aÉgida'
+    attack-speed: 1.3
+    attack-damage:
+      base: 7.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-power:
+      base: 1.0
+      scale: 0.02
+      spread: 0.05
+    critical-strike-chance:
+      base: 2.0
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    tier: UNCOMMON
+    max-durability: 3200.0
+    required-level: 12.0
+    required-class:
+    - DRAGON
+    ability:
+      ability1:
+        type: FREEZE
+        duration: 5.0
+        cooldown: 10.0
+        amplifier: 3.0
+        radius: 3.0
+        mode: ON_HIT
+    lore:
+    - '&8║ &eCongela &8&o(Al Golpear)'
+    - '&8║ &7Relentiza al objetivo &c5 segundos&7.'
+    - '&8║ &7&oEnfriamiento: &3&o10 segundos&7&o'
+III_OBSIDIANLANCE:
+  base:
+    material: DIAMOND_SWORD
+    name: '<#3498DB>Lanza Sagrada'
+    attack-damage:
+      base: 9.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    physical-damage:
+      base: 2.5
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    weapon-damage:
+      base: 1.5
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-chance:
+      base: 3.0
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-power:
+      base: 1.5
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    attack-speed: 1.3
+    tier: RARE
+    max-durability: 4500.0
+    required-level: 30.0
+    required-class:
+    - DRAGON
+    ability:
+      ability1:
+        type: STUN
+        duration: 2.0
+        cooldown: 15.0
+        mode: ON_HIT
+    lore:
+    - '&8║ &eStun &8&o(On Hit)'
+    - '&8║ &7Prevents the target from moving for &c2 seconds&7.'
+    - '&8║ &7&oCooldown: &3&o15 seconds&7&o.'
+IV_OVERWHELMINGLANCHE:
+  base:
+    material: NETHERITE_SWORD
+    name: '<#5B2C6F>Lanza de Longinus'
+    attack-damage:
+      base: 11.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    physical-damage:
+      base: 3.5
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    weapon-damage:
+      base: 2.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-chance:
+      base: 4.5
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-power:
+      base: 3.0
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    parry-rating:
+      base: 1.3
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    pvp-damage:
+      base: 1.75
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    attack-speed: 1.3
+    element:
+      thunder:
+        damage:
+          base: 12.0
+          scale: 0.0
+          spread: 0.02
+          max-spread: 0.06
+    tier: EPIC
+    max-durability: 6000.0
+    required-level: 40.0
+    required-class:
+    - DRAGON
+    ability:
+      ability1:
+        type: WITHER
+        mode: ON_HIT
+        duration: 4.0
+        amplifier: 2.0
+        cooldown: 9.0
+    lore:
+    - '&8║ &eWither &8&o(On Hit)'
+    - '&8║ &7Gives Wither II to the target entity for &c4 seconds&7.'
+    - '&8║ &7&oCooldown: &3&o9 seconds&7&o.'
+V_BEDROCKLANCE:
+  base:
+    material: NETHERITE_SWORD
+    name: '<#F39C12>Lanza Perforanubes'
+    attack-damage:
+      base: 13.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    physical-damage:
+      base: 4.5
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    weapon-damage:
+      base: 4.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-chance:
+      base: 5.5
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-power:
+      base: 5.0
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    parry-rating:
+      base: 3.25
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    pvp-damage:
+      base: 3.75
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    pve-damage:
+      base: 1.5
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    skill-damage:
+      base: 2.25
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    attack-speed: 1.3
+    tier: LEGENDARY
+    max-durability: 8500.0
+    required-level: 50.0
+    required-class:
+    - DRAGON
+    ability:
+      ability1:
+        type: IGNITE
+        duration: 40.0
+        cooldown: 7.0
+        radius: 3.0
+        max-ignite: 200.0
+        mode: ON_HIT
+      ability2:
+        type: BLACK_HOLE
+        duration: 4.0
+        mana: 20.0
+        radius: 3.0
+        cooldown: 20.0
+        mode: RIGHT_CLICK
+    lore:
+    - '&8║ &eIgnite &8&o(On Hit)'
+    - '&8║ &7Ignites the targets for &c2 seconds&7.'
+    - '&8║ &7&oCooldown: &3&o7 seconds&7&o.'
+    - '&8║ &eBlack Hole &8&o(Right Click)'
+    - '&8║ &7Creates a black hole, attracting all entities in a radius of'
+    - '&8║ &c3 blocks&7 for &c4 seconds&7.'
+    - '&8║ &7&oCooldown: &3&o20 seconds&7&o, uses &9&o20 mana&7&o.'
+VI_BEELANCE:
+  base:
+    material: GOLD_SWORD
+    name: '<#FFFF60>Halcón de <#009975>J<#3c886e>a<#507767>d<#5d6661>e'
+    attack-damage:
+      base: 15.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    physical-damage:
+      base: 6.5
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    magic-damage:
+      base: 2.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    weapon-damage:
+      base: 4.5
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-chance:
+      base: 6.75
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-power:
+      base: 6.25
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    parry-rating:
+      base: 4.25
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    pvp-damage:
+      base: 3.75
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    pve-damage:
+      base: 2.25
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    skill-damage:
+      base: 2.5
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    attack-speed: 1.65
+    tier: MYTHICAL
+    max-durability: 11000.0
+    required-level: 60.0
+    required-class:
+    - DRAGON
+    element:
+      wind:
+        damage:
+          base: 30.0
+          scale: 0.0
+          spread: 0.03
+          max-spread: 0.08
+      earth:
+        damage:
+          base: 20.0
+          scale: 0.0
+          spread: 0.03
+          max-spread: 0.08
+    ability:
+      ability1:
+        type: POISON
+        mode: ON_HIT
+        duration: 6.0
+        amplifier: 2.0
+        cooldown: 8.0
+      ability2:
+        type: FIREFLY
+        mode: RIGHT_CLICK
+        duration: 4.0
+        damage: 20.0
+        knockback: 2.0
+        cooldown: 20.0
+        mana: 15.0
+    lore:
+    - '&8║ &ePoison &8&o(On Hit)'
+    - '&8║ &7Gives Poison II to the target for &c6 seconds&7.'
+    - '&8║ &7&oCooldown: &3&o8 seconds&7&o.'
+    - '&8║ &eFirefly &8&o(Right Click)'
+    - '&8║ &7Morph into a fireball that explodes on impact'
+    - '&8║ &7dealing &c20 damage&7 and &cknocking back&7.'
+    - '&8║ &7&oCooldown: &3&o20 seconds&7&o, uses &9&o15 mana&7&o.'
+    movement-speed: 0.001
+

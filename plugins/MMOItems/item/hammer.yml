@@ -18,88 +18,58 @@ SANTAMMER:
     ability:
       on-hit:
         type: STUN
-        mode: ATTACK
+        mode: ON_HIT
         cooldown: 15.0
     lore:
-    - '&eEarned during X-Mas 2018!'
-THOR_HAMMER:
+    - '&eGanado en navidad 2020!'
+HAMMER:
   base:
-    material: IRON_AXE
-    max-durability: 80000.0
-    name: §b§lThor's Hammer
-    lore:
-      - §bUse the power of the storm!
-      - §ePlays a custom sound when attacking!
-      - §aWill not drop on death!
-    element:
-      thunder:
-        damage: 150.0
-    magic-damage:
-      base: 15.0
-      scale: 0.1
-      spread: 0.1
-      max-spread: 0.2
-    attack-speed: 1.4
-    required-level: 60.0
-    attack-damage:
-      base: 80.0
-      scale: 0.15
-      spread: 0.1
-      max-spread: 0.2
-    tier: MYTHICAL
-    stamina-cost: 15.0
-    mana-cost: 10.0
-    blunt-power: 6.0
-    blunt-rating: 75.0
-    gem-sockets:
-      - Thunder
-    sounds:
-      on-attack:
-        sound: entity.lightning_bolt.thunder
-        volume: 2.0
-        pitch: 0.2
-    enchants:
-      sharpness: 3.0
-      fire_aspect: 3.0
+    material: NETHERITE_AXE
+    name: '&eParzibal'
+    attack-damage: 60.0
+    pve-damage: 7.3
+    pvp-damage: 4.2
+    blunt-power: 3.0
+    skill-damage: 3.0
+    max-health: 15.0
+    armor: 5.0
+    two-handed: true
     ability:
       ability1:
-        type: SMITE
+        type: STUN
+        duration: 3.0
+        cooldown: 45.0
+        mode: ON_HIT
+      ability3:
+        type: SKY_SMASH
+        mode: SHIFT_RIGHT_CLICK
+        damage: 15.0
+        cooldown: 45.0
+        mana: 32.0
+      ability2:
+        type: EARTHQUAKE
+        cooldown: 35.0
+        mana: 30.0
+        damage: 10.0
         mode: RIGHT_CLICK
-        damage: 100.0
-        cooldown: 12.0
-    additional-experience: 15.0
-    unbreakable: true
-    disable-death-drop: true
-HEAVY_HAMMER:
-  base:
-    material: IRON_AXE
-    name: §7§lHeavy Hammer
-    max-durability: 3650.0
     lore:
-      - §fA very heavy hammer.
-      - §7You almost can't move, but it's
-      - §7worth it!
-    perm-effects:
-      SLOW: 4.0
-    attack-damage:
-      base: 35.0
-      scale: 0.15
-      spread: 0.1
-      max-spread: 0.2
-    critical-strike-chance:
-      base: 10.0
-      scale: 0.15
-      spread: 0.1
-      max-spread: 0.2
-    critical-strike-power:
-      base: 20.0
-      scale: 0.15
-      spread: 0.1
-      max-spread: 0.2
-    required-level: 10.0
-    required-class:
-      - Warrior
-    stamina-cost: 4.0
-    blunt-power: 5.0
-    blunt-rating: 85.0
-    tier: RARE
+    - '&eStun &8(al golpear)'
+    - '&7Al golpear a un jugador lo stunea por &33 segundos'
+    - '&7y tiene un cooldown de &345 segundos'
+    - '&eEarthquake &8(click derecho)'
+    - '&7Crea una honda en el piso haciendo &310 de daño&7 y'
+    - '&7y gasta &330 de mana&7, ademas tiene un cooldown de &345 segundos'
+    - '&eSky Mash &8(shift click derecho)'
+    - '&7Hace lanzar a su enemigo por los aires, causando &315 de daño'
+    - '&7y gasta &332 de mana&7, ademas tiene un cooldown de &345 segundos'
+    - '&6Martillo sumamente pesado, pero con la suficiente fuerza'
+    - '&6para romper craneos en solo segundos'
+    - '&6&lLK Industries'
+    movement-speed: -0.05
+    critical-strike-power: 64.0
+    critical-strike-chance: 12.0
+    attack-speed: -10.0
+    element:
+      earth:
+        damage: 23.0
+    required-level: 60.0

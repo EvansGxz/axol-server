@@ -1,12 +1,12 @@
 STEEL_INGOT:
   base:
     material: IRON_INGOT
-    name: '&fSteel Ingot'
+    name: '&fLingote de Metal'
     disable-repairing: true
     disable-crafting: true
     lore:
-      - '&7Can be used at the steel crafting'
-      - '&7station to craft advanced gear.'
+    - '&7Se puede utilizar en la elaboración de acero.'
+    - '&7estación para fabricar equipo avanzado.'
 UNCOMMON_WEAPON_ESSENCE:
   base:
     material: BLAZE_POWDER
@@ -14,14 +14,14 @@ UNCOMMON_WEAPON_ESSENCE:
       unbreaking: 1
     hide-enchants: true
     lore:
-      - '&7Can be used to craft uncommon items.'
+    - '&7Se puede usar para crear artículos poco comunes..'
     name: '&eUncommon Weapon Essence'
     disable-crafting: true
     disable-smelting: true
 WITHER_ESSENCE:
   base:
     material: BLACK_DYE
-    name: '&8Wither Essence'
+    name: '&8Escencia Wither'
     disable-crafting: true
 RARE_WEAPON_ESSENCE:
   base:
@@ -30,8 +30,8 @@ RARE_WEAPON_ESSENCE:
       unbreaking: 1
     hide-enchants: true
     lore:
-      - '&7Can be used to craft rare items.'
-    name: '&eRare Weapon Essence'
+    - '&7Se puede utilizar para crear objetos raros.'
+    name: '&eEsencia de arma rara'
     disable-crafting: true
     disable-smelting: true
 VERY_RARE_WEAPON_ESSENCE:
@@ -41,8 +41,8 @@ VERY_RARE_WEAPON_ESSENCE:
       unbreaking: 1
     hide-enchants: true
     lore:
-      - '&7Can be used to craft very rare items.'
-    name: '&eVery rare Weapon Essence'
+    - '&7Se puede utilizar para fabricar objetos muy raros.'
+    name: '&eEsencia de arma muy rara'
     disable-crafting: true
     disable-smelting: true
 LEGENDARY_WEAPON_ESSENCE:
@@ -52,8 +52,8 @@ LEGENDARY_WEAPON_ESSENCE:
       unbreaking: 1
     hide-enchants: true
     lore:
-      - '&7Can be used to craft legendary items.'
-    name: '&eLegendary Weapon Essence'
+    - '&7Se puede utilizar para crear objetos legendarios.'
+    name: '&eEsencia de arma legendaria'
     disable-crafting: true
     disable-smelting: true
 MYTHICAL_WEAPON_ESSENCE:
@@ -63,8 +63,8 @@ MYTHICAL_WEAPON_ESSENCE:
       unbreaking: 1
     hide-enchants: true
     lore:
-      - '&7Can be used to craft mythical items.'
-    name: '&eMythical Weapon Essence'
+    - '&7Se puede usar para crear artículos míticos.'
+    name: '&eEsencia de arma mítica'
     disable-crafting: true
     disable-smelting: true
 EPIC_WEAPON_ESSENCE:
@@ -74,8 +74,8 @@ EPIC_WEAPON_ESSENCE:
       unbreaking: 1
     hide-enchants: true
     lore:
-      - '&7Can be used to craft epic items.'
-    name: '&eEpic Weapon Essence'
+    - '&7Se puede usar para crear artículos épicos.'
+    name: '&eEsencia de arma épica'
     disable-crafting: true
     disable-smelting: true
 MAGICAL_WEAPON_ESSENCE:
@@ -85,8 +85,8 @@ MAGICAL_WEAPON_ESSENCE:
       unbreaking: 1
     hide-enchants: true
     lore:
-      - '&7Can be used to craft magical items.'
-    name: '&eMagical Weapon Essence'
+    - '&7Se puede utilizar para crear objetos mágicos.'
+    name: '&eEsencia de arma mágica'
     disable-crafting: true
     disable-smelting: true
 UNIQUE_WEAPON_ESSENCE:
@@ -96,54 +96,59 @@ UNIQUE_WEAPON_ESSENCE:
       unbreaking: 1
     hide-enchants: true
     lore:
-      - '&7Can be used to craft unique items.'
-    name: '&eUnique Weapon Essence'
+    - '&7Se puede usar para crear artículos únicos.'
+    name: '&eEsencia de arma única'
     disable-crafting: true
     disable-smelting: true
 WEAPON_POWDER:
   base:
     material: GUNPOWDER
     tier: TRASH
-    name: '&7Broken Weapon Powder'
+    name: '&7Pólvora de arma rota'
     lore:
-      - '&7Can be used as regular gunpowder.'
-      - '&7Obtained when deconstructing an item.'
+    - '&7Se puede utilizar como pólvora normal.'
+    - '&7Se obtiene al deconstruir un artículo.'
 MAGIC_FRAGMENT:
   base:
     material: MAGENTA_DYE
     disable-crafting: true
     tier: RARE
-    name: '&8Magic Fragment'
+    name: '&8Fragmento mágico'
 MAGIC_ESSENCE:
   base:
     material: BOOK
     disable-crafting: true
     tier: RARE
-    name: '&5Magic Essence'
+    name: '&5Esencia mágica'
 FIRE_ESSENCE:
   base:
     material: BLAZE_POWDER
     disable-crafting: true
-    name: '&bFire Essence'
+    name: '&bEsencia de fuego'
     hide-enchants: true
     enchants:
       unbreaking: 1
     crafting:
-      shaped: { }
+      shaped:
+        '1':
+        - BLAZE_POWDER BLAZE_POWDER BLAZE_POWDER
+        - BLAZE_POWDER BLAZE_ROD BLAZE_POWDER
+        - BLAZE_POWDER BLAZE_POWDER BLAZE_POWDER
 RARE_DIAMOND:
   base:
-    material: DIAMOND
+    material: IRON_INGOT
     enchants:
       unbreaking: 1
     hide-enchants: true
     disable-crafting: true
-    name: '&bRare Diamond'
+    name: '&bDiamante Raro'
+    custom-model-data: 283.0
 SILVER_COIN:
   base:
     material: IRON_NUGGET
-    name: '&fSilver Coin'
+    name: '&fMoneda de Plata'
     lore:
-      - '&7A very shiny silver coin.'
+    - '&7Una moneda de plata muy brillante.'
     enchants:
       unbreaking: 1
     hide-enchants: true
@@ -151,9 +156,9 @@ SILVER_COIN:
 SILVER_INGOT:
   base:
     material: IRON_INGOT
-    name: '&fSilver Ingot'
+    name: '&fLingo de Plata'
     lore:
-      - '&7A very shiny silver ingot.'
+    - '&7Un lingote de plata muy brillante.'
     enchants:
       unbreaking: 1
     hide-enchants: true
@@ -161,29 +166,122 @@ SILVER_INGOT:
     crafting:
       shaped:
         '1':
-          - MATERIAL.SILVER_COIN MATERIAL.SILVER_COIN MATERIAL.SILVER_COIN
-          - MATERIAL.SILVER_COIN MATERIAL.SILVER_COIN MATERIAL.SILVER_COIN
-          - MATERIAL.SILVER_COIN MATERIAL.SILVER_COIN MATERIAL.SILVER_COIN
-RESTORATION_GEM:
-  base:
-    material: EMERALD
-    name: §a§lRestoration Gem
-    lore:
-      - §7This gem can be used to repair magic items.
-    tier: UNCOMMON
-ITEM_UPGRADER:
+        - MATERIAL.SILVER_COIN MATERIAL.SILVER_COIN MATERIAL.SILVER_COIN
+        - MATERIAL.SILVER_COIN MATERIAL.SILVER_COIN MATERIAL.SILVER_COIN
+        - MATERIAL.SILVER_COIN MATERIAL.SILVER_COIN MATERIAL.SILVER_COIN
+S:
   base:
     material: PAPER
-    name: §fUniversal Item Upgrader
-    lore:
-      - §7§oThis blueprint can upgrade any weapon.
-    tier: RARE
-DARK_NETHERITE:
+FLECHAC:
   base:
-    material: NETHERITE_INGOT
-    name: §cDark Netherite
+    material: IRON_INGOT
+    name: '&fLingote de DarkSilver'
     lore:
-      - §cNetherite, but darker.
-      - §eCan be used in a smithing table
-      - §ewith netherite items.
+    - '&7Crea Equipamientos de &2Cazador &7con esta esencia.'
+    custom-model-data: 385.0
+HSOUL:
+  base:
+    material: DIAMOND
+    name: '&fEsencia de &2cazador'
+    custom-model-data: 329.0
+    required-level: 0.0
+ASOUL:
+  base:
+    material: DIAMOND
+    custom-model-data: 327.0
+    name: '&fEsencia de &easesino'
+DSOUL:
+  base:
+    material: DIAMOND
+    custom-model-data: 326.0
+    name: '&fEsencia de &7dragón'
+NSOUL:
+  base:
+    material: DIAMOND
+    custom-model-data: 328.0
+    name: '&fEsencia de &bnigromante'
+WASOUL:
+  base:
+    material: DIAMOND
+    custom-model-data: 330.0
+    name: '&fEsencia de &cGuerrero'
+WISOUL:
+  base:
+    material: DIAMOND
+    name: '&fEsencia de &6mago'
+GEMAS:
+  base:
+    material: PAPER
+    enchants:
+      power: 1.0
+    hide-enchants: true
+    name: '&5&oPapel De Consolidacion De Joyas'
+    lore:
+    - '&6Papel creado solo para la creacion de joyas'
+    - '&6&lLK Industries'
+    unstackable: true
+HIELO:
+  base:
+    material: PRISMARINE_SHARD
+    name: §1Dientes De ColosalWater
+    disable-repairing: true
+    disable-smithing: true
+    disable-smelting: true
+    disable-crafting: true
+    disable-interaction: true
+    enchants:
+      power: 1.0
+    hide-enchants: true
+    tier: VERY_RARE
+    lore:
+    - §6Poderosos dientes con un filo
+    - §6comparados al de un diamante.
+CRISTALS:
+  base:
+    material: PRISMARINE_CRYSTALS
+    name: §2Hierro Fundido Del Mar Profundo
+    tier: VERY_RARE
+    lore:
+    - §6Hierro fundido bajo las profundidades
+    - §6del mar profundo, donde incontables almas
+    - §6vagan tristemente.
+LOOTARAÑA:
+  base:
+    material: FERMENTED_SPIDER_EYE
+    name: '&7Cornia De Araña'
+    lore:
+    - '&8Ojo de una araña venenosa'
+    - '&8que se usa para espantar vampiros'
+    tier: COMMON
+LOOTARAÑA2:
+  base:
+    material: COBWEB
+    name: '&7Seda De Araña'
+    lore:
+    - '&8Resistente y economico hilo'
+    - '&8que se usa para crear armaduras ligeras'
+    tier: COMMON
+LOOTVAMP:
+  base:
+    material: IRON_NUGGET
+    name: '&9Colmillo De Vampiro'
+    lore:
+    - '&8Este vampiro tenia mala higiene dental'
+    tier: COMMON
+PIEL_DE_CONEJO_SALVAJE:
+  base:
+    material: RABBIT_HIDE
+    name: §2Piel De Conejo Salvaje
+    tier: COMMON
+    lore:
+    - §7Piel resistente y suave
+LOOTVAMP2:
+  base:
+    material: GOLD_NUGGET
+    name: §eColmillo De Vampiro Magico
+    enchants:
+      power: 1.0
+    hide-enchants: true
     tier: RARE
+    lore:
+    - §7Colmillo con gran cantidad de poder magico
