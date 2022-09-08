@@ -1,0 +1,27 @@
+mythicmobs-skill-id: Necromancer_ShadowDart
+
+name: Shadow Dart
+lore:
+- 'Shoot a dart of dark energy'
+- 'toward the enemy dealing &4{damage} &7shadow'
+- 'damage if it hits. Has a &e33% &7chance to'
+- 'apply the Wicked debuff on hit'
+- 'Costs &9{mana} &7mana | &e{cooldown}s &7Cooldown'
+material: BLACK_DYE
+
+mana:
+    base: 2.0
+    per-level: 0.5
+    max: 100.0
+    min: 2.0
+cooldown:
+    base: 5.95
+    per-level: -0.05
+    max: 6.0
+    min: 1.5
+damage:
+    base: 16.0
+    per-level: 4.0
+    max: 1000.0
+    min: 16.0
+    

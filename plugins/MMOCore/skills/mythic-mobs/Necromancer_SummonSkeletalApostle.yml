@@ -1,0 +1,42 @@
+mythicmobs-skill-id: Necromancer_SummonSkeletalApostle
+
+name: Skel Apostle
+lore:
+- 'Raise a skeletal apostle'
+- 'from the dead with &c{health} &7life'
+- 'dealing &4{damage} &7light damage'
+- 'It heals the necromancer &a{healing} &7life'
+- 'every &e{healingtime} &7seconds'
+- 'Costs &9{mana} &7mana | &e{cooldown}s &7Cooldown'
+material: SKELETON_SKULL
+
+mana:
+    base: 10.0
+    per-level: 2.0
+    max: 1000.0
+    min: 10.0
+cooldown:
+    base: 29.9
+    per-level: -0.1
+    max: 30.0
+    min: 20.0
+healing:
+    base: 2.0
+    per-level: 0.5
+    max: 100.0
+    min: 2.0
+healingtime:
+    base: 9.95
+    per-level: -0.05
+    max: 10.0
+    min: 5.0
+health:
+    base: 25.0
+    per-level: 2.5
+    max: 500.0
+    min: 20.0
+damage:
+    base: 1.0
+    per-level: 0.25
+    max: 30.0
+    min: 1.0

@@ -1,29 +1,28 @@
 display:
-    name: '&c&l&oGUERRERO'
+    name: '&6&l&oDRAGOON'
     lore:
-    - '&8╔═══ &c&l&nCLASE GUERRERO&8 ═══════'
-    - '&8║ &7La clase Guerrero se enfoca en'
-    - '&8║ &7repartir &cgran daño&7 cuerpo-cuerpo.'
-    - '&8║ &7Esta &cpoderosa clase &7te permite estar'
-    - '&8║ &7en la linea frontal y ser el &cdaño&7 principal'
-    - '&8║ &7para tus aliados!'
-    - '&8╠ &c&l&nESTILO DE JUEGO'
-    - '&8╠ &7Tipo: &c&lCUERPO-CUERPO'
-    - '&8║ &7Daño:        &a&l✦✦✦✦&c✧'
+    - '&8╔═══ &6&l&nCLASE DRAGOON&8 ═══════'
+    - '&8║ &7La clase dragoon es muy &6versatil'
+    - '&8║ &7y puede ser útil en &6toda&7 situación.'
+    - '&8║ &7Con su estilo de juego mixto entre'
+    - '&8║ &7rango y cuerpo-cuerpo, es bueno'
+    - '&8║ &7para ir contra cualquier enemigo!'
+    - '&8╠ &6&l&nESTILO DE JUEGO'
+    - '&8╠ &7Tipo: &6&lMIXTO'
+    - '&8║ &7Daño:        &a&l✦✦✦&c✧✧'
     - '&8║ &7Utilidad:     &a&l✦✦✦&c✧✧'
-    - '&8║ &7Movilidad:   &a&l✦&c✧✧✧✧'
+    - '&8║ &7Movilidad:   &a&l✦✦&c✧✧✧'
     - '&8║ &7Tenacidad: &a&l✦✦✦✦&c✧'
-    - '&8╠ &c&l&nTIPO DE ENERGIA'
-    - '&8║ &7Esta clase utiliza &cfuria&7 para'
+    - '&8╠ &6&l&nTIPO DE ENERGIA'
+    - '&8║ &7Esta clase usa &6estamina&7 para'
     - '&8║ &7usar destrezas y habilidades.'
-    - '&8║ &7Decae con el tiempo y se regenera'
-    - '&8║ &cluchando.'
-    - '&8╠ &c&l&nHABILIDADES'
-    - '&8║ &7Nivel 1: &cFuego Berserker'
-    - '&8║ &7Nivel 15: &cTormenta Ardiente'
-    - '&8║ &7Nivel 30: &cFuria Ardiente'
-    - '&8╚═══ &c&l&nCLASE GUERRERO&8 ═══════'
-    item: DIAMOND_SWORD:79 # Supports custom model data/texture by durability
+    - '&8║ &7Se regenera con el tiempo.'
+    - '&8╠ &6&l&nHABILIDADES'
+    - '&8║ &7Nivel 1: &6Regalo de Neptuno'
+    - '&8║ &7Nivel 15: &6Curación Mayor'
+    - '&8║ &7Nivel 30: &6Herida Profunda'
+    - '&8╚═══ &6&l&nCLASE DRAGOON&8 ═══════'
+    item: DIAMOND_AXE:1 # Supports custom model data/texture by durability
 
 # Must match an existing exp curve filename from the 'expcurves' folder
 exp-curve: levels
@@ -40,25 +39,20 @@ max-level: 100
 # 'icon' is the icon display on the player action bar
 # 'name' is basically displayed everywhere
 mana:
-    char: ♦
-    icon: '&4♦'
+    char: ■
+    icon: '&9⭐'
     color:
-        full: DARK_RED
-        half: RED
+        full: AQUA
+        half: BLUE
         empty: WHITE
-    name: 'Rage'
+    name: 'Mana'
 
-# Rage charges when dealing weapon and physical damage.
 triggers:
-    weapon-damage:
-    - 'mana{operation=GIVE;amount=2-3}'
-    physical-damage:
-    - 'mana{operation=GIVE;amount=2-3}'
-    
     level-up:
     - 'command{format="mmocore admin skill-points give %player% 1"}'
     - 'mmskill{id=N_LevelUp}'
     - 'command{format="mmocore admin attribute-points give %player% 1"}'
+# Rage charges when dealing weapon and physical damage.
 
 cast-particle:
     particle: REDSTONE
@@ -72,67 +66,67 @@ options:
     off-combat-mana-regen: true
 
 skills:
-    FIRE_BERSERKER:
+    NEPTUNE_GIFT:
         level: 1
         max-level: 30
-    FIRE_STORM:
+    GREATER_HEALINGS:
         level: 15
         max-level: 30
-    FIRE_RAGE:
+    DEEP_WOUND:
         level: 30
         max-level: 30
     
 attributes:
     mana-regeneration:
-        base: -1.0
-        per-level: 0
+        base: 0.3
+        per-level: 0.89
     max-mana:
-        base: 20
-        per-level: .5
+        base: 33
+        per-level: 2
     max-stamina:
-        base: 25
-        per-level: 0.25
+        base: 20
+        per-level: 0.12
     stamina-regeneration:
-        base: 0.2
-        per-level: 0.01
+        base: 0.12
+        per-level: 0
     armor:
-        base: 1
-        per-level: 0.75
+        base: 3.0
+        per-level: 0.1
     armor-toughness:
         base: 1.0
         per-level: 0
     health-regeneration:
-        base: 0.5
-        per-level: 0.03
-    max-health:
-        base: 30
-        per-level: 0.15
-    movement-speed:
-        base: .105
-        per-level: 0.0001
-    weapon-damage:
-        base: 2.0
-        per-level: 0.5 
-    physical-damage:
-        base: 5
+        base: 0.25
         per-level: 0.2
-    magic-damage:
-        base: -30.0
-        per-level: 0
-    skill-damage:
-        base: 5.0
-        per-level: 0.25
-    cooldown-reduction:
+    max-health:
+        base: 45
+        per-level: 0.35
+    movement-speed:
+        base: .095
+        per-level: 0.00001
+    weapon-damage:
+        base: 0.0
+        per-level: 0.50
+    physical-damage:
         base: 0.0
         per-level: 0.0
+    magic-damage:
+        base: 0.0
+        per-level: 0
+    skill-damage:
+        base: 0.0
+        per-level: 0.15
+    cooldown-reduction:
+        base: 1.0
+        per-level: 0.0
     attack-damage:
-        base: 1.5
+        base: 1.0
         per-level: 0.02
     projectile-damage:
-        base: -10.0
+        base: 0.0
         per-level: 0.0
     attack-speed:
-        base: 4.15
+        base: 4.0
         per-level: 0
 
 # Experience sources for main class experience.

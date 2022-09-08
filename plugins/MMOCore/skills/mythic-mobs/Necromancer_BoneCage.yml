@@ -1,0 +1,29 @@
+mythicmobs-skill-id: Necromancer_BoneCage
+
+name: Bone Cage
+lore:
+- 'Summon bones at the target location'
+- 'rooting enemies in place for &e{duration} &7seconds'
+- 'Costs &9{mana} &7mana | &e{cooldown}s &7Cooldown'
+material: BONE_MEAL
+
+mana:
+    base: 3.0
+    per-level: 0.6
+    max: 250.0
+    min: 3.0
+cooldown:
+    base: 29.9
+    per-level: -0.1
+    max: 30.0
+    min: 20.0
+duration:
+    base: 3.05
+    per-level: 0.05
+    max: 8.0
+    min: 2.0
+radius:
+    base: 5.05
+    per-level: 0.05
+    max: 10.0
+    min: 5.0

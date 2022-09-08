@@ -1,5 +1,5 @@
 # GUI display name
-name: '&eCurrent Skill Tree: &6{skill-tree-name}'
+name: '&eArbol de habilidad actual: &6{skill-tree-name}'
 
 # Number of slots in your inventory. Must be
 # between 9 and 54 and must be a multiple of 9.
@@ -12,20 +12,20 @@ items:
     slots: [9,18,27]
     lore:
       - ''
-      - '&aDescription:'
+      - '&aDescripción:'
       - '{tree-lore}'
       - ''
       - '--------------------'
-      - '&e◆Current {name} &epoints: &6{skill-tree-points}'
-      - '&e◆Current Global points: &6{global-points}'
+      - '&e◆Puntos actuales de &b{name}: &6{skill-tree-points}'
+      - '&e◆Puntos globales actuales: &6{global-points}'
 
   next-tree-list-page:
-    function: 'next-tree-list-page'
+    function: 'Siguiente'
     item: ARROW
     slots: [ 36 ]
 
   previous-tree-list-page:
-    function: 'previous-tree-list-page'
+    function: 'Anterior'
     item: 'ARROW'
     slots: [ 0 ]
 
@@ -33,14 +33,14 @@ items:
     function: reallocation
     item: CAULDRON
     slots: [45]
-    name: '&aReallocate Skill Tree Points'
+    name: '&aRedistribuír puntos de habilidad de árbol'
     lore:
       - ''
-      - 'You have spent a total of &6{total}&7 skill tree points.'
-      - '&7Right click to reallocate them.'
+      - 'Has gastado un total de &6{total}&7 puntos.'
+      - '&7Clic derecho para redistribuirlos.'
       - ''
-      - '&eCosts 1 attribute reallocation point.'
-      - '&e◆ Skill Tree Reallocation Points: &6{realloc-points}'
+      - '&eCosto: &61 &epunto de redistribuición.'
+      - '&e◆ Puntos de redistribuición de habilidad: &6{realloc-points}'
 
   skill-tree-node:
 
@@ -48,21 +48,21 @@ items:
     slots: [2,3,4,5,6,7,8,11,12,13,14,15,16,17,20,21,22,23,24,25,26,29,30,31,32,33,34,35,38,39,40,41,42,43,44]
     #The lore that will be displayed after the lore of the node
     lore:
-      - '&7Current State: &6{current-state}'
-      - '&7Current Level: &6{current-level}'
-      - '&7Max Level: &6{max-level}'
-      - '&7Max Children: &6{max-children}'
-      - '&7Size: &6{size}'
+      - '&7Estado Actual: &6{current-state}'
+      - '&7Nivel Actual: &6{current-level}'
+      - '&7Nivel Máximo: &6{max-level}'
+      - '&7Nodos Máximos: &6{max-children}'
+      - '&7Tamaño: &6{size}'
       - '--------------------'
-      - '&7⧆ &6Requirements: '
-      - '&fStrong Parents: '
+      - '&7⧆ &6Requerimientos: '
+      - '&fNodo Mayor: '
       - '{strong-parents}'
       - ''
-      - '&fSoft Parents: '
+      - '&fNodo Menor: '
       - '{soft-parents}'
       - '--------------------'
       - '{node-lore}'
       - '--------------------'
-      - '&eCurrent {skill-tree} &epoints: &6{skill-tree-points}'
-      - '&eCurrent global points: &6{global-points}'
+      - '&e{skill-tree-points} &epuntos de: &6{skill-tree}'
+      - '&ePuntos globales: &6{global-points}'
 

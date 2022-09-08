@@ -18,7 +18,7 @@ rules:
         matches: "[a-zA-Z-_!?]+"
         # Minimum and Maximum lengt of a tag
         min-length: 3
-        max-length: 4
+        max-length: 5
     name:
         # The name characters must match this RegEx string
         # or the guild creation will fail.
@@ -27,7 +27,7 @@ rules:
         matches: "[a-zA-Z -_!?]+"
         # Minimum and Maximum lengt of a tag
         min-length: 3
-        max-length: 14
+        max-length: 16
 
 
 

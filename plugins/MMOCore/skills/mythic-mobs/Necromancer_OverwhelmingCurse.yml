@@ -1,0 +1,35 @@
+mythicmobs-skill-id: Necromancer_OverwhelmingCurse
+
+name: Overwhelming Curse
+lore:
+- 'Curse the location near the target'
+- 'slowing them by slowness level &a{amount}'
+- 'in a radius of &a{radius} &7for &e{duration} &7seconds'
+- 'Costs &9{mana} &7mana | &e{cooldown}s &7Cooldown'
+material: COBWEB
+
+mana:
+    base: 10.0
+    per-level: 1.0
+    max: 500.0
+    min: 10.0
+cooldown:
+    base: 29.8
+    per-level: -0.2
+    max: 30.0
+    min: 20.0
+amount:
+    base: 1.05
+    per-level: 0.05
+    max: 5.0
+    min: 1.0
+duration:
+    base: 10.1
+    per-level: 0.1
+    max: 20.0
+    min: 10.0
+radius:
+    base: 5.2
+    per-level: 0.2
+    max: 15.0
+    min: 5.0

@@ -11,20 +11,31 @@ strength:
     # Buffs given every 1 attribute point spent
     # in this specific attribute.
     buff:
-        weapon_damage: 2
-        max_health: 1%
+        weapon_damage: 0.5
+        physical_damage: 0.5
 
 dexterity:
     name: Destreza
     max-points: 40
     buff:
-        physical_damage: 1.5
-        projectile_damage: 1
-        attack_speed: 0.5%
+        projectile_damage: 0.5
+        attack_speed: 0.1
 
 intelligence:
     name: Intelecto
     max-points: 40
     buff:
-        magic_damage: 2
-        cooldown_reduction: 1
+        magic_damage: 0.5
+        mana_regeneration: 0.05
+        cooldown_reduction: 0.25
+vitality:
+    name: Vitalidad
+    max-points: 40
+    buff:
+        max_health: 0.5
+        armor: 0.1
+mobility:
+    name: Movimiento
+    max-points: 40
+    buff:
+        movement_speed: 0.375

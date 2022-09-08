@@ -1,0 +1,24 @@
+mythicmobs-skill-id: Necromancer_BolsterSummon
+
+name: Bolster Summon
+lore:
+- 'Increase your summoned skeletons physical'
+- 'defense by &e50%&7 for &e{duration} &7seconds'
+- 'Costs &9{mana} &7mana | &e{cooldown}s &7Cooldown'
+material: IRON_CHESTPLATE
+
+mana:
+    base: 5.0
+    per-level: 1.25
+    max: 375.0
+    min: 5.0
+cooldown:
+    base: 59.8
+    per-level: -0.2
+    max: 60.0
+    min: 40.0
+duration:
+    base: 20.2
+    per-level: 0.2
+    max: 40.0
+    min: 20.0

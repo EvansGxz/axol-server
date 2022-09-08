@@ -1,0 +1,42 @@
+mythicmobs-skill-id: Necromancer_ShadowCloud
+
+name: Shadow Cloud
+lore:
+- 'Creates a cloud of shadows around the'
+- 'target dealing &4{damage} &7shadow damage'
+- 'to enemies every &e{damagetime} &7seconds'
+- 'in a radius of &a{radius} &7and lasts'
+- 'for &e{duration}&7 seconds'
+- 'Costs &9{mana} &7mana | &e{cooldown}s &7Cooldown'
+material: DRAGON_EGG
+
+mana:
+    base: 5.0
+    per-level: 1.0
+    max: 250.0
+    min: 5.0
+cooldown:
+    base: 29.9
+    per-level: -0.1
+    max: 30.0
+    min: 20.0
+damage:
+    base: 6.0
+    per-level: 1.0
+    max: 500.0
+    min: 6.0
+damagetime:
+    base: 2.98
+    per-level: -0.02
+    max: 3.0
+    min: 1.0
+duration:
+    base: 10.1
+    per-level: 0.1
+    max: 20.0
+    min: 10.0
+radius:
+    base: 5.05
+    per-level: 0.05
+    max: 10.0
+    min: 5.0

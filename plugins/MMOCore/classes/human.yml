@@ -2,7 +2,7 @@
 # Display options, it's not displayed anywhere so pointless.
 # Just need the name for reference and PAPI placeholders.
 display:
-    name: 'Human'
+    name: 'Humano'
 
 # This is the default class which players have when
 # joining the server. They can level it up, but they
@@ -11,7 +11,6 @@ display:
 options:
     default: true
     display: false
-    needs-permission: false # False by default
     
     # Only regens when out of combat
     off-combat-health-regen: false
@@ -20,10 +19,33 @@ options:
 # Must match an existing exp curve filename from the 'expcurves' folder
 exp-curve: levels
 
-#The number of skills a player can bound.
-max-bound-skills: 5
-
 # Experience sources for main class experience.
 main-exp-sources:
 - 'killmob{type=ZOMBIE;amount=1-3}'
-- 'killmob{type=ENDERMAN;amount=6-9}'
+- 'killmob{type=SKELETON;amount=1-3}'
+- 'killmob{type=CREEPER;amount=1-3}'
+- 'killmythicmob{type=Orcling;amount=10-25}'
+- 'killmythicmob{type=OrcKnight;amount=10-25}'
+- 'killmythicmob{type=OrcArcher;amount=10-25}'
+- 'killmythicmob{type=OrcDrummer;amount=10-25}'
+- 'killmythicmob{type=OrcWarMage;amount=10-25}'
+- 'killmythicmob{type=OrcAxeThrower;amount=10-25}'
+- 'killmythicmob{type=SpiderlingPoison;amount=10-25}'
+- 'killmythicmob{type=SpiderlingWither;amount=10-25}'
+- 'killmythicmob{type=SpiderlingFrost;amount=10-25}'
+- 'killmythicmob{type=SpiderlingFire;amount=10-25}'
+- 'killmythicmob{type=SpiderPoison;amount=10-25}'
+- 'killmythicmob{type=SpiderWither;amount=10-25}'
+- 'killmythicmob{type=SpiderFrost;amount=10-25}'
+- 'killmythicmob{type=SpiderFire;amount=10-25}'
+- 'killmythicmob{type=SpiderEggPoison;amount=10-25}'
+- 'killmythicmob{type=SpiderEggWither;amount=10-25}'
+- 'killmythicmob{type=SpiderEggFrost;amount=10-25}'
+- 'killmythicmob{type=SpiderEggFire;amount=10-25}'
+- 'killmythicmob{type=SpiderEggRandom;amount=10-25}'
+- 'killmythicmob{type=WraithServant;amount=10-25}'
+- 'killmythicmob{type=WraithWarrior;amount=10-25}'
+- 'killmythicmob{type=WraithArcher;amount=10-25}'
+- 'killmythicmob{type=WraithSprinter;amount=10-25}'
+- 'killmythicmob{type=WraithInterceptor;amount=10-25}'
+- 'killmythicmob{type=WraithExploder;amount=10-25}'
