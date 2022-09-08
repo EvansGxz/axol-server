@@ -1,6 +1,6 @@
 
 # GUI display name
-name: Player Attributes
+name: Atributos
 
 
 # Number of slots in your inventory. Must be
@@ -12,14 +12,14 @@ items:
         slots: [26]
         function: reallocation
         item: CAULDRON
-        name: '&aAttribute Points'
+        name: '&aRestablecer puntos de habilidad'
         lore:
-            - ''
-            - 'You have spent a total of &6{total}&7 attribute points.'
-            - '&7Right click to reallocate them.'
-            - ''
-            - '&eCosts 1 attribute reallocation point.'
-            - '&e◆ Attribute Reallocation Points: &6{points}'
+        - ''
+        - 'Has gastado un total de &6{total}&7 puntos de habilidad.'
+        - '&7Clic derecho para Reasignar.'
+        - ''
+        - '&eCuesta 1 punto de Reasignación.'
+        - '&e◆ Puntos de atributo de Reasignación: &6{points}'
     str:
         slots: [11]
         function: attribute_strength
@@ -27,15 +27,15 @@ items:
         item: GOLDEN_APPLE
         lore: # {buffs} returns amount of buffs
             - ''
-            - '&7Points Spent: &6{spent}&7/&6{max}'
-            - '&7Current {name}: &6&l{current}'
+            - '&7Puntos gastados: &6{spent}&7/&6{max}'
+            - '&7Actual {name}: &6&l{current}'
             - ''
-            - '&8When Leveled Up:'
-            - '&7  +{buff_weapon_damage}% Weapon Damage (&a+{total_weapon_damage}%&7)'
-            - '&7  +{buff_max_health} Max Health (&a+{total_max_health}&7)'
+            - '&8Cuando subes de nivel:'
+            - '&7  +{buff_weapon_damage}% Daño de arma (&a+{total_weapon_damage}%&7)'
+            - '&7  +{buff_max_health} Vida máxima (&a+{total_max_health}&7)'
             - ''
-            - '&eClick to level up for 1 attribute point.'
-            - '&e◆ Current Attribute Points: {attribute_points}'
+            - '&eClicpara subir de nivel por 1 punto de atributo.'
+            - '&e◆ Puntos de atributo actuales: {attribute_points}'
     dex:
         slots: [13]
         function: attribute_dexterity
@@ -44,16 +44,16 @@ items:
         hide-flags: true
         lore:
             - ''
-            - '&7Points Spent: &6{spent}&7/&6{max}'
-            - '&7Current {name}: &6&l{current}'
+            - '&7Puntos gastados: &6{spent}&7/&6{max}'
+            - '&7Actuales {name}: &6&l{current}'
             - ''
-            - '&8When Leveled Up:'
-            - '&7  +{buff_physical_damage}% Physical Damage (&a+{total_physical_damage}%&7)'
-            - '&7  +{buff_projectile_damage}% Projectile Damage (&a+{total_projectile_damage}%&7)'
-            - '&7  +{buff_attack_speed} Attack Speed (&a+{total_attack_speed}&7)'
+            - '&8Cuando subes de nivel:'
+            - '&7  +{buff_physical_damage}% Daño físico (&a+{total_physical_damage}%&7)'
+            - '&7  +{buff_projectile_damage}% Daño de proyectiles (&a+{total_projectile_damage}%&7)'
+            - '&7  +{buff_attack_speed} Velocidad de ataque (&a+{total_attack_speed}&7)'
             - ''
-            - '&eClick to level up for 1 attribute point.'
-            - '&e◆ Current Attribute Points: {attribute_points}'
+            - '&eClic para subir de nivel por 1 punto de atributo.'
+            - '&e◆ Puntos de atributo actuales: {attribute_points}'
     int:
         slots: [15]
         function: attribute_intelligence
@@ -61,12 +61,12 @@ items:
         item: BOOK
         lore:
             - ''
-            - '&7Points Spent: &6{spent}&7/&6{max}'
-            - '&7Current {name}: &6&l{current}'
+            - '&7Puntos gastados: &6{spent}&7/&6{max}'
+            - '&7Actuales {name}: &6&l{current}'
             - ''
-            - '&8When Leveled Up:'
-            - '&7  +{buff_magic_damage}% Magic Damage (&a+{total_magic_damage}%&7)'
-            - '&7  +{buff_cooldown_reduction}% Cooldown Reduction (&a+{total_cooldown_reduction}%&7)'
+            - '&8Cuando subes de nivel:'
+            - '&7  +{buff_magic_damage}% Poder mágico (&a+{total_magic_damage}%&7)'
+            - '&7  +{buff_cooldown_reduction}% Reducción de enfriamiento (&a+{total_cooldown_reduction}%&7)'
             - ''
-            - '&eClick to level up for 1 attribute point.'
-            - '&e◆ Current Attribute Points: {attribute_points}'
+            - '&eClic para subir de nivel por 1 punto de atributo.'
+            - '&e◆ Puntos de atributo actuales: {attribute_points}'

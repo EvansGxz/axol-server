@@ -1,6 +1,6 @@
 
 # GUI display name
-name: Class Selection
+name: Seleccion de Clase
 
 # Number of slots in your inventory. Must be
 # between 9 and 54 and must be a multiple of 9.
@@ -10,7 +10,7 @@ items:
     class:
         slots: [13,12,14,11,15,10,16]
         function: class
-        name: '&a&lThe {name}'
+        name: '&a&l{name}'
         hide-flags: true
         lore:
         - '{lore}'

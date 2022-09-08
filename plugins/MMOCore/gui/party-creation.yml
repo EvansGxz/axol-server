@@ -1,6 +1,6 @@
 
 # GUI display name
-name: Party Creation
+name: Creacon de Grupo
 
 # Number of slots in your inventory. Must be
 # between 9 and 54 and must be a multiple of 9.
@@ -11,11 +11,13 @@ items:
         slots: [12]
         item: GREEN_TERRACOTTA
         function: 'create'
-        name: '&aCreate a party!'
-        lore: {}
+        name: '&aCrear Grupo!'
+        lore: 
+        - '&fEstar en grupo añade bonificaciones a todos'
+        - '&flos miembros del grupo actual.'
     back:
         slots: [14]
         item: RED_TERRACOTTA
         function: back
-        name: '&aBack'
+        name: '&aRegresar'
         lore: {}

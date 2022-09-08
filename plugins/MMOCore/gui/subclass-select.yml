@@ -1,6 +1,6 @@
 
 # GUI display name
-name: Choose your path...
+name: Elige tu camino...
 
 # Number of slots in your inventory. Must be
 # between 9 and 54 and must be a multiple of 9.
@@ -11,12 +11,12 @@ items:
         function: back
         slots: [26]
         item: RED_STAINED_GLASS_PANE
-        name: '&aBack to Class Selection'
+        name: '&aVolver a la selección de clases'
         lore: []
     class:
         slots: [13,12,14,11,15,10,16]
         function: class
-        name: '&a&lThe {name}'
+        name: '&a&l{name}'
         lore:
         - '{lore}'
         - ''
