@@ -1,0 +1,179 @@
+display:
+    name: '&3&l&oNECROMANCER'
+    lore:
+    - '&8╔═══ &3&lCLASE <#123456>NIGROMANTE&8 ═══════'
+    - '&8║ &7El nigromante es un maestro de'
+    - '&8║ &7los muertos. Convocan esbirros no'
+    - '&8║ &7muertos. Puede manipular huesos y'
+    - '&8║ &7manejar las artes oscuras'
+    - '&8╠ &3&l&nESTILO DE JUEGO'
+    - '&8╠ &7Tipo: &3&lESPECIAL'
+    - '&8║ &7Daño:         &a&l✦✦✦✦&c✧'
+    - '&8║ &7Utilidad:      &a&l✦✦✦✦✦'
+    - '&8║ &7Movilidad:    &a&l✦✦&c✧✧✧'
+    - '&8║ &7Tenacidad:  &a&l✦&c✧✧✧✧'
+    - '&8╠ &3&l&nTIPO DE ENRGÍA'
+    - '&8║ &7Esta clase usa &9maná&7 para'
+    - '&8║ &7usar destrezas y habilidades.'
+    - '&8║ &7Se regenera con el tiempo.'
+    - '&8╠ &3&l&nHABILIDADES'
+    - '&8║ &7Nivel 1: &3Herida Maldita'
+    - '&8║ &7Nivel 5: &3Maldición Abrumadora'
+    - '&8║ &7Nivel 10: &3Trampa de vida'
+    - '&8║ &7+10 Habilidades.'
+    - '&8╚═══ &3&lCLASE NIGROMANTE&8 ═══════'
+    item: WITHER_SKELETON_SKULL
+
+# Must match an existing exp curve filename from the 'expcurves' folder
+exp-curve: levels
+
+max-level: 100
+
+triggers:
+    level-up:
+    - 'command{format="mmocore admin skill-points give %player% 1"}'
+    - 'mmskill{id=N_LevelUp}'
+    - 'command{format="mmocore admin attribute-points give %player% 1"}'
+
+# This is the default mana display options, however it is not mandatory
+# to have it in your class config file. Other classes do not have this
+# section and therefore have the default mana display options.
+#
+# 'char' is the character used to generate the mana bar as a message
+# 'color' are also the colors used to generate the mana bar
+# 'icon' is the icon display on the player action bar
+# 'name' is basically displayed everywhere
+mana:
+    char: ■
+    icon: '&9⭐'
+    color:
+        full: AQUA
+        half: BLUE
+        empty: WHITE
+    name: 'Mana'
+
+cast-particle:
+    particle: REDSTONE
+    color:
+        red: 155
+        green: 0
+        blue: 100
+
+# Special resource regeneration: (when out of combat),
+# players can regen a set % of their maximum mana/missing mana.
+# This % can scale with the player level.
+# It also works with other player resources: health, stellium and stamina!
+resource:
+    mana:
+    
+        # Scales with max mana.
+        type: MAX
+        
+        # Regen from 3 to 10% of max mana every second
+        value:
+            base: 3
+            per-level: .1
+            max: 10
+        
+        # Only regen when out of combat.
+        off-combat: true
+
+options:
+    off-combat-health-regen: true
+
+attributes:
+    max-health:
+        base: 15
+        per-level: 0.25
+    max-mana:
+        base: 40
+        per-level: 2.5
+    mana-regeneration:
+        base: 0.5
+        per-level: .1
+    armor:
+        base: 0.3
+        per-level: 0.2
+    armor-toughness:
+        base: 0
+        per-level: 0
+    health-regeneration:
+        base: 0.25
+        per-level: 0.04
+skills:
+    Necromancer_SummonSkeletalWarrior:
+        level: 15
+        max-level: 30
+    Necromancer_SummonSkeletalMage:
+        level: 65
+        max-level: 30
+    Necromancer_SummonSkeletalArcher:
+        level: 60
+        max-level: 30
+    Necromancer_SummonSkeletalApostle:
+        level: 55
+        max-level: 30
+    Necromancer_ShadowDart:
+        level: 50
+        max-level: 30
+    Necromancer_ShadowCloud:
+        level: 45
+        max-level: 30
+    Necromancer_BoneSpear:
+        level: 40
+        max-level: 30
+    Necromancer_BoneCage:
+        level: 35
+        max-level: 30
+    Necromancer_BoneShield:
+        level: 30
+        max-level: 30
+    Necromancer_LifeTap:
+        level: 25
+        max-level: 30
+    Necromancer_SacrificeSummon:
+        level: 20
+        max-level: 30
+    Necromancer_BolsterSummon:
+        level: 15
+        max-level: 30
+    Necromancer_ReverseLifeTap:
+        level: 10
+        max-level: 30
+    Necromancer_OverwhelmingCurse:
+        level: 5
+        max-level: 30
+    Necromancer_CripplingCurse:
+        level: 0
+        max-level: 30
+
+# Experience sources for main class experience.
+main-exp-sources:
+- 'killmob{type=ZOMBIE;amount=1-3}'
+- 'killmob{type=SKELETON;amount=1-3}'
+- 'killmob{type=CREEPER;amount=1-3}'
+- 'killmythicmob{type=Orcling;amount=10-25}'
+- 'killmythicmob{type=OrcKnight;amount=10-25}'
+- 'killmythicmob{type=OrcArcher;amount=10-25}'
+- 'killmythicmob{type=OrcDrummer;amount=10-25}'
+- 'killmythicmob{type=OrcWarMage;amount=10-25}'
+- 'killmythicmob{type=OrcAxeThrower;amount=10-25}'
+- 'killmythicmob{type=SpiderlingPoison;amount=10-25}'
+- 'killmythicmob{type=SpiderlingWither;amount=10-25}'
+- 'killmythicmob{type=SpiderlingFrost;amount=10-25}'
+- 'killmythicmob{type=SpiderlingFire;amount=10-25}'
+- 'killmythicmob{type=SpiderPoison;amount=10-25}'
+- 'killmythicmob{type=SpiderWither;amount=10-25}'
+- 'killmythicmob{type=SpiderFrost;amount=10-25}'
+- 'killmythicmob{type=SpiderFire;amount=10-25}'
+- 'killmythicmob{type=SpiderEggPoison;amount=10-25}'
+- 'killmythicmob{type=SpiderEggWither;amount=10-25}'
+- 'killmythicmob{type=SpiderEggFrost;amount=10-25}'
+- 'killmythicmob{type=SpiderEggFire;amount=10-25}'
+- 'killmythicmob{type=SpiderEggRandom;amount=10-25}'
+- 'killmythicmob{type=WraithServant;amount=10-25}'
+- 'killmythicmob{type=WraithWarrior;amount=10-25}'
+- 'killmythicmob{type=WraithArcher;amount=10-25}'
+- 'killmythicmob{type=WraithSprinter;amount=10-25}'
+- 'killmythicmob{type=WraithInterceptor;amount=10-25}'
+- 'killmythicmob{type=WraithExploder;amount=10-25}'

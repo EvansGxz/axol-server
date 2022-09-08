@@ -1,0 +1,180 @@
+display:
+    name: '&9&l&oMAGO'
+    lore:
+    - '&8╔═══ &9&l&nCLASE MAGO&8 ═══════'
+    - '&8║ &7La clase Mago usa &9poderosas'
+    - '&8║ &7habilidades mientras te mantengas'
+    - '&8║ &7a distancia de los enemigos.'
+    - '&8║ &7Su &9daño&7 y &9utilidad&7 lo hace'    
+    - '&8║ &7una pieza importante para el equipo!'
+    - '&8╠ &9&l&nESTILO DE JUEGO'
+    - '&8╠ &7Tipo: &9&lRANGO'
+    - '&8║ &7Daño:        &a&l✦✦✦✦&c✧'
+    - '&8║ &7Utilidad:     &a&l✦✦✦✦&c✧'
+    - '&8║ &7Movilidad:   &a&l✦✦&c✧✧✧'
+    - '&8║ &7Tenacidad: &a&l✦✦&c✧✧✧'
+    - '&8╠ &9&l&nTIPO DE ENERGIA'
+    - '&8║ &7Esta clase usa &9maná&7 para'
+    - '&8║ &7usar destrezas y habilidades.'
+    - '&8║ &7Se regenera con el tiempo.'
+    - '&8╠ &9&l&nHABILIDADES'
+    - '&8║ &7Nivel 1: &9Ámbar'
+    - '&8║ &7Nivel 15: &9Hielo Escarchado'
+    - '&8║ &7Nivel 30: &9Bola de Fuego'
+    - '&8╚═══ &9&l&nCLASE MAGO&8 ═══════'
+    item: WOODEN_HOE:3
+
+# Must match an existing exp curve filename from the 'expcurves' folder
+exp-curve: levels
+
+# Players cannot go further than Lvl 100
+max-level: 100
+
+triggers:
+    level-up:
+    - 'command{format="mmocore admin skill-points give %player% 1"}'
+    - 'mmskill{id=N_LevelUp}'
+    - 'command{format="mmocore admin attribute-points give %player% 1"}'
+
+# This is the default mana display options, however it is not mandatory
+# to have it in your class config file. Other classes do not have this
+# section and therefore have the default mana display options.
+#
+# 'char' is the character used to generate the mana bar as a message
+# 'color' are also the colors used to generate the mana bar
+# 'icon' is the icon display on the player action bar
+# 'name' is basically displayed everywhere
+mana:
+    char: ■
+    icon: '&9⭐'
+    color:
+        full: AQUA
+        half: BLUE
+        empty: WHITE
+    name: 'Mana'
+
+cast-particle:
+    particle: SPELL_INSTANT
+    
+triggers:
+    level-up:
+    - 'command{format="mmocore admin skill-points give %player% 1"}'
+    - 'mmskill{id=N_LevelUp}'
+    - 'command{format="mmocore admin attribute-points give %player% 1"}'
+
+# Special resource regeneration: (when out of combat),
+# players can regen a set % of their maximum mana/missing mana.
+# This % can scale with the player level.
+# It also works with other player resources: health, stellium and stamina!
+resource:
+    mana:
+    
+        # Scales with max mana.
+        type: MAX
+        
+        # Regen from 3 to 10% of max mana every second
+        value:
+            base: 3
+            per-level: .1
+            max: 10
+        
+        # Only regen when out of combat.
+        off-combat: true
+
+options:
+    off-combat-health-regen: true
+
+attributes:
+    mana-regeneration:
+        base: 0.5
+        per-level: 0.1
+    max-mana:
+        base: 50
+        per-level: 2.5
+    max-stamina:
+        base: 15
+        per-level: 0
+    stamina-regeneration:
+        base: 0.1
+        per-level: 0
+    armor:
+        base: 0
+        per-level: 0
+    armor-toughness:
+        base: 0
+        per-level: 0
+    health-regeneration:
+        base: 0.25
+        per-level: 0.01
+    max-health:
+        base: 18
+        per-level: 0.25
+    movement-speed:
+        base: .093
+        per-level: 0.00025
+    weapon-damage:
+        base: 0.0
+        per-level: 0.25
+    physical-damage:
+        base: -30.0
+        per-level: 0
+    magic-damage:
+        base: 5.0
+        per-level: 0.25
+    skill-damage:
+        base: 3.0
+        per-level: 0.3
+    cooldown-reduction:
+        base: 1.0
+        per-level: 0.25
+    attack-damage:
+        base: 1.0
+        per-level: 0
+    projectile-damage:
+        base: 0.0
+        per-level: 0.0
+    attack-speed:
+        base: 4.0
+        per-level: 0.0
+
+skills:
+    AMBERS:
+        level: 1
+        max-level: 30
+    ICE_SPIKES:
+        level: 15
+        max-level: 30
+    FIREBALL:
+        level: 30
+        max-level: 30
+
+# Experience sources for main class experience.
+main-exp-sources:
+- 'killmob{type=ZOMBIE;amount=1-3}'
+- 'killmob{type=SKELETON;amount=1-3}'
+- 'killmob{type=CREEPER;amount=1-3}'
+- 'killmythicmob{type=Orcling;amount=10-25}'
+- 'killmythicmob{type=OrcKnight;amount=10-25}'
+- 'killmythicmob{type=OrcArcher;amount=10-25}'
+- 'killmythicmob{type=OrcDrummer;amount=10-25}'
+- 'killmythicmob{type=OrcWarMage;amount=10-25}'
+- 'killmythicmob{type=OrcAxeThrower;amount=10-25}'
+- 'killmythicmob{type=SpiderlingPoison;amount=10-25}'
+- 'killmythicmob{type=SpiderlingWither;amount=10-25}'
+- 'killmythicmob{type=SpiderlingFrost;amount=10-25}'
+- 'killmythicmob{type=SpiderlingFire;amount=10-25}'
+- 'killmythicmob{type=SpiderPoison;amount=10-25}'
+- 'killmythicmob{type=SpiderWither;amount=10-25}'
+- 'killmythicmob{type=SpiderFrost;amount=10-25}'
+- 'killmythicmob{type=SpiderFire;amount=10-25}'
+- 'killmythicmob{type=SpiderEggPoison;amount=10-25}'
+- 'killmythicmob{type=SpiderEggWither;amount=10-25}'
+- 'killmythicmob{type=SpiderEggFrost;amount=10-25}'
+- 'killmythicmob{type=SpiderEggFire;amount=10-25}'
+- 'killmythicmob{type=SpiderEggRandom;amount=10-25}'
+- 'killmythicmob{type=WraithServant;amount=10-25}'
+- 'killmythicmob{type=WraithWarrior;amount=10-25}'
+- 'killmythicmob{type=WraithArcher;amount=10-25}'
+- 'killmythicmob{type=WraithSprinter;amount=10-25}'
+- 'killmythicmob{type=WraithInterceptor;amount=10-25}'
+- 'killmythicmob{type=WraithExploder;amount=10-25}'

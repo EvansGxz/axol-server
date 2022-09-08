@@ -1,29 +1,29 @@
 display:
-    name: '&c&l&oGUERRERO'
+    name: '&e&l&oAsesino'
     lore:
-    - '&8╔═══ &c&l&nCLASE GUERRERO&8 ═══════'
-    - '&8║ &7La clase Guerrero se enfoca en'
-    - '&8║ &7repartir &cgran daño&7 cuerpo-cuerpo.'
-    - '&8║ &7Esta &cpoderosa clase &7te permite estar'
-    - '&8║ &7en la linea frontal y ser el &cdaño&7 principal'
-    - '&8║ &7para tus aliados!'
-    - '&8╠ &c&l&nESTILO DE JUEGO'
-    - '&8╠ &7Tipo: &c&lCUERPO-CUERPO'
-    - '&8║ &7Daño:        &a&l✦✦✦✦&c✧'
-    - '&8║ &7Utilidad:     &a&l✦✦✦&c✧✧'
-    - '&8║ &7Movilidad:   &a&l✦&c✧✧✧✧'
-    - '&8║ &7Tenacidad: &a&l✦✦✦✦&c✧'
-    - '&8╠ &c&l&nTIPO DE ENERGIA'
-    - '&8║ &7Esta clase utiliza &cfuria&7 para'
-    - '&8║ &7usar destrezas y habilidades.'
-    - '&8║ &7Decae con el tiempo y se regenera'
-    - '&8║ &cluchando.'
-    - '&8╠ &c&l&nHABILIDADES'
-    - '&8║ &7Nivel 1: &cFuego Berserker'
-    - '&8║ &7Nivel 15: &cTormenta Ardiente'
-    - '&8║ &7Nivel 30: &cFuria Ardiente'
-    - '&8╚═══ &c&l&nCLASE GUERRERO&8 ═══════'
-    item: DIAMOND_SWORD:79 # Supports custom model data/texture by durability
+    - '&8╔═══ &e&l&nCLASE ASESINO&8 ═══════'
+    - '&8║ &7La clase Asesino se basa en &edaño'
+    - '&8║ &eextremo explosivo&7 para ser viable.'
+    - '&8║ &7Deberá &eejecutar objetivos de alta'
+    - '&8║ &7prioridad antes de que pueden ser'
+    - '&8║ &7una amenaza para su equipo!'
+    - '&8╠ &e&l&nESTILO DE JUEGO'
+    - '&8╠ &7Tipo: &e&lCUERPO-CUERPO'
+    - '&8║ &7Daño:        &a&l✦✦✦✦✦'
+    - '&8║ &7Utilidad:     &a&l✦✦&c✧✧✧'
+    - '&8║ &7Movilidad:   &a&l✦✦✦✦&c✧'
+    - '&8║ &7Tenacidad: &a&l✦&c✧✧✧✧'
+    - '&8╠ &e&l&nTIPO DE ENERGÍA'
+    - '&8║ &7Esta clase usa &eenergía&7 para usar'
+    - '&8║ &7destrezas y habilidades.'
+    - '&8║ &7Regenera rapido su energía'
+    - '&8║ &7pero se agota con facilidad.'
+    - '&8╠ &e&l&nHABILIDADES'
+    - '&8║ &7Nivel 1: &ePuñalada por la espalda'
+    - '&8║ &7Nivel 15: &eEscabroso'
+    - '&8║ &7Nivel 30: &eEvadir'
+    - '&8╚═══ &e&l&nCLASE ASESINO&8 ═══════'
+    item: LEATHER_BOOTS:1
 
 # Must match an existing exp curve filename from the 'expcurves' folder
 exp-curve: levels
@@ -31,108 +31,90 @@ exp-curve: levels
 # Players cannot go further than Lvl 100
 max-level: 100
 
-# Warrior has rage which he gains while casting spells
-# Rage increase its skill damage. Use <mmocore.rage>
-# to get the player's rage (MythicMobs formulas)
-#
-# 'char' is the character used to generate the mana bar as a message
-# 'color' are also the colors used to generate the mana bar
-# 'icon' is the icon display on the player action bar
-# 'name' is basically displayed everywhere
 mana:
-    char: ♦
-    icon: '&4♦'
+    char: ■
+    icon: '&e⭐'
     color:
-        full: DARK_RED
-        half: RED
+        full: YELLOW
+        half: BLUE
         empty: WHITE
-    name: 'Rage'
-
-# Rage charges when dealing weapon and physical damage.
+    name: 'Energia'
+ 
 triggers:
-    weapon-damage:
-    - 'mana{operation=GIVE;amount=2-3}'
-    physical-damage:
-    - 'mana{operation=GIVE;amount=2-3}'
-    
     level-up:
     - 'command{format="mmocore admin skill-points give %player% 1"}'
     - 'mmskill{id=N_LevelUp}'
     - 'command{format="mmocore admin attribute-points give %player% 1"}'
 
-cast-particle:
-    particle: REDSTONE
-    color:
-        red: 255
-        green: 0
-        blue: 0
-
-# Rage only decays when out of combat
 options:
     off-combat-mana-regen: true
+    off-combat-health-regen: true
+
+cast-particle:
+    particle: SPELL_WITCH
 
 skills:
-    FIRE_BERSERKER:
+    BACKSTAB:
         level: 1
         max-level: 30
-    FIRE_STORM:
+    SNEAKY_PICKY:
         level: 15
         max-level: 30
-    FIRE_RAGE:
+    EVADE:
         level: 30
         max-level: 30
-    
+
 attributes:
     mana-regeneration:
-        base: -1.0
+        base: 3.0
         per-level: 0
     max-mana:
-        base: 20
-        per-level: .5
-    max-stamina:
         base: 25
-        per-level: 0.25
+        per-level: 2
+    max-stamina:
+        base: 20
+        per-level: 0.02
     stamina-regeneration:
-        base: 0.2
-        per-level: 0.01
+        base: 0.25
+        per-level: 0.02
     armor:
-        base: 1
-        per-level: 0.75
+        base: 0.3
+        per-level: 0.2
     armor-toughness:
-        base: 1.0
+        base: 0
         per-level: 0
     health-regeneration:
-        base: 0.5
-        per-level: 0.03
+        base: 0.25
+        per-level: 0.04
     max-health:
-        base: 30
-        per-level: 0.15
+        base: 14
+        per-level: 0.25
     movement-speed:
-        base: .105
-        per-level: 0.0001
+        base: .111
+        per-level: 0.00025
     weapon-damage:
         base: 2.0
         per-level: 0.5 
     physical-damage:
-        base: 5
-        per-level: 0.2
+        base: 7
+        per-level: 0.25
     magic-damage:
-        base: -30.0
+        base: -20.0
         per-level: 0
     skill-damage:
-        base: 5.0
-        per-level: 0.25
+        base: 2.0
+        per-level: 0.2
     cooldown-reduction:
         base: 0.0
         per-level: 0.0
     attack-damage:
-        base: 1.5
-        per-level: 0.02
+        base: 2.0
+        per-level: 0.025
     projectile-damage:
-        base: -10.0
+        base: -30.0
         per-level: 0.0
     attack-speed:
-        base: 4.15
+        base: 4.2
         per-level: 0
 
 # Experience sources for main class experience.
