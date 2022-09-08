@@ -1,6 +1,6 @@
 player:
   main: "player"
-  aliases: ["p", "profile"]
+  aliases: ["p", "profile", "jugador"]
 attributes:
   main: "attributes"
   aliases: ["att", "stats"]
@@ -21,16 +21,16 @@ friends:
   aliases: ["f"]
 party:
   main: "party"
-  aliases: []
+  aliases: ["grupo"]
 guild:
   main: "guild"
-  aliases: []
+  aliases: ["fam", "familia"]
 withdraw:
   main: "withdraw"
   aliases: ["w"]
-skill-tree:
-  main: "skilltree"
-  aliase: ["st"]
 deposit:
   main: "deposit"
   aliases: ["d"]
+skill-tree:
+  main: "skilltree"
+  aliase: ["st"]

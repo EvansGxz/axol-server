@@ -2,7 +2,7 @@
 # Attribute ID
 strength:
 
-    name: Strength
+    name: Fuerza
     
     # Maximum amount of points players 
     # may spend in this attribute.
@@ -15,7 +15,7 @@ strength:
         max_health: 1%
 
 dexterity:
-    name: Dexterity
+    name: Destreza
     max-points: 40
     buff:
         physical_damage: 1.5
@@ -23,7 +23,7 @@ dexterity:
         attack_speed: 0.5%
 
 intelligence:
-    name: Intelligence
+    name: Intelecto
     max-points: 40
     buff:
         magic_damage: 2
