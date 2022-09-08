@@ -1,7 +1,7 @@
 STIFF_GREATSTAFF:
   base:
     material: STICK
-    name: '&fStiff Greatstaff'
+    name: '&fGran bastón rígido'
     attack-damage:
       base: 11.0
       spread: 0.03
@@ -11,10 +11,10 @@ STIFF_GREATSTAFF:
     ability:
       on-hit:
         type: STUN
-        mode: ATTACK
+        mode: ON_HIT
         cooldown: 15.0
     lore:
-    - '&7So heavy it &cstuns&7 enemies on hit.'
+    - '&7Tan pesado que &caturde&7 a los enemigos al golpear.'
     disable-crafting: true
     disable-smelting: true
     block-rating: 5.0

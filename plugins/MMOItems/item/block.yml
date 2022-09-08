@@ -22,3 +22,10 @@
     - I only have a lore!
     material: STONE
     block-id: 3.0
+HORNO:
+  base:
+    material: NETHER_GOLD_ORE
+    repair-type: '10'
+    name: '&6Mena De &2XP&6 Oro &8Oscuro'
+    max-xp: 500.0
+    required-power: 20.0

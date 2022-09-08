@@ -1,0 +1,175 @@
+
+# Name which will be displayed
+# when opening the station
+name: 'Forja Asesino (#page#/#max#)'
+
+# The maximum amount of items in the crafting queue ie. the
+# max number of items players are able to craft simultaneously.
+# Must be between 1 and 64.
+max-queue-size: 10
+
+# The sound that plays whenever an action is
+# completed in the crafting station.
+# GET SOUND NAMES HERE:
+# https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Sound.html
+sound: ENTITY_EXPERIENCE_ORB_PICKUP
+
+# This is how the gui looks. You can define your own
+# in crafting-stations/layouts by creating a new
+# file with the name of the file as the id.
+layout: default
+
+# Configure GUI items here
+items:
+    fill:
+        material: AIR
+    no-recipe:
+        material: GRAY_STAINED_GLASS_PANE
+        name: '&aSin receta'
+    no-queue-item:
+        material: GRAY_STAINED_GLASS_PANE
+        name: '&aNo Item en cola'
+
+# Station recipes
+recipes:
+    assassin-helmet:
+        output:
+            type: ARMOR
+            id: I_ASSASSINHELMET
+            amount: 1
+        crafting-time: 25
+        conditions:
+        - 'level{level=4}'
+        - 'class{list=ASESINO}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=ASOUL,amount=6,display="Esencia de Asesino"}
+    assassin-chestplate:
+        output:
+            type: ARMOR
+            id: I_ASSASSINCHESTPLATE
+            amount: 1
+        crafting-time: 40
+        conditions:
+        - 'level{level=4}'
+        - 'class{list=ASESINO}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=ASOUL,amount=9,display="Esencia de Asesino"}
+    assassin-leggings:
+        output:
+            type: ARMOR
+            id: I_ASSASSINLEGGINGS
+            amount: 1
+        crafting-time: 30
+        conditions:
+        - 'level{level=4}'
+        - 'class{list=ASESINO}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=ASOUL,amount=8,display="Esencia de Asesino"}
+    assassin-boots:
+        output:
+            type: ARMOR
+            id: I_ASSASSINBOOTS
+            amount: 1
+        crafting-time: 20
+        conditions:
+        - 'level{level=4}'
+        - 'class{list=ASESINO}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=ASOUL,amount=5,display="Esencia de Asesino"}
+    assassin-dagger:
+        output:
+            type: DAGGER
+            id: I_STARTERASSASSINDAGGER
+            amount: 1
+        crafting-time: 50
+        conditions:
+        - 'level{level=2}'
+        - 'class{list=ASESINO}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=ASOUL,amount=5,display="Esencia de Asesino"}
+        - 'vanilla{type=DIAMOND_SWORD,amount=1,display="Espada de diamante"}'
+    assassin-dagger2:
+        output:
+            type: DAGGER
+            id: II_FINEDAGGER
+            amount: 1
+        crafting-time: 110
+        conditions:
+        - 'level{level=15}'
+        - 'class{list=ASESINO}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=ASOUL,amount=15,display="Esencia de Asesino"}
+        - 'vanilla{type=DIAMOND_SWORD,amount=1,display="Espada de diamante"}'    
+    assassin-dagger3:
+        output:
+            type: DAGGER
+            id: III_EDGEDDAGGER
+            amount: 1
+        crafting-time: 220
+        conditions:
+        - 'level{level=40}'
+        - 'class{list=ASESINO}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=ASOUL,amount=25,display="Esencia de Asesino"}
+        - 'vanilla{type=DIAMOND_SWORD,amount=1,display="Espada de diamante"}'
+    assassin-dagger4:
+        output:
+            type: DAGGER
+            id: III_PIERCINGDAGGER
+            amount: 1
+        crafting-time: 220
+        conditions:
+        - 'level{level=43}'
+        - 'class{list=ASESINO}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=ASOUL,amount=25,display="Esencia de Asesino"}
+        - mmoitem{type=DAGGER,id=II_FINEDAGGER,amount=2,display="&aDaga templaria"}
+    assassin-dagger5:
+        output:
+            type: DAGGER
+            id: IV_SHADOWDAGGER
+            amount: 1
+        crafting-time: 330
+        conditions:
+        - 'level{level=50}'
+        - 'class{list=ASESINO}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=ASOUL,amount=35,display="Esencia de Asesino"}
+        - mmoitem{type=DAGGER,id=III_EDGEDDAGGER,amount=2,display="<#3498DB>Daga Curva"}
+    assassin-dagger6:
+        output:
+            type: DAGGER
+            id: IV_LIGHTINGDAGGER
+            amount: 1
+        crafting-time: 330
+        conditions:
+        - 'level{level=50}'
+        - 'class{list=ASESINO}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=ASOUL,amount=35,display="Esencia de Asesino"}
+        - mmoitem{type=DAGGER,id=III_PIERCINGDAGGER,amount=2,display="<#3498DB>Daga Persa"}
+    assassin-dagger7:
+        output:
+            type: DAGGER
+            id: V_ECLIPSEDAGGER
+            amount: 1
+        crafting-time: 440
+        conditions:
+        - 'level{level=60}'
+        - 'class{list=ASESINO}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=ASOUL,amount=45,display="Esencia de Asesino"}
+        - mmoitem{type=DAGGER,id=IV_SHADOWDAGGER,amount=1,display="<#5B2C6F>Daga Sombría"}
+        - mmoitem{type=DAGGER,id=IV_LIGHTINGDAGGER,amount=1,display="<#5B2C6F>Escama de Dragón"}
+    assassin-dagger8:
+        output:
+            type: DAGGER
+            id: VI_BEEDAGGER
+            amount: 1
+        crafting-time: 550
+        conditions:
+        - 'level{level=70}'
+        - 'class{list=ASESINO}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=ASOUL,amount=55,display="Esencia de Asesino"}
+        - mmoitem{type=DAGGER,id=V_ECLIPSEDAGGER,amount=2,display="<#F39C12>Eclipse"}

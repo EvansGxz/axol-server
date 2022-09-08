@@ -1,64 +1,69 @@
-SHARP_SPEAR:
+TRIDENTE_AFILADO:
   base:
     material: TRIDENT
-    name: §7Sharp Spear
-    lore:
-      - §7A spear made for close combat.
-    critical-strike-chance:
-      base: 6.0
-      scale: 0.05
-      spread: 0.1
-      max-spread: 0.2
-    critical-strike-power:
-      base: 15.0
-      scale: 0.05
-      spread: 0.1
-      max-spread: 0.2
-    required-level: 5.0
-    tier: UNCOMMON
-    attack-damage:
-      base: 9.0
-      scale: 0.1
-      spread: 0.05
-      max-spread: 0.1
-    attack-speed: 1.7
     ability:
       ability1:
-        type: WEAKEN_TARGET
-        mode: ATTACK
-        duration: 2.0
-        cooldown: 0.5
-        extra-damage: 25.0
-    gem-sockets:
-      - Uncolored
-    upgrade:
-      reference: universal
-    stamina-cost: 4.0
-WARRIOR_SPEAR:
+        type: FREEZE
+        mode: ON_HIT
+    sounds: {}
+    attack-speed: 5.0
+BLIZ:
   base:
     material: TRIDENT
-    required-level: 20.0
-    tier: EPIC
-    projectile-damage: 1000.0
-    attack-damage: 2.0
-    attack-speed: 1.5
-    critical-strike-chance:
-      base: 5.0
-      scale: 0.05
-      spread: 0.1
-      max-spread: 0.2
-    critical-strike-power:
-      base: 20.0
-      scale: 0.05
-      spread: 0.1
-      max-spread: 0.2
-    lore:
-      - §7Deals §cvery high damage§7 when thrown!
+    ability:
+      ability1:
+        type: BLINK
+        mode: RIGHT_CLICK
+        range: 20.0
+        cooldown: 15.0
+      ability2:
+        type: FREEZE
+        mode: ON_HIT
+        amplifier: 3.0
+        cooldown: 18.0
+    two-handed: true
+    required-level: 60.0
+    attack-damage:
+      base: 83.5
+      spread: 0.157
+      max-spread: 0.197
+    physical-damage: 19.3
+    attack-speed: 4.21
+    critical-strike-chance: 6.71
+    critical-strike-power: 12.3
+    pve-damage: 16.4
+    pvp-damage: 2.65
+    max-durability: 10000.0
+    additional-experience: 7.32
+    required-class:
+    - CAZADOR
+    disable-repairing: true
+    disable-enchanting: true
+    disable-smithing: true
+    disable-smelting: true
+    disable-crafting: true
     enchants:
-      loyalty: 3.0
-    unbreakable: true
-    gem-sockets:
-      - Red
-      - Red
-    movement-speed: -0.02
-    name: §6§lWarrior's Spear
+      loyalty: 5.0
+      respiration: 5.0
+    name: '&6Tridente Del &1﹄﹃Mar Profundo Espacial﹄﹃'
+    element:
+      water:
+        damage: 20.0
+    item-particles:
+      type: VORTEX
+      particle: ENCHANTMENT_TABLE
+    perm-effects:
+      ABSORPTION: 1.0
+      DOLPHINS_GRACE: 2.0
+    weapon-damage: 7.32
+    lore:
+    - '&eEspacio-Tiempo &8(Pasiva)'
+    - '&7Al golpear con el tridente congelara un radio'
+    - '&7de &35 bloques&7, dura &34 segundos&7, y posee'
+    - '&7un cooldown de &318 segundos.'
+    - '&eSalto Espacial &8(Click Derecho)'
+    - '&7Te teletransporta a una ubicacion señalada con'
+    - '&7el puntero, en una distancia de maximo &320 bloques'
+    - '&7y posee un cooldown de &315 segundos.'
+    - '&6&lLK Industries'
+    tier: LEGENDARY

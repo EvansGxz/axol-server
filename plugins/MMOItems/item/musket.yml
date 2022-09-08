@@ -1,91 +1,347 @@
-MAKESHIFT_MUSKET:
-  base:
-    material: IRON_HORSE_ARMOR
-    name: §fMakeshift Musket
-    lore:
-      - §7A decent musket that doesn't require ammo.
-      - §eGreat for hunting mobs.
-    crafting:
-      shaped:
-        '1':
-          input:
-            - v AIR 0 1..|v AIR 0 1..|v AIR 0 1..
-            - v iron_ingot - 1.0..|v iron_ingot - 1.0..|v copper_block - 1.0..
-            - v iron_nugget - 1.0..|v AIR 0 1..|v copper_ingot - 1.0..
-    critical-strike-chance:
-      base: 15.0
-      scale: 0.05
-      spread: 0.15
-      max-spread: 0.3
-    critical-strike-power:
-      base: 40.0
-      scale: 0.05
-      spread: 0.15
-      max-spread: 0.3
-    required-level: 8.0
-    attack-speed: 1.4
-    range: 48.0
-    weapon-damage:
-      base: 20.0
-      scale: 0.1
-      spread: 0.1
-      max-spread: 0.2
-    tier: RARE
-    pve-damage: 100.0
-    attack-damage:
-      base: 12.0
-      scale: 0.1
-      spread: 0.1
-      max-spread: 0.2
-    knockback: 0.15
-    recoil: 0.1
-    two-handed: true
-    max-durability: 1350.0
-SNIPER_RIFLE:
+MOSKET:
   base:
     material: DIAMOND_HORSE_ARMOR
-    name: §b§lSniper Rifle
-    max-durability: 6000.0
+    name: '&6&lOmegamin Machine Gun'
+    required-level: 100.0
+    attack-damage: 20.0
+    critical-strike-chance: 10.0
+    critical-strike-power: 12.2
+    range: 30.0
+    projectile-damage: 20.0
+    two-handed: true
+    knockback: 0.15
     lore:
-      - §bWhen you need a lot of precision.
-    disable-interaction: true
-    range: 160.0
-    attack-damage:
-      base: 30.0
-      scale: 0.15
-      spread: 0.1
-      max-spread: 0.2
-    critical-strike-chance:
-      base: 30.0
-      spread: 0.15
-      max-spread: 0.3
-    critical-strike-power:
-      base: 60.0
-      spread: 0.15
-      max-spread: 0.3
-    required-level: 35.0
-    weapon-damage:
-      base: 10.0
-      scale: 0.05
-      spread: 0.05
-      max-spread: 0.1
-    projectile-damage:
-      base: 10.0
-      scale: 0.05
-      spread: 0.1
-      max-spread: 0.2
-    tier: EPIC
-    gem-sockets:
-      - Cyan
-      - Cyan
+    - '&6Arma de gran calibre con el'
+    - '&6poder para acabar con'
+    - '&6cualquier enemigo.'
+    - '&6&lLK Industries'
+    pve-damage: 4.0
+    pvp-damage: 3.2
+    unbreakable: true
     ability:
       ability1:
-        type: STUN
-        mode: ATTACK
+        type: SLOW
         cooldown: 5.0
-        duration: 2.0
-    attack-speed: 0.9
-    knockback: 0.25
-    recoil: 0.01
-    displayed-type: Firearm
+        amplifier: 1.5
+    attack-speed: 200.0
+    disable-enchanting: true
+    disable-repairing: true
+    disable-smithing: true
+    required-class:
+    - CAZADOR
+RPG:
+  base:
+    material: IRON_HORSE_ARMOR
+    two-handed: true
+    knockback: 1.0
+    name: '&2Lanza Granadas Tactica'
+    attack-speed: -10.0
+    ability:
+      ability1:
+        type: FIREBOLT
+        mode: RIGHT_CLICK
+        cooldown: 2.0
+        damage: 80.0
+        ignite: 6.0
+        mana: 35.0
+      ability2:
+        type: TNT_THROW
+        mode: SHIFT_RIGHT_CLICK
+        mana: 40.0
+        cooldown: 35.0
+        force: 2.0
+    attack-damage: 2.7
+    critical-strike-chance: 16.8
+    critical-strike-power: 7.1
+    pve-damage: 6.9
+    pvp-damage: 4.2
+    projectile-damage: 4.6
+    range: 20.0
+    required-level: 80.0
+    lore:
+    - '&eLanza Granadas &8(click derecho)'
+    - '&7Dispara una granada cada &32 segundos&7, haciendo &380 de daño'
+    - '&7y lo quema durante &36 segundos&7, y por cada disparo gasta'
+    - '&335 de mana'
+    - '&eGranada Perforante &8(shift click derecho)'
+    - '&7Lanza un tnt de &32 de fuerza&7, gasta &340 de mana &7en cada tiro'
+    - '&7y tiene un cooldown de &340 segundos'
+    - '&6Arma de alto calibre creada, solo para'
+    - '&6hacer estallar el mundo'
+    - '&6&lLK Industries'
+    required-class:
+    - CAZADOR
+SNIPER:
+  base:
+    material: IRON_HORSE_ARMOR
+    critical-strike-chance: 18.0
+    critical-strike-power: 40.0
+    pve-damage: 10.0
+    pvp-damage: 3.0
+    range: 500.0
+    two-handed: true
+    perm-effects:
+      NIGHT_VISION: 1.0
+      SLOW: 1.0
     movement-speed: -0.05
+    knockback: 1.5
+    name: '&6Fusil De Francontirador &8Dragunov'
+    ability:
+      ability1:
+        type: WEAKEN_TARGET
+        cooldown: 100.0
+        extra-damage: 60.0
+        mode: ON_HIT
+    lore:
+    - '&eWeaken Target &8(Al Disparar)'
+    - '&7Al disparar a un enemigo, invoca una marca'
+    - '&7que dura &34 segundos&7, al volver a disparar'
+    - '&7en esos &34 segundos&7, el disparo tiene un incremento del'
+    - '&7mas del &360% de daño base'
+    - '&6Rifle de francotirador semiautomatico, diseñado por'
+    - '&6Evgeniy Fiodorovich Dragunov en la Union Sovietica'
+    - '&6entre 1958 y 1963'
+    - '&6&lLK Industries'
+    revision-id: 1
+    required-level: 100.0
+    attack-damage: 80.0
+    attack-speed: -65.0
+    required-class:
+    - CAZADOR
+LANZALLAMAS:
+  base:
+    material: IRON_HORSE_ARMOR
+    attack-speed: 150.0
+    range: 25.0
+    ability:
+      ability1:
+        type: BURN
+        cooldown: 0.0
+        mode: ON_HIT
+        duration: 10.0
+    item-particles:
+      type: AURA
+      particle: FLAME
+    skill-damage: 10.0
+    pve-damage: 4.2
+    pvp-damage: 2.6
+    element:
+      fire:
+        damage: 60.0
+    two-handed: true
+    perm-effects:
+      FIRE_RESISTANCE: 2.0
+      SLOW: 2.0
+    knockback-resistance: 0.3
+    undead-damage: 5.0
+    required-level: 50.0
+    fire-damage-reduction: 25.0
+    disable-enchanting: true
+    name: '&6LanzaLlamas &8M2A1-7'
+    lore:
+    - '&6Lanzallamas muy poderoso, capaz de derretir a cualquiera'
+    - '&6su primera aparicion fue en la segunda guerra mundial'
+    - '&e&oItem De Apoyo'
+    - '&6&lLK Industries'
+    attack-damage: 5.0
+HEIZER:
+  base:
+    material: DIAMOND_HORSE_ARMOR
+    name: '&1Heizer Criogénico'
+    element:
+      ice:
+        damage: 200.0
+        defense: 30.0
+    required-level: 80.0
+    range: 8.0
+    two-handed: true
+    ability:
+      ability1:
+        type: BLIND
+        duration: 12.0
+        mode: RIGHT_CLICK
+        mana: 60.0
+        cooldown: 40.0
+    attack-speed: -1000.0
+    disable-repairing: true
+    disable-enchanting: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-crafting: true
+    sounds:
+      on-attack:
+        sound: ice
+        volume: 3.0
+        pitch: 3.0
+    fire-damage-reduction: -20.0
+    lore:
+    - '&eMejora Heizer &8(Click Derecho)'
+    - '&7Mejora el disparo &1Criogénico&7 dando un mayor efecto'
+    - '&7que dura &312 segundos&7, consume &360 de mana'
+    - '&7y posee un cooldown de &340 segundos.'
+    - '&6Prototipo de escala militar, con funcion de congelar'
+    - '&6al enemigo en tan solo unos segundos.'
+    - '&e&oItem De Apoyo'
+    - '&6&lLK Industries'
+    perm-effects:
+      SLOW: 2.0
+    attack-damage: 3.41
+BAZOOKA_SHULKER:
+  base:
+    material: IRON_HORSE_ARMOR
+    ability:
+      ability1:
+        type: SHULKER_MISSILE
+        effect-duration: 15.0
+        mode: RIGHT_CLICK
+        mana: 20.0
+        damage: 25.0
+        cooldown: 30.0
+        duration: 10.0
+    name: '&2Bazooka Shulker'
+    two-handed: true
+    required-level: 20.0
+    disable-repairing: true
+    disable-enchanting: true
+    disable-smithing: true
+    disable-smelting: true
+    disable-crafting: true
+    knockback: 1.0
+    revision-id: 1
+    lore:
+    - '&eLevitate &8(Click Derecho)'
+    - '&7Dispara una serie de &33 misiles shulker&7, haciendo'
+    - '&325 de daño&7, consumiendo &320 de mana &7y posee un'
+    - '&7cooldown de &330 segundos.'
+    - '&e&oItem De Apoyo'
+    - '&6&lLK Industries'
+PORTALGUN:
+  base:
+    material: IRON_HORSE_ARMOR
+    name: '&ETeleport Gun'
+    ability:
+      ability1:
+        type: BLINK
+        mode: RIGHT_CLICK
+        range: 150.0
+        cooldown: 60.0
+    two-handed: true
+    disable-repairing: true
+    disable-enchanting: true
+    disable-smithing: true
+    disable-smelting: true
+    disable-crafting: true
+    lore:
+    - '&eViaje Espacial &8(Click Derecho)'
+    - '&7Te teletransporta a una ubicacion señalada'
+    - '&7por el puntero en un rango maximo de &3150 bloques'
+    - '&7y posee un cooldown de &360 segundos.'
+    - '&e&oItem De Apoyo'
+    - '&6&lLK Industries'
+    required-level: 45.0
+    attack-damage: 0.0
+MISSILE:
+  base:
+    material: DIAMOND_HORSE_ARMOR
+    ability:
+      ability1:
+        type: HOLY_MISSILE
+        mode: RIGHT_CLICK
+        cooldown: 0.0
+        damage: 30.0
+        mana: 3.0
+        duration: 6.0
+    name: '&6&oAmetralladora Misiles Cosmicos'
+    required-level: 100.0
+    lore:
+    - '&eDevastacion De Mundos &8(Click Derecho)'
+    - '&7Dispara una rafaga de misiles, haciendo &330 de daño'
+    - '&7por impacto, y consumiendo &33 de mana &7por cada'
+    - '&7misil disparado.'
+    - '&6Quien posea esta arma, a donde quiera que vaya'
+    - '&6traera la devastacion'
+    - '&6&lLK Industries'
+    knockback: 1.0
+    two-handed: true
+    max-mana: 100.0
+    enchants:
+      power: 1.0
+    hide-enchants: true
+    disable-crafting: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+'&2LANZA_DARDOS_VENENOSO':
+  base:
+    material: LEATHER_HORSE_ARMOR
+    name: '&2Lanza Dardos Venenoso'
+    disable-repairing: true
+    disable-enchanting: true
+    disable-smithing: true
+    disable-smelting: true
+    disable-crafting: true
+    required-class:
+    - CAZADOR
+    attack-damage: 25.0
+    ability:
+      ability1:
+        type: POISON
+        mode: RIGHT_CLICK
+        amplifier: 8.0
+        duration: 10.0
+        cooldown: 10.0
+    attack-speed: -100.0
+    required-level: 20.0
+    critical-strike-chance: 2.13
+    range: 15.0
+    critical-strike-power: 4.32
+    pvp-damage: 2.45
+    element:
+      earth:
+        damage: 12.0
+    movement-speed: 0.02
+    lore:
+    - '&eVeneno Fatal &8(Pasiva)'
+    - '&7Dispara dardos de &3(Poison) nivel 8&7, y dura'
+    - '&310 segundos,&7 ademas posee un cooldown'
+    - '&7de &310 segundos.'
+    - '&6&lLK Industries'
+    perm-effects:
+      INVISIBILITY: 1.0
+      NIGHT_VISION: 1.0
+BLACK_HOLE:
+  base:
+    material: GOLDEN_HORSE_ARMOR
+    name: '&8Creador De Agujeros Negros'
+    ability:
+      ability1:
+        type: BLACK_HOLE
+        mode: RIGHT_CLICK
+        duration: 1.0
+        radius: 3.0
+        cooldown: 1.0
+        mana: 15.0
+    required-level: 25.0
+    range: 15.0
+    disable-repairing: true
+    disable-enchanting: true
+    disable-smithing: true
+    disable-smelting: true
+    disable-crafting: true
+    item-particles:
+      particle: SQUID_INK
+      type: FIREFLIES
+    enchants:
+      power: 1.0
+    hide-enchants: true
+    lore:
+    - '&eVortice Succionador &8(Click Derecho)'
+    - '&7Invoca un &8agujero negro&7, que dura &31 segundo'
+    - '&7en un radio de &33 bloques&7, consume &315 de mana'
+    - '&7y posee un cooldown de &31 segundo.'
+    - '&e&oItem De Apoyo'
+    - '&6&lLK Industries'
+    perm-effects:
+      JUMP: 3.0
+    revision-id: 1

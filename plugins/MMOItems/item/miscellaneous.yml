@@ -1,9 +1,9 @@
 GOLD_COIN:
   base:
     material: GOLD_NUGGET
-    name: '&fGold Coin'
+    name: '&fMoneda de Oro'
     lore:
-    - '&7A very shiny gold coin.'
+    - '&7Una moneda de oro muy brillante.'
     enchants:
       unbreaking: 1
     hide-enchants: true
@@ -16,37 +16,147 @@ HUMAN_SOUL:
     hide-enchants: true
     enchants:
       unbreaking: 1
-    name: '&6Human Soul'
+    name: '&6Alma de Humano'
     disable-crafting: true
     lore:
-    - '&7&oYou hear the screams of'
-    - '&7&oyour enemies... or friends.'
-MYSTERIOUS_PEARL:
+    - '&7&oOyes los gritos'
+    - '&7&oTus enemigos... Tus amigos.'
+CORAZON:
   base:
-    material: ENDER_PEARL
+    material: HEART_OF_THE_SEA
+    name: '&6&lCorazon Ancestral'
+    lore:
+    - §6Este Corazon Ancestral, tiene un precio muy
+    - §6elevado, ademas sirve para crear armamento
+    - §6de primera calidad.
+    tier: EPIC
+GOLD_NUGGET:
+  base:
+    material: GOLD_NUGGET
+    name: '&e&lBeeCoin'
     enchants:
-      luck_of_the_sea: 1.0
+      power: 1.0
     hide-enchants: true
-    name: §9Mysterious Pearl
     lore:
-      - §7§oWho knows what secrets it can hide...
-      - §3Can't be stacked.
-    unstackable: true
-    tier: RARE
-LEVEL_1_KEY:
+    - '&6Moneda Oficial del server'
+ELIPCHEQUE:
   base:
-    material: SHEARS
-    name: §3§nLevel 1§3 Key
+    material: PAPER
+    name: '&6&lElipCheque'
+    enchants:
+      power: 1.0
+    hide-enchants: true
     lore:
-      - §7Gives the permission §cmmoitems.key§7 when
-      - §7held.
-    granted-permissions:
-      - mmoitems.key
-    tier: UNIQUE
+    - '&6Cheque de alto valor, se desconoce la cantidad impresa'
+    - '&6pero posee un gran poder'
     unstackable: true
-    disable-interaction: true
-    disable-repairing: true
-    disable-enchanting: true
+BEECOINDIAMOND:
+  base:
+    material: DIAMOND
+    enchants:
+      power: 1.0
+    hide-enchants: true
+    name: '&e&lBeeDiamond'
+    lore:
+    - '&6Moneda Oficial del server'
+BEEEMERALD:
+  base:
+    material: EMERALD
+    name: '&e&lBeeEmerald'
+    lore:
+    - '&6Moneda Oficial del server'
+    enchants:
+      power: 1.0
+    hide-enchants: true
+'&6ULTIMATESTAR':
+  base:
+    material: NETHER_STAR
+    name: '&4&lUni-Star'
+    disable-crafting: true
     disable-smelting: true
     disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    auto-soulbind: true
+    ability:
+      ability1: {}
+    lore:
+    - '&4Item con valor casi infinito'
+FLYANGEL:
+  base:
+    material: NETHERITE_SWORD
+    disable-repairing: true
+    disable-enchanting: true
+    disable-smithing: true
+    disable-smelting: true
+    disable-crafting: true
+    item-particles:
+      type: OFFSET
+      particle: ENCHANTMENT_TABLE
+      horizontal-offset: 0.4
+      amount: 25.0
+      vertical-offset: 0.6
+    enchants:
+      sharpness: 666.0
+    commands:
+      cmd0:
+        format: heal
+        delay: 0.0
     unbreakable: true
+    will-break: true
+    max-durability: 666.0
+    name: '&4&kl&r&l&0&oOP&r&4&kl'
+    lore:
+    - '&4&l&k00000000000000000000000000000000'
+BEDROCK:
+  base:
+    material: BEDROCK
+    disable-interaction: true
+    disable-crafting: true
+    disable-smelting: true
+    disable-smithing: true
+    disable-enchanting: true
+    disable-repairing: true
+    lore:
+    - La ultima etapa del valor
+    name: '&4&l Primer piedra'
+MITHYCGEM:
+  base:
+    material: NETHER_STAR
+    name: '&e&lReforced DiamondEmerald Star'
+    lore:
+    - '&6Aliacion de BeeDiamond y BeeEmerald forjado'
+    - '&6con escencias miticas'
+    - '&6Moneda Oficial del server'
+LAGRIMAS:
+  base:
+    material: GHAST_TEAR
+    name: '&2Lagrimas De Fortuna'
+    lore:
+    - '&6Buenas obras, es igual a buena fortuna'
+    - '&6&lLK Industries'
+BEECHEQUE:
+  base:
+    material: PAPER
+    enchants:
+      power: 1.0
+    hide-enchants: true
+    name: §6§lBeeCheque
+    disable-enchanting: true
+    disable-repairing: true
+    disable-smithing: true
+    disable-smelting: true
+    disable-crafting: true
+    lore:
+    - §6Con este cheque puedes comprar
+    - §6cosas muy utiles en el Gremio
+BEETOKEN:
+  base:
+    material: GOLD_INGOT
+    enchants:
+      power: 1.0
+    hide-enchants: true
+    name: §6§lBeeToken
+    lore:
+    - §6Moneda popular que se utiliza
+    - §6en el Gremio.

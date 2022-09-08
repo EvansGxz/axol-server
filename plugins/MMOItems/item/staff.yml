@@ -1,7 +1,7 @@
 EARTH_STAFF:
   base:
     material: JUNGLE_SAPLING
-    name: '&fEarth Staff'
+    name: '&fBastón de tierra'
     enchants:
       unbreaking: 1
     hide-enchants: true
@@ -39,13 +39,13 @@ EARTH_STAFF:
         duration: 2.0
       on-hit:
         type: SLOW
-        mode: ATTACK
+        mode: ON_HIT
         cooldown: 39.0
         amplifier: 4.0
         duration: 2.0
     lore:
-    - '&7An extremely powerful weapon.'
-    - '&7Use it &f&nwisely&7.'
+    - '&7Un arma extremadamente poderosa.'
+    - '&7Úsalo con &f&nsabiduría&7.'
     tier: VERY_RARE
     disable-crafting: true
     disable-smelting: true
@@ -54,7 +54,7 @@ EARTH_STAFF:
 LIGHTNING_STAFF:
   base:
     material: STICK
-    name: '&f&lLightning Staff'
+    name: '&f&lBastón de rayos'
     required-level: 3.0
     attack-damage:
       base: 10.0
@@ -72,7 +72,7 @@ LIGHTNING_STAFF:
     ability:
       on-hit:
         type: STARFALL
-        mode: ATTACK
+        mode: ON_HIT
         damage: 5.0
         cooldown: 30.0
 BONE_STAFF:
@@ -93,88 +93,54 @@ BONE_STAFF:
       max-spread: 0.2
     lore: []
     name: '&fBone Staff'
-MANA_STAFF:
+OVERLOAD:
   base:
     material: DIAMOND_HOE
-    name: §b§lMana Staff
-    lore:
-      - §b§oThis staff uses pure ambiant mana.
-    tier: RARE
-    required-level: 15.0
-    critical-strike-chance:
-      base: 15.0
-      spread: 0.08
-      max-spread: 0.19
-    critical-strike-power:
-      base: 30.0
-      spread: 0.08
-      max-spread: 0.19
-    attack-damage:
-      base: 14.0
-      scale: 0.07
-      spread: 0.1
-    attack-speed: 0.7
+    ability:
+      ability1:
+        type: OVERLOAD
+        damage: 60.0
+        mana: 45.0
+        cooldown: 100.0
+        radius: 9.0
+        mode: RIGHT_CLICK
+      ability2:
+        type: HOLY_MISSILE
+        cooldown: 30.0
+        damage: 20.0
+        mana: 25.0
+        mode: SHIFT_RIGHT_CLICK
     perm-effects:
       SPEED: 1.0
-    ability:
-      ability1:
-        type: REGEN_ALLY
-        mode: RIGHT_CLICK
-        duration: 3.0
-        cooldown: 8.0
-        heal: 10.0
-        mana: 10.0
-    magic-damage-reduction:
-      base: 15.0
-      scale: 0.05
-      spread: 0.1
-      max-spread: 0.2
-    magic-damage:
-      base: 12.0
-      scale: 0.07
-      spread: 0.12
-    mana-cost: 5.0
-    range: 32.0
+    attack-damage: 13.6
+    attack-speed: 2.1
+    projectile-damage: 5.2
+    max-health: 12.0
+    max-mana: 21.0
+    mana-regeneration: 2.1
     element:
-      water:
-        damage:
-          base: 60.0
-          scale: 0.0
-          spread: 0.1
-          max-spread: 0.25
-    gem-sockets:
-      - Blue
-    staff-spirit: MANA_SPIRIT
-VOID_STAFF:
-  base:
-    material: NETHERITE_HOE
-    name: §5§lVoid Staff
-    attack-damage: 25.0
-    attack-speed: 1.5
-    required-level: 40.0
-    tier: LEGENDARY
-    critical-strike-chance:
-      base: 10.0
-      scale: 0.1
-      spread: 0.1
-      max-spread: 0.2
-    critical-strike-power:
-      base: 20.0
-      scale: 0.1
-      spread: 0.1
-      max-spread: 0.2
-    range: 30.0
-    mana-cost: 6.0
-    magic-damage: 40.0
-    staff-spirit: VOID_SPIRIT
-    required-class:
-      - Mage
-    ability:
-      ability1:
-        type: CURSED_BEAM
-        mode: RIGHT_CLICK
-        damage: 30.0
-        duration: 4.0
-        cooldown: 7.0
+      thunder:
+        damage: 20.0
+    critical-strike-chance: 3.4
+    critical-strike-power: 3.2
+    pve-damage: 5.0
+    pvp-damage: 5.0
+    skill-damage: 2.02
+    name: '&6Baston De Amidas'
     lore:
-      - §7Think of all the places this can go.
+    - '&3Capaz de crear Holocaustos en solo segundos'
+    - '&6&lLK Industries'
+    - '&eOverload &8(click derecho)'
+    - '&7Crea una honda expansiva que hace &360 de daño'
+    - '&7en un radio de &39 bloques &7y gasta &345 de mana'
+    - '&eHoly Missile &8(shift click derecho)'
+    - '&7Lanza un misil a donde apuntes, haciendo'
+    - '&320 de Daño &7y gasta &325 de mana'
+    revision-id: 1
+    disable-enchanting: true
+    disable-repairing: true
+    disable-smithing: true
+    disable-interaction: true
+    required-level: 60.0
+    required-class:
+    - MAGO

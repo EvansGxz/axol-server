@@ -1,0 +1,187 @@
+
+# Name which will be displayed
+# when opening the station
+name: 'Forja Cazador (#page#/#max#)'
+
+# The maximum amount of items in the crafting queue ie. the
+# max number of items players are able to craft simultaneously.
+# Must be between 1 and 64.
+max-queue-size: 10
+
+# The sound that plays whenever an action is
+# completed in the crafting station.
+# GET SOUND NAMES HERE:
+# https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Sound.html
+sound: ENTITY_EXPERIENCE_ORB_PICKUP
+
+# This is how the gui looks. You can define your own
+# in crafting-stations/layouts by creating a new
+# file with the name of the file as the id.
+layout: default
+
+# Configure GUI items here
+items:
+    fill:
+        material: AIR
+    no-recipe:
+        material: GRAY_STAINED_GLASS_PANE
+        name: '&aSin receta'
+    no-queue-item:
+        material: GRAY_STAINED_GLASS_PANE
+        name: '&aNo Item en cola'
+
+# Station recipes
+recipes:
+    hunter-helmet:
+        output:
+            type: ARMOR
+            id: I_HUNTERHELMET
+            amount: 1
+        crafting-time: 25
+        conditions:
+        - 'level{level=4}'
+        - 'class{list=CAZADOR}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=HSOUL,amount=6,display="Esencia de Cazador"}
+    hunter-chestplate:
+        output:
+            type: ARMOR
+            id: I_HUNTERCHESTPLATE
+            amount: 1
+        crafting-time: 40
+        conditions:
+        - 'level{level=4}'
+        - 'class{list=CAZADOR}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=HSOUL,amount=9,display="Esencia de Cazador"}
+    hunter-leggings:
+        output:
+            type: ARMOR
+            id: I_HUNTERLEGGINGS
+            amount: 1
+        crafting-time: 30
+        conditions:
+        - 'level{level=4}'
+        - 'class{list=CAZADOR}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=HSOUL,amount=8,display="Esencia de Cazador"}
+    hunter-boots:
+        output:
+            type: ARMOR
+            id: I_HUNTERBOOTS
+            amount: 1
+        crafting-time: 20
+        conditions:
+        - 'level{level=4}'
+        - 'class{list=CAZADOR}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=HSOUL,amount=5,display="Esencia de Cazador"}
+    hunter-bow:
+        output:
+            type: BOW
+            id: I_STARTERHUNTERSWORD
+            amount: 1
+        crafting-time: 50
+        conditions:
+        - 'level{level=4}'
+        - 'class{list=CAZADOR}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=HSOUL,amount=5,display="Esencia de Cazador"}
+        - 'vanilla{type=BOW,amount=1,display="Arco"}'
+    hunter-bow2:
+        output:
+            type: BOW
+            id: II_PRECISIONBOW
+            amount: 1
+        crafting-time: 110
+        conditions:
+        - 'level{level=15}'
+        - 'class{list=CAZADOR}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=HSOUL,amount=15,display="Esencia de Cazador"}
+        - mmoitem{type=BOW,id=I_STARTERHUNTERSWORD,amount=2}
+    hunter-bow2-2:
+        output:
+            type: GREATBOW
+            id: II_HEAVYGREATBOW
+            amount: 1
+        crafting-time: 120
+        conditions:
+        - 'level{level=25}'
+        - 'class{list=CAZADOR}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=HSOUL,amount=17,display="Esencia de Cazador"}
+        - mmoitem{type=BOW,id=I_STARTERHUNTERSWORD,amount=2}
+    hunter-bow3:
+        output:
+            type: BOW
+            id: III_EARTHBOW
+            amount: 1
+        crafting-time: 220
+        conditions:
+        - 'level{level=30}'
+        - 'class{list=CAZADOR}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=HSOUL,amount=25,display="Esencia de Cazador"}
+        - mmoitem{type=GREATBOW,id=II_HEAVYGREATBOW,amount=2}
+    hunter-bow3-3:
+        output:
+            type: GREATBOW
+            id: III_WARBOW
+            amount: 1
+        crafting-time: 230
+        conditions:
+        - 'level{level=40}'
+        - 'class{list=CAZADOR}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=HSOUL,amount=27,display="Esencia de Cazador"}
+        - mmoitem{type=BOW,id=II_PRECISIONBOW,amount=2}
+    hunter-bow4:
+        output:
+            type: BOW
+            id: IV_INFERNALBOW
+            amount: 1
+        crafting-time: 330
+        conditions:
+        - 'level{level=50}'
+        - 'class{list=CAZADOR}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=HSOUL,amount=35,display="Esencia de Cazador"}
+        - mmoitem{type=GREATBOW,id=III_WARBOW,amount=2}
+    hunter-bow4-4:
+        output:
+            type: GREATBOW
+            id: IV_PLANETARYGREATBOW
+            amount: 1
+        crafting-time: 340
+        conditions:
+        - 'level{level=55}'
+        - 'class{list=CAZADOR}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=HSOUL,amount=37,display="Esencia de Cazador"}
+        - mmoitem{type=BOW,id=III_WARBOW,amount=2}
+    hunter-bow5:
+        output:
+            type: BOW
+            id: V_WORLDBOW
+            amount: 1
+        crafting-time: 440
+        conditions:
+        - 'level{level=60}'
+        - 'class{list=CAZADOR}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=HSOUL,amount=45,display="Esencia de Cazador"}
+        - mmoitem{type=GREATBOW,id=IV_PLANETARYGREATBOW,amount=1}
+        - mmoitem{type=BOW,id=IV_INFERNALBOW,amount=1}
+    hunter-bow6:
+        output:
+            type: BOW
+            id: VI_BEEBOW
+            amount: 1
+        crafting-time: 550
+        conditions:
+        - 'level{level=70}'
+        - 'class{list=CAZADOR}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=HSOUL,amount=55,display="Esencia de Cazador"}
+        - mmoitem{type=BOW,id=V_WORLDBOW,amount=2}

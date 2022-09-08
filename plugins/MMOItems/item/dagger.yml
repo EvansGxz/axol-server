@@ -1,7 +1,7 @@
 STEEL_DAGGER:
   base:
     material: IRON_SWORD
-    name: '&fSteel Dagger'
+    name: '&fDaga de Hierro'
     attack-damage:
       base: 4.75
       spread: 0.017
@@ -43,7 +43,7 @@ DRACULA_DAGGER:
       base: 7.5
       spread: 0.02
       max-spread: 0.06
-    name: '&fDracula''s Dagger'
+    name: '&fDaga Vampirica'
     attack-speed:
       base: 1.65
       spread: 0.01
@@ -56,144 +56,517 @@ DRACULA_DAGGER:
     ability:
       on-hit:
         type: VAMPIRISM
-        mode: ATTACK
+        mode: ON_HIT
         drain: 3.0
         cooldown: 4.0
     lore:
-    - '&7Every 4sec, hitting an'
-    - '&7enemy &cdrains&7 his health,'
+    - '&7Cada 4seg golpeando un'
+    - '&7enemigo &cdrena&7 su vida,'
     - '&7healing you for &c1.5 heart&7.'
     enchants:
       unbreaking: 10
     hide-enchants: true
-VERY_SHARP_DAGGER:
+I_STARTERASSASSINDAGGER:
   base:
-    material: IRON_SWORD
-    tier: RARE
-    max-durability: 1800.0
-    will-break: true
-    name: §7§l§oVery Sharp Dagger
-    displayed-type: §cSharp Dagger
+    material: DIAMOND_SWORD
+    name: '&fDaga de metal'
+    attack-speed: 1.8
+    critical-strike-power:
+      base: 2.0
+      scale: 0.02
+      spread: 0.05
+    critical-strike-chance:
+      base: 3.0
+      scale: 0.02
+      spread: 0.05
+    tier: COMMON
+    max-durability: 1250.0
+    required-level: 2.0
+    required-class:
+    - ASESINO
+    attack-damage:
+      base: 10.0
+      scale: 2.0
+      spread: 0.05
+      max-spread: 0.4
+II_FINEDAGGER:
+  base:
+    material: DIAMOND_SWORD
+    name: '&aDaga templaria'
+    attack-damage:
+      base: 7.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-power:
+      base: 2.0
+      scale: 0.02
+      spread: 0.05
+    critical-strike-chance:
+      base: 1.75
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    attack-speed: 1.8
+    tier: UNCOMMON
+    max-durability: 3200.0
     required-level: 12.0
     required-class:
-      - Assassin
-    attack-damage:
-      base: 10.0
-      scale: 0.13
-      spread: 0.1
-      max-spread: 0.23
-    attack-speed: 1.9
-    critical-strike-chance:
-      base: 30.0
-      scale: 0.05
-      spread: 0.1
-      max-spread: 0.23
-    critical-strike-power:
-      base: 80.0
-      scale: 0.09
-      spread: 0.08
-      max-spread: 0.2
-    weapon-damage:
-      base: 15.0
-      scale: 0.2
-      spread: 0.2
-      max-spread: 0.3
-    movement-speed: 0.02
-    gem-sockets:
-      - White
-    upgrade:
-      template: weapon-default
-    physical-damage:
-      base: 30.0
-      scale: 0.1
-      spread: 0.3
-      max-spread: 0.6
-    lore:
-      - §f§oExtremely sharp due to a very long
-      - §f§oprocess of refining.
-POISONOUS_DAGGER:
+    - ASESINO
+III_EDGEDDAGGER:
   base:
-    material: WOODEN_SWORD
-    name: §2§l§oPoisonous Dagger
-    lore:
-      - §7Who knows what infected it...
-    max-durability: 4500.0
+    material: DIAMOND_SWORD
+    name: <#3498DB>Daga Curva
     attack-damage:
-      base: 22.0
-      scale: 0.15
-      spread: 0.15
-      max-spread: 0.25
-    attack-speed: 1.75
-    critical-strike-chance:
-      base: 25.0
-      scale: 0.05
-      spread: 0.08
-      max-spread: 0.13
-    critical-strike-power:
-      base: 40.0
-      scale: 0.09
-      spread: 0.11
-      max-spread: 0.18
-    pvp-damage:
-      base: 15.0
-      scale: 0.03
-      spread: 0.15
-      max-spread: 0.2
+      base: 9.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    physical-damage:
+      base: 4.5
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
     weapon-damage:
-      base: 10.0
-      spread: 0.1
-      max-spread: 0.2
-    tier: LEGENDARY
-    gem-sockets:
-      - Green
-      - Green
-    magic-damage:
-      base: 12.0
-      spread: 0.1
-      max-spread: 0.2
-    required-level: 32.0
-    upgrade:
-      template: weapon-default
-    break-downgrade: true
+      base: 2.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-chance:
+      base: 4.5
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-power:
+      base: 2.5
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    attack-speed: 1.6
+    tier: RARE
+    max-durability: 4500.0
+    required-level: 33.0
+    required-class:
+    - ASESINO
+    ability:
+      ability1:
+        type: CONFUSE
+        mana: 2.0
+        cooldown: 5.0
+        mode: ON_HIT
+III_PIERCINGDAGGER:
+  base:
+    material: DIAMOND_SWORD
+    name: <#3498DB>Daga Persa
+    attack-damage:
+      base: 9.5
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    physical-damage:
+      base: 4.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    weapon-damage:
+      base: 1.5
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-chance:
+      base: 4.0
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-power:
+      base: 3.0
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    attack-speed: 1.8
+    tier: RARE
+    max-durability: 4500.0
+    required-level: 30.0
+    required-class:
+    - ASESINO
+    ability:
+      ability1:
+        type: FREEZING_CURSE
+        duration: 5.0
+        damage: 8.0
+        mana: 8.0
+        cooldown: 15.0
+        amplifier: 2.5
+        radius: 4.0
+        mode: ON_HIT
+IV_SHADOWDAGGER:
+  base:
+    material: NETHERITE_SWORD
+    name: <#5B2C6F>Daga Sombría
+    attack-damage:
+      base: 11.5
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    physical-damage:
+      base: 4.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    weapon-damage:
+      base: 2.25
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-chance:
+      base: 4.0
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-power:
+      base: 2.75
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    parry-rating:
+      base: 1.5
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    pvp-damage:
+      base: 2.0
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    attack-speed: 1.8
+    tier: EPIC
     element:
-      earth:
+      fire:
+        damage:
+          base: 10.0
+          scale: 0.0
+          spread: 0.02
+          max-spread: 0.06
+      wind:
+        damage:
+          base: 10.0
+          scale: 0.0
+          spread: 0.02
+          max-spread: 0.06
+    max-durability: 6000.0
+    required-level: 40.0
+    required-class:
+    - ASESINO
+    perm-effects:
+      INVISIBILITY: 1.0
+IV_LIGHTINGDAGGER:
+  base:
+    material: NETHERITE_SWORD
+    name: <#5B2C6F>Escama de Dragón
+    attack-damage:
+      base: 11.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    physical-damage:
+      base: 5.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    weapon-damage:
+      base: 2.75
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-chance:
+      base: 4.5
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-power:
+      base: 3.0
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    parry-rating:
+      base: 1.0
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    pvp-damage:
+      base: 1.5
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    attack-speed: 1.8
+    tier: EPIC
+    element:
+      thunder:
+        damage:
+          base: 10.0
+          scale: 0.0
+          spread: 0.02
+          max-spread: 0.06
+      ice:
+        damage:
+          base: 10.0
+          scale: 0.0
+          spread: 0.02
+          max-spread: 0.06
+    max-durability: 6000.0
+    required-level: 44.0
+    required-class:
+    - ASESINO
+    ability:
+      ability1:
+        type: STARFALL
+        damage: 10.0
+        mana: 10.0
+        cooldown: 15.0
+        mode: ON_HIT
+V_ECLIPSEDAGGER:
+  base:
+    material: NETHERITE_SWORD
+    name: <#F39C12>Eclipse
+    attack-damage:
+      base: 14.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    physical-damage:
+      base: 5.25
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    weapon-damage:
+      base: 3.0
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-chance:
+      base: 6.5
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-power:
+      base: 5.0
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    parry-rating:
+      base: 3.25
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    pvp-damage:
+      base: 3.75
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    pve-damage:
+      base: 1.25
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    skill-damage:
+      base: 1.75
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    attack-speed: 1.8
+    tier: LEGENDARY
+    element:
+      fire:
         damage:
           base: 30.0
           scale: 0.0
-          spread: 0.1
-          max-spread: 0.2
+          spread: 0.03
+          max-spread: 0.08
+    ability:
+      ability2:
+        type: BURNING_HANDS
+        cooldown: 15.0
+        mana: 10.0
+        mode: RIGHT_CLICK
+        damage: 10.0
+        duration: 5.0
+    max-durability: 8500.0
+    required-level: 50.0
+    required-class:
+    - ASESINO
+VI_BEEDAGGER:
+  base:
+    material: NETHERITE_SWORD
+    name: <#FFFF60>Rey Salomón
+    attack-damage:
+      base: 17.5
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    physical-damage:
+      base: 6.5
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    magic-damage:
+      base: 1.25
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    weapon-damage:
+      base: 3.75
+      scale: 0.1
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-chance:
+      base: 6.75
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    critical-strike-power:
+      base: 6.25
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    parry-rating:
+      base: 4.25
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    pvp-damage:
+      base: 3.5
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    pve-damage:
+      base: 2.5
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    skill-damage:
+      base: 2.0
+      scale: 0
+      spread: 0.03
+      maxSpread: 0.08
+    attack-speed: 1.8
+    tier: MYTHICAL
+    element:
+      ice:
+        damage:
+          base: 40.0
+          scale: 0.0
+          spread: 0.03
+          max-spread: 0.08
+      water:
+        damage:
+          base: 10.0
+          scale: 0.0
+          spread: 0.03
+          max-spread: 0.08
+    max-durability: 11000.0
+    required-level: 60.0
+    required-class:
+    - ASESINO
     ability:
       ability1:
-        type: POISON
-        mode: ATTACK
-        duration: 4.0
-        stamina: 0.0
-        cooldown: 6.0
-        amplifier: 2.0
-SNEAKY_DAGGER:
+        type: EARTHQUAKE
+        duration: 5.0
+        damage: 15.0
+        mana: 10.0
+        cooldown: 15.0
+        amplifier: 3.0
+        mode: RIGHT_CLICK
+    perm-effects:
+      INCREASE_DAMAGE: 1.0
+    custom-model-data: 1.0
+HAYAI_DAGGER:
+  base:
+    material: DIAMOND_SWORD
+    disable-enchanting: true
+    disable-smithing: true
+    disable-smelting: true
+    disable-crafting: true
+    item-particles:
+      particle: CLOUD
+    max-durability: 500.0
+    name: '&5Hayai Dagger'
+    pvp-damage: 1.8
+    pve-damage: 13.0
+    stamina-cost: 5.0
+    required-class:
+    - ASESINO
+    stamina-regeneration: 1.0
+    ability:
+      ability1:
+        type: SKY_SMASH
+        stamina: 10.0
+        mode: RIGHT_CLICK
+    physical-damage: 10.0
+    attack-damage: 13.0
+    perm-effects:
+      SPEED: 3.0
+      INCREASE_DAMAGE: 1.0
+    max-stamina: 5.0
+    element:
+      wind:
+        damage: 15.0
+        defense: 20.0
+    critical-strike-chance: 30.0
+    critical-strike-power: 35.0
+    weapon-damage: 13.0
+    required-level: 50.0
+    skill-damage: 1.0
+    lore:
+    - '&4&lMade by Dwz'
+ARROJADIZA:
+  base:
+    material: IRON_SWORD
+    ability:
+      ability2:
+        type: VAMPIRISM
+        mode: RIGHT_CLICK
+        drain: 30.0
+        cooldown: 10.0
+      ability1:
+        type: ITEM_THROW
+        mode: RIGHT_CLICK
+        force: 2.0
+        mana: 15.0
+        damage: 8.0
+    name: '&2Puas Perforadoras &4Vampiricas'
+    disable-repairing: true
+    disable-enchanting: true
+    disable-smithing: true
+    required-level: 5.0
+    lore:
+    - '&eDrain &8(Click Derecho)'
+    - '&7Lanza una pua que perfora al enemigo'
+    - '&7drenando &330 puntos de vida&7 y causando le'
+    - '&38 de daño&7, consume &315 de mana&7, y posee un'
+    - '&7cooldown de &310 segundos'
+    - '&6&lLK Industries'
+    required-class:
+    - ASESINO
+TODO_O_NADA:
   base:
     material: STONE_SWORD
-    name: §8§lSneaky Dagger
+    name: §3TODO O NADA!
+    critical-strike-power: 800.0
+    critical-strike-chance: 50.0
+    required-class:
+    - ASESINO
+    physical-damage: 4.32
+    movement-speed: 0.01
+    required-level: 12.0
+    disable-repairing: true
+    disable-enchanting: true
+    disable-smithing: true
+    disable-smelting: true
+    disable-crafting: true
+    disable-interaction: true
     lore:
-      - §7This dagger is very sneaky.
-      - §8§oWhat dagger?
-    tier: UNCOMMON
+    - §7Apuesta todo con tu ultima jugada
+    - §7§lEs morir o matar.
+    attack-speed: 2.1
+    max-durability: 2500.0
     attack-damage: 5.0
-    attack-speed: 2.2
-    critical-strike-chance:
-      base: 9.0
-      scale: 0.1
-      spread: 0.01
-      max-spread: 0.05
-    critical-strike-power:
-      base: 20.0
-      scale: 0.1
-      spread: 0.01
-      max-spread: 0.05
-    required-level: 5.0
-    ability:
-      ability1:
-        type: BACKSTAB
-        mode: ATTACK
-        cooldown: 3.0
-        extra: 50.0
