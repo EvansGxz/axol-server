@@ -127,7 +127,7 @@ party:
   # Edit party buffs here. You may
   # add as many stats as you want.
   buff:
-    health-regeneration: 3
+    health-regeneration: 1.5
     additional-experience: 5
 
   # Prefix you need to put in the chat
@@ -172,7 +172,7 @@ vanilla-exp-redirection:
 override-vanilla-exp: true
 
 # Check the target player's RPG profile when shift when shift right clicking.
-shift-click-player-profile-check: false
+shift-click-player-profile-check: true
 
 # If main class experience holograms should be displayed
 # whenever a player earns main class exp
@@ -180,10 +180,10 @@ display-main-class-exp-holograms: true
 
 # Requires a SERVER reload when changed.
 death-exp-loss:
-  enabled: false
+  enabled: true
 
   # Percentage of current EXP you lose when dying.
-  percent: 30
+  percent: 10
 
 # Fun extra RPG feature that switches the player's hotbar with
 # the 9 lower row items of his inventory. This allows the player
