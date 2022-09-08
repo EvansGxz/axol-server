@@ -1,0 +1,48 @@
+mythicmobs-skill-id: Necromancer_SummonSkeletalWarrior
+
+name: Skel Warrior
+lore:
+- 'Raise a skeletal warrior'
+- 'from the dead with &c{health} &7life'
+- 'It deals &4{damage} &7physical damage'
+- 'with its 3 different skills'
+- 'it can taunt enemies in a radius of &a{threatradius}'
+- 'for &c{threat} &7threat every &e{threattime} &7seconds'
+- 'Costs &9{mana} &7mana | &e{cooldown}s &7Cooldown'
+material: SKELETON_SKULL
+
+mana:
+    base: 10.0
+    per-level: 2.0
+    max: 1000.0
+    min: 10.0
+cooldown:
+    base: 29.9
+    per-level: -0.1
+    max: 30.0
+    min: 20.0
+damage:
+    base: 4.0
+    per-level: 0.75
+    max: 200.0
+    min: 0.0
+health:
+    base: 40.0
+    per-level: 3.0
+    max: 500.0
+    min: 20.0
+threat:
+    base: 20.0
+    per-level: 5.0
+    max: 1000.0
+    min: 20.0
+threattime:
+    base: 9.98
+    per-level: -0.02
+    max: 10.0
+    min: 8.0
+threatradius:
+    base: 6.05
+    per-level: 0.05
+    max: 11.0
+    min: 6.0

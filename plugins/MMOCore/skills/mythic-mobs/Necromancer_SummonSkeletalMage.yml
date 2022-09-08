@@ -1,0 +1,37 @@
+mythicmobs-skill-id: Necromancer_SummonSkeletalMage
+
+name: Skel Mage
+lore:
+- 'Raise a skeletal mage'
+- 'from the dead with &C{health} &7life'
+- 'It deals &4{damage} &7elemental damage'
+- 'and can use 5 different elements'
+- 'It casts spells every &E{castingtime} &7seconds'
+- 'Costs &9{mana} &7mana | &e{cooldown}s &7Cooldown'
+material: SKELETON_SKULL
+
+mana:
+    base: 10.0
+    per-level: 2.0
+    max: 1000.0
+    min: 10.0
+cooldown:
+    base: 29.9
+    per-level: -0.1
+    max: 30.0
+    min: 20.0
+damage:
+    base: 8.0
+    per-level: 1.5
+    max: 200.0
+    min: 0.0
+health:
+    base: 18.0
+    per-level: 1.5
+    max: 500.0
+    min: 10.0
+castingtime:
+    base: 2.95
+    per-level: -0.05
+    max: 3.0
+    min: 1.0

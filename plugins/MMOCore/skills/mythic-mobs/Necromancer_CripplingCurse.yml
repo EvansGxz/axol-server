@@ -1,0 +1,30 @@
+mythicmobs-skill-id: Necromancer_CripplingCurse
+
+name: Crippling Curse
+lore:
+- 'Curse the location near the target'
+- 'lowering their physical defense by &e33%'
+- 'in a radius of &a{radius}&7 for &e{duration} &7seconds'
+- 'Costs &9{mana} &7mana | &e{cooldown}s &7Cooldown'
+material: MUSIC_DISC_11
+
+mana:
+    base: 10.0
+    per-level: 1.0
+    max: 500.0
+    min: 10.0
+cooldown:
+    base: 29.9
+    per-level: -0.1
+    max: 30.0
+    min: 20.0
+duration:
+    base: 10.1
+    per-level: 0.1
+    max: 20.0
+    min: 10.0
+radius:
+    base: 5.2
+    per-level: 0.2
+    max: 15.0
+    min: 5.0

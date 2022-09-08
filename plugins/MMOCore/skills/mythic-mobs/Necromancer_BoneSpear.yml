@@ -1,0 +1,27 @@
+mythicmobs-skill-id: Necromancer_BoneSpear
+
+name: Bone Spear
+lore:
+- 'Shoot a sharply pointed bone'
+- 'toward the enemy dealing &4{damage} &7physical'
+- 'damage if it lands. Has a &e33% &7chance'
+- 'to inflict a bleed for &4{damage} &7damage'
+- 'over &e4 &7seconds'
+- 'Costs &9{mana} &7mana | &e{cooldown}s &7Cooldown'
+material: BONE
+
+mana:
+    base: 2.0
+    per-level: 0.5
+    max: 200.0
+    min: 2.0
+cooldown:
+    base: 5.95
+    per-level: -0.05
+    max: 6.0
+    min: 1.5
+damage:
+    base: 16.0
+    per-level: 4.0
+    max: 1000.0
+    min: 6.0

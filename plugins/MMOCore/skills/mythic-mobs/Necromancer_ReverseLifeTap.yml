@@ -1,0 +1,24 @@
+mythicmobs-skill-id: Necromancer_ReverseLifeTap
+
+name: Rev Life Tap
+lore:
+- 'Siphon &4{amount} &7life from yourself'
+- 'into your summoned skeleton'
+- 'Costs &9{mana} &7mana | &e{cooldown}s &7Cooldown'
+material: WITHER_ROSE
+
+mana:
+    base: 1.0
+    per-level: 0.25
+    max: 50.0
+    min: 1.0
+cooldown:
+    base: 9.95
+    per-level: -0.05
+    max: 10.0
+    min: 5.0
+amount:
+    base: 5.0
+    per-level: 0.5
+    max: 60.0
+    min: 5.0
