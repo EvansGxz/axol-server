@@ -1,0 +1,34 @@
+DemonSword1:
+  Id: DIAMOND_SWORD
+  Display: 'vS2'
+  Model: 247
+
+DemonSword2:
+  Id: DIAMOND_SWORD
+  Display: 'vS2'
+  Model: 248
+DemonSword3:
+  Id: DIAMOND_SWORD
+  Display: 'vS2'
+  Model: 249
+
+
+DemonSword4:
+  Id: DIAMOND_SWORD
+  Display: 'vS2'
+  Model: 243
+  
+DemonSword1MINI:
+  Id: DIAMOND_SWORD
+  Display: 'vS2'
+  Model: 250
+
+DemonSword2MINI:
+  Id: DIAMOND_SWORD
+  Display: 'vS2'
+  Model: 251
+DemonSword3MINI:
+  Id: DIAMOND_SWORD
+  Display: 'vS2'
+  Model: 252
+

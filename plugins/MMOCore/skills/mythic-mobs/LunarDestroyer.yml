@@ -1,0 +1,11 @@
+mythicmobs-skill-id: LunarDestroyer
+name: Lunar Destroyer
+material: WITHER_ROSE
+cooldown:
+  base: 60.0
+  per-level: 0
+  max: 3.0
+  min: 1.0
+damage:
+  base: 9.0
+  per-level: 0.3

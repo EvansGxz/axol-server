@@ -1,0 +1,10 @@
+Calcination:
+  Skills:
+  - Aura{auraName=Calcination_Pasive;oS=CalcinationS;oT=CalcinationT;oE=CalcinationE;interval=1;duration=20;os=CalcinationS;maxStacks=1} 
+CalcinationS:
+  Skills:
+CalcinationT:
+  Skills:
+  - particles{p=reddust;color=#FC6400;a=1;hs=0.4;vs=0.5;size=0.6;y=1} 
+  - particles{p=SMALL_FLAME;a=1;vs=0.2;y=1;speed=0.1} 
+  - damage{a="<modifier.damage>";pkb=true} 

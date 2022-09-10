@@ -1,0 +1,328 @@
+DModeBladeMobs2:
+  Type: armor_stand
+  Options:
+    MovementSpeed: -1
+    Collidable: false
+    Despawn: false
+    Invincible: true
+    Silent: true
+    PreventSunburn: true
+    KnockbackResistance: 1
+    Invisible: true
+    NoGravity: true
+    Marker: true
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - skill{s=DModeBlade2} @self ~onSpawn
+  - remove{delay=20} @self ~onSpawn
+
+
+DModeBladeMobs1:
+  Type: armor_stand
+  Options:
+    MovementSpeed: -1
+    Collidable: false
+    Despawn: false
+    Invincible: true
+    Silent: true
+    PreventSunburn: true
+    KnockbackResistance: 1
+    Invisible: true
+    NoGravity: true
+    Marker: true
+    Small: true
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - skill{s=DModeBlade1} @self ~onSpawn
+  - remove{delay=20} @self ~onSpawn
+
+
+DModeBladeMobs:
+  Type: armor_stand
+  Options:
+    MovementSpeed: -1
+    Collidable: false
+    Despawn: false
+    Invincible: true
+    Silent: true
+    PreventSunburn: true
+    KnockbackResistance: 1
+    Invisible: true
+    NoGravity: true
+    Marker: true
+    Small: true
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - skill{s=DModeBlade}  @self ~onSpawn
+  - remove{delay=20} @self ~onSpawn
+
+
+
+
+
+
+DModeBladeMobs2_V2:
+  Type: armor_stand
+  Options:
+    MovementSpeed: -1
+    Collidable: false
+    Despawn: false
+    Invincible: true
+    Silent: true
+    PreventSunburn: true
+    KnockbackResistance: 1
+    Invisible: true
+    NoGravity: true
+    Marker: true
+    Small: true
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - skill{s=DModeBlade2_V2} @self ~onSpawn
+  - remove{delay=20} @self ~onSpawn
+
+
+DModeBladeMobs1_V2:
+  Type: armor_stand
+  Options:
+    MovementSpeed: -1
+    Collidable: false
+    Despawn: false
+    Invincible: true
+    Silent: true
+    PreventSunburn: true
+    KnockbackResistance: 1
+    Invisible: true
+    NoGravity: true
+    Marker: true
+    Small: true
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - skill{s=DModeBlade1_V2} @self ~onSpawn
+  - remove{delay=20} @self ~onSpawn
+
+
+DModeBladeMob_V2:
+  Type: armor_stand
+  Options:
+    MovementSpeed: -1
+    Collidable: false
+    Despawn: false
+    Invincible: true
+    Silent: true
+    PreventSunburn: true
+    KnockbackResistance: 1
+    Invisible: true
+    NoGravity: true
+    Marker: true
+    Small: true
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - skill{s=DModeBlade_V2} @self ~onSpawn
+  - remove{delay=20} @self ~onSpawn
+
+
+
+
+
+
+DModeBladeMobFire:
+  Type: armor_stand
+  Options:
+    MovementSpeed: -1
+    Collidable: false
+    Despawn: false
+    Invincible: true
+    Silent: true
+    PreventSunburn: true
+    KnockbackResistance: 1
+    Invisible: true
+    NoGravity: true
+    Marker: true
+    Small: true
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - skill{s=DModeBladeFire} @self ~onSpawn
+  - remove{delay=20} @self ~onSpawn
+
+
+DModeBladeMobFireV2:
+  Type: armor_stand
+  Options:
+    MovementSpeed: -1
+    Collidable: false
+    Despawn: false
+    Invincible: true
+    Silent: true
+    PreventSunburn: true
+    KnockbackResistance: 1
+    Invisible: true
+    NoGravity: true
+    Marker: true
+    Small: true
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - skill{s=DModeBladeFireV2} @self ~onSpawn
+  - remove{delay=20} @self ~onSpawn
+
+
+
+DModeBladeMobChaos:
+  Type: armor_stand
+  Options:
+    MovementSpeed: -1
+    Collidable: false
+    Despawn: false
+    Invincible: true
+    Silent: true
+    PreventSunburn: true
+    KnockbackResistance: 1
+    Invisible: true
+    NoGravity: true
+    Marker: true
+    Small: true
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - skill{s=DModeBladeChaos} @self ~onSpawn
+  - remove{delay=20} @self ~onSpawn
+
+
+DModeBladeMobChaosV2:
+  Type: armor_stand
+  Options:
+    MovementSpeed: -1
+    Collidable: false
+    Despawn: false
+    Invincible: true
+    Silent: true
+    PreventSunburn: true
+    KnockbackResistance: 1
+    Invisible: true
+    NoGravity: true
+    Marker: true
+    Small: true
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - skill{s=DModeBladeChaosV2} @self ~onSpawn
+  - remove{delay=20} @self ~onSpawn
+
+
+
+BloodyClawsMob1:
+  Type: armor_stand
+  Options:
+    MovementSpeed: -1
+    Collidable: false
+    Despawn: false
+    Invincible: true
+    Silent: true
+    PreventSunburn: true
+    KnockbackResistance: 1
+    Invisible: true
+    NoGravity: true
+    Marker: true
+    Small: true
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - skill{s=BloodyClaws1} @self ~onSpawn
+  - remove{delay=20} @self ~onSpawn
+
+
+BloodyClawsMob2:
+  Type: armor_stand
+  Options:
+    MovementSpeed: -1
+    Collidable: false
+    Despawn: false
+    Invincible: true
+    Silent: true
+    PreventSunburn: true
+    KnockbackResistance: 1
+    Invisible: true
+    NoGravity: true
+    Marker: true
+    Small: true
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - skill{s=BloodyClaws2} @self ~onSpawn
+  - remove{delay=20} @self ~onSpawn
+
+BloodyClawsMobV11:
+  Type: armor_stand
+  Options:
+    MovementSpeed: -1
+    Collidable: false
+    Despawn: false
+    Invincible: true
+    Silent: true
+    PreventSunburn: true
+    KnockbackResistance: 1
+    Invisible: true
+    NoGravity: true
+    Marker: true
+    Small: true
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - skill{s=BloodyClawsV11} @self ~onSpawn
+  - remove{delay=20} @self ~onSpawn
+
+
+BloodyClawsMobV12:
+  Type: armor_stand
+  Options:
+    MovementSpeed: -1
+    Collidable: false
+    Despawn: false
+    Invincible: true
+    Silent: true
+    PreventSunburn: true
+    KnockbackResistance: 1
+    Invisible: true
+    NoGravity: true
+    Marker: true
+    Small: true
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - skill{s=BloodyClawsV12} @self ~onSpawn
+  - remove{delay=20} @self ~onSpawn

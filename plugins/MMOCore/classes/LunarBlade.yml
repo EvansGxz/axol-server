@@ -1,0 +1,54 @@
+display:
+  name: Lunar Blade
+  lore:
+  - '&aClase Especializada en Armas tipo Katana y Espada.'
+  - '&aBlademaster especializado en movimientos rápidos.'
+  attribute-lore:
+    - '&a+ &7Vida Máxima'
+    - '&a+ &7Velocidad de Movimiento'
+    - '&a+ &7Velocidad de Ataque'
+  item: DIAMOND_SWORD
+
+cast-particle:
+    particle: SUSPENDED
+
+exp-curve: levels 
+
+max-levels: 70
+
+triggers:
+  level-up:
+  - 'command{format="mmocore admin skill-points give %player% 1"}'
+
+
+
+attributes:
+  max-health:
+    base: 20
+    per-level: 3
+  attack_speed:
+    base: 3.5
+    per-level: 0.1
+  movement_speed:
+    base: 0.1
+    per-level: 0.001
+  
+
+skills:
+    ImperatorisLuna:
+        level: 3
+        max-level: 30
+    LunamSlashs:
+        level: 3
+        max-level: 30
+    LunamStormSoulsA:
+        level: 3
+        max-level: 30
+    LunamAeternaMarkI:
+        level: 3
+        max-level: 30
+    LunamSwords:
+        level: 3
+        max-level: 30
+ 
+

@@ -1,0 +1,18 @@
+mythicmobs-skill-id: SpinningBlades
+name: Sonic Blades
+material: PURPLE_GLAZED_TERRACOTTA
+lore:
+- 'Lanzas cuchillas giratorias que hacen de daño +{damage}'
+- 'Que duran {duration}ticks'
+cooldown:
+  base: 10.0
+  per-level: -0.02
+  max: 3.0
+  min: 1.0
+damage:
+  base: 5.0
+  per-level: 8.0
+duration:
+  base: 50
+  per-level: 10
+ 

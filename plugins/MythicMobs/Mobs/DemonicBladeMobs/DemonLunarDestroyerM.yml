@@ -1,0 +1,68 @@
+LunarDestroyerChaosMob:
+  Type: armor_stand
+  Display: ""
+  Options:
+    MovementSpeed: -1
+    Collidable: false
+    Despawn: false
+    Invincible: true
+    Silent: true
+    PreventSunburn: true
+    KnockbackResistance: 1
+    Invisible: true
+    HasGravity: false
+    Marker: true
+    Small: true
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - remove{delay=25} @self ~onSpawn
+  - skill{s=LunarDestroyerParticlesChaos} @self ~onSpawn
+
+LunarDestroyerFireMob:
+  Type: armor_stand
+  Display: ""
+  Options:
+    MovementSpeed: -1
+    Collidable: false
+    Despawn: false
+    Invincible: true
+    Silent: true
+    PreventSunburn: true
+    KnockbackResistance: 1
+    Invisible: true
+    HasGravity: false
+    Marker: true
+    Small: true
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - remove{delay=25} @self ~onSpawn
+  - skill{s=LunarDestroyerParticlesFire} @self ~onSpawn
+
+LunarDestroyerNormalMob:
+  Type: armor_stand
+  Display: ""
+  Options:
+    MovementSpeed: -1
+    Collidable: false
+    Despawn: false
+    Invincible: true
+    Silent: true
+    PreventSunburn: true
+    KnockbackResistance: 1
+    Invisible: true
+    HasGravity: false
+    Marker: true
+    Small: true
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - remove{delay=25} @self ~onSpawn
+  - skill{s=LunarDestroyerParticlesNormal} @self ~onSpawn

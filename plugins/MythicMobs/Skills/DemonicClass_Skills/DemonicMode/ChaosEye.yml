@@ -1,0 +1,7 @@
+ChaosEye:
+  Skills:
+  - Aura{auraName=DemonicModeAuraA;interval=1;duration=200;rd=true;ms=15;ShowBarTimer=false} @self
+
+MSpawnD:
+  Skills:
+  - summon{t=dragonsit1} @self

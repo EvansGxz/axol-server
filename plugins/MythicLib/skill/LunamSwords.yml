@@ -1,0 +1,4 @@
+mythicmobs-skill-id: LunamSwords
+modifiers: # Ability stats that you can change later in MMOCore/MMOItems. You can use <modifier.###> as a placeholder in MythicMobs Skills.
+  - damage
+  - cooldown

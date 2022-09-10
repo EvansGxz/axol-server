@@ -202,3 +202,65 @@ combat_bow:
     - default/combat_bow_pulling_1
     - default/combat_bow_pulling_2
     custom_model_data: 1
+
+DemonSwordClass:
+  displayname: "DMB"
+  material: DIAMOND_SWORD
+  Pack:
+    generate_model: false
+    custom_model_data: 247
+    model: elias_espada1.json
+
+DemonSwordClass2:
+  displayname: "DMB"
+  material: DIAMOND_SWORD
+  Pack:
+    generate_model: false
+    custom_model_data: 248
+    model: elias_espada2.json
+DemonSwordClass3:
+  displayname: "DMB"
+  material: DIAMOND_SWORD
+  Pack:
+    generate_model: false
+    custom_model_data: 249
+    model: elias_espada3.json
+    
+DemonSwordClassMini:
+  displayname: "DMB"
+  material: DIAMOND_SWORD
+  Pack:
+    generate_model: false
+    custom_model_data: 250
+    model: elias_espada1_mini.json
+
+DemonSwordClassMini2:
+  displayname: "DMB"
+  material: DIAMOND_SWORD
+  Pack:
+    generate_model: false
+    custom_model_data: 251
+    model: elias_espada2_mini.json
+DemonSwordClassMini3:
+  displayname: "DMB"
+  material: DIAMOND_SWORD
+  Pack:
+    generate_model: false
+    custom_model_data: 252
+    model: elias_espada3_mini.json
+ 
+portal_void:
+  displayname: "portal_void"
+  material: DIAMOND_SWORD
+  Pack:
+    generate_model: false
+    custom_model_data: 243
+    model: portal_void.json
+
+PDB2:
+  displayname: "Proyec"
+  material: DIAMOND_SWORD
+  Pack:
+    generate_model: false
+    custom_model_data: 13
+    model: dagablue.json

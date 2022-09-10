@@ -1,0 +1,178 @@
+
+ASDClassParticles:
+  Skills:
+  - particles{p=reddust;a=1;size=0.15;color=#b196f8}
+  
+ASDClassParticlesShortP:
+  Skills:
+  - particles{p=reddust;a=1;size=0.15;color=#5a1cf8}
+  
+# Filo
+ChaosSword_DemonicClassP:
+  Skills:
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=2.355;sfo=0;sso=0}        # Start point
+  #
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=2.39;sfo=0;sso=0.008}     
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=2.421;sfo=0;sso=0.015} 
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=2.466;sfo=0;sso=0.022} 
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=2.51;sfo=0;sso=0.027} 
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=2.55;sfo=0;sso=0.033} 
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=2.6;sfo=0;sso=0.037}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=2.639;sfo=0;sso=0.038}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=2.680;sfo=0;sso=0.039}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=2.72;sfo=0;sso=0.042}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=2.77;sfo=0;sso=0.047}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=2.818;sfo=0;sso=0.049}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=2.865;sfo=0;sso=0.052}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=2.915;sfo=0;sso=0.052}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=2.950;sfo=0;sso=0.07}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3;sfo=0;sso=0.067}
+  - delay 1
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.045;sfo=0;sso=0.08}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.08;sfo=0;sso=0.083}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.115;sfo=0;sso=0.074}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.140;sfo=0;sso=0.095}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.151;sfo=0;sso=0.13}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.145;sfo=0;sso=0.16}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.120;sfo=0;sso=0.18}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.093;sfo=0;sso=0.20}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.107;sfo=0;sso=0.22}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.135;sfo=0;sso=0.24}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.161;sfo=0;sso=0.252}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.190;sfo=0;sso=0.26}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.220;sfo=0;sso=0.255}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.254;sfo=0;sso=0.24}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.225;sfo=0;sso=0.22}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.203;sfo=0;sso=0.195}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.19;sfo=0;sso=0.165}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.195;sfo=0;sso=0.133}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.203;sfo=0;sso=0.1}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.215;sfo=0;sso=0.073}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.233;sfo=0;sso=0.04}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.261;sfo=0;sso=0.02}
+  #
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=2.39;sfo=0;sso=-0.008} 
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=2.421;sfo=0;sso=-0.015} 
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=2.466;sfo=0;sso=-0.022} 
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=2.51;sfo=0;sso=-0.027} 
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=2.55;sfo=0;sso=-0.033} 
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=2.6;sfo=0;sso=-0.037}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=2.639;sfo=0;sso=-0.038}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=2.680;sfo=0;sso=-0.039}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=2.72;sfo=0;sso=-0.042}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=2.77;sfo=0;sso=-0.047}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=2.818;sfo=0;sso=-0.049}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=2.865;sfo=0;sso=-0.052}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=2.915;sfo=0;sso=-0.052}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=2.950;sfo=0;sso=-0.07}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3;sfo=0;sso=-0.067}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.045;sfo=0;sso=-0.08}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.08;sfo=0;sso=-0.083}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.115;sfo=0;sso=-0.074}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.140;sfo=0;sso=-0.095}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.151;sfo=0;sso=-0.13}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.145;sfo=0;sso=-0.16}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.120;sfo=0;sso=-0.18}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.093;sfo=0;sso=-0.20}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.107;sfo=0;sso=-0.22}
+  - delay 1
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.135;sfo=0;sso=-0.24}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.161;sfo=0;sso=-0.252}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.190;sfo=0;sso=-0.26}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.220;sfo=0;sso=-0.255}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.254;sfo=0;sso=0.24}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.225;sfo=0;sso=-0.22}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.203;sfo=0;sso=-0.195}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.19;sfo=0;sso=-0.165}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.195;sfo=0;sso=-0.133}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.203;sfo=0;sso=-0.1}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.215;sfo=0;sso=-0.073}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.233;sfo=0;sso=-0.04}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.261;sfo=0;sso=-0.02}
+
+  
+
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.32;sfo=0;sso=0.01} 
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.287;sfo=0;sso=0.025} 
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.270;sfo=0;sso=0.048}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.305;sfo=0;sso=0.048}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.34;sfo=0;sso=0.033}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.383;sfo=0;sso=0.022}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.415;sfo=0;sso=0.03}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.430;sfo=0;sso=0.059}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.433;sfo=0;sso=0.09}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.465;sfo=0;sso=0.07}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.495;sfo=0;sso=0.045}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.51;sfo=0;sso=0.015}
+
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.32;sfo=0;sso=-0.01} 
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.287;sfo=0;sso=-0.025} 
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.270;sfo=0;sso=-0.048}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.305;sfo=0;sso=-0.048}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.34;sfo=0;sso=-0.033}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.383;sfo=0;sso=-0.022}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.415;sfo=0;sso=-0.03}
+  - delay 1
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.430;sfo=0;sso=-0.059}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.433;sfo=0;sso=-0.09}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.465;sfo=0;sso=-0.07}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.495;sfo=0;sso=-0.045}
+  - projectile{oT=ASDClassParticles;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.51;sfo=0;sso=-0.015}
+
+  # Dentro- arriba
+  - projectile{oT=ASDClassParticlesShortP;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.465;sfo=0;sso=0}
+  - projectile{oT=ASDClassParticlesShortP;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.415;sfo=0;sso=0}
+  - projectile{oT=ASDClassParticlesShortP;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.435;sfo=0;sso=0.015}
+  - projectile{oT=ASDClassParticlesShortP;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.45;sfo=0;sso=0.033}
+  - projectile{oT=ASDClassParticlesShortP;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.435;sfo=0;sso=-0.015}
+  - projectile{oT=ASDClassParticlesShortP;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.45;sfo=0;sso=-0.033}
+
+
+  # Dentro Abajo 
+
+  - projectile{oT=ASDClassParticlesShortP;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=2.76;sfo=0;sso=0}
+  - projectile{oT=ASDClassParticlesShortP;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=2.889;sfo=0;sso=0}
+
+  - projectile{oT=ASDClassParticlesShortP;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=2.8;sfo=0;sso=0.009}
+  - projectile{oT=ASDClassParticlesShortP;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=2.84;sfo=0;sso=0.015}
+  - projectile{oT=ASDClassParticlesShortP;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=2.875;sfo=0;sso=0.020}
+  - projectile{oT=ASDClassParticlesShortP;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=2.898;sfo=0;sso=0.025}
+
+  - projectile{oT=ASDClassParticlesShortP;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=2.8;sfo=0;sso=-0.009}
+  - projectile{oT=ASDClassParticlesShortP;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=2.84;sfo=0;sso=-0.015}
+  - projectile{oT=ASDClassParticlesShortP;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=2.875;sfo=0;sso=-0.020}
+  - projectile{oT=ASDClassParticlesShortP;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=2.898;sfo=0;sso=-0.025}
+
+
+  # dentro Medio
+
+  - projectile{oT=ASDClassParticlesShortP;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.05;sfo=0;sso=0}
+  - projectile{oT=ASDClassParticlesShortP;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.22;sfo=0;sso=0}
+
+  - projectile{oT=ASDClassParticlesShortP;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.08;sfo=0;sso=0.017}  
+  - projectile{oT=ASDClassParticlesShortP;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.11;sfo=0;sso=0.025}  
+  - projectile{oT=ASDClassParticlesShortP;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.15;sfo=0;sso=0.048}  
+  - projectile{oT=ASDClassParticlesShortP;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.19;sfo=0;sso=0.025} 
+
+  - projectile{oT=ASDClassParticlesShortP;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.08;sfo=0;sso=-0.017}  
+  - projectile{oT=ASDClassParticlesShortP;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.11;sfo=0;sso=-0.025}  
+  - projectile{oT=ASDClassParticlesShortP;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.15;sfo=0;sso=-0.048}  
+  - projectile{oT=ASDClassParticlesShortP;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.19;sfo=0;sso=-0.025}
+
+
+
+  # Dentro medio up
+
+  
+  - projectile{oT=ASDClassParticlesShortP;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.17;sfo=0;sso=0}
+  - projectile{oT=ASDClassParticlesShortP;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.12;sfo=0;sso=0}
+
+  - projectile{oT=ASDClassParticlesShortP;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.145;sfo=0;sso=0.014}
+  - projectile{oT=ASDClassParticlesShortP;mr=1;v=0;i=1;d=20;hp=false;hnp=false;sE=false;sB=false;syo=3.145;sfo=0;sso=-0.014}
+
+
+
+## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ##
+## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ##
+## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ##
+## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## 

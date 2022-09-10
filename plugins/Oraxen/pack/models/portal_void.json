@@ -1,0 +1,65 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"3": "default/textures/portal_elias"
+	},
+	"elements": [
+		{
+			"from": [7.5, -16, -16],
+			"to": [7.5, 32, 32],
+			"faces": {
+				"north": {"uv": [0, 0, 0, 16], "texture": "#missing"},
+				"east": {"uv": [0.09375, 0, 16, 16], "texture": "#3"},
+				"south": {"uv": [0, 0, 0, 16], "texture": "#missing"},
+				"west": {"uv": [16, 0, 0, 16], "texture": "#3"},
+				"up": {"uv": [0, 0, 0, 16], "texture": "#missing"},
+				"down": {"uv": [0, 0, 0, 16], "texture": "#missing"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [154, 90, 0],
+			"translation": [-9, -11.75, 22],
+			"scale": [4, 4, 4]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [130, 0, 0],
+			"translation": [0, 22.75, 0]
+		},
+		"firstperson_righthand": {
+			"rotation": [55, 0, 0],
+			"translation": [5, 0, -28]
+		},
+		"firstperson_lefthand": {
+			"rotation": [55, 0, 0],
+			"translation": [5, 0, -28]
+		},
+		"ground": {
+			"rotation": [66, 0, 0],
+			"translation": [0, 24.75, 0]
+		},
+		"gui": {
+			"rotation": [90, -30, 90],
+			"translation": [0.25, 0, 0],
+			"scale": [0.33, 0.33, 0.33]
+		},
+		"head": {
+			"rotation": [90, 90, 0],
+			"translation": [-3.5, -41, 0.75],
+			"scale": [0, 4, 4]
+		},
+		"fixed": {
+			"rotation": [57, 0, 0],
+			"translation": [0, 46.75, 18.5]
+		}
+	},
+	"groups": [
+		{
+			"name": "group",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [0]
+		}
+	]
+}

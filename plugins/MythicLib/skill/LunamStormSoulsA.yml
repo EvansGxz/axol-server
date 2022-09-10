@@ -1,0 +1,7 @@
+
+
+mythicmobs-skill-id: LunamStormSoulsA
+modifiers: # Ability stats that you can change later in MMOCore/MMOItems. You can use <modifier.###> as a placeholder in MythicMobs Skills.
+  - damage
+  - cooldown
+

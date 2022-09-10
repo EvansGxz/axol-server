@@ -1,0 +1,745 @@
+LunarDestroyerTChaos:
+  Skills:
+  - particles{p=reddust;a=1;size=0.8;color=#000000}
+  - particles{p=reddust;color=#7c4bfb;a=2;vs=0.1;hs=0.2;size=0.8}
+  - particles{p=reddust;color=#8f69f0;a=2;vs=0.1;hs=0.2;size=0.7}
+  - pull{v=8;to=true} @EntitiesNearOrigin{r=3;ignore=players} # IGNORE BOSSES:)
+
+LunarDestroyerTFire:
+  Skills:
+  - particles{p=reddust;a=1;size=0.8;;color=#000000}
+  - particles{p=reddust;color=#FC6400;a=2;vs=0.1;hs=0.2;size=0.8}
+  - particles{p=reddust;color=#FF7500;a=2;vs=0.1;hs=0.2;size=0.7}
+  - pull{v=8;to=true} @EntitiesNearOrigin{r=3;ignore=players} 
+LunarDestroyerP:
+  Skills:
+  - particles{p=reddust;a=1;size=1.3;color=#000000}
+  - particles{p=reddust;color=#990000;a=2;vs=0.1;hs=0.2;size=0.8}
+  - particles{p=reddust;color=#660000;a=2;vs=0.1;hs=0.2;size=0.7}
+  - pull{v=8;to=true} @EntitiesNearOrigin{r=3;ignore=players} 
+  #
+LunarDestroyer:
+  Conditions:
+  - hasaura CancelAuraDMClass false
+  Skills:
+  - lunge{velocity=2;velocityY=0.35} @Targetlocation
+  - delay 5
+  - skill{s=ChaosLunarDestroyer}
+  - skill{s=FireLunarDestroyer}
+  - skill{s=LunarDestroyerWA}
+  - delay 35
+  - potion{type=SLOW_FALLING;level=5;d=10;p=false} @self
+ChaosLunarDestroyer:
+  Conditions:
+  - hasaura EclipseAuraA false
+  - hasaura ChaosAuraA true
+  Skills:
+  - summon{t=LunarDestroyerChaosMob} @self
+  - skill{s=LunarDestroyerDMGChaos} @self
+  
+
+
+LunarDestroyerWA:
+  Conditions:
+  - hasaura EclipseAuraA false
+  - hasaura ChaosAuraA false
+  Skills:
+  - summon{t=LunarDestroyerNormalMob} @self
+  - skill{s=LunarDestroyerDMGNormal} @self
+
+
+FireLunarDestroyer:
+  Conditions:
+  - hasaura EclipseAuraA true
+  - hasaura ChaosAuraA false
+  Skills:
+  - summon{t=LunarDestroyerFireMob} @self
+  - skill{s=LunarDestroyerDMGFire} @origin
+  - sound{s=demonicclassound;v=0.25;p=1;repeat=1;repeatInterval=15} @self
+  - sound{s=fireb;v=0.35;p=1.1} @self
+
+
+
+LunarDestroyerParticlesNormal:
+  Skills:
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.85;sfo=-2.35}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.15;sfo=-2.1}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.4;sfo=-1.8}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.6;sfo=-1.5}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.78;sfo=-1.15}
+  - delay 1
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.9;sfo=-0.8}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=4;sfo=-0.4}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=4.01;sfo=-0.05}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=4;sfo=0.35}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.9;sfo=0.7}
+  - delay 1
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.78;sfo=1.1}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.6;sfo=1.4}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.4;sfo=1.7}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.15;sfo=2}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.85;sfo=2.25}
+  - delay 1
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.5;sfo=2.48}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.2;sfo=2.65}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.8;sfo=2.75}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.45;sfo=2.8}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.08;sfo=2.85}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0.70;sfo=2.8}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0.40;sfo=2.75}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0;sfo=2.65}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.40;sfo=2.48}
+  - delay 1
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.70;sfo=2.25}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.95;sfo=2}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.20;sfo=1.7}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.45;sfo=1.4}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.6;sfo=1.1}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.75;sfo=0.7}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.8;sfo=0.35}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.85;sfo=-0.05}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.8;sfo=-0.4}
+  - delay 1
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.75;sfo=-0.8}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.6;sfo=-1.15}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.45;sfo=-1.5}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.2;sfo=-1.8}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.95;sfo=-2.1}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.65;sfo=-2.35}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.35;sfo=-2.55}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.05;sfo=-2.70}
+  - delay 1
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0.33;sfo=-2.85}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0.7;sfo=-2.9}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.10;sfo=-2.95}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.5;sfo=-2.93}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.85;sfo=-2.85}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.2;sfo=-2.7}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.55;sfo=-2.55}
+  - delay 1
+  ###################################################
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.85;sfo=-2.35}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.15;sfo=-2.1}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.4;sfo=-1.8}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.6;sfo=-1.5}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.78;sfo=-1.15}
+  - delay 1
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.9;sfo=-0.8}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=4;sfo=-0.4}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=4.01;sfo=-0.05}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=4;sfo=0.35}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.9;sfo=0.7}
+  - delay 1
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.78;sfo=1.1}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.6;sfo=1.4}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.4;sfo=1.7}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.15;sfo=2}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.85;sfo=2.25}
+  - delay 1
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.5;sfo=2.48}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.2;sfo=2.65}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.8;sfo=2.75}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.45;sfo=2.8}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.08;sfo=2.85}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0.70;sfo=2.8}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0.40;sfo=2.75}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0;sfo=2.65}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.40;sfo=2.48}
+  - delay 1
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.70;sfo=2.25}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.95;sfo=2}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.20;sfo=1.7}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.45;sfo=1.4}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.6;sfo=1.1}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.75;sfo=0.7}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.8;sfo=0.35}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.85;sfo=-0.05}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.8;sfo=-0.4}
+  - delay 1
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.75;sfo=-0.8}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.6;sfo=-1.15}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.45;sfo=-1.5}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.2;sfo=-1.8}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.95;sfo=-2.1}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.65;sfo=-2.35}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.35;sfo=-2.55}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.05;sfo=-2.70}
+  - delay 1
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0.33;sfo=-2.85}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0.7;sfo=-2.9}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.10;sfo=-2.95}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.5;sfo=-2.93}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.85;sfo=-2.85}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.2;sfo=-2.7}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.55;sfo=-2.55}
+  - delay 1
+  ###################################################
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.85;sfo=-2.35}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.15;sfo=-2.1}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.4;sfo=-1.8}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.6;sfo=-1.5}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.78;sfo=-1.15}
+  - delay 1
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.9;sfo=-0.8}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=4;sfo=-0.4}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=4.01;sfo=-0.05}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=4;sfo=0.35}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.9;sfo=0.7}
+  - delay 1
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.78;sfo=1.1}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.6;sfo=1.4}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.4;sfo=1.7}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.15;sfo=2}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.85;sfo=2.25}
+  - delay 1
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.5;sfo=2.48}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.2;sfo=2.65}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.8;sfo=2.75}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.45;sfo=2.8}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.08;sfo=2.85}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0.70;sfo=2.8}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0.40;sfo=2.75}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0;sfo=2.65}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.40;sfo=2.48}
+  - delay 1
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.70;sfo=2.25}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.95;sfo=2}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.20;sfo=1.7}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.45;sfo=1.4}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.6;sfo=1.1}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.75;sfo=0.7}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.8;sfo=0.35}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.85;sfo=-0.05}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.8;sfo=-0.4}
+  - delay 1
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.75;sfo=-0.8}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.6;sfo=-1.15}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.45;sfo=-1.5}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.2;sfo=-1.8}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.95;sfo=-2.1}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.65;sfo=-2.35}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.35;sfo=-2.55}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.05;sfo=-2.70}
+  - delay 1
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0.33;sfo=-2.85}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0.7;sfo=-2.9}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.10;sfo=-2.95}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.5;sfo=-2.93}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.85;sfo=-2.85}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.2;sfo=-2.7}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.55;sfo=-2.55}
+  - delay 1
+  ###################################################
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.85;sfo=-2.35}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.15;sfo=-2.1}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.4;sfo=-1.8}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.6;sfo=-1.5}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.78;sfo=-1.15}
+  - delay 1
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.9;sfo=-0.8}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=4;sfo=-0.4}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=4.01;sfo=-0.05}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=4;sfo=0.35}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.9;sfo=0.7}
+  - delay 1
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.78;sfo=1.1}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.6;sfo=1.4}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.4;sfo=1.7}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.15;sfo=2}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.85;sfo=2.25}
+  - delay 1
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.5;sfo=2.48}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.2;sfo=2.65}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.8;sfo=2.75}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.45;sfo=2.8}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.08;sfo=2.85}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0.70;sfo=2.8}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0.40;sfo=2.75}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0;sfo=2.65}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.40;sfo=2.48}
+  - delay 1
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.70;sfo=2.25}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.95;sfo=2}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.20;sfo=1.7}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.45;sfo=1.4}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.6;sfo=1.1}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.75;sfo=0.7}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.8;sfo=0.35}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.85;sfo=-0.05}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.8;sfo=-0.4}
+  - delay 1
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.75;sfo=-0.8}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.6;sfo=-1.15}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.45;sfo=-1.5}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.2;sfo=-1.8}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.95;sfo=-2.1}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.65;sfo=-2.35}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.35;sfo=-2.55}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.05;sfo=-2.70}
+  - delay 1
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0.33;sfo=-2.85}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0.7;sfo=-2.9}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.10;sfo=-2.95}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.5;sfo=-2.93}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.85;sfo=-2.85}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.2;sfo=-2.7}
+  - projectile{oT=LunarDestroyerP;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.55;sfo=-2.55}
+
+  
+LunarDestroyerParticlesChaos:
+  Skills:
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.85;sfo=-2.35}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.15;sfo=-2.1}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.4;sfo=-1.8}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.6;sfo=-1.5}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.78;sfo=-1.15}
+  - delay 1
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.9;sfo=-0.8}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=4;sfo=-0.4}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=4.01;sfo=-0.05}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=4;sfo=0.35}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.9;sfo=0.7}
+  - delay 1
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.78;sfo=1.1}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.6;sfo=1.4}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.4;sfo=1.7}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.15;sfo=2}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.85;sfo=2.25}
+  - delay 1
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.5;sfo=2.48}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.2;sfo=2.65}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.8;sfo=2.75}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.45;sfo=2.8}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.08;sfo=2.85}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0.70;sfo=2.8}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0.40;sfo=2.75}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0;sfo=2.65}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.40;sfo=2.48}
+  - delay 1
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.70;sfo=2.25}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.95;sfo=2}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.20;sfo=1.7}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.45;sfo=1.4}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.6;sfo=1.1}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.75;sfo=0.7}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.8;sfo=0.35}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.85;sfo=-0.05}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.8;sfo=-0.4}
+  - delay 1
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.75;sfo=-0.8}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.6;sfo=-1.15}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.45;sfo=-1.5}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.2;sfo=-1.8}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.95;sfo=-2.1}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.65;sfo=-2.35}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.35;sfo=-2.55}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.05;sfo=-2.70}
+  - delay 1
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0.33;sfo=-2.85}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0.7;sfo=-2.9}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.10;sfo=-2.95}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.5;sfo=-2.93}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.85;sfo=-2.85}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.2;sfo=-2.7}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.55;sfo=-2.55}
+  - delay 3
+  ###################################################
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.85;sfo=-2.35}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.15;sfo=-2.1}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.4;sfo=-1.8}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.6;sfo=-1.5}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.78;sfo=-1.15}
+  - delay 1
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.9;sfo=-0.8}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=4;sfo=-0.4}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=4.01;sfo=-0.05}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=4;sfo=0.35}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.9;sfo=0.7}
+  - delay 1
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.78;sfo=1.1}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.6;sfo=1.4}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.4;sfo=1.7}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.15;sfo=2}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.85;sfo=2.25}
+  - delay 1
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.5;sfo=2.48}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.2;sfo=2.65}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.8;sfo=2.75}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.45;sfo=2.8}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.08;sfo=2.85}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0.70;sfo=2.8}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0.40;sfo=2.75}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0;sfo=2.65}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.40;sfo=2.48}
+  - delay 1
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.70;sfo=2.25}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.95;sfo=2}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.20;sfo=1.7}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.45;sfo=1.4}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.6;sfo=1.1}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.75;sfo=0.7}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.8;sfo=0.35}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.85;sfo=-0.05}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.8;sfo=-0.4}
+  - delay 1
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.75;sfo=-0.8}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.6;sfo=-1.15}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.45;sfo=-1.5}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.2;sfo=-1.8}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.95;sfo=-2.1}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.65;sfo=-2.35}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.35;sfo=-2.55}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.05;sfo=-2.70}
+  - delay 1
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0.33;sfo=-2.85}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0.7;sfo=-2.9}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.10;sfo=-2.95}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.5;sfo=-2.93}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.85;sfo=-2.85}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.2;sfo=-2.7}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.55;sfo=-2.55}
+  - delay 3
+  ###################################################
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.85;sfo=-2.35}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.15;sfo=-2.1}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.4;sfo=-1.8}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.6;sfo=-1.5}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.78;sfo=-1.15}
+  - delay 1
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.9;sfo=-0.8}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=4;sfo=-0.4}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=4.01;sfo=-0.05}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=4;sfo=0.35}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.9;sfo=0.7}
+  - delay 1
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.78;sfo=1.1}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.6;sfo=1.4}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.4;sfo=1.7}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.15;sfo=2}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.85;sfo=2.25}
+  - delay 1
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.5;sfo=2.48}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.2;sfo=2.65}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.8;sfo=2.75}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.45;sfo=2.8}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.08;sfo=2.85}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0.70;sfo=2.8}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0.40;sfo=2.75}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0;sfo=2.65}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.40;sfo=2.48}
+  - delay 1
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.70;sfo=2.25}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.95;sfo=2}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.20;sfo=1.7}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.45;sfo=1.4}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.6;sfo=1.1}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.75;sfo=0.7}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.8;sfo=0.35}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.85;sfo=-0.05}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.8;sfo=-0.4}
+  - delay 1
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.75;sfo=-0.8}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.6;sfo=-1.15}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.45;sfo=-1.5}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.2;sfo=-1.8}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.95;sfo=-2.1}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.65;sfo=-2.35}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.35;sfo=-2.55}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.05;sfo=-2.70}
+  - delay 1
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0.33;sfo=-2.85}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0.7;sfo=-2.9}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.10;sfo=-2.95}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.5;sfo=-2.93}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.85;sfo=-2.85}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.2;sfo=-2.7}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.55;sfo=-2.55}
+  - delay 3
+  ###################################################
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.85;sfo=-2.35}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.15;sfo=-2.1}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.4;sfo=-1.8}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.6;sfo=-1.5}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.78;sfo=-1.15}
+  - delay 1
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.9;sfo=-0.8}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=4;sfo=-0.4}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=4.01;sfo=-0.05}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=4;sfo=0.35}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.9;sfo=0.7}
+  - delay 1
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.78;sfo=1.1}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.6;sfo=1.4}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.4;sfo=1.7}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.15;sfo=2}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.85;sfo=2.25}
+  - delay 1
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.5;sfo=2.48}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.2;sfo=2.65}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.8;sfo=2.75}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.45;sfo=2.8}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.08;sfo=2.85}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0.70;sfo=2.8}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0.40;sfo=2.75}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0;sfo=2.65}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.40;sfo=2.48}
+  - delay 1
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.70;sfo=2.25}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.95;sfo=2}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.20;sfo=1.7}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.45;sfo=1.4}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.6;sfo=1.1}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.75;sfo=0.7}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.8;sfo=0.35}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.85;sfo=-0.05}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.8;sfo=-0.4}
+  - delay 1
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.75;sfo=-0.8}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.6;sfo=-1.15}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.45;sfo=-1.5}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.2;sfo=-1.8}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.95;sfo=-2.1}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.65;sfo=-2.35}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.35;sfo=-2.55}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.05;sfo=-2.70}
+  - delay 1
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0.33;sfo=-2.85}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0.7;sfo=-2.9}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.10;sfo=-2.95}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.5;sfo=-2.93}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.85;sfo=-2.85}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.2;sfo=-2.7}
+  - projectile{oT=LunarDestroyerTChaos;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.55;sfo=-2.55}
+
+
+
+
+
+
+
+
+
+LunarDestroyerParticlesFire:
+  Skills:
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.85;sfo=-2.35}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.15;sfo=-2.1}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.4;sfo=-1.8}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.6;sfo=-1.5}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.78;sfo=-1.15}
+  - delay 1
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.9;sfo=-0.8}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=4;sfo=-0.4}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=4.01;sfo=-0.05}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=4;sfo=0.35}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.9;sfo=0.7}
+  - delay 1
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.78;sfo=1.1}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.6;sfo=1.4}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.4;sfo=1.7}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.15;sfo=2}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.85;sfo=2.25}
+  - delay 1
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.5;sfo=2.48}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.2;sfo=2.65}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.8;sfo=2.75}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.45;sfo=2.8}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.08;sfo=2.85}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0.70;sfo=2.8}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0.40;sfo=2.75}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0;sfo=2.65}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.40;sfo=2.48}
+  - delay 1
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.70;sfo=2.25}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.95;sfo=2}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.20;sfo=1.7}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.45;sfo=1.4}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.6;sfo=1.1}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.75;sfo=0.7}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.8;sfo=0.35}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.85;sfo=-0.05}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.8;sfo=-0.4}
+  - delay 1
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.75;sfo=-0.8}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.6;sfo=-1.15}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.45;sfo=-1.5}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.2;sfo=-1.8}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.95;sfo=-2.1}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.65;sfo=-2.35}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.35;sfo=-2.55}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.05;sfo=-2.70}
+  - delay 1
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0.33;sfo=-2.85}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0.7;sfo=-2.9}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.10;sfo=-2.95}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.5;sfo=-2.93}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.85;sfo=-2.85}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.2;sfo=-2.7}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.55;sfo=-2.55}
+  - delay 1
+  ###################################################
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.85;sfo=-2.35}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.15;sfo=-2.1}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.4;sfo=-1.8}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.6;sfo=-1.5}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.78;sfo=-1.15}
+  - delay 1
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.9;sfo=-0.8}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=4;sfo=-0.4}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=4.01;sfo=-0.05}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=4;sfo=0.35}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.9;sfo=0.7}
+  - delay 1
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.78;sfo=1.1}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.6;sfo=1.4}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.4;sfo=1.7}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.15;sfo=2}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.85;sfo=2.25}
+  - delay 1
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.5;sfo=2.48}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.2;sfo=2.65}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.8;sfo=2.75}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.45;sfo=2.8}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.08;sfo=2.85}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0.70;sfo=2.8}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0.40;sfo=2.75}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0;sfo=2.65}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.40;sfo=2.48}
+  - delay 1
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.70;sfo=2.25}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.95;sfo=2}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.20;sfo=1.7}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.45;sfo=1.4}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.6;sfo=1.1}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.75;sfo=0.7}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.8;sfo=0.35}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.85;sfo=-0.05}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.8;sfo=-0.4}
+  - delay 1
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.75;sfo=-0.8}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.6;sfo=-1.15}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.45;sfo=-1.5}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.2;sfo=-1.8}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.95;sfo=-2.1}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.65;sfo=-2.35}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.35;sfo=-2.55}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.05;sfo=-2.70}
+  - delay 1
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0.33;sfo=-2.85}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0.7;sfo=-2.9}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.10;sfo=-2.95}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.5;sfo=-2.93}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.85;sfo=-2.85}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.2;sfo=-2.7}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.55;sfo=-2.55}
+  - delay 1
+  ###################################################
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.85;sfo=-2.35}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.15;sfo=-2.1}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.4;sfo=-1.8}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.6;sfo=-1.5}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.78;sfo=-1.15}
+  - delay 1
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.9;sfo=-0.8}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=4;sfo=-0.4}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=4.01;sfo=-0.05}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=4;sfo=0.35}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.9;sfo=0.7}
+  - delay 1
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.78;sfo=1.1}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.6;sfo=1.4}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.4;sfo=1.7}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.15;sfo=2}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.85;sfo=2.25}
+  - delay 1
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.5;sfo=2.48}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.2;sfo=2.65}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.8;sfo=2.75}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.45;sfo=2.8}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.08;sfo=2.85}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0.70;sfo=2.8}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0.40;sfo=2.75}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0;sfo=2.65}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.40;sfo=2.48}
+  - delay 1
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.70;sfo=2.25}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.95;sfo=2}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.20;sfo=1.7}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.45;sfo=1.4}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.6;sfo=1.1}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.75;sfo=0.7}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.8;sfo=0.35}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.85;sfo=-0.05}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.8;sfo=-0.4}
+  - delay 1
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.75;sfo=-0.8}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.6;sfo=-1.15}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.45;sfo=-1.5}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.2;sfo=-1.8}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.95;sfo=-2.1}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.65;sfo=-2.35}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.35;sfo=-2.55}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.05;sfo=-2.70}
+  - delay 1
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0.33;sfo=-2.85}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0.7;sfo=-2.9}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.10;sfo=-2.95}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.5;sfo=-2.93}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.85;sfo=-2.85}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.2;sfo=-2.7}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.55;sfo=-2.55}
+  - delay 1
+  ###################################################
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.85;sfo=-2.35}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.15;sfo=-2.1}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.4;sfo=-1.8}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.6;sfo=-1.5}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.78;sfo=-1.15}
+  - delay 1
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.9;sfo=-0.8}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=4;sfo=-0.4}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=4.01;sfo=-0.05}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=4;sfo=0.35}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.9;sfo=0.7}
+  - delay 1
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.78;sfo=1.1}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.6;sfo=1.4}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.4;sfo=1.7}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=3.15;sfo=2}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.85;sfo=2.25}
+  - delay 1
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.5;sfo=2.48}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.2;sfo=2.65}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.8;sfo=2.75}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.45;sfo=2.8}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.08;sfo=2.85}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0.70;sfo=2.8}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0.40;sfo=2.75}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0;sfo=2.65}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.40;sfo=2.48}
+  - delay 1
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.70;sfo=2.25}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.95;sfo=2}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.20;sfo=1.7}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.45;sfo=1.4}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.6;sfo=1.1}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.75;sfo=0.7}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.8;sfo=0.35}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.85;sfo=-0.05}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.8;sfo=-0.4}
+  - delay 1
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.75;sfo=-0.8}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.6;sfo=-1.15}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.45;sfo=-1.5}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-1.2;sfo=-1.8}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.95;sfo=-2.1}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.65;sfo=-2.35}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.35;sfo=-2.55}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=-0.05;sfo=-2.70}
+  - delay 1
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0.33;sfo=-2.85}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=0.7;sfo=-2.9}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.10;sfo=-2.95}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.5;sfo=-2.93}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=1.85;sfo=-2.85}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.2;sfo=-2.7}
+  - projectile{oT=LunarDestroyerTFire;mr=1;v=0;i=1;d=5;hp=false;hnp=false;sE=false;sB=false;sso=0;syo=2.55;sfo=-2.55}

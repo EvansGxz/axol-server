@@ -1,0 +1,48 @@
+[09/09 19:22:01] [info] EvansGxz | connected
+[09/09 19:22:02] [info] EvansGxz | fetched user data : no value ; created it
+[09/09 19:22:02] [info] EvansGxz | pushing user bca68bdd-c316-4010-908e-911b2ef7edbd, active quests : 
+[09/09 19:22:02] [info] EvansGxz | fetching user quests : 
+- user active quests : 
+- filtered (non-cached) : 
+[09/09 19:22:02] [info] EvansGxz | fetched user quests : 
+[09/09 19:29:58] [info] EvansGxz | fetched user data : active quests 
+[09/09 19:29:58] [info] EvansGxz | fetching user quests : 
+- user active quests : 
+- filtered (non-cached) : 
+[09/09 19:29:58] [info] EvansGxz | fetched user quests : 
+[09/09 20:15:03] [info] EvansGxz | connected
+[09/09 20:15:03] [info] EvansGxz | fetched user data : active quests 
+[09/09 20:15:04] [info] EvansGxz | fetching user quests : 
+- user active quests : 
+- filtered (non-cached) : 
+[09/09 20:15:04] [info] EvansGxz | fetched user quests : 
+[09/09 20:30:58] [info] EvansGxz | connected
+[09/09 20:30:58] [info] EvansGxz | fetched user data : active quests 
+[09/09 20:30:58] [info] EvansGxz | fetching user quests : 
+- user active quests : 
+- filtered (non-cached) : 
+[09/09 20:30:59] [info] EvansGxz | fetched user quests : 
+[09/09 20:53:05] [info] EvansGxz | disposing user quests data : 
+- must dispose quests
+[09/09 20:53:05] [info] EvansGxz | disposed user data
+[09/09 20:53:05] [info] EvansGxz | disconnected
+[09/09 20:56:43] [info] EvansGxz | connected
+[09/09 20:56:43] [info] EvansGxz | fetched user data : active quests 
+[09/09 20:56:43] [info] EvansGxz | fetching user quests : 
+- user active quests : 
+- filtered (non-cached) : 
+[09/09 20:56:43] [info] EvansGxz | fetched user quests : 
+[09/09 21:17:19] [info] EvansGxz | disposing user quests data : 
+- must dispose quests
+[09/09 21:17:19] [info] EvansGxz | disposed user data
+[09/09 21:17:19] [info] EvansGxz | disconnected
+[09/09 21:19:08] [info] EvansGxz | connected
+[09/09 21:19:09] [info] EvansGxz | fetched user data : active quests 
+[09/09 21:19:09] [info] EvansGxz | fetching user quests : 
+- user active quests : 
+- filtered (non-cached) : 
+[09/09 21:19:09] [info] EvansGxz | fetched user quests : 
+[09/09 21:26:12] [info] EvansGxz | disposing user quests data : 
+- must dispose quests
+[09/09 21:26:12] [info] EvansGxz | disposed user data
+[09/09 21:26:12] [info] EvansGxz | disconnected

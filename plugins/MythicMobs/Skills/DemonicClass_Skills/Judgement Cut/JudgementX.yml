@@ -1,0 +1,441 @@
+JudgementX:
+  Conditions:
+  - hasaura CancelAuraDMClass false
+  Skills:
+  - skill{s=JudgementOX} @origin
+  - skill{s=JudgementOXChaos} @origin
+  - skill{s=JudgementOXFire} @origin
+  - delay 1
+  - lunge{velocity=20;velocityY=0} @Targetlocation
+  #- skill{s=JudgmementBullet}
+  #- skill{s=JudgmementBulletF}
+  #- skill{s=JudgmementBulletC}
+  - potion{type=INVISIBILITY;d=12;p=false} @self
+  - sound{s=thunderblader;v=0.25;p=1.3} @self
+  - delay 10
+  - skill{s=JudgementX2}
+  - skill{s=JudgementX3}
+  - summon{type=JudgementXMob} @self
+  - skill{s=JudgementSlashDMG1} @self
+
+
+
+
+
+
+JudgementOX:
+  Conditions:
+  - hasaura EclipseAuraA false
+  - hasaura ChaosAuraA false
+  Skills:
+ # - projectile{oT=PGXT;i=1;v=0;mr=1;d=50;sfo=0;sso=0;syo=1} 
+  - summon{t=DemonicSword1MobMINI} @self
+  - orbital{points=20;hnp=true;interval=1;duration=40;r=0.2;oy=1.1;oz=0;ox=0;vr=1;hr=1}
+  - orbital{onTick=JGXT;onHit=JGXH;points=25;hnp=true;interval=1;duration=50;r=2;oy=1.1;oz=0;ox=0} 
+  - delay 5
+  - orbital{onTick=JGXT;onHit=JGXH;points=25;hnp=true;interval=1;duration=45;r=2;oy=1.1;oz=0;ox=0} 
+  - delay 5
+  - orbital{onTick=JGXT;onHit=JGXH;points=25;hnp=true;interval=1;duration=40;r=2;oy=1.1;oz=0;ox=0} 
+
+  
+PGXT:
+  Skills:
+  - particlering{p=reddust;a=1;size=0.5;color=#660000;points=36;r=2} @origin
+JGXT:
+  Skills:
+  - particlesphere{p=reddust;a=5;size=0.9;color=#aa180e;r=0.15}  @origin
+#
+JudgementOXChaos:
+  Conditions:
+  - hasaura EclipseAuraA false
+  - hasaura ChaosAuraA true
+  Skills:
+  - summon{t=DemonicSword3MobMINI} @self
+  - orbital{oT=JGXTE;points=20;hnp=true;interval=1;duration=100;r=0.2;oy=1.1;oz=0;ox=0;vr=1;hr=1}
+  #- projectile{oT=PGXTChaos;i=1;v=0;mr=1;d=50;sfo=0;sso=0;syo=1} 
+  - orbital{onTick=JGXTChaos;onHit=JGXHChaos;points=20;hnp=true;interval=1;duration=50;r=2;oy=1.1;oz=0;ox=0;vr=2.5;hr=2.5} 
+  - delay 5
+  - orbital{onTick=JGXTChaos;points=20;hnp=true;interval=1;duration=95;r=2;oy=1.1;oz=0;ox=0;vr=1;hr=1} 
+  - delay 5
+  - orbital{onTick=JGXTChaos;points=20;hnp=true;interval=1;duration=90;r=2;oy=1.1;oz=0;ox=0;vr=1;hr=1}
+JGXTE:
+  Skills:
+  - pull{v=10;to=true} @EntitiesNearOrigin{r=4;ignore=players}
+PGXTChaos:
+  Skills:
+  - particlering{p=reddust;a=1;size=0.5;color=#6e3deb;points=36;r=2} @origin
+JGXTChaos:
+  Skills:
+  - particlesphere{p=reddust;a=5;size=0.5;color=#674ea7;r=0.15}  @origin
+JGXHChaos:
+  Skills:
+  - mmodamage{a="<modifier.damage>";pkb=true;types="SKILL"}
+JudgementOXFire:
+  Conditions:
+  - hasaura EclipseAuraA true
+  - hasaura ChaosAuraA false
+  Skills:
+  - summon{t=DemonicSword2MobMINI} @self
+  - orbital{points=20;hnp=true;interval=1;duration=40;r=0.2;oy=1.1;oz=0;ox=0;vr=1;hr=1}
+  - projectile{oT=PGXTFire;i=1;v=0;mr=1;d=50;sfo=0;sso=0;syo=1} 
+  - orbital{onTick=JGXTFire;onHit=JGXHFire;points=25;hnp=true;interval=1;duration=50;r=2;oy=1.1;oz=0;ox=0;vr=2.5;hr=2.5} 
+  - delay 5
+  - orbital{onTick=JGXTFire;points=25;hnp=true;interval=1;duration=45;r=2;oy=1.1;oz=0;ox=0;vr=1;hr=1} 
+  - delay 5
+  - orbital{onTick=JGXTFire;points=25;hnp=true;interval=1;duration=40;r=2;oy=1.1;oz=0;ox=0;vr=1;hr=1}
+
+PGXTFire:
+  Skills:
+  - particlering{p=reddust;a=1;size=0.5;color=#CC4A00;points=36;r=2} @origin
+JGXTFire:
+  Skills:
+  - particlesphere{p=reddust;a=5;size=0.9;color=#ff5d00;r=0.15} @origin
+JGXHFire:
+  Skills:
+  - mmodamage{a="<modifier.damage>";pkb=true;types="SKILL"}
+  - skill{s=Calcination} @MobsNearOrigin{r=3;t=YamatoTesting,Hypnos}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+JudgmementBullet:
+  Conditions:
+  - hasaura EclipseAuraA false
+  - hasaura ChaosAuraA false
+  Skills:
+  - projectile{oH=JudgmementBulletH2;oE=JudgmementBulletE;mr=20;i=1;v=70;sfo=0;sso=0;syo=0.5;hnp=true;hp=true;sB=true;sE=false} @Targetlocation
+  - projectile{oT=JudgmementBulletT2;mr=10;i=1;v=40;sfo=-1;sso=0;syo=0.5;hnp=true;hp=true;sB=true;sE=false} @Targetlocation
+JudgmementBulletF:
+  Conditions:
+  - hasaura EclipseAuraA true
+  - hasaura ChaosAuraA false
+  Skills:
+  - projectile{oH=JudgmementBulletH2F;oE=JudgmementBulletE;mr=20;i=1;v=70;sfo=0;sso=0;syo=0.5;hnp=true;hp=true;sB=true;sE=false} @Targetlocation
+  - projectile{oT=JudgmementBulletT2F;mr=10;i=1;v=40;sfo=-1;sso=0;syo=0.5;hnp=true;hp=true;sB=true;sE=false} @Targetlocation
+JudgmementBulletC:
+  Conditions:
+  - hasaura EclipseAuraA false
+  - hasaura ChaosAuraA true
+  Skills:
+  - projectile{oH=JudgmementBulletH2C;oE=JudgmementBulletE;mr=20;i=1;v=70;sfo=0;sso=0;syo=0.5;hnp=true;hp=true;sB=true;sE=false} @Targetlocation
+  - projectile{oT=JudgmementBulletT2C;mr=10;i=1;v=40;sfo=-1;sso=0;syo=0.5;hnp=true;hp=true;sB=true;sE=false} @Targetlocation
+JudgementX2:
+  Conditions:
+  - hasaura EclipseAuraA false
+  - hasaura ChaosAuraA true
+  Skills:
+  - sound{s=demonicclassound2;v=0.25;p=0.8} @self
+  - summon{type=JudgementXMobChaos} @Forward{f=0.2}
+  - skill{s=JudgementChaosSlashDMG1} @self
+
+JudgementX3:
+  Conditions:
+  - hasaura EclipseAuraA true
+  - hasaura ChaosAuraA false
+  Skills:
+  - sound{s=demonicclassound;v=0.25;p=1} @self
+  - summon{type=JudgementXMobFire} @Forward{f=0.2}
+  - skill{s=JudgementFireSlashDMG1} @self
+
+
+JudgementFireXT:
+  Skills:
+  - particles{p=reddust;color=#FC6400;a=1;hs=0.2;size=0.5}
+  - particles{p=reddust;color=#FF7500;a=1;hs=0.2;size=0.4}
+JudgementChaosXT:
+  Skills:
+  - particles{p=reddust;color=#6000ff;a=1;hs=0.2;size=0.5}
+  - particles{p=reddust;color=#8855DD;a=1;hs=0.2;size=0.4}
+
+JudgementXT:
+  Skills:
+  - particles{p=reddust;a=1;size=0.5;color=#00000;hs=0.1}
+JudgmementBullet2:
+  Skills:
+  - skill{s=JudgmementBulletT2} @self
+
+ 
+
+
+  
+
+JudgmementBulletT2:
+  Skills:
+  - effect:particles{p=reddust;a=1;size=0.8;color=#ff0000;hs=0;vs=0;forwardOffset=1;sideOffset=0;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#ff0000;hs=0;vs=0;forwardOffset=1.2;sideOffset=0.1;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#ff0000;hs=0;vs=0;forwardOffset=1.4;sideOffset=0.2;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#ff0000;hs=0;vs=0;forwardOffset=1.6;sideOffset=0.3;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#ff0000;hs=0;vs=0;forwardOffset=1.8;sideOffset=0.4;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#ff0000;hs=0;vs=0;forwardOffset=2;sideOffset=0.5;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#ff0000;hs=0;vs=0;forwardOffset=2.2;sideOffset=0.6;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#ff0000;hs=0;vs=0;forwardOffset=2.4;sideOffset=0.7;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#ff0000;hs=0;vs=0;forwardOffset=2.6;sideOffset=0.6;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#ff0000;hs=0;vs=0;forwardOffset=2.8;sideOffset=0.5;y=0.4;repeat=1;repeatInterval=10} 
+  - delay 1
+  - effect:particles{p=reddust;a=1;size=0.8;color=#ff0000;hs=0;vs=0;forwardOffset=3;sideOffset=0.4;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#ff0000;hs=0;vs=0;forwardOffset=3.2;sideOffset=0.3;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#ff0000;hs=0;vs=0;forwardOffset=3.4;sideOffset=0.2;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#ff0000;hs=0;vs=0;forwardOffset=3.6;sideOffset=-0;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#ff0000;hs=0;vs=0;forwardOffset=1;sideOffset=0;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#ff0000;hs=0;vs=0;forwardOffset=1.2;sideOffset=0.1;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#ff0000;hs=0;vs=0;forwardOffset=1.4;sideOffset=0.2;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#ff0000;hs=0;vs=0;forwardOffset=1.6;sideOffset=0.3;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#ff0000;hs=0;vs=0;forwardOffset=1.8;sideOffset=0.4;y=0.4;repeat=1;repeatInterval=10} 
+  - delay 1
+  - effect:particles{p=reddust;a=1;size=0.8;color=#ff0000;hs=0;vs=0;forwardOffset=2;sideOffset=0.5;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#ff0000;hs=0;vs=0;forwardOffset=2.2;sideOffset=0.6;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#ff0000;hs=0;vs=0;forwardOffset=2.4;sideOffset=0.7;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#ff0000;hs=0;vs=0;forwardOffset=2.6;sideOffset=0.6;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#ff0000;hs=0;vs=0;forwardOffset=2.8;sideOffset=0.5;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#ff0000;hs=0;vs=0;forwardOffset=3;sideOffset=0.4;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#ff0000;hs=0;vs=0.;forwardOffset=3.2;sideOffset=0.3;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#ff0000;hs=0;vs=0.;forwardOffset=3.4;sideOffset=0.2;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#ff0000;hs=0;vs=0;forwardOffset=3.6;sideOffset=-0;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#ff0000;hs=0;vs=0;forwardOffset=1;sideOffset=0;y=0.4;repeat=1;repeatInterval=10} 
+  - delay 1
+  - effect:particles{p=reddust;a=1;size=0.8;color=#ff0000;hs=0;vs=0;forwardOffset=1.2;sideOffset=0.1;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#ff0000;hs=0;vs=0;forwardOffset=1.4;sideOffset=0.2;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#ff0000;hs=0;vs=0;forwardOffset=1.6;sideOffset=0.3;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#ff0000;hs=0;vs=0;forwardOffset=1.8;sideOffset=0.4;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#ff0000;hs=0;vs=0;forwardOffset=2;sideOffset=0.5;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#ff0000;hs=0;vs=0;forwardOffset=2.2;sideOffset=0.6;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#ff0000;hs=0;vs=0;forwardOffset=2.4;sideOffset=0.7;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#ff0000;hs=0;vs=0;forwardOffset=2.6;sideOffset=0.6;y=0.4;repeat=1;repeatInterval=10} 
+  - delay 1
+  - effect:particles{p=reddust;a=1;size=0.8;color=#ff0000;hs=0;vs=0;forwardOffset=2.8;sideOffset=0.5;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#ff0000;hs=0;vs=0;forwardOffset=3;sideOffset=0.4;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#ff0000;hs=0;vs=0;forwardOffset=3.2;sideOffset=0.3;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#ff0000;hs=0;vs=0;forwardOffset=3.4;sideOffset=0.2;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#ff0000;hs=0;vs=0;forwardOffset=3.6;sideOffset=-0;y=0.4;repeat=1;repeatInterval=10} 
+JudgmementBulletT2F:
+  Skills:
+  - effect:particles{p=reddust;a=1;size=0.8;color=#FC6400;hs=0;vs=0;forwardOffset=1;sideOffset=0;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#FC6400;hs=0;vs=0;forwardOffset=1.2;sideOffset=0.1;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#FC6400;hs=0;vs=0;forwardOffset=1.4;sideOffset=0.2;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#FC6400;hs=0;vs=0;forwardOffset=1.6;sideOffset=0.3;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#FC6400;hs=0;vs=0;forwardOffset=1.8;sideOffset=0.4;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#FC6400;hs=0;vs=0;forwardOffset=2;sideOffset=0.5;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#FC6400;hs=0;vs=0;forwardOffset=2.2;sideOffset=0.6;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#FC6400;hs=0;vs=0;forwardOffset=2.4;sideOffset=0.7;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#FC6400;hs=0;vs=0;forwardOffset=2.6;sideOffset=0.6;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#FC6400;hs=0;vs=0;forwardOffset=2.8;sideOffset=0.5;y=0.4;repeat=1;repeatInterval=10} 
+  - delay 1
+  - effect:particles{p=reddust;a=1;size=0.8;color=#FC6400;hs=0;vs=0;forwardOffset=3;sideOffset=0.4;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#FC6400;hs=0;vs=0;forwardOffset=3.2;sideOffset=0.3;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#FC6400;hs=0;vs=0;forwardOffset=3.4;sideOffset=0.2;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#FC6400;hs=0;vs=0;forwardOffset=3.6;sideOffset=-0;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#FC6400;hs=0;vs=0;forwardOffset=1;sideOffset=0;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#FC6400;hs=0;vs=0;forwardOffset=1.2;sideOffset=0.1;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#FC6400;hs=0;vs=0;forwardOffset=1.4;sideOffset=0.2;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#FC6400;hs=0;vs=0;forwardOffset=1.6;sideOffset=0.3;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#FC6400;hs=0;vs=0;forwardOffset=1.8;sideOffset=0.4;y=0.4;repeat=1;repeatInterval=10} 
+  - delay 1
+  - effect:particles{p=reddust;a=1;size=0.8;color=#FC6400;hs=0;vs=0;forwardOffset=2;sideOffset=0.5;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#FC6400;hs=0;vs=0;forwardOffset=2.2;sideOffset=0.6;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#FC6400;hs=0;vs=0;forwardOffset=2.4;sideOffset=0.7;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#FC6400;hs=0;vs=0;forwardOffset=2.6;sideOffset=0.6;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#FC6400;hs=0;vs=0;forwardOffset=2.8;sideOffset=0.5;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#FC6400;hs=0;vs=0;forwardOffset=3;sideOffset=0.4;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#FC6400;hs=0;vs=0.;forwardOffset=3.2;sideOffset=0.3;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#FC6400;hs=0;vs=0.;forwardOffset=3.4;sideOffset=0.2;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#FC6400;hs=0;vs=0;forwardOffset=3.6;sideOffset=-0;y=0.4;repeat=1;repeatInterval=10} 
+  - delay 1
+  - effect:particles{p=reddust;a=1;size=0.8;color=#FC6400;hs=0;vs=0;forwardOffset=1;sideOffset=0;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#FC6400;hs=0;vs=0;forwardOffset=1.2;sideOffset=0.1;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#FC6400;hs=0;vs=0;forwardOffset=1.4;sideOffset=0.2;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#FC6400;hs=0;vs=0;forwardOffset=1.6;sideOffset=0.3;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#FC6400;hs=0;vs=0;forwardOffset=1.8;sideOffset=0.4;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#FC6400;hs=0;vs=0;forwardOffset=2;sideOffset=0.5;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#FC6400;hs=0;vs=0;forwardOffset=2.2;sideOffset=0.6;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#FC6400;hs=0;vs=0;forwardOffset=2.4;sideOffset=0.7;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#FC6400;hs=0;vs=0;forwardOffset=2.6;sideOffset=0.6;y=0.4;repeat=1;repeatInterval=10}
+  - delay 1 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#FC6400;hs=0;vs=0;forwardOffset=2.8;sideOffset=0.5;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#FC6400;hs=0;vs=0;forwardOffset=3;sideOffset=0.4;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#FC6400;hs=0;vs=0;forwardOffset=3.2;sideOffset=0.3;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#FC6400;hs=0;vs=0;forwardOffset=3.4;sideOffset=0.2;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#FC6400;hs=0;vs=0;forwardOffset=3.6;sideOffset=-0;y=0.4;repeat=1;repeatInterval=10} 
+JudgmementBulletT2C:
+  Skills:
+  - effect:particles{p=reddust;a=1;size=0.8;color=#6000ff;hs=0;vs=0;forwardOffset=1;sideOffset=0;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#6000ff;hs=0;vs=0;forwardOffset=1.2;sideOffset=0.1;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#6000ff;hs=0;vs=0;forwardOffset=1.4;sideOffset=0.2;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#6000ff;hs=0;vs=0;forwardOffset=1.6;sideOffset=0.3;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#6000ff;hs=0;vs=0;forwardOffset=1.8;sideOffset=0.4;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#6000ff;hs=0;vs=0;forwardOffset=2;sideOffset=0.5;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#6000ff;hs=0;vs=0;forwardOffset=2.2;sideOffset=0.6;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#6000ff;hs=0;vs=0;forwardOffset=2.4;sideOffset=0.7;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#6000ff;hs=0;vs=0;forwardOffset=2.6;sideOffset=0.6;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#6000ff;hs=0;vs=0;forwardOffset=2.8;sideOffset=0.5;y=0.4;repeat=1;repeatInterval=10} 
+  - delay 1
+  - effect:particles{p=reddust;a=1;size=0.8;color=#6000ff;hs=0;vs=0;forwardOffset=3;sideOffset=0.4;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#6000ff;hs=0;vs=0;forwardOffset=3.2;sideOffset=0.3;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#6000ff;hs=0;vs=0;forwardOffset=3.4;sideOffset=0.2;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#6000ff;hs=0;vs=0;forwardOffset=3.6;sideOffset=-0;y=0.4;repeat=1;repeatInterval=10}
+  - effect:particles{p=reddust;a=1;size=0.8;color=#6000ff;hs=0;vs=0;forwardOffset=1;sideOffset=0;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#6000ff;hs=0;vs=0;forwardOffset=1.2;sideOffset=0.1;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#6000ff;hs=0;vs=0;forwardOffset=1.4;sideOffset=0.2;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#6000ff;hs=0;vs=0;forwardOffset=1.6;sideOffset=0.3;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#6000ff;hs=0;vs=0;forwardOffset=1.8;sideOffset=0.4;y=0.4;repeat=1;repeatInterval=10}
+  - delay 1 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#6000ff;hs=0;vs=0;forwardOffset=2;sideOffset=0.5;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#6000ff;hs=0;vs=0;forwardOffset=2.2;sideOffset=0.6;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#6000ff;hs=0;vs=0;forwardOffset=2.4;sideOffset=0.7;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#6000ff;hs=0;vs=0;forwardOffset=2.6;sideOffset=0.6;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#6000ff;hs=0;vs=0;forwardOffset=2.8;sideOffset=0.5;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#6000ff;hs=0;vs=0;forwardOffset=3;sideOffset=0.4;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#6000ff;hs=0;vs=0.;forwardOffset=3.2;sideOffset=0.3;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#6000ff;hs=0;vs=0.;forwardOffset=3.4;sideOffset=0.2;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#6000ff;hs=0;vs=0;forwardOffset=3.6;sideOffset=-0;y=0.4;repeat=1;repeatInterval=10} 
+  - delay 1
+  - effect:particles{p=reddust;a=1;size=0.8;color=#6000ff;hs=0;vs=0;forwardOffset=1;sideOffset=0;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#6000ff;hs=0;vs=0;forwardOffset=1.2;sideOffset=0.1;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#6000ff;hs=0;vs=0;forwardOffset=1.4;sideOffset=0.2;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#6000ff;hs=0;vs=0;forwardOffset=1.6;sideOffset=0.3;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#6000ff;hs=0;vs=0;forwardOffset=1.8;sideOffset=0.4;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#6000ff;hs=0;vs=0;forwardOffset=2;sideOffset=0.5;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#6000ff;hs=0;vs=0;forwardOffset=2.2;sideOffset=0.6;y=0.4;repeat=1;repeatInterval=10} 
+  - delay 1
+  - effect:particles{p=reddust;a=1;size=0.8;color=#6000ff;hs=0;vs=0;forwardOffset=2.4;sideOffset=0.7;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#6000ff;hs=0;vs=0;forwardOffset=2.6;sideOffset=0.6;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#6000ff;hs=0;vs=0;forwardOffset=2.8;sideOffset=0.5;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#6000ff;hs=0;vs=0;forwardOffset=3;sideOffset=0.4;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#6000ff;hs=0;vs=0;forwardOffset=3.2;sideOffset=0.3;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#6000ff;hs=0;vs=0;forwardOffset=3.4;sideOffset=0.2;y=0.4;repeat=1;repeatInterval=10} 
+  - effect:particles{p=reddust;a=1;size=0.8;color=#6000ff;hs=0;vs=0;forwardOffset=3.6;sideOffset=-0;y=0.4;repeat=1;repeatInterval=10}  
+#JudgementXT
+JudgementSlash1:
+  Skills:
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.91;sfo=0.37;sso=-1.05} 
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.88;sfo=0.48;sso=-1.13}
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.845;sfo=0.58;sso=-1.19}
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.815;sfo=0.69;sso=-1.24}
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.778;sfo=0.805;sso=-1.294}
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.75;sfo=0.93;sso=-1.34}
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.735;sfo=1.03;sso=-1.358}
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.715;sfo=1.16;sso=-1.38}
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.695;sfo=1.28;sso=-1.405}
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.678;sfo=1.43;sso=-1.43}
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.668;sfo=1.57;sso=-1.427}
+  - delay 1
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.665;sfo=1.722;sso=-1.424}
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.668;sfo=1.88;sso=-1.405}
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.671;sfo=2.03;sso=-1.378}
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.679;sfo=2.15;sso=-1.355}
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.685;sfo=2.280;sso=-1.323}
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.695;sfo=2.39;sso=-1.285}
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.705;sfo=2.50;sso=-1.245}
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.715;sfo=2.61;sso=-1.2}
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.730;sfo=2.70;sso=-1.16}
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.745;sfo=2.81;sso=-1.10}
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.758;sfo=2.90;sso=-1.04}
+  - delay 1
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.788;sfo=2.98;sso=-0.99}
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.810;sfo=3.07;sso=-0.93}
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.835;sfo=3.15;sso=-0.86}
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.865;sfo=3.23;sso=-0.80}
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.9;sfo=3.32;sso=-0.73}
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.93;sfo=3.40;sso=-0.65}
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.96;sfo=3.46;sso=-0.575}
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.99;sfo=3.52;sso=-0.505}
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.02;sfo=3.58;sso=-0.425}
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.05;sfo=3.635;sso=-0.35}
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.08;sfo=3.68;sso=-0.28}
+  - delay 1
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.11;sfo=3.725;sso=-0.21}
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.15;sfo=3.77;sso=-0.11}
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.195;sfo=3.81;sso=-0.03}
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.245;sfo=3.845;sso=0.07}
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.285;sfo=3.885;sso=0.16}
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.330;sfo=3.92;sso=0.26}
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.370;sfo=3.94;sso=0.35}
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.415;sfo=3.955;sso=0.45}
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.465;sfo=3.97;sso=0.56}
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.52;sfo=3.99;sso=0.66}
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.57;sfo=4;sso=0.77}
+  - delay 1
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.62;sfo=4;sso=0.87}
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.665;sfo=3.99;sso=0.97}
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.71;sfo=3.97;sso=1.07}
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.765;sfo=3.95;sso=1.16}
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.815;sfo=3.92;sso=1.27}
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.871;sfo=3.88;sso=1.37}
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.925;sfo=3.839;sso=1.48}
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.97;sfo=3.78;sso=1.61}
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=2.03;sfo=3.71;sso=1.73}
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=2.08;sfo=3.66;sso=1.83}
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=2.13;sfo=3.59;sso=1.91}
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=2.18;sfo=3.52;sso=2}
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=2.23;sfo=3.45;sso=2.085}
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=2.28;sfo=3.36;sso=2.16}
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=2.32;sfo=3.25;sso=2.23}
+  - projectile{oT=JudgementXT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=2.36;sfo=3.15;sso=2.30}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+

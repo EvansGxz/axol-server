@@ -29,6 +29,9 @@ condition:
   food:
     positive: '&a✔ Requires #food# Food'
     negative: '&c✖ Requires #food# Food'
+  money:
+    positive: '&a✔ Requires $#money#'
+    negative: '&c✖ Requires $#money#'
 ingredient:
   mmoitem:
     positive: '&8✔ &7#amount# #level##item#'

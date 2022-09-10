@@ -1,0 +1,182 @@
+SpinningBlades:
+  Conditions:
+  - hasaura CancelAuraDMClass false
+  Skills:
+  - skill{s=SpinningBladesSkill}
+  - skill{s=SpinningBladesSkillF}
+  - skill{s=SpinningBladesSkillA}
+
+
+
+SpinningBladesSkill:
+  Conditions:
+  - hasaura EclipseAuraA false
+  - hasaura ChaosAuraA false
+  Skills:
+  - projectile{oE=SBABE;i=1;mr=20;v=20;sso=0;sfo=0;sfo=0;sB=true;sE=false} @forward{f=1}
+SpiningBladeActivated:
+  Skills:
+  - particles{p=reddust;a=5;size=0.4;color=#FF7500;hs=0.2;vs=0.1} 
+SBABE:
+  Skills:
+  - orbital{onTick=SpinningBlades_T3;onHit=SpinningBlades_H;points=10;hnp=true;hp=false;interval=1;duration=<modifier.duration>;r=2.7;oy=1;oz=3.3;ox=0} 
+  - orbital{onTick=SpinningBlades_T3;onHit=SpinningBlades_H;points=10;hnp=true;hp=false;interval=1;duration=<modifier.duration>;r=2.7;oy=1;oz=-3.3;ox=0} 
+  - orbital{onTick=SpinningBlades_T3;onHit=SpinningBlades_H;points=10;hnp=true;hp=false;interval=1;duration=<modifier.duration>;r=2.7;oy=1;oz=0;ox=3.3} 
+  - orbital{onTick=SpinningBlades_T3;onHit=SpinningBlades_H;points=10;hnp=true;hp=false;interval=1;duration=<modifier.duration>;r=2.7;oy=1;oz=0;ox=-3.3} 
+SpinningBlades_H:
+  Skills:
+  - damage{a="<modifier.damage>";pkb=true} 
+  - sound{s=fireb;v=0.20;p=0.2}
+
+
+
+
+SpinningBlades_T:
+  Skills:
+  - particles{p=reddust;a=5;size=0.4;color=#FC6400;hs=0.2;vs=0.1} @origin 
+SpinningBlades_T2:
+  Skills:
+  - particles{p=reddust;a=5;size=0.4;color=#FF7500;hs=0.2;vs=0.1} @origin 
+SpinningBlades_T3:
+  Skills:
+  - particles{p=reddust;a=5;size=0.5;color=#990000;hs=0.3} @origin 
+
+
+
+
+TestingModifyProjectile:
+  Skills:
+  - projectile{oT=TMP_oT;i=1;v=8;d=200;mr=100} @TargetLocation
+TMP_oT:
+  Skills:
+  - particles{particle=flame;a=2;hs=0;vs=0;s=0;y=0} @origin
+  - modifyProjectile{trait=VELOCITY;action=MULTIPLY;value=1}
+
+
+
+
+
+#SpinningBlades_T_P:
+ # Skills:
+  #- particlering{p=reddust;a=1;size=0.3;color=#B62203;r=6;points=32}
+  #- particlering{p=reddust;a=1;size=0.3;color=#801100;r=6.3;points=32;hs=0.2}
+
+
+ #- projectile{oT=SpinningBlades_T_P;i=1;mr=1;v=0;d=<modifier.duration>;sso=0;sfo=0;sfo=0;sB=true;sE=false}
+
+
+
+
+
+
+
+
+
+SpinningBladesSkillF:
+  Conditions:
+  - hasaura EclipseAuraA true
+  - hasaura ChaosAuraA false
+  Skills:
+  - projectile{oE=SBABEF;i=1;mr=20;v=20;sso=0;sfo=0;sfo=0;sB=true;sE=false} @forward{f=1}
+SpiningBladeActivatedF:
+  Skills:
+  - particles{p=reddust;a=5;size=0.4;color=#FF7500;hs=0.2;vs=0.1} 
+SBABEF:
+  Skills:
+  - orbital{onTick=SpinningBlades_TF;onHit=SpinningBlades_HF;points=10;hnp=true;hp=false;interval=1;duration=<modifier.duration>;r=2.5;oy=1;oz=3.3;ox=;vr=2;hr=2} 
+  - orbital{onTick=SpinningBlades_T2F;onHit=SpinningBlades_HF;points=10;hnp=true;hp=false;interval=1;duration=<modifier.duration>;r=2.6;oy=1;oz=3.3;ox=0;vr=2;hr=2} 
+  - orbital{onTick=SpinningBlades_T3F;onHit=SpinningBlades_HF;points=10;hnp=true;hp=false;interval=1;duration=<modifier.duration>;r=2.7;oy=1;oz=3.3;ox=0;vr=2;hr=2} 
+
+  - orbital{onTick=SpinningBlades_TF;onHit=SpinningBlades_HF;points=10;hnp=true;hp=false;interval=1;duration=<modifier.duration>;r=2.5;oy=1;oz=-3.3;ox=0;vr=2;hr=2} 
+  - orbital{onTick=SpinningBlades_T2F;onHit=SpinningBlades_HF;points=10;hnp=true;hp=false;interval=1;duration=<modifier.duration>;r=2.6;oy=1;oz=-3.3;ox=0;vr=2;hr=2} 
+  - orbital{onTick=SpinningBlades_T3F;onHit=SpinningBlades_HF;points=10;hnp=true;hp=false;interval=1;duration=<modifier.duration>;r=2.7;oy=1;oz=-3.3;ox=0;vr=2;hr=2} 
+
+  - orbital{onTick=SpinningBlades_TF;onHit=SpinningBlades_HF;points=10;hnp=true;hp=false;interval=1;duration=<modifier.duration>;r=2.5;oy=1;oz=0;ox=3.3;vr=2;hr=2} 
+  - orbital{onTick=SpinningBlades_T2F;onHit=SpinningBlades_HF;points=10;hnp=true;hp=false;interval=1;duration=<modifier.duration>;r=2.6;oy=1;oz=0;ox=3.3;vr=2;hr=2} 
+  - orbital{onTick=SpinningBlades_T3F;onHit=SpinningBlades_HF;points=10;hnp=true;hp=false;interval=1;duration=<modifier.duration>;r=2.7;oy=1;oz=0;ox=3.3;vr=2;hr=2} 
+
+  - orbital{onTick=SpinningBlades_TF;onHit=SpinningBlades_HF;points=10;hnp=true;hp=false;interval=1;duration=<modifier.duration>;r=2.5;oy=1;oz=0;ox=-3.3;vr=2;hr=2} 
+  - orbital{onTick=SpinningBlades_T2F;onHit=SpinningBlades_HF;points=10;hnp=true;hp=false;interval=1;duration=<modifier.duration>;r=2.6;oy=1;oz=0;ox=-3.3;vr=2;hr=2} 
+  - orbital{onTick=SpinningBlades_T3F;onHit=SpinningBlades_HF;points=10;hnp=true;hp=false;interval=1;duration=<modifier.duration>;r=2.7;oy=1;oz=0;ox=-3.3;vr=2;hr=2} 
+SpinningBlades_HF:
+  Skills:
+  - damage{a="<modifier.damage>";pkb=true} 
+  - skill{s=Calcination}
+  - skill{s=SPSOUNDCOOL}
+SPSOUNDCOOL:
+  Cooldown: 3
+  Skills:
+  - sound{s=fireb;v=0.20;p=0.2} 
+
+
+
+
+SpinningBlades_TF:
+  Skills:
+  - particlering{p=reddust;a=1;size=0.3;color=#000000;hs=0.05;vs=0.5;r=0.4;points=12} @origin 
+SpinningBlades_T2F:
+  Skills:
+  - particlering{p=reddust;a=1;size=0.3;color=#ffa342;hs=0.05;r=0.5;points=12} @origin 
+SpinningBlades_T3F:
+  Skills:
+  - particlering{p=reddust;a=1;size=0.5;color=#FC6400;hs=0.05;r=0.6;points=12} @origin 
+
+
+
+
+
+
+
+
+
+
+
+SpinningBladesSkillA:
+  Conditions:
+  - hasaura EclipseAuraA false
+  - hasaura ChaosAuraA true
+  Skills:
+  - projectile{oE=SBABEA;i=1;mr=20;v=20;sso=0;sfo=0;sfo=0;sB=true;sE=false} @forward{f=1}
+SpiningBladeActivatedA:
+  Skills:
+  - particles{p=reddust;a=5;size=0.4;color=#FF7500;hs=0.2;vs=0.1} 
+SBABEA:
+  Skills:
+  - orbital{onTick=SpinningBlades_TA;onHit=SpinningBlades_HA;points=10;hnp=true;hp=false;interval=1;duration=<modifier.duration>;r=2.5;oy=1;oz=3.3;ox=0;vr=2;hr=2} 
+  - orbital{onTick=SpinningBlades_T2A;onHit=SpinningBlades_HA;points=10;hnp=true;hp=false;interval=1;duration=<modifier.duration>;r=2.6;oy=1;oz=3.3;ox=0;vr=2;hr=2} 
+  - orbital{onTick=SpinningBlades_T3A;onHit=SpinningBlades_HA;points=10;hnp=true;hp=false;interval=1;duration=<modifier.duration>;r=2.7;oy=1;oz=3.3;ox=0;vr=2;hr=2} 
+
+  - orbital{onTick=SpinningBlades_TA;onHit=SpinningBlades_HA;points=10;hnp=true;hp=false;interval=1;duration=<modifier.duration>;r=2.5;oy=1;oz=-3.3;ox=0;vr=2;hr=2} 
+  - orbital{onTick=SpinningBlades_T2A;onHit=SpinningBlades_HA;points=10;hnp=true;hp=false;interval=1;duration=<modifier.duration>;r=2.6;oy=1;oz=-3.3;ox=0;vr=2;hr=2} 
+  - orbital{onTick=SpinningBlades_T3A;onHit=SpinningBlades_HA;points=10;hnp=true;hp=false;interval=1;duration=<modifier.duration>;r=2.7;oy=1;oz=-3.3;ox=0;vr=2;hr=2} 
+
+  - orbital{onTick=SpinningBlades_TA;onHit=SpinningBlades_HA;points=10;hnp=true;hp=false;interval=1;duration=<modifier.duration>;r=2.5;oy=1;oz=0;ox=3.3;vr=2;hr=2} 
+  - orbital{onTick=SpinningBlades_T2A;onHit=SpinningBlades_HA;points=10;hnp=true;hp=false;interval=1;duration=<modifier.duration>;r=2.6;oy=1;oz=0;ox=3.3;vr=2;hr=2} 
+  - orbital{onTick=SpinningBlades_T3A;onHit=SpinningBlades_HA;points=10;hnp=true;hp=false;interval=1;duration=<modifier.duration>;r=2.7;oy=1;oz=0;ox=3.3;vr=2;hr=2} 
+
+  - orbital{onTick=SpinningBlades_TA;onHit=SpinningBlades_HA;points=10;hnp=true;hp=false;interval=1;duration=<modifier.duration>;r=2.5;oy=1;oz=0;ox=-3.3;vr=2;hr=2} 
+  - orbital{onTick=SpinningBlades_T2A;onHit=SpinningBlades_HA;points=10;hnp=true;hp=false;interval=1;duration=<modifier.duration>;r=2.6;oy=1;oz=0;ox=-3.3;vr=2;hr=2} 
+  - orbital{onTick=SpinningBlades_T3A;onHit=SpinningBlades_HA;points=10;hnp=true;hp=false;interval=1;duration=<modifier.duration>;r=2.7;oy=1;oz=0;ox=-3.3;vr=2;hr=2} 
+SpinningBlades_HA:
+  Skills:
+  - damage{a="<modifier.damage> * 2";pkb=true} 
+  - skill{s=SonicSoundBld}
+SonicSoundBld:
+  Cooldown: 1
+  Skills:
+  - sound{s=sonicblades;v=0.2;p=2.3}
+
+
+
+SpinningBlades_TA:
+  Skills:
+  - particlering{p=reddust;a=1;size=0.3;color=#6f62d2;hs=0.05;vs=0;r=0.4;points=12} @origin 
+SpinningBlades_T2A:
+  Skills:
+  - particlering{p=reddust;a=1;size=0.3;color=#7e53d4;hs=0.05;vs=0;r=0.5;points=12} @origin 
+SpinningBlades_T3A:
+  Skills:
+  - particlering{p=reddust;a=1;size=0.5;color=#008cff;hs=0.05;r=0.6;points=12} @origin 
+
+
+
