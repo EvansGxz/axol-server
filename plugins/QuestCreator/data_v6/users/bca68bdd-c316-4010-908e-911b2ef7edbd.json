@@ -1,8 +1,24 @@
 {
   "version": "4",
   "uuid": "bca68bdd-c316-4010-908e-911b2ef7edbd",
+  "activeQuests": {
+    "farm_wheat_1": "07e6a1b0-3295-4953-8cc6-bb1b8fc61d32",
+    "example_npc_fetch": "6a72135c-739e-439a-96d1-2d3fb53743e1"
+  },
+  "questHistory": {
+    "elements": [
+      "example_npc_fetch@null@1663027408376@1663027408376@0@COMMAND@COMMAND@SUCCESS@main/FARM/null/1663027408376-main/DELIVER/null/1663027408376",
+      "cat_1@null@1663013861670@1663014957451@2564@ACTIVATOR_PHYSICAL@GOTO@SUCCESS@null",
+      "example_npc_fetch@null@1663003463239@1663003820847@0@ACTIVATOR_PHYSICAL@GOTO@SUCCESS@main/farm/null/1663003683683-main/deliver/null/1663003820806"
+    ]
+  },
   "questPools": {
-    "tokens": ""
+    "pools": {
+      "daily": {
+        "lastFrames": "a,1663183819000"
+      }
+    },
+    "tokens": "daily_16,1-daily_17,1"
   },
   "journalToggle": "true",
   "gpsToggle": "true",

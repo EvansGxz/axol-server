@@ -1,0 +1,33 @@
+[12/09 19:06:11] [info] EvansGxz | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 6a72135c-739e-439a-96d1-2d3fb53743e1
+[12/09 19:06:11] [info] EvansGxz | quest EvansGxz/example_npc_fetch | started quest : cause ACTIVATOR_PHYSICAL
+[12/09 19:06:11] [info] EvansGxz | quest EvansGxz/example_npc_fetch/main | started branch
+[12/09 19:45:00] [info] - | quest EvansGxz/example_npc_fetch | paused quest
+[12/09 19:45:00] [info] - | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 6a72135c-739e-439a-96d1-2d3fb53743e1
+[13/09 13:16:28] [info] EvansGxz | quest EvansGxz/example_npc_fetch | fetched quest
+[13/09 13:16:28] [info] EvansGxz | quest EvansGxz/example_npc_fetch | resumed quest
+[13/09 13:16:28] [info] EvansGxz | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 6a72135c-739e-439a-96d1-2d3fb53743e1
+[13/09 13:24:10] [info] EvansGxz | quest EvansGxz/example_npc_fetch | paused quest
+[13/09 13:26:02] [info] EvansGxz | quest EvansGxz/example_npc_fetch | fetched quest
+[13/09 13:26:02] [info] EvansGxz | quest EvansGxz/example_npc_fetch | resumed quest
+[13/09 13:26:03] [info] EvansGxz | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 6a72135c-739e-439a-96d1-2d3fb53743e1
+[13/09 15:11:53] [info] EvansGxz | quest EvansGxz/example_npc_fetch | paused quest
+[13/09 15:14:05] [info] EvansGxz | quest EvansGxz/example_npc_fetch | fetched quest
+[13/09 15:14:05] [info] EvansGxz | quest EvansGxz/example_npc_fetch | resumed quest
+[13/09 15:14:05] [info] EvansGxz | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 6a72135c-739e-439a-96d1-2d3fb53743e1
+[13/09 15:21:49] [info] EvansGxz | quest EvansGxz/example_npc_fetch | paused quest
+[13/09 15:25:31] [info] EvansGxz | quest EvansGxz/example_npc_fetch | fetched quest
+[13/09 15:25:31] [info] EvansGxz | quest EvansGxz/example_npc_fetch | resumed quest
+[13/09 15:25:31] [info] EvansGxz | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 6a72135c-739e-439a-96d1-2d3fb53743e1
+[13/09 15:55:11] [info] EvansGxz | quest EvansGxz/example_npc_fetch | paused quest
+[13/09 15:57:27] [info] EvansGxz | quest EvansGxz/example_npc_fetch | fetched quest
+[13/09 15:57:27] [info] EvansGxz | quest EvansGxz/example_npc_fetch | resumed quest
+[13/09 15:57:28] [info] EvansGxz | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 6a72135c-739e-439a-96d1-2d3fb53743e1
+[14/09 14:30:19] [info] EvansGxz | quest EvansGxz/example_npc_fetch | fetched quest
+[14/09 14:30:19] [info] EvansGxz | quest EvansGxz/example_npc_fetch | resumed quest
+[14/09 14:30:20] [info] EvansGxz | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 6a72135c-739e-439a-96d1-2d3fb53743e1
+[14/09 15:07:30] [info] - | quest EvansGxz/example_npc_fetch | paused quest
+[14/09 15:19:17] [info] EvansGxz | quest EvansGxz/example_npc_fetch | fetched quest
+[14/09 15:19:17] [info] EvansGxz | quest EvansGxz/example_npc_fetch | resumed quest
+[14/09 15:19:17] [info] EvansGxz | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 6a72135c-739e-439a-96d1-2d3fb53743e1
+[14/09 16:26:23] [info] - | quest EvansGxz/example_npc_fetch | paused quest
+[14/09 16:26:23] [info] - | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 6a72135c-739e-439a-96d1-2d3fb53743e1

@@ -1,0 +1,6 @@
+Reporter:
+  enabled: true
+  data:
+    core: true
+    plugins: true
+  server: c2d6400a-17e7-48e3-b76c-11b66de2f1f2

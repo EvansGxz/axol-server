@@ -1,14 +1,14 @@
 class-points: 0
-skill-points: 0
+skill-points: 10
 skill-reallocation-points: 0
 attribute-points: 0
 attribute-realloc-points: 0
-level: 40
+level: 50
 experience: 0.0
 class: LUNARBLADE
 waypoints: []
 friends: []
-last-login: 1662776772665
+last-login: 1663190782996
 skill-tree-points:
   global: 0
 skill-tree-reallocation-points: 0

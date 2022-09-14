@@ -1,0 +1,25 @@
+# Mimic v0.8.0
+#
+# Here you can configure Mimic APIs.
+# Use command '/mimic info' to list available implementations.
+
+# [LevelSystem API]
+# Specify here the preferred level system implementation.
+# If the value is empty, will be used implementation with the highest priority.
+level-system: ''
+
+# [ClassSystem API]
+# Specify here the preferred class system implementation.
+# If the value is empty, will be used implementation with the highest priority.
+class-system: ''
+
+# [PlayerInventory API]
+# Specify here the preferred player inventory provider implementation.
+# If the value is empty, will be used implementation with the highest priority.
+inventory-provider: ''
+
+# [ItemsRegistry API]
+# List here disabled items registry implementations.
+# You can't disable 'mimic' and 'minecraft' items registries.
+# By default, all implementations are enabled.
+disabled-items-registries: []

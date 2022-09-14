@@ -1,0 +1,17 @@
+type: CITIZENS_NPCS
+npcs: [1]  # a list of NPCs
+
+click_types: [LEFT_CLICK,RIGHT_CLICK]  # accepted click types (only RIGHT_CLICK by default)
+
+messages: |
+  &aA list of messages
+  &aThat make the dialog
+
+reset: # to reset the dialog under certain conditions
+  reset_delay: 30 SECOND  # to reset it after a certain time
+  reset_distance: 5  # to reset it if the player walks away
+  reset_notify:
+    # ... to be sent when the dialog is reset (see "generic configuration/notifications")
+  reset_goto: QUEST_FAIL  # to apply a certain goto when the dialog resets
+
+complete_journal_entry_messages: true  # to add the message to this object's journal entry ; this will only work if the entry detail contains {messages}

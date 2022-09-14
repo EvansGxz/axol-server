@@ -1,0 +1,23 @@
+[12/09 15:17:41] [info] EvansGxz | quest EvansGxz/cat_1 | pushing quest cat_1 = 6f0fb3e4-8301-4ba3-bc75-4b4d51bd0ae6
+[12/09 15:17:41] [info] EvansGxz | quest EvansGxz/cat_1 | started quest : cause ACTIVATOR_PHYSICAL
+[12/09 15:17:41] [info] EvansGxz | quest EvansGxz/cat_1/main | started branch
+[12/09 15:35:54] [info] EvansGxz | quest EvansGxz/cat_1 | paused quest
+[12/09 15:35:54] [info] EvansGxz | quest EvansGxz/cat_1 | pushing quest cat_1 = 6f0fb3e4-8301-4ba3-bc75-4b4d51bd0ae6
+[12/09 15:35:57] [info] EvansGxz | quest EvansGxz/cat_1 | fetched quest
+[12/09 15:35:57] [info] EvansGxz | quest EvansGxz/cat_1 | goto QUEST_SUCCESS | applying goto
+[12/09 15:35:57] [info] EvansGxz | quest EvansGxz/cat_1 | dispatching command as CONSOLE : /eco give EvansGxz 500
+[12/09 15:35:57] [info] EvansGxz | quest EvansGxz/cat_1 | dispatching command as CONSOLE : /qc points EvansGxz add 1 global
+[12/09 15:35:57] [info] EvansGxz | quest EvansGxz/cat_1 | give rewards for group, debug : group rewards processing debug |
+model : cat_1
+groups : cat=[cat_1, cat_2]
+quest players : bca68bdd-c316-4010-908e-911b2ef7edbd
+- preparing to process player bca68bdd-c316-4010-908e-911b2ef7edbd
+-- processing player bca68bdd-c316-4010-908e-911b2ef7edbd, EvansGxz
+--- end type : SUCCESS
+--- groups here : cat=[cat_1, cat_2]
+---- group cat
+---- shouldGiveRewards : false
+---- counts : [1, 0]
+---- history counts : cat_1=1, cat_2=0
+[12/09 15:35:57] [info] EvansGxz | quest EvansGxz/cat_1 | stopped quest : cause GOTO
+[12/09 15:35:57] [info] EvansGxz | quest EvansGxz/cat_1 | resumed quest

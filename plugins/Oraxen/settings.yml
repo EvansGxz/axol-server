@@ -30,9 +30,9 @@ conditions of Oraxen."
 
   upload:
     enabled: true
-    type: polymath #transfer.sh or polymath
+    type: polymath
     polymath:
-      server: atlas.oraxen.com # you can also host your own polymath instance
+      server: texture.miraidyus.world # you can also host your own polymath instance
 
   dispatch:
     send_pack: true

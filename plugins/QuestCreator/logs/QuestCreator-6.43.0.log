@@ -64,3 +64,196 @@
 [09/09 21:31:41] [info] Disabled integration for MythicMobs
 [09/09 21:31:41] [info] Disabled integration for MMOCore
 [09/09 21:31:41] [info] Disabled integration for Citizens
+[12/09 12:13:51] [info] Initializing worker and caches
+[12/09 12:13:51] [info] Registering statistics
+[12/09 12:13:51] [info] Initializing tasks and listeners
+[12/09 12:21:08] [ERROR] Invalid value '0' in file §4quest_activators/npc_farmer.yml§r§c at path §4npcs§r§c
+[12/09 12:21:38] [ERROR] Invalid value '0' in file §4quest_activators/npc_farmer.yml§r§c at path §4npcs§r§c
+[12/09 12:22:08] [ERROR] Invalid value '0' in file §4quest_activators/npc_farmer.yml§r§c at path §4npcs§r§c
+[12/09 12:22:38] [ERROR] Invalid value '0' in file §4quest_activators/npc_farmer.yml§r§c at path §4npcs§r§c
+[12/09 12:23:08] [ERROR] Invalid value '0' in file §4quest_activators/npc_farmer.yml§r§c at path §4npcs§r§c
+[12/09 12:23:38] [ERROR] Invalid value '0' in file §4quest_activators/npc_farmer.yml§r§c at path §4npcs§r§c
+[12/09 12:30:20] [ERROR] Invalid value 'VAULT' in file §4quest_models/example_npc_fetch.yml§r§c at path §4end_objects.success.a.currency§r§c
+[12/09 13:31:00] [info] Disabled integration for dynmap
+[12/09 13:31:00] [info] Disabled integration for PlaceholderAPI
+[12/09 13:31:00] [info] Disabled integration for MMOItems
+[12/09 13:31:00] [info] Disabled integration for ProtocolLib
+[12/09 13:31:00] [info] Disabled integration for MythicMobs
+[12/09 13:31:00] [info] Disabled integration for MMOCore
+[12/09 13:31:00] [info] Disabled integration for Citizens
+[12/09 13:31:01] [info] Initializing worker and caches
+[12/09 13:31:01] [info] Registering statistics
+[12/09 13:31:01] [info] Initializing tasks and listeners
+[12/09 13:37:52] [info] Disabled integration for dynmap
+[12/09 13:37:52] [info] Disabled integration for PlaceholderAPI
+[12/09 13:37:52] [info] Disabled integration for MMOItems
+[12/09 13:37:52] [info] Disabled integration for ProtocolLib
+[12/09 13:37:52] [info] Disabled integration for MythicMobs
+[12/09 13:37:52] [info] Disabled integration for MMOCore
+[12/09 13:37:52] [info] Disabled integration for Citizens
+[12/09 14:13:43] [info] Initializing worker and caches
+[12/09 14:13:43] [info] Registering statistics
+[12/09 14:13:43] [info] Initializing tasks and listeners
+[12/09 14:47:31] [ERROR] Invalid value 'ravager_1' in file §4quest_groups/combat/ravager.yml§r§c at path §4models§r§c
+[12/09 15:17:05] [info] Disabled integration for dynmap
+[12/09 15:17:05] [info] Disabled integration for PlaceholderAPI
+[12/09 15:17:05] [info] Disabled integration for MMOItems
+[12/09 15:17:05] [info] Disabled integration for ProtocolLib
+[12/09 15:17:05] [info] Disabled integration for MythicMobs
+[12/09 15:17:05] [info] Disabled integration for MMOCore
+[12/09 15:17:05] [info] Disabled integration for Citizens
+[12/09 15:17:08] [info] Initializing worker and caches
+[12/09 15:17:08] [info] Registering statistics
+[12/09 15:17:08] [info] Initializing tasks and listeners
+[12/09 15:17:08] [ERROR] Invalid value 'ravager_1' in file §4quest_groups/combat/ravager.yml§r§c at path §4models§r§c
+[12/09 15:17:41] [ERROR] Number should be at least 1.0 in file §4quest_models/animals/cat_1.yml§r§c at path §4branches.main.objects.animals.goals.a.goal§r§c
+[12/09 15:35:54] [info] Disabled integration for dynmap
+[12/09 15:35:54] [info] Disabled integration for PlaceholderAPI
+[12/09 15:35:54] [info] Disabled integration for MMOItems
+[12/09 15:35:54] [info] Disabled integration for ProtocolLib
+[12/09 15:35:54] [info] Disabled integration for MythicMobs
+[12/09 15:35:54] [info] Disabled integration for MMOCore
+[12/09 15:35:54] [info] Disabled integration for Citizens
+[12/09 15:35:57] [info] Initializing worker and caches
+[12/09 15:35:57] [info] Registering statistics
+[12/09 15:35:57] [info] Initializing tasks and listeners
+[12/09 15:35:57] [ERROR] Number should be at least 1.0 in file §4quest_models/animals/cat_1.yml§r§c at path §4branches.main.objects.animals.goals.a.goal§r§c
+[12/09 15:35:57] [DEBUG] Dispatching command as CONSOLE : /eco give EvansGxz 500
+[12/09 15:35:57] [DEBUG] Dispatching command as CONSOLE : /qc points EvansGxz add 1 global
+[12/09 15:36:32] [info] Disabled integration for dynmap
+[12/09 15:36:32] [info] Disabled integration for PlaceholderAPI
+[12/09 15:36:32] [info] Disabled integration for MMOItems
+[12/09 15:36:32] [info] Disabled integration for ProtocolLib
+[12/09 15:36:32] [info] Disabled integration for MythicMobs
+[12/09 15:36:32] [info] Disabled integration for MMOCore
+[12/09 15:36:32] [info] Disabled integration for Citizens
+[12/09 15:36:35] [info] Initializing worker and caches
+[12/09 15:36:35] [info] Registering statistics
+[12/09 15:36:35] [info] Initializing tasks and listeners
+[12/09 18:50:22] [info] Disabled integration for dynmap
+[12/09 18:50:22] [info] Disabled integration for PlaceholderAPI
+[12/09 18:50:22] [info] Disabled integration for MMOItems
+[12/09 18:50:22] [info] Disabled integration for ProtocolLib
+[12/09 18:50:22] [info] Disabled integration for MythicMobs
+[12/09 18:50:22] [info] Disabled integration for MMOCore
+[12/09 18:50:22] [info] Disabled integration for Citizens
+[12/09 18:50:25] [info] Initializing worker and caches
+[12/09 18:50:25] [info] Registering statistics
+[12/09 18:50:25] [info] Initializing tasks and listeners
+[12/09 18:54:04] [info] Disabled integration for dynmap
+[12/09 18:54:04] [info] Disabled integration for PlaceholderAPI
+[12/09 18:54:04] [info] Disabled integration for MMOItems
+[12/09 18:54:04] [info] Disabled integration for ProtocolLib
+[12/09 18:54:04] [info] Disabled integration for MythicMobs
+[12/09 18:54:04] [info] Disabled integration for MMOCore
+[12/09 18:54:04] [info] Disabled integration for Citizens
+[12/09 18:54:07] [info] Initializing worker and caches
+[12/09 18:54:07] [info] Registering statistics
+[12/09 18:54:07] [info] Initializing tasks and listeners
+[12/09 18:57:33] [info] Disabled integration for dynmap
+[12/09 18:57:33] [info] Disabled integration for PlaceholderAPI
+[12/09 18:57:33] [info] Disabled integration for MMOItems
+[12/09 18:57:33] [info] Disabled integration for ProtocolLib
+[12/09 18:57:33] [info] Disabled integration for MythicMobs
+[12/09 18:57:33] [info] Disabled integration for MMOCore
+[12/09 18:57:33] [info] Disabled integration for Citizens
+[12/09 18:57:35] [info] Initializing worker and caches
+[12/09 18:57:35] [info] Registering statistics
+[12/09 18:57:35] [info] Initializing tasks and listeners
+[12/09 19:03:58] [info] Disabled integration for dynmap
+[12/09 19:03:58] [info] Disabled integration for PlaceholderAPI
+[12/09 19:03:58] [info] Disabled integration for MMOItems
+[12/09 19:03:58] [info] Disabled integration for ProtocolLib
+[12/09 19:03:58] [info] Disabled integration for MythicMobs
+[12/09 19:03:58] [info] Disabled integration for MMOCore
+[12/09 19:03:58] [info] Disabled integration for Citizens
+[12/09 19:04:00] [info] Initializing worker and caches
+[12/09 19:04:00] [info] Registering statistics
+[12/09 19:04:00] [info] Initializing tasks and listeners
+[12/09 19:05:23] [info] Disabled integration for dynmap
+[12/09 19:05:23] [info] Disabled integration for PlaceholderAPI
+[12/09 19:05:23] [info] Disabled integration for MMOItems
+[12/09 19:05:23] [info] Disabled integration for ProtocolLib
+[12/09 19:05:23] [info] Disabled integration for MythicMobs
+[12/09 19:05:23] [info] Disabled integration for MMOCore
+[12/09 19:05:23] [info] Disabled integration for Citizens
+[12/09 19:05:26] [info] Initializing worker and caches
+[12/09 19:05:26] [info] Registering statistics
+[12/09 19:05:26] [info] Initializing tasks and listeners
+[12/09 19:06:00] [info] Disabled integration for dynmap
+[12/09 19:06:00] [info] Disabled integration for PlaceholderAPI
+[12/09 19:06:00] [info] Disabled integration for MMOItems
+[12/09 19:06:00] [info] Disabled integration for ProtocolLib
+[12/09 19:06:00] [info] Disabled integration for MythicMobs
+[12/09 19:06:00] [info] Disabled integration for MMOCore
+[12/09 19:06:00] [info] Disabled integration for Citizens
+[12/09 19:06:02] [info] Initializing worker and caches
+[12/09 19:06:02] [info] Registering statistics
+[12/09 19:06:02] [info] Initializing tasks and listeners
+[13/09 06:42:07] [info] Disabled integration for dynmap
+[13/09 06:42:07] [info] Disabled integration for PlaceholderAPI
+[13/09 06:42:07] [info] Disabled integration for MMOItems
+[13/09 06:42:07] [info] Disabled integration for ProtocolLib
+[13/09 06:42:07] [info] Disabled integration for MythicMobs
+[13/09 06:42:07] [info] Disabled integration for MMOCore
+[13/09 06:42:07] [info] Disabled integration for Citizens
+[13/09 13:16:10] [info] Initializing worker and caches
+[13/09 13:16:10] [info] Registering statistics
+[13/09 13:16:10] [info] Initializing tasks and listeners
+[13/09 13:24:10] [info] Disabled integration for dynmap
+[13/09 13:24:10] [info] Disabled integration for PlaceholderAPI
+[13/09 13:24:10] [info] Disabled integration for MMOItems
+[13/09 13:24:10] [info] Disabled integration for ProtocolLib
+[13/09 13:24:10] [info] Disabled integration for MythicMobs
+[13/09 13:24:10] [info] Disabled integration for MMOCore
+[13/09 13:24:10] [info] Disabled integration for Citizens
+[13/09 13:25:44] [info] Initializing worker and caches
+[13/09 13:25:45] [info] Registering statistics
+[13/09 13:25:45] [info] Initializing tasks and listeners
+[13/09 15:11:53] [info] Disabled integration for dynmap
+[13/09 15:11:53] [info] Disabled integration for PlaceholderAPI
+[13/09 15:11:53] [info] Disabled integration for MMOItems
+[13/09 15:11:53] [info] Disabled integration for ProtocolLib
+[13/09 15:11:53] [info] Disabled integration for MythicMobs
+[13/09 15:11:53] [info] Disabled integration for MMOCore
+[13/09 15:11:53] [info] Disabled integration for Citizens
+[13/09 15:13:41] [info] Initializing worker and caches
+[13/09 15:13:41] [info] Registering statistics
+[13/09 15:13:41] [info] Initializing tasks and listeners
+[13/09 15:21:49] [info] Disabled integration for dynmap
+[13/09 15:21:49] [info] Disabled integration for PlaceholderAPI
+[13/09 15:21:49] [info] Disabled integration for MMOItems
+[13/09 15:21:50] [info] Disabled integration for ProtocolLib
+[13/09 15:21:50] [info] Disabled integration for MythicMobs
+[13/09 15:21:50] [info] Disabled integration for MMOCore
+[13/09 15:21:50] [info] Disabled integration for Citizens
+[13/09 15:25:18] [info] Initializing worker and caches
+[13/09 15:25:18] [info] Registering statistics
+[13/09 15:25:18] [info] Initializing tasks and listeners
+[13/09 15:55:11] [info] Disabled integration for dynmap
+[13/09 15:55:11] [info] Disabled integration for PlaceholderAPI
+[13/09 15:55:11] [info] Disabled integration for MMOItems
+[13/09 15:55:11] [info] Disabled integration for ProtocolLib
+[13/09 15:55:11] [info] Disabled integration for MythicMobs
+[13/09 15:55:11] [info] Disabled integration for MMOCore
+[13/09 15:55:11] [info] Disabled integration for Citizens
+[14/09 14:29:09] [info] Initializing worker and caches
+[14/09 14:29:09] [info] Registering statistics
+[14/09 14:29:09] [info] Initializing tasks and listeners
+[14/09 15:07:30] [info] Disabled integration for dynmap
+[14/09 15:07:30] [info] Disabled integration for PlaceholderAPI
+[14/09 15:07:30] [info] Disabled integration for MMOItems
+[14/09 15:07:30] [info] Disabled integration for ProtocolLib
+[14/09 15:07:30] [info] Disabled integration for MythicMobs
+[14/09 15:07:30] [info] Disabled integration for MMOCore
+[14/09 15:07:30] [info] Disabled integration for Citizens
+[14/09 15:17:06] [info] Initializing worker and caches
+[14/09 15:17:06] [info] Registering statistics
+[14/09 15:17:06] [info] Initializing tasks and listeners
+[14/09 16:26:43] [info] Disabled integration for dynmap
+[14/09 16:26:43] [info] Disabled integration for PlaceholderAPI
+[14/09 16:26:43] [info] Disabled integration for MMOItems
+[14/09 16:26:43] [info] Disabled integration for ProtocolLib
+[14/09 16:26:43] [info] Disabled integration for MythicMobs
+[14/09 16:26:43] [info] Disabled integration for MMOCore
+[14/09 16:26:43] [info] Disabled integration for Citizens

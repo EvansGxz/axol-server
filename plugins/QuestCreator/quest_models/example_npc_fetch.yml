@@ -1,0 +1,152 @@
+# -------------------- Display settings --------------------
+
+display_name: NPC fetch quest
+description: ['You''ll have to farm 20 stone and 20 dirt for a NPC in this quest.']
+
+start_notify:
+  title: '&6Quest started'
+  title_subtitle: '&7You started quest {quest} &7!'
+  sound: ENTITY_PLAYER_LEVELUP
+
+progress_notify:
+  actionbar: '&a{quest} &7| {objective}'
+progress_notify_scoreboard: true
+
+all_status_item:
+  type: STONE
+  name: '&6{quest}'
+  lore: |
+    &7{description}
+    {completions}
+    {last_completion}
+    {cooldown}
+    {detailed_progression}
+    {detailed_errors}
+    {controls}
+
+# -------------------- Post-quest settings --------------------
+
+completion:
+  max_completions: 20
+  notify:
+    SUCCESS:
+      title: '&dQuest completed'
+      title_subtitle: '&7You completed quest &a{quest} &7!'
+      sound: ENTITY_PLAYER_LEVELUP
+    FAIL:
+      title: '&cQuest failed'
+      title_subtitle: '&7You failed quest &c{quest} &7!'
+      sound: BLOCK_ANVIL_DESTROY
+    CANCEL:
+      title: '&cQuest cancelled'
+      title_subtitle: '&7You cancelled quest &c{quest}'
+      sound: BLOCK_ANVIL_DESTROY
+
+cooldown:
+  duration: 10 SECOND
+  end_types: [SUCCESS]
+
+# -------------------- Activator settings --------------------
+
+activators: [npc_test1]
+
+activators_dialog:
+  - '&6[Farmer] &7Hi ! Do you want to start my quest ? It''s just about getting some blocks.'
+  - ''  # empty line so the player needs to click again for the GUI to open
+
+activators_dialog_auto_start_distance: 3.5
+
+activators_dialog_reset:
+  reset_delay: 30 SECOND
+  reset_distance: 5.0
+  reset_notify:
+    message: '&6[Farmer] &7Okay then, rude D:'
+
+# -------------------- Quest content --------------------
+
+branches:
+
+  MAIN:
+    starts_at: FARM
+    objects:
+
+      # ----- First object : the farm object. The player will have to go mine 20 stone and 20 dirt
+
+      FARM:
+        # display
+        name_short: Farm some blocks
+        objective_detail: '&7Farm blocks | &7Stone : &b{objective_progression:a}&7/&b{objective_goal:a} &7| Dirt : &b{objective_progression:b}&7/&b{objective_goal:b}'
+        objective_detail_verbose: |
+          &7Farm some blocks
+          &7Stone : &b{objective_progression:a}&7/&b{objective_goal:a}
+          &7Dirt : &b{objective_progression:b}&7/&b{objective_goal:b}
+        start_notify:
+          message: '&6[Farmer] &7Wonderful ! I''ll be waiting for you then.'
+        # blocks break settings
+        type: PLAYER_BLOCKS_BREAK
+        goals:
+          - types: [STONE]
+            goal: 20.0
+          - types: [DIRT,GRASS_BLOCK]
+            goal: 20.0
+        allow_player_blocks: false
+        allow_player_blocks_error_message: '&cThis block was placed by a player, you can''t use it to progress your quest !'
+        # post-object
+        complete_notify:
+          sound: ENTITY_PLAYER_LEVELUP
+          message: '&7[&a{quest}&7] You''re all done with the mining ! You can deliver the items to the farmer now.'
+        goto: OBJECT DELIVER
+
+      # ----- Second object : the NPC delivery object. The player will have to interact with the NPC to give him
+      #                       the 20 cobblestones and 20 dirt (and they will be taken from their inventory)
+
+      DELIVER:
+        # display
+        name_short: Deliver your items to the farmer
+        objective_detail: '&7Deliver items | Cobblestone : &b{objective_progression:a}&7/&b{objective_goal:a} &7| Dirt : &b{objective_progression:b}&7/&b{objective_goal:b}'
+        objective_detail_verbose: |
+          &7Deliver your items to the farmer
+          &7Stone : &b{objective_progression:a}&7/&b{objective_goal:a}
+          &7Dirt : &b{objective_progression:b}&7/&b{objective_goal:b}
+        # npc deliver settings
+        type: PLAYER_CITIZENS_NPC_DELIVER_ITEMS
+        npc: 0
+        goals:
+          - item:
+              type: COBBLESTONE
+            goal: 20.0
+            take: true
+          - item:
+              type: DIRT
+            goal: 20.0
+            take: true
+        # post-object
+        complete_notify:
+          sound: ENTITY_PLAYER_LEVELUP
+          message: '&6[Farmer] &7That''s so amazing ! Thanks a lot. Here''s a $20 reward :D'
+        goto: QUEST_SUCCESS
+
+# -------------------- Rewards settings --------------------
+
+end_objects:
+  SUCCESS:
+    - type: SERVER_LOGIC_MONEY
+      currency: VAULT
+      value_formula: {value} + 20.0  # takes the current money amount and add 20$
+    - type: SERVER_FIREWORKS_LAUNCH
+      effects:
+        - type: CREEPER
+          colors: |
+            AQUA
+            BLUE
+          fade_colors: |
+            AQUA
+            BLUE
+          flicker: true
+          trail: true
+      count: 1
+      position:
+        type: PLAYER_RELATIVE_SINGLE
+        location:
+          distance: 3.0
+          vertical_offset: 1.0

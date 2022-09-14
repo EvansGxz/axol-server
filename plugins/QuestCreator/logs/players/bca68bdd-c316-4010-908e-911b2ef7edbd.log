@@ -46,3 +46,422 @@
 - must dispose quests
 [09/09 21:26:12] [info] EvansGxz | disposed user data
 [09/09 21:26:12] [info] EvansGxz | disconnected
+[12/09 12:21:07] [info] EvansGxz | connected
+[12/09 12:21:08] [info] EvansGxz | fetched user data : active quests 
+[12/09 12:21:08] [info] EvansGxz | fetching user quests : 
+- user active quests : 
+- filtered (non-cached) : 
+[12/09 12:21:08] [info] EvansGxz | fetched user quests : 
+[12/09 12:24:23] [info] EvansGxz | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 2d1e3fa0-07d4-4483-af8b-c8a4e124a24e
+[12/09 12:24:23] [info] EvansGxz | quest EvansGxz/example_npc_fetch | started quest : cause ACTIVATOR_PHYSICAL
+[12/09 12:24:23] [info] EvansGxz | quest EvansGxz/example_npc_fetch/main | started branch
+[12/09 12:24:23] [info] EvansGxz | pushing user bca68bdd-c316-4010-908e-911b2ef7edbd, active quests : example_npc_fetch=2d1e3fa0-07d4-4483-af8b-c8a4e124a24e
+[12/09 12:24:58] [info] EvansGxz | pushing user bca68bdd-c316-4010-908e-911b2ef7edbd, active quests : example_npc_fetch=2d1e3fa0-07d4-4483-af8b-c8a4e124a24e
+[12/09 12:24:58] [info] EvansGxz | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 2d1e3fa0-07d4-4483-af8b-c8a4e124a24e
+[12/09 12:25:01] [info] EvansGxz | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 2d1e3fa0-07d4-4483-af8b-c8a4e124a24e
+[12/09 12:25:03] [info] EvansGxz | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 2d1e3fa0-07d4-4483-af8b-c8a4e124a24e
+[12/09 12:25:57] [info] EvansGxz | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 2d1e3fa0-07d4-4483-af8b-c8a4e124a24e
+[12/09 12:25:58] [info] EvansGxz | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 2d1e3fa0-07d4-4483-af8b-c8a4e124a24e
+[12/09 12:26:00] [info] EvansGxz | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 2d1e3fa0-07d4-4483-af8b-c8a4e124a24e
+[12/09 12:26:12] [info] EvansGxz | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 2d1e3fa0-07d4-4483-af8b-c8a4e124a24e
+[12/09 12:26:13] [info] EvansGxz | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 2d1e3fa0-07d4-4483-af8b-c8a4e124a24e
+[12/09 12:26:27] [info] EvansGxz | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 2d1e3fa0-07d4-4483-af8b-c8a4e124a24e
+[12/09 12:26:28] [info] EvansGxz | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 2d1e3fa0-07d4-4483-af8b-c8a4e124a24e
+[12/09 12:26:30] [info] EvansGxz | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 2d1e3fa0-07d4-4483-af8b-c8a4e124a24e
+[12/09 12:26:31] [info] EvansGxz | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 2d1e3fa0-07d4-4483-af8b-c8a4e124a24e
+[12/09 12:26:32] [info] EvansGxz | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 2d1e3fa0-07d4-4483-af8b-c8a4e124a24e
+[12/09 12:26:33] [info] EvansGxz | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 2d1e3fa0-07d4-4483-af8b-c8a4e124a24e
+[12/09 12:26:36] [info] EvansGxz | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 2d1e3fa0-07d4-4483-af8b-c8a4e124a24e
+[12/09 12:26:38] [info] EvansGxz | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 2d1e3fa0-07d4-4483-af8b-c8a4e124a24e
+[12/09 12:26:40] [info] EvansGxz | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 2d1e3fa0-07d4-4483-af8b-c8a4e124a24e
+[12/09 12:26:41] [info] EvansGxz | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 2d1e3fa0-07d4-4483-af8b-c8a4e124a24e
+[12/09 12:26:42] [info] EvansGxz | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 2d1e3fa0-07d4-4483-af8b-c8a4e124a24e
+[12/09 12:26:44] [info] EvansGxz | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 2d1e3fa0-07d4-4483-af8b-c8a4e124a24e
+[12/09 12:27:51] [info] EvansGxz | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 2d1e3fa0-07d4-4483-af8b-c8a4e124a24e
+[12/09 12:27:52] [info] EvansGxz | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 2d1e3fa0-07d4-4483-af8b-c8a4e124a24e
+[12/09 12:27:53] [info] EvansGxz | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 2d1e3fa0-07d4-4483-af8b-c8a4e124a24e
+[12/09 12:27:54] [info] EvansGxz | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 2d1e3fa0-07d4-4483-af8b-c8a4e124a24e
+[12/09 12:27:55] [info] EvansGxz | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 2d1e3fa0-07d4-4483-af8b-c8a4e124a24e
+[12/09 12:27:56] [info] EvansGxz | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 2d1e3fa0-07d4-4483-af8b-c8a4e124a24e
+[12/09 12:27:57] [info] EvansGxz | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 2d1e3fa0-07d4-4483-af8b-c8a4e124a24e
+[12/09 12:27:58] [info] EvansGxz | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 2d1e3fa0-07d4-4483-af8b-c8a4e124a24e
+[12/09 12:27:59] [info] EvansGxz | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 2d1e3fa0-07d4-4483-af8b-c8a4e124a24e
+[12/09 12:28:00] [info] EvansGxz | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 2d1e3fa0-07d4-4483-af8b-c8a4e124a24e
+[12/09 12:28:01] [info] EvansGxz | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 2d1e3fa0-07d4-4483-af8b-c8a4e124a24e
+[12/09 12:28:02] [info] EvansGxz | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 2d1e3fa0-07d4-4483-af8b-c8a4e124a24e
+[12/09 12:28:03] [info] EvansGxz | quest EvansGxz/example_npc_fetch | goto OBJECT DELIVER | applying goto
+[12/09 12:28:03] [info] EvansGxz | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 2d1e3fa0-07d4-4483-af8b-c8a4e124a24e
+[12/09 12:28:56] [info] EvansGxz | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 2d1e3fa0-07d4-4483-af8b-c8a4e124a24e
+[12/09 12:30:20] [info] EvansGxz | quest EvansGxz/example_npc_fetch | goto QUEST_SUCCESS | applying goto
+[12/09 12:30:20] [info] EvansGxz | quest EvansGxz/example_npc_fetch | give rewards for group, debug : group rewards processing debug |
+model : example_npc_fetch
+groups : 
+quest players : bca68bdd-c316-4010-908e-911b2ef7edbd
+- preparing to process player bca68bdd-c316-4010-908e-911b2ef7edbd
+-- processing player bca68bdd-c316-4010-908e-911b2ef7edbd, EvansGxz
+--- end type : SUCCESS
+--- groups here : 
+[12/09 12:30:20] [info] EvansGxz | quest EvansGxz/example_npc_fetch | stopped quest : cause GOTO
+[12/09 12:30:20] [info] EvansGxz | pushing user bca68bdd-c316-4010-908e-911b2ef7edbd, active quests : 
+[12/09 13:31:01] [info] EvansGxz | fetched user data : active quests 
+[12/09 13:31:01] [info] EvansGxz | fetching user quests : 
+- user active quests : 
+- filtered (non-cached) : 
+[12/09 13:31:01] [info] EvansGxz | fetched user quests : 
+[12/09 13:31:01] [info] EvansGxz | pushing user bca68bdd-c316-4010-908e-911b2ef7edbd, active quests : 
+[12/09 13:33:12] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | pushing quest farm_wheat_1 = 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[12/09 13:33:12] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | started quest : cause GUI
+[12/09 13:33:12] [info] EvansGxz | quest EvansGxz/farm_wheat_1/main | started branch
+[12/09 13:33:12] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | pushing quest farm_wheat_1 = 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[12/09 13:33:12] [info] EvansGxz | pushing user bca68bdd-c316-4010-908e-911b2ef7edbd, active quests : farm_wheat_1=07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[12/09 13:37:52] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | paused quest
+[12/09 14:47:31] [info] EvansGxz | connected
+[12/09 14:47:31] [info] EvansGxz | fetched user data : active quests farm_wheat_1=07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[12/09 14:47:32] [info] EvansGxz | fetching user quests : 
+- user active quests : farm_wheat_1=07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+- filtered (non-cached) : 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[12/09 14:47:32] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | fetched quest
+[12/09 14:47:32] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | resumed quest
+[12/09 14:47:32] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | pushing quest farm_wheat_1 = 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[12/09 14:47:32] [info] EvansGxz | pool daily | processed pool, detailed procedure :
+
+Time frame information :
+- 12 Sep 2022 a las 12:00 = 1662958800000 = start
+- 12 Sep 2022 a las 2:47 = 1663012052000 = now
+- 12 Sep 2022 a las 11:59 = 1663045140000 = end
+- null = last
+- Last pool frames = 
+Initial state (related to this pool) :
+
+- Tokens : 
+- Quests : 
+- History : 
+- Has remaining tokens : false
+After prestop/prereset (related to this pool) :
+
+- Tokens : 
+- Quests : 
+- History : 
+Giving tokens (single) :
+- Gave 1 to daily_18
+- Gave 1 to daily_16
+Giving tokens (groups) :
+Last frame is now 1663012052000
+Final state (related to this pool) :
+
+- Tokens : daily_16=1, daily_18=1
+- Quests : 
+- History : 
+[12/09 14:47:32] [info] EvansGxz | fetched user quests : 
+- 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32 | NOT discarded | is present, farm_wheat_1
+[12/09 14:47:33] [info] EvansGxz | pushing user bca68bdd-c316-4010-908e-911b2ef7edbd, active quests : farm_wheat_1=07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[12/09 15:17:05] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | paused quest
+[12/09 15:17:05] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | pushing quest farm_wheat_1 = 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[12/09 15:17:08] [info] EvansGxz | fetched user data : active quests farm_wheat_1=07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[12/09 15:17:08] [info] EvansGxz | fetching user quests : 
+- user active quests : farm_wheat_1=07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+- filtered (non-cached) : 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[12/09 15:17:08] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | fetched quest
+[12/09 15:17:08] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | resumed quest
+[12/09 15:17:08] [info] EvansGxz | fetched user quests : 
+- 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32 | NOT discarded | is present, farm_wheat_1
+[12/09 15:17:08] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | pushing quest farm_wheat_1 = 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[12/09 15:17:41] [info] EvansGxz | quest EvansGxz/cat_1 | pushing quest cat_1 = 6f0fb3e4-8301-4ba3-bc75-4b4d51bd0ae6
+[12/09 15:17:41] [info] EvansGxz | quest EvansGxz/cat_1 | started quest : cause ACTIVATOR_PHYSICAL
+[12/09 15:17:41] [info] EvansGxz | quest EvansGxz/cat_1/main | started branch
+[12/09 15:17:42] [info] EvansGxz | pushing user bca68bdd-c316-4010-908e-911b2ef7edbd, active quests : cat_1=6f0fb3e4-8301-4ba3-bc75-4b4d51bd0ae6, farm_wheat_1=07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[12/09 15:35:54] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | paused quest
+[12/09 15:35:54] [info] EvansGxz | quest EvansGxz/cat_1 | paused quest
+[12/09 15:35:54] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | pushing quest farm_wheat_1 = 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[12/09 15:35:54] [info] EvansGxz | quest EvansGxz/cat_1 | pushing quest cat_1 = 6f0fb3e4-8301-4ba3-bc75-4b4d51bd0ae6
+[12/09 15:35:57] [info] EvansGxz | fetched user data : active quests cat_1=6f0fb3e4-8301-4ba3-bc75-4b4d51bd0ae6, farm_wheat_1=07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[12/09 15:35:57] [info] EvansGxz | fetching user quests : 
+- user active quests : cat_1=6f0fb3e4-8301-4ba3-bc75-4b4d51bd0ae6, farm_wheat_1=07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+- filtered (non-cached) : 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32, 6f0fb3e4-8301-4ba3-bc75-4b4d51bd0ae6
+[12/09 15:35:57] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | fetched quest
+[12/09 15:35:57] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | resumed quest
+[12/09 15:35:57] [info] EvansGxz | quest EvansGxz/cat_1 | fetched quest
+[12/09 15:35:57] [info] EvansGxz | quest EvansGxz/cat_1 | goto QUEST_SUCCESS | applying goto
+[12/09 15:35:57] [info] EvansGxz | quest EvansGxz/cat_1 | dispatching command as CONSOLE : /eco give EvansGxz 500
+[12/09 15:35:57] [info] EvansGxz | quest EvansGxz/cat_1 | dispatching command as CONSOLE : /qc points EvansGxz add 1 global
+[12/09 15:35:57] [info] EvansGxz | quest EvansGxz/cat_1 | give rewards for group, debug : group rewards processing debug |
+model : cat_1
+groups : cat=[cat_1, cat_2]
+quest players : bca68bdd-c316-4010-908e-911b2ef7edbd
+- preparing to process player bca68bdd-c316-4010-908e-911b2ef7edbd
+-- processing player bca68bdd-c316-4010-908e-911b2ef7edbd, EvansGxz
+--- end type : SUCCESS
+--- groups here : cat=[cat_1, cat_2]
+---- group cat
+---- shouldGiveRewards : false
+---- counts : [1, 0]
+---- history counts : cat_1=1, cat_2=0
+[12/09 15:35:57] [info] EvansGxz | quest EvansGxz/cat_1 | stopped quest : cause GOTO
+[12/09 15:35:57] [info] EvansGxz | quest EvansGxz/cat_1 | resumed quest
+[12/09 15:35:57] [info] EvansGxz | fetched user quests : 
+- 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32 | NOT discarded | is present, farm_wheat_1
+- 6f0fb3e4-8301-4ba3-bc75-4b4d51bd0ae6 | NOT discarded | is NOT present
+[12/09 15:35:57] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | pushing quest farm_wheat_1 = 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[12/09 15:35:57] [info] EvansGxz | pushing user bca68bdd-c316-4010-908e-911b2ef7edbd, active quests : farm_wheat_1=07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[12/09 15:36:32] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | paused quest
+[12/09 15:36:32] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | pushing quest farm_wheat_1 = 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[12/09 15:36:35] [info] EvansGxz | fetched user data : active quests farm_wheat_1=07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[12/09 15:36:35] [info] EvansGxz | fetching user quests : 
+- user active quests : farm_wheat_1=07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+- filtered (non-cached) : 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[12/09 15:36:35] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | fetched quest
+[12/09 15:36:35] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | resumed quest
+[12/09 15:36:35] [info] EvansGxz | fetched user quests : 
+- 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32 | NOT discarded | is present, farm_wheat_1
+[12/09 15:36:35] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | pushing quest farm_wheat_1 = 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[12/09 15:46:25] [info] EvansGxz | disposing user quests data : 
+- must dispose quests | farm_wheat_1 (07e6a1b0-3295-4953-8cc6-bb1b8fc61d32)
+[12/09 15:46:25] [info] - | quest EvansGxz/farm_wheat_1 | paused quest
+[12/09 15:46:25] [info] - | quest EvansGxz/farm_wheat_1 | pushing quest farm_wheat_1 = 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[12/09 15:46:25] [info] EvansGxz | disposed user quests data
+[12/09 15:46:25] [info] EvansGxz | disposed user data
+[12/09 15:46:25] [info] EvansGxz | disconnected
+[12/09 15:55:10] [info] EvansGxz | connected
+[12/09 15:55:10] [info] EvansGxz | fetched user data : active quests farm_wheat_1=07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[12/09 15:55:10] [info] EvansGxz | fetching user quests : 
+- user active quests : farm_wheat_1=07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+- filtered (non-cached) : 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[12/09 15:55:10] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | fetched quest
+[12/09 15:55:10] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | resumed quest
+[12/09 15:55:10] [info] EvansGxz | fetched user quests : 
+- 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32 | NOT discarded | is present, farm_wheat_1
+[12/09 15:55:10] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | pushing quest farm_wheat_1 = 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[12/09 16:37:36] [info] EvansGxz | disposing user quests data : 
+- must dispose quests | farm_wheat_1 (07e6a1b0-3295-4953-8cc6-bb1b8fc61d32)
+[12/09 16:37:36] [info] - | quest EvansGxz/farm_wheat_1 | paused quest
+[12/09 16:37:36] [info] - | quest EvansGxz/farm_wheat_1 | pushing quest farm_wheat_1 = 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[12/09 16:37:36] [info] EvansGxz | disposed user quests data
+[12/09 16:37:36] [info] EvansGxz | disposed user data
+[12/09 16:37:36] [info] EvansGxz | disconnected
+[12/09 18:52:11] [info] EvansGxz | connected
+[12/09 18:52:11] [info] EvansGxz | fetched user data : active quests farm_wheat_1=07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[12/09 18:52:11] [info] EvansGxz | fetching user quests : 
+- user active quests : farm_wheat_1=07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+- filtered (non-cached) : 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[12/09 18:52:11] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | fetched quest
+[12/09 18:52:11] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | resumed quest
+[12/09 18:52:11] [info] EvansGxz | fetched user quests : 
+- 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32 | NOT discarded | is present, farm_wheat_1
+[12/09 18:52:11] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | pushing quest farm_wheat_1 = 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[12/09 18:54:04] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | paused quest
+[12/09 18:54:04] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | pushing quest farm_wheat_1 = 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[12/09 18:54:07] [info] EvansGxz | fetched user data : active quests farm_wheat_1=07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[12/09 18:54:07] [info] EvansGxz | fetching user quests : 
+- user active quests : farm_wheat_1=07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+- filtered (non-cached) : 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[12/09 18:54:07] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | fetched quest
+[12/09 18:54:07] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | resumed quest
+[12/09 18:54:07] [info] EvansGxz | fetched user quests : 
+- 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32 | NOT discarded | is present, farm_wheat_1
+[12/09 18:54:07] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | pushing quest farm_wheat_1 = 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[12/09 18:57:33] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | paused quest
+[12/09 18:57:33] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | pushing quest farm_wheat_1 = 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[12/09 18:57:35] [info] EvansGxz | fetched user data : active quests farm_wheat_1=07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[12/09 18:57:35] [info] EvansGxz | fetching user quests : 
+- user active quests : farm_wheat_1=07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+- filtered (non-cached) : 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[12/09 18:57:35] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | fetched quest
+[12/09 18:57:35] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | resumed quest
+[12/09 18:57:35] [info] EvansGxz | fetched user quests : 
+- 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32 | NOT discarded | is present, farm_wheat_1
+[12/09 18:57:35] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | pushing quest farm_wheat_1 = 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[12/09 19:03:28] [info] EvansGxz | pushing user bca68bdd-c316-4010-908e-911b2ef7edbd, active quests : farm_wheat_1=07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[12/09 19:03:58] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | paused quest
+[12/09 19:03:58] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | pushing quest farm_wheat_1 = 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[12/09 19:04:00] [info] EvansGxz | fetched user data : active quests farm_wheat_1=07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[12/09 19:04:00] [info] EvansGxz | fetching user quests : 
+- user active quests : farm_wheat_1=07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+- filtered (non-cached) : 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[12/09 19:04:00] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | fetched quest
+[12/09 19:04:00] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | resumed quest
+[12/09 19:04:00] [info] EvansGxz | fetched user quests : 
+- 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32 | NOT discarded | is present, farm_wheat_1
+[12/09 19:04:00] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | pushing quest farm_wheat_1 = 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[12/09 19:05:23] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | paused quest
+[12/09 19:05:23] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | pushing quest farm_wheat_1 = 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[12/09 19:05:26] [info] EvansGxz | fetched user data : active quests farm_wheat_1=07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[12/09 19:05:26] [info] EvansGxz | fetching user quests : 
+- user active quests : farm_wheat_1=07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+- filtered (non-cached) : 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[12/09 19:05:26] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | fetched quest
+[12/09 19:05:26] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | resumed quest
+[12/09 19:05:26] [info] EvansGxz | fetched user quests : 
+- 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32 | NOT discarded | is present, farm_wheat_1
+[12/09 19:05:26] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | pushing quest farm_wheat_1 = 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[12/09 19:06:00] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | paused quest
+[12/09 19:06:00] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | pushing quest farm_wheat_1 = 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[12/09 19:06:02] [info] EvansGxz | fetched user data : active quests farm_wheat_1=07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[12/09 19:06:02] [info] EvansGxz | fetching user quests : 
+- user active quests : farm_wheat_1=07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+- filtered (non-cached) : 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[12/09 19:06:02] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | fetched quest
+[12/09 19:06:02] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | resumed quest
+[12/09 19:06:02] [info] EvansGxz | fetched user quests : 
+- 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32 | NOT discarded | is present, farm_wheat_1
+[12/09 19:06:02] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | pushing quest farm_wheat_1 = 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[12/09 19:06:11] [info] EvansGxz | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 6a72135c-739e-439a-96d1-2d3fb53743e1
+[12/09 19:06:11] [info] EvansGxz | quest EvansGxz/example_npc_fetch | started quest : cause ACTIVATOR_PHYSICAL
+[12/09 19:06:11] [info] EvansGxz | quest EvansGxz/example_npc_fetch/main | started branch
+[12/09 19:06:12] [info] EvansGxz | pushing user bca68bdd-c316-4010-908e-911b2ef7edbd, active quests : farm_wheat_1=07e6a1b0-3295-4953-8cc6-bb1b8fc61d32, example_npc_fetch=6a72135c-739e-439a-96d1-2d3fb53743e1
+[12/09 19:45:00] [info] EvansGxz | disposing user quests data : 
+- must dispose quests | farm_wheat_1 (07e6a1b0-3295-4953-8cc6-bb1b8fc61d32) | example_npc_fetch (6a72135c-739e-439a-96d1-2d3fb53743e1)
+[12/09 19:45:00] [info] - | quest EvansGxz/example_npc_fetch | paused quest
+[12/09 19:45:00] [info] - | quest EvansGxz/farm_wheat_1 | paused quest
+[12/09 19:45:00] [info] - | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 6a72135c-739e-439a-96d1-2d3fb53743e1
+[12/09 19:45:00] [info] - | quest EvansGxz/farm_wheat_1 | pushing quest farm_wheat_1 = 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[12/09 19:45:00] [info] EvansGxz | disposed user quests data
+[12/09 19:45:00] [info] EvansGxz | disposed user data
+[12/09 19:45:00] [info] EvansGxz | disconnected
+[13/09 13:16:27] [info] EvansGxz | connected
+[13/09 13:16:27] [info] EvansGxz | fetched user data : active quests farm_wheat_1=07e6a1b0-3295-4953-8cc6-bb1b8fc61d32, example_npc_fetch=6a72135c-739e-439a-96d1-2d3fb53743e1
+[13/09 13:16:27] [info] EvansGxz | fetching user quests : 
+- user active quests : farm_wheat_1=07e6a1b0-3295-4953-8cc6-bb1b8fc61d32, example_npc_fetch=6a72135c-739e-439a-96d1-2d3fb53743e1
+- filtered (non-cached) : 6a72135c-739e-439a-96d1-2d3fb53743e1, 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[13/09 13:16:28] [info] EvansGxz | quest EvansGxz/example_npc_fetch | fetched quest
+[13/09 13:16:28] [info] EvansGxz | quest EvansGxz/example_npc_fetch | resumed quest
+[13/09 13:16:28] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | fetched quest
+[13/09 13:16:28] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | resumed quest
+[13/09 13:16:28] [info] EvansGxz | fetched user quests : 
+- 6a72135c-739e-439a-96d1-2d3fb53743e1 | NOT discarded | is present, example_npc_fetch
+- 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32 | NOT discarded | is present, farm_wheat_1
+[13/09 13:16:28] [info] EvansGxz | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 6a72135c-739e-439a-96d1-2d3fb53743e1
+[13/09 13:16:28] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | pushing quest farm_wheat_1 = 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[13/09 13:24:10] [info] EvansGxz | quest EvansGxz/example_npc_fetch | paused quest
+[13/09 13:24:10] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | paused quest
+[13/09 13:26:02] [info] EvansGxz | connected
+[13/09 13:26:02] [info] EvansGxz | fetched user data : active quests farm_wheat_1=07e6a1b0-3295-4953-8cc6-bb1b8fc61d32, example_npc_fetch=6a72135c-739e-439a-96d1-2d3fb53743e1
+[13/09 13:26:02] [info] EvansGxz | fetching user quests : 
+- user active quests : farm_wheat_1=07e6a1b0-3295-4953-8cc6-bb1b8fc61d32, example_npc_fetch=6a72135c-739e-439a-96d1-2d3fb53743e1
+- filtered (non-cached) : 6a72135c-739e-439a-96d1-2d3fb53743e1, 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[13/09 13:26:02] [info] EvansGxz | quest EvansGxz/example_npc_fetch | fetched quest
+[13/09 13:26:02] [info] EvansGxz | quest EvansGxz/example_npc_fetch | resumed quest
+[13/09 13:26:02] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | fetched quest
+[13/09 13:26:02] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | resumed quest
+[13/09 13:26:02] [info] EvansGxz | fetched user quests : 
+- 6a72135c-739e-439a-96d1-2d3fb53743e1 | NOT discarded | is present, example_npc_fetch
+- 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32 | NOT discarded | is present, farm_wheat_1
+[13/09 13:26:03] [info] EvansGxz | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 6a72135c-739e-439a-96d1-2d3fb53743e1
+[13/09 13:26:03] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | pushing quest farm_wheat_1 = 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[13/09 15:11:53] [info] EvansGxz | quest EvansGxz/example_npc_fetch | paused quest
+[13/09 15:11:53] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | paused quest
+[13/09 15:14:05] [info] EvansGxz | connected
+[13/09 15:14:05] [info] EvansGxz | fetched user data : active quests farm_wheat_1=07e6a1b0-3295-4953-8cc6-bb1b8fc61d32, example_npc_fetch=6a72135c-739e-439a-96d1-2d3fb53743e1
+[13/09 15:14:05] [info] EvansGxz | fetching user quests : 
+- user active quests : farm_wheat_1=07e6a1b0-3295-4953-8cc6-bb1b8fc61d32, example_npc_fetch=6a72135c-739e-439a-96d1-2d3fb53743e1
+- filtered (non-cached) : 6a72135c-739e-439a-96d1-2d3fb53743e1, 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[13/09 15:14:05] [info] EvansGxz | quest EvansGxz/example_npc_fetch | fetched quest
+[13/09 15:14:05] [info] EvansGxz | quest EvansGxz/example_npc_fetch | resumed quest
+[13/09 15:14:05] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | fetched quest
+[13/09 15:14:05] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | resumed quest
+[13/09 15:14:05] [info] EvansGxz | fetched user quests : 
+- 6a72135c-739e-439a-96d1-2d3fb53743e1 | NOT discarded | is present, example_npc_fetch
+- 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32 | NOT discarded | is present, farm_wheat_1
+[13/09 15:14:05] [info] EvansGxz | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 6a72135c-739e-439a-96d1-2d3fb53743e1
+[13/09 15:14:05] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | pushing quest farm_wheat_1 = 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[13/09 15:21:49] [info] EvansGxz | quest EvansGxz/example_npc_fetch | paused quest
+[13/09 15:21:49] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | paused quest
+[13/09 15:25:30] [info] EvansGxz | connected
+[13/09 15:25:31] [info] EvansGxz | fetched user data : active quests farm_wheat_1=07e6a1b0-3295-4953-8cc6-bb1b8fc61d32, example_npc_fetch=6a72135c-739e-439a-96d1-2d3fb53743e1
+[13/09 15:25:31] [info] EvansGxz | fetching user quests : 
+- user active quests : farm_wheat_1=07e6a1b0-3295-4953-8cc6-bb1b8fc61d32, example_npc_fetch=6a72135c-739e-439a-96d1-2d3fb53743e1
+- filtered (non-cached) : 6a72135c-739e-439a-96d1-2d3fb53743e1, 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[13/09 15:25:31] [info] EvansGxz | quest EvansGxz/example_npc_fetch | fetched quest
+[13/09 15:25:31] [info] EvansGxz | quest EvansGxz/example_npc_fetch | resumed quest
+[13/09 15:25:31] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | fetched quest
+[13/09 15:25:31] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | resumed quest
+[13/09 15:25:31] [info] EvansGxz | fetched user quests : 
+- 6a72135c-739e-439a-96d1-2d3fb53743e1 | NOT discarded | is present, example_npc_fetch
+- 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32 | NOT discarded | is present, farm_wheat_1
+[13/09 15:25:31] [info] EvansGxz | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 6a72135c-739e-439a-96d1-2d3fb53743e1
+[13/09 15:25:31] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | pushing quest farm_wheat_1 = 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[13/09 15:55:11] [info] EvansGxz | quest EvansGxz/example_npc_fetch | paused quest
+[13/09 15:55:11] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | paused quest
+[13/09 15:57:27] [info] EvansGxz | connected
+[13/09 15:57:27] [info] EvansGxz | fetched user data : active quests farm_wheat_1=07e6a1b0-3295-4953-8cc6-bb1b8fc61d32, example_npc_fetch=6a72135c-739e-439a-96d1-2d3fb53743e1
+[13/09 15:57:27] [info] EvansGxz | fetching user quests : 
+- user active quests : farm_wheat_1=07e6a1b0-3295-4953-8cc6-bb1b8fc61d32, example_npc_fetch=6a72135c-739e-439a-96d1-2d3fb53743e1
+- filtered (non-cached) : 6a72135c-739e-439a-96d1-2d3fb53743e1, 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[13/09 15:57:27] [info] EvansGxz | quest EvansGxz/example_npc_fetch | fetched quest
+[13/09 15:57:27] [info] EvansGxz | quest EvansGxz/example_npc_fetch | resumed quest
+[13/09 15:57:27] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | fetched quest
+[13/09 15:57:27] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | resumed quest
+[13/09 15:57:27] [info] EvansGxz | fetched user quests : 
+- 6a72135c-739e-439a-96d1-2d3fb53743e1 | NOT discarded | is present, example_npc_fetch
+- 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32 | NOT discarded | is present, farm_wheat_1
+[13/09 15:57:28] [info] EvansGxz | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 6a72135c-739e-439a-96d1-2d3fb53743e1
+[13/09 15:57:28] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | pushing quest farm_wheat_1 = 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[14/09 14:30:18] [info] EvansGxz | connected
+[14/09 14:30:19] [info] EvansGxz | fetched user data : active quests farm_wheat_1=07e6a1b0-3295-4953-8cc6-bb1b8fc61d32, example_npc_fetch=6a72135c-739e-439a-96d1-2d3fb53743e1
+[14/09 14:30:19] [info] EvansGxz | fetching user quests : 
+- user active quests : farm_wheat_1=07e6a1b0-3295-4953-8cc6-bb1b8fc61d32, example_npc_fetch=6a72135c-739e-439a-96d1-2d3fb53743e1
+- filtered (non-cached) : 6a72135c-739e-439a-96d1-2d3fb53743e1, 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[14/09 14:30:19] [info] EvansGxz | quest EvansGxz/example_npc_fetch | fetched quest
+[14/09 14:30:19] [info] EvansGxz | quest EvansGxz/example_npc_fetch | resumed quest
+[14/09 14:30:19] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | fetched quest
+[14/09 14:30:19] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | resumed quest
+[14/09 14:30:19] [info] EvansGxz | pool daily | new streak : 0 | current tokens : daily_3=1, daily_12=1
+[14/09 14:30:19] [info] EvansGxz | pool daily | processed pool, detailed procedure :
+
+Time frame information :
+- 14 Sep 2022 a las 12:00 = 1663131600000 = start
+- 14 Sep 2022 a las 2:30 = 1663183819000 = now
+- 14 Sep 2022 a las 11:59 = 1663217940000 = end
+- 13 Sep 2022 a las 7:03 = 1663070626000 = last | after start false | before end true
+- Last pool frames = a:1663070626000
+Initial state (related to this pool) :
+
+- Tokens : daily_3=1, daily_12=1
+- Quests : 
+- History : 
+- Has remaining tokens : true
+After prestop/prereset (related to this pool) :
+
+- Tokens : 
+- Quests : 
+- History : 
+Giving tokens (single) :
+- Gave 1 to daily_16
+- Gave 1 to daily_17
+Giving tokens (groups) :
+Last frame is now 1663183819000
+Final state (related to this pool) :
+
+- Tokens : daily_16=1, daily_17=1
+- Quests : 
+- History : 
+[14/09 14:30:19] [info] EvansGxz | fetched user quests : 
+- 6a72135c-739e-439a-96d1-2d3fb53743e1 | NOT discarded | is present, example_npc_fetch
+- 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32 | NOT discarded | is present, farm_wheat_1
+[14/09 14:30:20] [info] EvansGxz | pushing user bca68bdd-c316-4010-908e-911b2ef7edbd, active quests : farm_wheat_1=07e6a1b0-3295-4953-8cc6-bb1b8fc61d32, example_npc_fetch=6a72135c-739e-439a-96d1-2d3fb53743e1
+[14/09 14:30:20] [info] EvansGxz | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 6a72135c-739e-439a-96d1-2d3fb53743e1
+[14/09 14:30:20] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | pushing quest farm_wheat_1 = 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[14/09 15:07:30] [info] - | quest EvansGxz/example_npc_fetch | paused quest
+[14/09 15:07:30] [info] - | quest EvansGxz/farm_wheat_1 | paused quest
+[14/09 15:19:16] [info] EvansGxz | connected
+[14/09 15:19:17] [info] EvansGxz | fetched user data : active quests farm_wheat_1=07e6a1b0-3295-4953-8cc6-bb1b8fc61d32, example_npc_fetch=6a72135c-739e-439a-96d1-2d3fb53743e1
+[14/09 15:19:17] [info] EvansGxz | fetching user quests : 
+- user active quests : farm_wheat_1=07e6a1b0-3295-4953-8cc6-bb1b8fc61d32, example_npc_fetch=6a72135c-739e-439a-96d1-2d3fb53743e1
+- filtered (non-cached) : 6a72135c-739e-439a-96d1-2d3fb53743e1, 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[14/09 15:19:17] [info] EvansGxz | quest EvansGxz/example_npc_fetch | fetched quest
+[14/09 15:19:17] [info] EvansGxz | quest EvansGxz/example_npc_fetch | resumed quest
+[14/09 15:19:17] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | fetched quest
+[14/09 15:19:17] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | resumed quest
+[14/09 15:19:17] [info] EvansGxz | fetched user quests : 
+- 6a72135c-739e-439a-96d1-2d3fb53743e1 | NOT discarded | is present, example_npc_fetch
+- 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32 | NOT discarded | is present, farm_wheat_1
+[14/09 15:19:17] [info] EvansGxz | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 6a72135c-739e-439a-96d1-2d3fb53743e1
+[14/09 15:19:17] [info] EvansGxz | quest EvansGxz/farm_wheat_1 | pushing quest farm_wheat_1 = 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[14/09 16:26:23] [info] EvansGxz | disposing user quests data : 
+- must dispose quests | farm_wheat_1 (07e6a1b0-3295-4953-8cc6-bb1b8fc61d32) | example_npc_fetch (6a72135c-739e-439a-96d1-2d3fb53743e1)
+[14/09 16:26:23] [info] - | quest EvansGxz/example_npc_fetch | paused quest
+[14/09 16:26:23] [info] - | quest EvansGxz/farm_wheat_1 | paused quest
+[14/09 16:26:23] [info] - | quest EvansGxz/example_npc_fetch | pushing quest example_npc_fetch = 6a72135c-739e-439a-96d1-2d3fb53743e1
+[14/09 16:26:23] [info] - | quest EvansGxz/farm_wheat_1 | pushing quest farm_wheat_1 = 07e6a1b0-3295-4953-8cc6-bb1b8fc61d32
+[14/09 16:26:23] [info] EvansGxz | disposed user quests data
+[14/09 16:26:23] [info] EvansGxz | disposed user data
+[14/09 16:26:23] [info] EvansGxz | disconnected
