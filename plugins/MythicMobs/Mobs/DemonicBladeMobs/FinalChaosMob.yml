@@ -1,0 +1,46 @@
+DemonicSword3Mob:
+  Type: armor_stand
+  Display: ""
+  Options:
+    Invisible: true
+  
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Equipment:
+  - DemonSword3 HEAD
+  Skills:
+  - skill{s=FinalChaosSkillDown} @self ~onSpawn
+  - sound{s=chaosimpact;v=0.5;p=0.8;delay=30} @PIR{r=30} ~onSpawn
+  - skill{s=EffectExapndCSKILLD;delay=40} ~onSpawn
+  
+DemonicSword4Mob:
+  Type: armor_stand
+  Display: ""
+  Options:
+    Invisible: true
+    NoGravity: true
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Equipment:
+  - DemonSword4 HEAD
+  Skills:
+  - effect:spin{duration=99999;velocity=1} @self ~onSpawn
+  - effect:particlering{p=reddust;a=5;color=#6959CD;size=0.5;r=0.1;hs=1.5;delay=180;repeat=5;repeatInterval=5;y=-0.2} @self ~onSpawn
+  - remove{delay=200} @self ~onSpawn
+  - sound{s=chaoswordown;v=0.8;p=1.2;repeat=1;repeatInterval=65} @PIR{r=35} ~onSpawn
+FinalChaosMobS:
+  Type: armor_stand
+  Display: ""
+  Options:
+    Invisible: true
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Equipment:
+  Skills:
+  - 

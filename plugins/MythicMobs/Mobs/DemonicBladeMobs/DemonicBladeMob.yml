@@ -1,0 +1,264 @@
+ChaosSword_DemonicClassPM:
+  Type: armor_stand
+  Display: ""
+  Options:
+    MovementSpeed: -1
+    Collidable: false
+    Despawn: false
+    Invincible: true
+    Silent: true
+    PreventSunburn: true
+    KnockbackResistance: 1
+    Invisible: true
+    HasGravity: false
+    Marker: true
+    Small: true
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - remove{delay=12} @self ~onSpawn
+  - skill{s=ChaosSword_DemonicClassP} @self ~onSpawn
+
+FireSword_DemonicClassPM:
+  Type: armor_stand
+  Display: ""
+  Options:
+    MovementSpeed: -1
+    Collidable: false
+    Despawn: false
+    Invincible: true
+    Silent: true
+    PreventSunburn: true
+    KnockbackResistance: 1
+    Invisible: true
+    HasGravity: false
+    Marker: true
+    Small: true
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - remove{delay=12} @self ~onSpawn
+  - skill{s=FireSword_DemonicClassP} @self ~onSpawn
+
+
+Demonic_Cut:
+  Type: armor_stand
+  Display: ""
+  Options:
+    MovementSpeed: -1
+    Collidable: false
+    Despawn: false
+    Invincible: true
+    Silent: true
+    PreventSunburn: true
+    KnockbackResistance: 1
+    Invisible: true
+    HasGravity: false
+    Small: true
+    Marker: true
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - skill{s=Demonic_Cut} @self ~onSpawn
+  - remove{delay=10} @self ~onSpawn
+
+
+
+
+Demonic_Cutv2:
+  Type: armor_stand
+  Display: ""
+  Options:
+    MovementSpeed: -1
+    Collidable: false
+    Despawn: false
+    Invincible: true
+    Silent: true
+    PreventSunburn: true
+    KnockbackResistance: 1
+    Invisible: true
+    HasGravity: false
+    Small: true
+    Marker: true
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - skill{s=Demonic_CutV2} @self ~onSpawn
+  - remove{delay=10} @self ~onSpawn
+
+
+Demonic_Cutv3:
+  Type: armor_stand
+  Display: ""
+  Options:
+    MovementSpeed: -1
+    Collidable: false
+    Despawn: false
+    Invincible: true
+    Silent: true
+    PreventSunburn: true
+    KnockbackResistance: 1
+    Invisible: true
+    HasGravity: false
+    Small: true
+    Marker: true
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - skill{s=Demonic_CutV3} @self ~onSpawn
+  - remove{delay=10} @self ~onSpawn
+
+
+
+
+
+
+Demonic_Cut2:
+  Type: armor_stand
+  Display: ""
+  Options:
+    MovementSpeed: -1
+    Collidable: false
+    Despawn: false
+    Invincible: true
+    Silent: true
+    PreventSunburn: true
+    KnockbackResistance: 1
+    Invisible: true
+    HasGravity: false
+    Small: true
+    Marker: true
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - skill{s=Demonic_Cut2} @self ~onSpawn
+  - remove{delay=10} @self ~onSpawn
+
+Demonic_Cut2v2:
+  Type: armor_stand
+  Display: ""
+  Options:
+    MovementSpeed: -1
+    Collidable: false
+    Despawn: false
+    Invincible: true
+    Silent: true
+    PreventSunburn: true
+    KnockbackResistance: 1
+    Invisible: true
+    HasGravity: false
+    Small: true
+    Marker: true
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - skill{s=Demonic_Cut2v3v2} @self ~onSpawn
+  - remove{delay=10} @self ~onSpawn
+
+
+Demonic_Cut2v3:
+  Type: armor_stand
+  Display: ""
+  Options:
+    MovementSpeed: -1
+    Collidable: false
+    Despawn: false
+    Invincible: true
+    Silent: true
+    PreventSunburn: true
+    KnockbackResistance: 1
+    Invisible: true
+    HasGravity: false
+    Small: true
+    Marker: true
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - skill{s=Demonic_Cut2v3} @self ~onSpawn
+  - remove{delay=10} @self ~onSpawn
+Demonic_Cut2v3Fire:
+  Type: armor_stand
+  Display: ""
+  Options:
+    MovementSpeed: -1
+    Collidable: false
+    Despawn: false
+    Invincible: true
+    Silent: true
+    PreventSunburn: true
+    KnockbackResistance: 1
+    Invisible: true
+    HasGravity: false
+    Small: true
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - skill{s=Demonic_Cut2v3Fire} @self ~onSpawn
+  - remove{delay=10} @self ~onSpawn
+
+
+Demonic_Cutv3Fire:
+  Type: armor_stand
+  Display: ""
+  Options:
+    MovementSpeed: -1
+    Collidable: false
+    Despawn: false
+    Invincible: true
+    Silent: true
+    PreventSunburn: true
+    KnockbackResistance: 1
+    Invisible: true
+    HasGravity: false
+    Small: true
+    Marker: true
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - skill{s=Demonic_CutV3Fire} @self ~onSpawn
+  - remove{delay=10} @self ~onSpawn
+
+
+
+SpinningBladesMob:
+  Type: armor_stand
+  Display: ""
+  Options:
+    MovementSpeed: -1
+    Collidable: false
+    Despawn: false
+    Invincible: true
+    Silent: true
+    PreventSunburn: true
+    KnockbackResistance: 1
+    Invisible: true
+    HasGravity: false
+    Small: true
+    Marker: true
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - skill{s=SpinningBlades} @self ~onSpawn
+  - remove{delay=100} @self ~onSpawn

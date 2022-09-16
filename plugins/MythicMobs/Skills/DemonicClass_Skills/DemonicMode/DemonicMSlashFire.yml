@@ -1,0 +1,154 @@
+DemonicMFireCondition:
+  Conditions:
+  - hasaura EclipseAuraA true
+  - hasaura ChaosAuraA false
+  Skills:
+  - summon{t=DModeBladeMobFire} @forward{f=1}
+  - skill{s=DModeBladeFireDMG} @forward{f=1}
+  - delay 5
+  - summon{t=DModeBladeMobFireV2} @forward{f=1}
+  - skill{s=DModeBladeFireDMGV2} @forward{f=1}
+
+DModeBladeFireT:
+  Skills:
+  - particles{p=reddust;color=#FC6400;a=1;hs=0.1;size=0.5}
+  - particles{p=reddust;color=#FF7500;a=1;hs=0.1;size=0.5}
+
+
+
+DModeBladeFire:
+  Skills:
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.91;sfo=0.37;sso=-1.05} 
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.88;sfo=0.48;sso=-1.13}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.845;sfo=0.58;sso=-1.19}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.815;sfo=0.69;sso=-1.24}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.778;sfo=0.805;sso=-1.294}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.75;sfo=0.93;sso=-1.34}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.735;sfo=1.03;sso=-1.358}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.715;sfo=1.16;sso=-1.38}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.695;sfo=1.28;sso=-1.405}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.678;sfo=1.43;sso=-1.43}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.668;sfo=1.57;sso=-1.427}
+  - delay 1
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.665;sfo=1.722;sso=-1.424}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.668;sfo=1.88;sso=-1.405}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.671;sfo=2.03;sso=-1.378}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.679;sfo=2.15;sso=-1.355}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.685;sfo=2.280;sso=-1.323}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.695;sfo=2.39;sso=-1.285}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.705;sfo=2.50;sso=-1.245}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.715;sfo=2.61;sso=-1.2}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.730;sfo=2.70;sso=-1.16}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.745;sfo=2.81;sso=-1.10}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.758;sfo=2.90;sso=-1.04}
+  - delay 1
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.788;sfo=2.98;sso=-0.99}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.810;sfo=3.07;sso=-0.93}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.835;sfo=3.15;sso=-0.86}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.865;sfo=3.23;sso=-0.80}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.9;sfo=3.32;sso=-0.73}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.93;sfo=3.40;sso=-0.65}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.96;sfo=3.46;sso=-0.575}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.99;sfo=3.52;sso=-0.505}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.02;sfo=3.58;sso=-0.425}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.05;sfo=3.635;sso=-0.35}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.08;sfo=3.68;sso=-0.28}
+  - delay 1
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.11;sfo=3.725;sso=-0.21}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.15;sfo=3.77;sso=-0.11}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.195;sfo=3.81;sso=-0.03}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.245;sfo=3.845;sso=0.07}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.285;sfo=3.885;sso=0.16}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.330;sfo=3.92;sso=0.26}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.370;sfo=3.94;sso=0.35}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.415;sfo=3.955;sso=0.45}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.465;sfo=3.97;sso=0.56}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.52;sfo=3.99;sso=0.66}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.57;sfo=4;sso=0.77}
+  - delay 1
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.62;sfo=4;sso=0.87}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.665;sfo=3.99;sso=0.97}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.71;sfo=3.97;sso=1.07}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.765;sfo=3.95;sso=1.16}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.815;sfo=3.92;sso=1.27}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.871;sfo=3.88;sso=1.37}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.925;sfo=3.839;sso=1.48}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.97;sfo=3.78;sso=1.61}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=2.03;sfo=3.71;sso=1.73}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=2.08;sfo=3.66;sso=1.83}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=2.13;sfo=3.59;sso=1.91}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=2.18;sfo=3.52;sso=2}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=2.23;sfo=3.45;sso=2.085}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=2.28;sfo=3.36;sso=2.16}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=2.32;sfo=3.25;sso=2.23}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=2.36;sfo=3.15;sso=2.30}
+
+
+
+
+DModeBladeFireV2:
+  Skills:
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.91;sfo=0.37;sso=1.05} 
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.88;sfo=0.48;sso=1.13}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.845;sfo=0.58;sso=1.19}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.815;sfo=0.69;sso=1.24}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.778;sfo=0.805;sso=1.294}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.75;sfo=0.93;sso=1.34}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.735;sfo=1.03;sso=1.358}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.715;sfo=1.16;sso=1.38}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.695;sfo=1.28;sso=1.405}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.678;sfo=1.43;sso=1.43}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.668;sfo=1.57;sso=1.427}
+  - delay 1
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.665;sfo=1.722;sso=1.424}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.668;sfo=1.88;sso=1.405}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.671;sfo=2.03;sso=1.378}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.679;sfo=2.15;sso=1.355}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.685;sfo=2.280;sso=1.323}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.695;sfo=2.39;sso=1.285}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.705;sfo=2.50;sso=1.245}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.715;sfo=2.61;sso=1.2}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.730;sfo=2.70;sso=1.16}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.745;sfo=2.81;sso=1.10}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.758;sfo=2.90;sso=1.04}
+  - delay 1
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.788;sfo=2.98;sso=0.99}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.810;sfo=3.07;sso=0.93}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.835;sfo=3.15;sso=0.86}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.865;sfo=3.23;sso=-0.80}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.9;sfo=3.32;sso=0.73}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.93;sfo=3.40;sso=0.65}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.96;sfo=3.46;sso=0.575}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=0.99;sfo=3.52;sso=0.505}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.02;sfo=3.58;sso=0.425}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.05;sfo=3.635;sso=0.35}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.08;sfo=3.68;sso=0.28}
+  - delay 1
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.11;sfo=3.725;sso=0.21}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.15;sfo=3.77;sso=0.11}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.195;sfo=3.81;sso=0.03}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.245;sfo=3.845;sso=-0.07}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.285;sfo=3.885;sso=-0.16}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.330;sfo=3.92;sso=-0.26}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.370;sfo=3.94;sso=-0.35}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.415;sfo=3.955;sso=-0.45}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.465;sfo=3.97;sso=-0.56}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.52;sfo=3.99;sso=-0.66}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.57;sfo=4;sso=-0.77}
+  - delay 1
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.62;sfo=4;sso=-0.87}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.665;sfo=3.99;sso=-0.97}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.71;sfo=3.97;sso=-1.07}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.765;sfo=3.95;sso=-1.16}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.815;sfo=3.92;sso=-1.27}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.871;sfo=3.88;sso=-1.37}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.925;sfo=3.839;sso=-1.48}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=1.97;sfo=3.78;sso=-1.61}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=2.03;sfo=3.71;sso=-1.73}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=2.08;sfo=3.66;sso=-1.83}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=2.13;sfo=3.59;sso=-1.91}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=2.18;sfo=3.52;sso=-2}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=2.23;sfo=3.45;sso=-2.085}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=2.28;sfo=3.36;sso=-2.16}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=2.32;sfo=3.25;sso=-2.23}
+  - projectile{oT=DModeBladeFireT;mr=1;v=0;i=1;hr=3;vr=3;;d=10;hnp=true;sE=false;sB=false;syo=2.36;sfo=3.15;sso=-2.30}

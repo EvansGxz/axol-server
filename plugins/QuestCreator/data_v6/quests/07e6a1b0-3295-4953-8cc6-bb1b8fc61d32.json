@@ -1,0 +1,25 @@
+{
+  "version": "1",
+  "uuid": "07e6a1b0-3295-4953-8cc6-bb1b8fc61d32",
+  "modelId": "farm_wheat_1",
+  "startCause": "GUI",
+  "started": "1663007592434",
+  "pauseTime": "5076",
+  "lastUpdate": "1663290115084",
+  "players": [
+    "bca68bdd-c316-4010-908e-911b2ef7edbd"
+  ],
+  "currentBranches": {
+    "main": {
+      "objectId": "farm",
+      "lastObjectProgression": "1663007592435",
+      "objectProgression": {
+        "farm": "a/0.0/25.0"
+      }
+    }
+  },
+  "cameraMode": "false",
+  "path": {
+    "lastObject": "null,null"
+  }
+}

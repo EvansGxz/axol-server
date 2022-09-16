@@ -1,0 +1,10 @@
+PDB2:
+  Id: DIAMOND_SWORD
+  Display: 'Proyec'
+  Model: 13
+PDB:
+  Id: DIAMOND_SWORD
+  Display: 'Proyec2'
+  Model: 14
+
+# This you have to put it your way, never change the name!

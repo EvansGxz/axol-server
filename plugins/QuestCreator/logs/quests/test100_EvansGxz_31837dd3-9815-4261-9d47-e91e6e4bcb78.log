@@ -1,0 +1,16 @@
+[15/09 19:44:06] [info] EvansGxz | quest EvansGxz/test100 | pushing quest test100 = 31837dd3-9815-4261-9d47-e91e6e4bcb78
+[15/09 19:44:06] [info] EvansGxz | quest EvansGxz/test100 | started quest : cause ACTIVATOR_PHYSICAL
+[15/09 19:44:06] [info] EvansGxz | quest EvansGxz/test100/main | started branch
+[15/09 19:44:10] [info] EvansGxz | quest EvansGxz/test100 | pushing quest test100 = 31837dd3-9815-4261-9d47-e91e6e4bcb78
+[15/09 19:44:11] [info] EvansGxz | quest EvansGxz/test100 | pushing quest test100 = 31837dd3-9815-4261-9d47-e91e6e4bcb78
+[15/09 19:44:12] [info] EvansGxz | quest EvansGxz/test100 | goto QUEST_SUCCESS | applying goto
+[15/09 19:44:12] [info] EvansGxz | quest EvansGxz/test100 | give rewards for group, debug : group rewards processing debug |
+model : test100
+groups : 
+quest players : bca68bdd-c316-4010-908e-911b2ef7edbd
+- preparing to process player bca68bdd-c316-4010-908e-911b2ef7edbd
+-- processing player bca68bdd-c316-4010-908e-911b2ef7edbd, EvansGxz
+--- end type : SUCCESS
+--- groups here : 
+[15/09 19:44:12] [info] EvansGxz | quest EvansGxz/test100 | stopped quest : cause GOTO
+[15/09 19:44:32] [info] EvansGxz | quest EvansGxz/test100 | goto QUEST_FAIL | applying goto

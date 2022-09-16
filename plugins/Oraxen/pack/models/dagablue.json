@@ -1,0 +1,32 @@
+{
+	"credit": "HECHO POR EL MAS PIJUDO Mateo0203#5719",
+	"ambientocclusion": false,
+	"textures": {
+		"0": "default/textures/dagablue",
+		"particle": "default/textures/dagablue"
+	},
+	"elements": [
+		{
+			"from": [-16, -16, 6.8],
+			"to": [32, 32, 6.9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 8, 7.3]},
+			"faces": {
+				"north": {"uv": [0, 0.13962, 14.68761, 16], "texture": "#0"},
+				"east": {"uv": [0, 0.13962, 1.06108, 16], "texture": "#0"},
+				"south": {"uv": [14.68761, 0.13962, 0, 16], "texture": "#0"},
+				"west": {"uv": [0, 0.13962, 1.06108, 16], "texture": "#0"},
+				"up": {"uv": [0, 0.13962, 1.06108, 16], "texture": "#0"},
+				"down": {"uv": [0, 0.13962, 1.06108, 16], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"translation": [0, 0, 3]
+		},
+		"head": {
+			"translation": [-1.75, 9.75, 1.25],
+			"scale": [1.28, 1.28, 1.28]
+		}
+	}
+}

@@ -1,0 +1,166 @@
+BladeTempest:
+  Conditions:
+  - hasaura EclipseAuraA true
+  - hasaura ChaosAuraA false
+  Skills:
+  - skill{s=CancelAuraDMClass}
+  - lunge{velocity=10;velocityY=0.1} @forward{f=-5}  
+  - sound{s=thunderblader;v=0.25;p=1} @self
+  - delay 15
+  - sound{s=swordbring;p=0.8;v=0.05;repeat=7;repeatInterval=10} @self
+  - sound{s=demonicclassound;v=0.05;p=1;repeat=7;repeatInterval=10} @self
+  - potion{t=SLOW;d=70;p=false;i=false;level=1} @self
+  - sound{s=thunderblader;v=0.25;p=0.8} @self
+  - delay 5
+  - lunge{velocity=8} @targetlocation
+ 
+  - delay 5
+  - skill{s=BladeTempestA}
+CancelAuraDMClass:
+  Skills:
+  - aura{auraName=CancelAuraDMClass;d=80;i=1} @self
+
+
+
+BladeTempestA:
+  Skills:
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-4;sso=-2;syo=6.5} @targetlocation
+  - delay 1
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-4;sso=2;syo=6.5} @targetlocation
+  - delay 1
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-3;sso=-0;syo=1} @targetlocation
+  - delay 1
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-2;sso=2;syo=1} @targetlocation
+  - delay 1
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-3;sso=-2;syo=4} @targetlocation
+  - delay 1
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-5;sso=6;syo=1.5} @targetlocation
+  - delay 1
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-5;sso=-4;syo=1.5} @targetlocation
+  - delay 1
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-5;sso=-0;syo=2.5} @targetlocation
+  - delay 1  
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-6;sso=8;syo=1} @targetlocation
+  - delay 1
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-6;sso=-8;syo=1} @targetlocation 
+  - delay 1 
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-3;sso=-0;syo=5} @targetlocation
+  - delay 1
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-3;sso=-3;syo=5} @targetlocation 
+  - delay 1 
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-4;sso=-5;syo=6} @targetlocation
+  - delay 1
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-4;sso=5;syo=6} @targetlocation  
+  - delay 1
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-4;sso=-2;syo=6.5} @targetlocation
+  - delay 1
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-4;sso=2;syo=6.5} @targetlocation 
+  - delay 1 
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-4;sso=2;syo=6.5} @targetlocation
+  - delay 1
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-4;sso=-5;syo=6} @targetlocation
+  - delay 1
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-3;sso=-3;syo=5} @targetlocation
+  - delay 1
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-3;sso=-0;syo=5} @targetlocation 
+  - delay 1 
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-6;sso=-8;syo=1} @targetlocation
+  - delay 1
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-6;sso=8;syo=1}  @targetlocation 
+  - delay 1 
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-6;sso=8;syo=1}  @targetlocation
+  - delay 1
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-5;sso=6;syo=1.5} @targetlocation  
+  - delay 1
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-5;sso=-4;syo=1.5} @targetlocation
+  - delay 1
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-3;sso=-2;syo=4} @targetlocation 
+  - delay 1 
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-2;sso=2;syo=1} @targetlocation
+  - delay 1
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-3;sso=-0;syo=1} @targetlocation  
+  - delay 1
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-4;sso=2;syo=6.5} @targetlocation
+  - delay 1
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-4;sso=-2;syo=6.5} @targetlocation 
+  - delay 1 
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-4;sso=-2;syo=6.5} @targetlocation
+  - delay 1
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-4;sso=2;syo=6.5} @targetlocation 
+  - delay 1 
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-3;sso=-0;syo=1} @targetlocation
+  - delay 1
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-2;sso=2;syo=1} @targetlocation  
+  - delay 1
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-3;sso=-2;syo=4} @targetlocation
+  - delay 1
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-5;sso=6;syo=1.5} @targetlocation  
+  - delay 1
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-5;sso=-4;syo=1.5} @targetlocation
+  - delay 1
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-5;sso=-0;syo=2.5} @targetlocation 
+  - delay 1 
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-6;sso=8;syo=1} @targetlocation
+  - delay 1
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-6;sso=-8;syo=1} @targetlocation 
+  - delay 1 
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-3;sso=-0;syo=5} @targetlocation
+  - delay 1
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-3;sso=-3;syo=5} @targetlocation 
+  - delay 1 
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-4;sso=-5;syo=6} @targetlocation
+  - delay 1
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-4;sso=5;syo=6} @targetlocation  
+  - delay 1
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-4;sso=-2;syo=6.5} @targetlocation
+  - delay 1
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-4;sso=2;syo=6.5} @targetlocation 
+  - delay 1 
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-4;sso=2;syo=6.5} @targetlocation
+  - delay 1
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-4;sso=-5;syo=6} @targetlocation 
+  - delay 1 
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-3;sso=-3;syo=5} @targetlocation
+  - delay 1
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-3;sso=-0;syo=5} @targetlocation 
+  - delay 1 
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-6;sso=-8;syo=1} @targetlocation
+  - delay 1
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-6;sso=8;syo=1}  @targetlocation
+  - delay 1
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-6;sso=8;syo=1}  @targetlocation
+  - delay 1
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-5;sso=6;syo=1.5} @targetlocation
+  - delay 1
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-5;sso=-4;syo=1.5} @targetlocation
+  - delay 1
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-3;sso=-2;syo=4} @targetlocation
+  - delay 1
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-2;sso=2;syo=1} @targetlocation
+  - delay 1
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-3;sso=-0;syo=1} @targetlocation
+  - delay 1
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-4;sso=2;syo=6.5} @targetlocation
+  - delay 1
+  - projectile{bulletType=MOB;mob=DemonicSword2Mob;onHit=BladeTempestH;oT=BladeTempestT;v=40;i=1;hR=2;vR=2;mr=35;;hnp=true;hp=false;hR=1;vR=1;sE=false;sfo=-4;sso=-2;syo=6.5} @targetlocation
+
+  
+
+
+
+
+
+
+
+  
+
+BladeTempestH:
+  Skills:
+  - mmodamage{a="<modifier.damage> * 3";pkb=true;types="SKILL,PROJECTILE"} 
+  #- skill{s=Calcination} # ACTIVATE THIS IF YOU WANT THIS SKILL HIGHLY OP
+
+
+BladeTempestT:
+  Skills:
+  - effect:particleline{p=reddust;a=1;color=#dd862c;fromorigin=true;syo=0.3;delay=10;size=0.5}
+

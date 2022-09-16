@@ -1,0 +1,183 @@
+DemonicCutDMGFireH:
+  Conditions:
+  - hasaura EclipseAuraA true
+  - hasaura ChaosAuraA false
+  Skills: 
+  - skill{s=Calcination} @MobsNearOrigin{r=3;t=YamatoTesting,Hypnos}
+  - mmodamage{a="<modifier.damage>";pkb=true;types="SKILL"}  @EntitiesNearOrigin{r=4}
+  
+DemonicCutDMGFire1:
+  Conditions:
+  - hasaura EclipseAuraA true
+  - hasaura ChaosAuraA false
+  Skills:
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=0;sso=2.2} 
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=0.1;sso=2.19} 
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=0.2;sso=2.17} 
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=0.3;sso=2.15}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=0.4;sso=2.125}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=0.5;sso=2.1125}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=0.6;sso=2.08}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=0.7;sso=2.07}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=0.8;sso=2.045}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=0.9;sso=2.001}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=1;sso=2}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=1.1;sso=1.95}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=1.2;sso=1.91}
+  - delay 1
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=1.3;sso=1.87}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=1.4;sso=1.82}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=1.5;sso=1.78}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=1.6;sso=1.70}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=1.7;sso=1.65}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=1.8;sso=1.58}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=1.9;sso=1.52}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=2;sso=1.44}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=2.1;sso=1.36}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=2.2;sso=1.26}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=2.3;sso=1.15}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=2.35;sso=1.05}
+  - delay 1
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=2.43;sso=0.95}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=2.45;sso=0.90}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=2.47;sso=0.86}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=2.52;sso=0.76}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=2.57;sso=0.63}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=2.61;sso=0.48}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=2.63;sso=0.35}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=2.65;sso=0.20}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=2.66;sso=0.1}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=2.67;sso=-0.05}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=2.65;sso=-0.20}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=2.63;sso=-0.35}
+  - delay 1
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=2.61;sso=-0.48}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=2.57;sso=-0.63}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=2.52;sso=-0.76}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=2.47;sso=-0.86}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=2.45;sso=-0.90}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=2.43;sso=-0.95}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=2.36;sso=-1.05}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=2.30;sso=-1.15}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=2.22;sso=-1.26}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=2.13;sso=-1.36}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=2.07;sso=-1.44}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=2;sso=-1.52}
+  - delay 1
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=1.95;sso=-1.55}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=1.91;sso=-1.60}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=1.83;sso=-1.65}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=1.73;sso=-1.70}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=1.67;sso=-1.75}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=1.60;sso=-1.80}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=1.53;sso=-1.85}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=1.50;sso=-1.89}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=1.40;sso=-1.94}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=1.30;sso=-2}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=1.20;sso=-2.05}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=1.1;sso=-2.08}
+  - delay 1
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=1;sso=-2.12}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=0.9;sso=-2.16}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=0.8;sso=-2.20}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=0.7;sso=-2.24}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=0.6;sso=-2.26}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=0.5;sso=-2.29}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=0.4;sso=-2.3}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=0.3;sso=-2.31}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=0.2;sso=-2.32}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=0.1;sso=-2.33}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;sE=false;sB=false;syo=1;sfo=0;sso=-2.34}
+
+
+
+DemonicCutDMGFire2:
+  Conditions:
+  - hasaura EclipseAuraA true
+  - hasaura ChaosAuraA false
+  Skills:
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=0;sso=-2.34}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=0.1;sso=-2.33}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=0.2;sso=-2.32}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=0.3;sso=-2.31}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=0.4;sso=-2.3}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=0.5;sso=-2.29}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=0.6;sso=-2.26}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=0.7;sso=-2.24}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=0.8;sso=-2.20}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=0.9;sso=-2.16}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=1;sso=-2.12}
+  - delay 1
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=1.1;sso=-2.08}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=1.20;sso=-2.05}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=1.30;sso=-2}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=1.40;sso=-1.94}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=1.50;sso=-1.89}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=1.53;sso=-1.85}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=1.60;sso=-1.80}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=1.67;sso=-1.75}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=1.73;sso=-1.70}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=1.83;sso=-1.65}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=1.91;sso=-1.60}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=1.95;sso=-1.55}
+  - delay 1
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=2;sso=-1.52}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=2.07;sso=-1.44}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=2.13;sso=-1.36}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=2.22;sso=-1.26}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=2.30;sso=-1.15}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=2.36;sso=-1.05}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=2.43;sso=-0.95}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=2.45;sso=-0.90}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=2.47;sso=-0.86}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=2.52;sso=-0.76}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=2.57;sso=-0.63}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=2.61;sso=-0.48}
+  - delay 1
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=2.63;sso=-0.35}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=2.65;sso=-0.20}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=2.67;sso=-0.05}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=2.66;sso=0.1}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=2.65;sso=0.20}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=2.63;sso=0.35}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=2.61;sso=0.48}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=2.57;sso=0.63}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=2.52;sso=0.76}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=2.47;sso=0.86}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=2.45;sso=0.90}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=2.43;sso=0.95}
+  - delay 1
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=2.35;sso=1.05}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=2.3;sso=1.15}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=2.2;sso=1.26}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=2.1;sso=1.36}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=2;sso=1.44}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=1.9;sso=1.52}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=1.8;sso=1.58}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=1.7;sso=1.65}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=1.6;sso=1.70}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=1.5;sso=1.78}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=1.4;sso=1.82}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=1.3;sso=1.87}
+  - delay 1
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=1.2;sso=1.91}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=1.1;sso=1.95}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=1;sso=2}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=0.9;sso=2.001}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=0.8;sso=2.045}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=0.7;sso=2.07}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=0.6;sso=2.08}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=0.5;sso=2.1125}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=0.4;sso=2.125}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=0.3;sso=2.15}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=0.2;sso=2.17}
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=0.1;sso=2.19} 
+  - projectile{oH=DemonicCutDMGFireH;mr=1;v=0;i=1;d=3;hp=true;hnp=true;vr=3;hr=3;syo=1;sfo=0;sso=2.2}
+
+
+
+
+
+
+
+

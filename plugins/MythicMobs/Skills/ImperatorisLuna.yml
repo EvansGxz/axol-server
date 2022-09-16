@@ -1,0 +1,540 @@
+#Don't forget to join Discord for Help on Setup! :)
+# Made by EliasCous
+
+
+
+
+
+
+## Lunar Dash
+
+ImperatorisLuna:
+  Skills:
+  - sound{s=entity.illusioner.mirror_move;v=1;p=0.571} @self
+  - potion{type=INVISIBILITY;duration=20;level=1;p=false} @self
+  - Aura{auraName=EmperatorisLunaAura;oT=ImperatorisLunaAuraT;oE=ImperatorisLunaAuraE;interval=1;duration=20} @self
+  - projectile{oT=ImperatorisLunaT;oH=ImperatorisLunaH;oE=ImperatorisLunaE;v=80;mr=20;i=1;sE=false;sB=true;syo=0.8;sfo=0;sso=0;hnp=true;vR=3;hR=3;hnp=true;hp=false} @targetlocation
+  
+
+ImperatorisLunaE:
+  Skills:
+  - teleport{spreadh=0;spreadv=0} 
+  - sound{s=entity.illusioner.mirror_move;v=1;p=1.02}
+
+ImperatorisLunaH:
+  Skills:
+  - damage{a="<modifier.damage>";pkb=true}  # FOR PREMIUMS
+  - skill{s=ImperatorisActivated}
+ImperatorisLunaAuraT:
+  Skills:
+  - effect:particlesphere{p=reddust;a=1;color=#0150d6;r=1;y=0.5;repeat=5;repeatInterval=1;vs=1;hs=0.5}
+  - effect:particlesphere{p=reddust;a=1;color=#2a83ff;r=1;y=0.5;repeat=5;repeatInterval=1;vs=1;hs=0.5}
+
+
+
+ImperatorisActivated:
+  Cooldown: 1
+  Skills:
+  - chain{
+      bounces=8;
+      bounceRadius=10;
+      bounceDelay=0;
+      hitSelf=false;
+      hp=false; 
+      hitNonPlayers=true;
+      hitTarget=true;
+      onBounce=[
+        - effect:particleline{p=reddust;a=1;fromOrigin=true;color=#0150d6;y=0.5;repeat=1;repeatInterval=2}
+        - damage{a="<modifier.damage>";pkb=true} @origin{ignore=players}
+        - sound{s=item.trident.return;v=1;p=1.4}
+        - skill{s=LunamAeternaMarkI} @origin{ignore=players}
+      ];
+      bounceConditions=[
+        - inlineofsight
+        
+      ];
+    } 
+
+ 
+##
+##
+
+
+
+
+##LunamAeterna Mark
+
+#LunamAeternaMark:
+ # passive-type: LOGIN
+ # Skills:
+  #- skill{s=LunamAeternaMarkI}   # DISABLED FOR NOW
+LunamAeternaMarkI:
+  Skills:
+  - Aura{auraName=LunamAeternaMarkAura;oT=LunamAeternaMarkAuraT;oE=LunamAeternaMarkAuraE;interval=1;duration=60}
+  - orbital{onTick=LunamAeternaMarkOrbitalT;points=5;interval=1;;duration=60;r=1;oy=1.5} 
+  
+LunamAeternaMarkOrbitalT:
+  Skills:
+  - effect:particles{p=reddust;a=1;color=#2a83ff;size=0.7} @origin
+
+
+   
+LunamAeternaMarkAuraE:
+  Skills:
+  - damage{a="<modifier.damage> * 2";pkb=true} 
+  - sound{s=entity.ender_eye.death;v=1;p=0.9} @origin
+
+
+
+#LunamAeternaMarkActivate:
+  #TargetConditions:
+  #- hasaura{n=LunamAeternaMarkAura} true
+  #Skills:
+  #- onAttack{oH=LunamAeternaMarkA;multiplier=<modifier.damage>;auraname=LunamAeternaMarkActivateL} @self  # DISABLED FOR NOW
+#LunamAeternaMarkA: 
+  #Skills:
+  #- sound{s=entity.ender_eye.death;v=1;p=0.9}
+
+#
+##
+####
+######### Lunam Swords Rain
+####
+##
+#
+LunamSwords:
+  Skills:
+  - orbital{oS=LunamSwordsRainA;oH=LunamSwordRainHit;points=13;interval=1;duration=100;r=4.5;hr=2;vr=3;hnp=true} @forward{f=1;y=1}
+  - orbital{oH=LunamSwordRainHit;points=13;interval=1;duration=100;r=4;hr=2;vr=3;hnp=true} @forward{f=1;y=1}                                 # INCREASE "POINTS" IF YOU WANT less hits per second
+  - orbital{oH=LunamSwordRainHit;points=13;interval=1;duration=100;r=3;hr=2;vr=3;hnp=true} @forward{f=1;y=1}  
+  - orbital{oH=LunamSwordRainHit;points=13;interval=1;duration=100;r=2;hr=2;vr=3;hnp=true} @forward{f=1;y=1}
+  - orbital{oH=LunamSwordRainHit;points=13;interval=1;duration=100;r=1;hr=2;vr=3;hnp=true} @forward{f=1;y=1}
+  
+LunamSwordsRainO:
+  Skills:
+  - orbital{oT=LunamORainT;oS=LunamSwordsRainA;oH=LunamSwordRainHit;points=13;interval=1;duration=100;r=3;hr=5;vr=5;hnp=true}
+LunamORainT:
+  Skills:
+  - particles{p=reddust;a=3} @origin
+LunamSwordsRainA:
+  Skills:
+  - summon{type=LunamSwordsSummon} 
+LunamSwordSwordF:
+  Skills:
+  - projectile{bulletType=MYTHICITEM;MATERIAL=PDB2;v=22;i=1;mr=50;syo=30;sfo=0;sso=0;vO=-1010;oT=LunamSwordRainTick;oE=LunamSwordRainEnd;hnp=true;hp=false;hR=3;vR=3;sE=false} 
+  - delay 1
+  - projectile{bulletType=MYTHICITEM;MATERIAL=PDB2;v=22;i=1;mr=50;syo=30;sfo=2;sso=2;vO=-1010;oT=LunamSwordRainTick;oE=LunamSwordRainEnd;hnp=true;hp=false;hR=3;vR=3;sE=false}
+  - delay 1
+  - projectile{bulletType=MYTHICITEM;MATERIAL=PDB2;v=22;i=1;mr=50;syo=30;sfo=4.8;sso=2;vO=-1010;oT=LunamSwordRainTick;oE=LunamSwordRainEnd;hnp=true;hp=false;hR=3;vR=3;sE=false} 
+  - delay 1
+  - projectile{bulletType=MYTHICITEM;MATERIAL=PDB2;v=22;i=1;mr=50;syo=30;sfo=4.8;sso=-2;vO=-1010;oT=LunamSwordRainTick;oE=LunamSwordRainEnd;hnp=true;hp=false;hR=3;vR=3;sE=false} 
+  - delay 1
+  - projectile{bulletType=MYTHICITEM;MATERIAL=PDB2;v=22;i=1;mr=50;syo=30;sfo=2;sso=0;vO=-1010;oT=LunamSwordRainTick;oE=LunamSwordRainEnd;hnp=true;hp=false;hR=3;vR=3;sE=false} 
+  - delay 1
+  - projectile{bulletType=MYTHICITEM;MATERIAL=PDB2;v=22;i=1;mr=50;syo=30;sfo=0;sso=-2;vO=-1010;oT=LunamSwordRainTick;oE=LunamSwordRainEnd;hnp=true;hp=false;hR=3;vR=3;sE=false} 
+  - delay 1
+  - projectile{bulletType=MYTHICITEM;MATERIAL=PDB2;v=22;i=1;mr=50;syo=30;sfo=2;sso=-2;vO=-1010;oT=LunamSwordRainTick;oE=LunamSwordRainEnd;hnp=true;hp=false;hR=3;vR=3;sE=false} 
+  - delay 1
+  - projectile{bulletType=MYTHICITEM;MATERIAL=PDB2;v=22;i=1;mr=50;syo=30;sfo=-4.8;sso=-2;vO=-1010;oT=LunamSwordRainTick;oE=LunamSwordRainEnd;hnp=true;hp=false;hR=3;vR=3;sE=false} 
+  - delay 1
+  - projectile{bulletType=MYTHICITEM;MATERIAL=PDB2;v=22;i=1;mr=50;syo=30;sfo=-2.8;sso=2;vO=-1010;oT=LunamSwordRainTick;oE=LunamSwordRainEnd;hnp=true;hp=false;hR=3;vR=3;sE=false} 
+  - delay 1
+  - projectile{bulletType=MYTHICITEM;MATERIAL=PDB2;v=22;i=1;mr=50;syo=30;sfo=-2;sso=0;vO=-1010;oT=LunamSwordRainTick;oE=LunamSwordRainEnd;hnp=true;hp=false;hR=3;vR=3;sE=false} 
+  - delay 1
+  - projectile{bulletType=MYTHICITEM;MATERIAL=PDB2;v=22;i=1;mr=50;syo=30;sfo=0;sso=4;vO=-1010;oT=LunamSwordRainTick;oE=LunamSwordRainEnd;hnp=true;hp=false;hR=3;vR=3;sE=false}
+  - delay 1
+  - projectile{bulletType=MYTHICITEM;MATERIAL=PDB2;v=22;i=1;mr=50;syo=30;sfo=2;sso=-4.5;vO=-1010;oT=LunamSwordRainTick;oE=LunamSwordRainEnd;hnp=true;hp=false;hR=3;vR=3;sE=false} 
+  - delay 1
+  - projectile{bulletType=MYTHICITEM;MATERIAL=PDB2;v=22;i=1;mr=50;syo=30;sfo=-2;sso=-4.5;vO=-1010;oT=LunamSwordRainTick;oE=LunamSwordRainEnd;hnp=true;hp=false;hR=3;vR=3;sE=false} 
+
+
+
+
+LunamSwordRainTick:
+  Skills:
+  - effect:particleline{p=reddust;a=1;color=#66cdf4;fromorigin=true;syo=4;size=0.3}
+LunamSwordRainHit:
+  Skills:
+  - damage{a="<modifier.damage>";pkb=true;delay=20} 
+LunamSwordRainEnd:
+  Skills:
+  - sound{s=item.trident.thunder;v=0.2;p=2.52}
+  - sound{s=entity.ender_eye.death;v=0.2;p=0.9}
+
+#############################################################################################################################
+#############################################################################################################################
+############################################### Lunam Storm Souls###############################################################
+LunamStormSoulsA:
+  Skills:
+  - summon{type=LunamStormSoulsMob} @forward{f=2}
+  - orbital{oS=LunamStormSoulsS;points=13;interval=1;duration=600;r=4.5;hr=2;vr=3;hnp=false} @forward{f=1;y=1}
+
+LunamStormSouls:
+  Skills:
+  - potion{type=levitation;duration=10;level=2;repeat=120;repeatInterval=20;p=false} @self
+  - potion{type=SLOW_FALLING;duration=10;level=3;repeat=120;repeatInterval=15;p=false} @self
+  - effect:spin{duration=1200;velocity=3} @self
+  - orbital{oT=LunamStormSoulsOrbitalEFT;points=20;interval=1;duration=1400;oy=1.8;r=1;ry=1.8;rz=3;rx=3} @self
+  - orbital{oT=LunamStormSoulsOrbitalEFT;points=20;interval=1;duration=1400;oy=1.8;r=1;ry=-1.8;rz=-3;rx=-3} @self
+  - orbital{oT=LunamStormSoulsOrbitalEFT2;points=20;interval=1;duration=1400;oy=1.8;r=1;ry=1.8;rz=3;rx=3} @self
+  - orbital{oT=LunamStormSoulsOrbitalEFT2;points=20;interval=1;duration=1400;oy=1.8;r=1;ry=-1.8;rz=-3;rx=-3} @self
+  - delay 620
+  - remove @self
+
+LunamStormSoulsS:
+  Skills:
+  - effect:particlesphere{p=reddust;a=5;color=#2a83ff;size=0.8;repeat=10;repeatInterval=2;y=4;r=0.3} @self
+  - effect:particlesphere{p=reddust;a=5;color=#000000;size=0.5;repeat=10;repeatInterval=2;y=4;r=0.3} @self
+  - delay 5
+  - sound{s=item.trident.thunder;v=0.5;p=3.52}
+  - missile{oT=LStormST;oH=LStormSH;oE=LStormSE;v=20;i=1;hR=2;vR=2;in=4.5;tyo=3;md=500;sE=false;mr=30;fo=true;syo=8;sB=false;sfo=0;sso=0;HitPlayers=false;HitNonPlayers=true;repeat=10;repeatInterval=60} @EIR{r=30;limit=1;sort=NEAREST;t=YamatoTesting}  
+LStormST:
+  Skills:
+  - effect:particles{p=reddust;a=1;color=#2a83ff;size=0.8}
+  - effect:particles{p=reddust;a=1;color=#000000;size=0.5}
+
+LStormSH:
+  Skills:
+  - damage{a="<modifier.damage>";pkb=true}
+  - sound{s=entity.ender_eye.death;v=0.5;p=0.9}
+
+
+LunamStormSoulsOrbitalEFT:
+  Skills:
+  - effect:particles{p=reddust;a=1;color=#2a83ff;size=0.8} @origin
+  - effect:particles{p=reddust;a=1;color=#000000;size=0.5} @origin
+
+
+LunamStormSoulsOrbitalEFT2:
+  Skills:
+  - effect:particles{p=reddust;a=1;color=#2a83ff;size=0.8} @origin
+  - effect:particles{p=reddust;a=1;color=#000000;size=0.5} @origin
+
+
+
+#############################################################################################################################
+#############################################################################################################################
+############################################### Lunam Blade ####################################################################
+
+
+
+LunamSlashE:  # COLORS OF SLASHS
+  Skills:
+  - effect:particles{p=reddust;a=3;color=#0150d6;repeat=2;repeatInterval=1}
+LunamSlashEW:
+  Skills:
+  - effect:particles{p=reddust;a=3;color=#073583;repeat=2;repeatInterval=1}
+LunamSlash2E:
+  Skills:
+  - effect:particles{p=reddust;a=3;color=#0150d6;repeat=2;repeatInterval=1} 
+LunamSlash2EW:
+  Skills:
+  - effect:particles{p=reddust;a=3;color=#073583;repeat=2;repeatInterval=1} 
+
+
+
+LunamSlashs:
+  Skills:
+  - skill{s=LunamSlash} 
+  - sound{s=entity.ender_eye.death;v=1;p=0.2} @self
+  - sound{s=entity.wither.hurt;v=0.1;p=0.7} @self
+  - sound{s=entity.wither.shoot;v=0.05;p=0.6} @self
+  - sound{s=entity.ender_dragon.hurt;v=0.05;p=0.6} @self
+  - delay 10
+  - skill{s=LunamSlash2}
+  - sound{s=entity.ender_eye.death;v=1;p=0.2} @self
+  - sound{s=entity.wither.hurt;v=0.1;p=0.7} @self
+  - sound{s=entity.wither.shoot;v=0.05;p=0.6} @self
+  - sound{s=entity.ender_dragon.hurt;v=0.05;p=0.6} @self
+  - delay 20
+  - skill{s=LunamSlash} 
+  - skill{s=LunamSlash2}
+  - sound{s=entity.ender_eye.death;v=1;p=0.2} @self
+  - sound{s=entity.wither.hurt;v=0.1;p=0.7} @self
+  - sound{s=entity.wither.shoot;v=0.05;p=0.6} @self
+  - sound{s=entity.ender_dragon.hurt;v=0.05;p=0.6} @self
+  - skill{s=LunamSlashsV1}
+LunamSlashsV1:
+  Conditions:
+  - crouching true
+  - onground true
+  Skills:
+  - damage{a="<modifier.damage>";pkb=true}  @EIR{r=3;ignore=players} #Damage Of Slash with Shift
+  - delay 5
+  - projectile{oT=LunamSlashsV1Tick;oH=LunamSlashsV1Hit;LunamSlashV1HitV;oE=LunamSlashsV1End;v=30;i=1;mr=22;sfo=0;sso=0;syo=1.2;hnp=true;hp=false;sB=true;sE=false} @forward{f=-22}
+  - projectile{oH=LunamSlashV1HitV;v=30;i=1;mr=22;sfo=0;sso=0;syo=1.2;hnp=true;hp=false;sB=true;sE=false} @forward{f=-22}
+  - disengage{v=300;repeat=1;RepeatInterval=2} @self
+LunamSlashsV1Tick:
+  Skills:
+  - effect:particles{p=reddust;a=10;color=#0150d6;r=5;vs=0.5;hs=0.5;repeat=7;repeatInterval=1} 
+  - effect:particles{p=reddust;a=10;color=#2a83ff;r=5;vs=0.5;hs=0.5;repeat=7;repeatInterval=1}  
+  - sound{s=entity.ender_eye.death;v=1;p=0.2} 
+  - sound{s=entity.wither.hurt;v=0.1;p=0.7} 
+  - sound{s=entity.wither.shoot;v=0.05;p=0.6} 
+  - sound{s=entity.ender_dragon.hurt;v=0.05;p=0.6} 
+LunamSlashsV1Hit:
+  Skills:
+  - damage{a="<modifier.damage>";pkb=true} 
+LunamSlashV1HitV:
+  TargetConditions:
+  - hasaura{n=LunamAeternaMarkAura} true
+  Skills:
+  - delay 1
+  - damage{a="<modifier.damage>";pkb=true} 
+
+LunamSlashsV1End: 
+  Skills:
+  - skill{s=LunamSlashsV2End} @origin
+LunamSlashsV2End:
+  Conditions:
+  - crouching true
+  - onground true
+  Skills:
+  - projectile{oT=LunamSlashsV1Tick;oH=LunamSlashsV1Hit;oE=LunamSlashsV3End;v=30;i=1;mr=22;sfo=0;sso=0;syo=1;hnp=true;hp=false;sB=true;sE=false;hr=4;vr=4} @forward{f=22;y=1}
+  - projectile{oH=LunamSlashV1HitV;v=30;i=1;mr=22;sfo=0;sso=0;syo=1;hnp=true;hp=false;sB=true;sE=false} @forward{f=22;y=1}
+LunamSlashsV3End:
+  Skills:
+  - teleport{spreadh=0;spreadv=0} 
+  - sound{s=entity.illusioner.mirror_move;v=0.5;p=0.4}
+  - sound{s=entity.ender_eye.death;v=1;p=0.2} 
+  - sound{s=entity.wither.hurt;v=0.1;p=0.7} 
+  - sound{s=entity.wither.shoot;v=0.05;p=0.6} 
+  - sound{s=entity.ender_dragon.hurt;v=0.05;p=0.6} 
+
+  
+
+
+
+
+LunamSlashH:
+  Skills:
+  - damage{a="<modifier.damage>";pkb=true}  # Damage Of Slashs - RIGHT
+  
+LunamSlash2H:
+  Skills:
+  - damage{a="<modifier.damage>";pkb=true}  # Damage Of Slash - LEFT 
+LunamSlash:
+  Conditions:
+  - onground true
+  Skills:
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.70;hO=100} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.70;hO=97} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.70;hO=94} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.67;hO=91} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.67;hO=88} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.67;hO=85} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.64;hO=82} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.64;hO=79} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.64;hO=76} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.61;hO=73} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.61;hO=70} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.61;hO=67} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.58;hO=64} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.58;hO=61} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.58;hO=58} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.55;hO=55} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.55;hO=52} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.55;hO=49} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.51;hO=46} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.51;hO=43} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.51;hO=40} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.48;hO=37} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.48;hO=34} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.48;hO=46} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.45;hO=43} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.45;hO=40} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.45;hO=37} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.41;hO=34} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.41;hO=31} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.41;hO=28} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.38;hO=25} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.38;hO=21} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.38;hO=18} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.35;hO=15} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.35;hO=11} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.35;hO=8} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.31;hO=5} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.31;hO=3} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.31;hO=0} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.28;hO=-3} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.28;hO=6} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.28;hO=-9} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.25;hO=-12} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.25;hO=-15} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.25;hO=-18} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.25;hO=-12} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.25;hO=-15} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.21;hO=-18} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.21;hO=-21} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.21;hO=-24} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.18;hO=-27} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.18;hO=-30} @forward{f=2;y=0.9}
+
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.70;hO=100} @forward
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.70;hO=97} @forward
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.70;hO=94} @forward
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.67;hO=91} @forward
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.67;hO=88} @forward
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.67;hO=85} @forward
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2.5;vO=0.64;hO=82} @forward
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2.5;vO=0.64;hO=79} @forward
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2.5;vO=0.64;hO=76} @forward
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2.5;vO=0.61;hO=73} @forward
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2.5;vO=0.61;hO=70} @forward
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2.5;vO=0.61;hO=67} @forward
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2.5;vO=0.58;hO=64} @forward
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2.5;vO=0.58;hO=61} @forward
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2.5;vO=0.58;hO=58} @forward
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.55;hO=55} @forward
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.55;hO=52} @forward
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.55;hO=49} @forward
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.51;hO=46} @forward
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.51;hO=43} @forward
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.51;hO=40} @forward
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.48;hO=37} @forward
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.48;hO=34} @forward
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.48;hO=46} @forward
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.45;hO=43} @forward
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.45;hO=40} @forward
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.45;hO=37} @forward
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.41;hO=34} @forward
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.41;hO=31} @forward
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.41;hO=28} @forward
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.38;hO=25} @forward
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.38;hO=18} @forward
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.35;hO=15} @forward
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.35;hO=11} @forward
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.35;hO=8} @forward
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.31;hO=5} @forward
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.31;hO=3} @forward
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.31;hO=0} @forward
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.28;hO=-3} @forward
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.28;hO=6} @forward
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.28;hO=-9} @forward
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.25;hO=-12} @forward
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.25;hO=-15} @forward
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.25;hO=-18} @forward
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.25;hO=-12} @forward
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.25;hO=-15} @forward
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.21;hO=-18} @forward
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.21;hO=-21} @forward
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.21;hO=-24} @forward
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.18;hO=-27} @forward
+  - projectile{oT=LunamSlashT;oH=LunamSlashH;oE=LunamSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.18;hO=-30} @forward
+
+
+#########################################################################################
+########################## Other Side ##################################################
+LunamSlash2:
+  Conditions:
+  - onground true
+  Skills:
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2E;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.70;hO=-100} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2E;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.70;hO=-97} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2E;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.70;hO=-94} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2E;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.67;hO=-91} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2E;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.67;hO=-88} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2E;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.67;hO=-85} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2E;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.64;hO=-82} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2E;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.64;hO=-79} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2E;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.64;hO=-76} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2E;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.61;hO=-73} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2E;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.61;hO=-70} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2E;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.61;hO=-67} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2E;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.58;hO=-64} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2E;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.58;hO=-61} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2E;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.58;hO=-58} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2E;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.55;hO=-55} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2E;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.55;hO=-52} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2E;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.55;hO=-49} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2E;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.51;hO=-46} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2E;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.51;hO=-43} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2E;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.51;hO=-40} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2E;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.48;hO=-37} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2E;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.48;hO=-34} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2E;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.48;hO=-46} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2E;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.45;hO=-43} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2E;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.45;hO=-40} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2E;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.45;hO=-37} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2E;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.41;hO=-34} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2E;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.41;hO=-31} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2E;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.41;hO=-28} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2E;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.38;hO=-25} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2E;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.38;hO=-21} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2E;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.38;hO=-18} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2E;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.35;hO=-15} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2E;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.35;hO=-11} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2E;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.35;hO=-8} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2E;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.31;hO=-5} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2E;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.31;hO=-3} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2E;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.31;hO=-0} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2E;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.28;hO=3} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2E;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.28;hO=6} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2E;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.28;hO=9} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2E;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.25;hO=12} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2E;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.25;hO=15} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2E;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.25;hO=18} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2E;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.25;hO=12} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2E;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.25;hO=15} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2E;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.21;hO=18} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2E;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.21;hO=21} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2E;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.21;hO=24} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2E;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.18;hO=27} @forward{f=2;y=0.9}
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2E;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.18;hO=30} @forward{f=2;y=0.9}
+
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2EW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.70;hO=-100} @forward
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2EW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.70;hO=-97} @forward
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2EW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.70;hO=-94} @forward
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2EW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.67;hO=-91} @forward
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2EW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.67;hO=-88} @forward
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2EW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.67;hO=-85} @forward
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2EW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2.5;vO=0.64;hO=-82} @forward
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2EW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2.5;vO=0.64;hO=-79} @forward
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2EW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2.5;vO=0.64;hO=-76} @forward
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2EW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2.5;vO=0.61;hO=-73} @forward
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2EW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2.5;vO=0.61;hO=-70} @forward
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2EW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2.5;vO=0.61;hO=-67} @forward
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2EW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2.5;vO=0.58;hO=-64} @forward
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2EW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2.5;vO=0.58;hO=-61} @forward
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2EW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2.5;vO=0.58;hO=-58} @forward
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2EW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.55;hO=-55} @forward
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2EW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.55;hO=-52} @forward
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2EW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.55;hO=-49} @forward
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2EW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.51;hO=-46} @forward
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2EW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.51;hO=-43} @forward
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2EW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.51;hO=-40} @forward
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2EW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.48;hO=-37} @forward
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2EW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.48;hO=-34} @forward
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2EW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.48;hO=-46} @forward
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2EW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.45;hO=-43} @forward
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2EW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.45;hO=-40} @forward
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2EW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.45;hO=-37} @forward
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2EW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.41;hO=-34} @forward
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2EW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.41;hO=-31} @forward
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2EW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.41;hO=-28} @forward
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2EW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.38;hO=-25} @forward
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2EW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.38;hO=-21} @forward
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2EW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.38;hO=-18} @forward
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2EW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.35;hO=-15} @forward
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2EW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.35;hO=-11} @forward
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2EW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.35;hO=-8} @forward
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2EW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.31;hO=-5} @forward
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2EW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.31;hO=-3} @forward
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2EW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.31;hO=0} @forward
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2EW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.28;hO=3} @forward
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2EW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.28;hO=6} @forward
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2EW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.28;hO=9} @forward
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2EW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.25;hO=12} @forward
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2EW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.25;hO=15} @forward
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2EW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.25;hO=18} @forward
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2EW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.25;hO=12} @forward
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2EW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.25;hO=15} @forward
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2EW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.21;hO=18} @forward
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2EW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.21;hO=21} @forward
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2EW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.21;hO=24} @forward
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2EW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.18;hO=27} @forward
+  - projectile{oT=LunamSlash2T;oH=LunamSlash2H;oE=LunamSlash2EW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.18;hO=30} @forward
+
+
+
+ 

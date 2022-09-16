@@ -1,0 +1,15 @@
+Chaos:
+  Conditions:
+  - hasaura EclipseAuraA false
+  Skills:
+  - summon{type=ChaosSword_DemonicClassPM} @self
+  - skill{s=ChaosAura} @self
+
+
+ChaosAura:
+  Skills:
+  - Aura{auraName=ChaosAuraA;ot=BOAAuraT;interval=1;duration=<modifier.duration>} @self
+
+
+
+##

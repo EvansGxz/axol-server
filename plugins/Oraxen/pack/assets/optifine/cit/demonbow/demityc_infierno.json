@@ -1,0 +1,28 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "minecraft:item/bow"
+   },
+  "display": {
+      "thirdperson_righthand": {
+          "rotation": [ 0, 90, 45 ],
+          "translation": [ 8, 12, -4 ],
+          "scale": [ 2, 2, 0.75 ]
+         },
+      "thirdperson_lefthand": {
+          "rotation": [ 0, -90, -45 ],
+          "translation": [ -8, 12, 4 ],
+          "scale": [ 2, 2, 0.75 ]
+         },
+      "firstperson_lefthand": {
+          "rotation": [ 0, -90, -35 ],
+          "translation": [ 0, 8, 2 ],
+          "scale": [ 1.5, 1.5, 0.75 ]
+         },   
+      "firstperson_righthand": {
+         "rotation": [ 0, 90, 35 ],
+         "translation": [ 0, 8, 2 ],
+         "scale": [ 1.5, 1.5, 0.75 ]
+        }
+  }
+}

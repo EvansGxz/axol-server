@@ -1,0 +1,114 @@
+# -------------------- Display settings --------------------
+
+display_name: Inicio de una aventura
+description: ['Habla con ...']
+
+start_notify:
+  title: '&6Inicio de una aventura'
+  title_subtitle: '&7Inicio de una aventura {quest} &7!'
+  sound: ENTITY_PLAYER_LEVELUP
+
+progress_notify:
+  actionbar: '&a{quest} &7| {objective}'
+progress_notify_scoreboard: true
+
+# -------------------- Post-quest settings --------------------
+
+completion:
+  max_completions: 20
+  notify:
+    SUCCESS:
+      title: '&dMisión Completada'
+      title_subtitle: '&7Completaste la misión &a{quest} &7!'
+      sound: ENTITY_PLAYER_LEVELUP
+    FAIL:
+      title: '&cFallaste la misión'
+      title_subtitle: '&7Misión: &c{quest} &7!'
+      sound: BLOCK_ANVIL_DESTROY
+    CANCEL:
+      title: '&cMisión cancelada'
+      title_subtitle: '&7Misión: &c{quest}'
+      sound: BLOCK_ANVIL_DESTROY
+
+cooldown:
+  duration: 10 SECOND
+  end_types: [SUCCESS]
+
+# -------------------- Activator settings --------------------
+
+activators: [npc_test2]
+
+activators_dialog:
+  - '&6[Forastero!] &7¡AYUDA!'
+  - ''  # empty line so the player needs to click again for the GUI to open
+
+activators_dialog_auto_start_distance: 3.5
+
+activators_dialog_reset:
+  reset_delay: 30 SECOND
+  reset_distance: 5.0
+  reset_notify:
+    message: '&6[Forastero] &7Oh... entiendo:('
+
+# -------------------- Quest content --------------------
+
+branches:
+
+  MAIN:
+    starts_at: HABLA
+    objects:
+
+      # ----- First object : the farm object. The player will have to go mine 20 stone and 20 dirt
+
+      HABLA:
+        # display
+        name_short: Habla con Hector
+        objective_detail: '&7Habla con Hector'
+        start_notify:
+          message: '&6[Forastero] &7Gracías! Te estaré esperando!.'
+        # blocks break settings
+        type: PLAYER_CITIZENS_NPC_DIALOG
+        npc: 1  # npc id
+        npc_names: ['&aMy NPC','&cMy Other NPC']  # a list of npc names, if 'npc' is not set
+        click_types: [LEFT_CLICK,RIGHT_CLICK]  # accepted click types (only RIGHT_CLICK by default)
+        
+
+        messages: |
+          &a¿Hola?
+          &aAsí que te envía el Forastero, ya veo...
+          &aDigamos que me debe un favor, ve y dale esto de mi parte
+
+        reset: # to reset the dialog under certain conditions
+          reset_delay: 30 SECOND  # to reset it after a certain time
+          reset_distance: 5  # to reset it if the player walks away
+          reset_notify:
+            # ... to be sent when the dialog is reset (see "generic configuration/notifications")
+          reset_goto: QUEST_FAIL  # to apply a certain goto when the dialog resets
+
+        complete_journal_entry_messages: true
+        goto: QUEST_SUCCESS
+     
+# -------------------- Rewards settings --------------------
+
+end_objects:
+  SUCCESS:
+    - type: SERVER_LOGIC_MONEY
+      currency: VAULT
+      value_formula: {value} + 20.0  # takes the current money amount and add 20$
+    - type: SERVER_FIREWORKS_LAUNCH
+      effects:
+        - type: CREEPER
+          colors: |
+            AQUA
+            BLUE
+          fade_colors: |
+            AQUA
+            BLUE
+          flicker: true
+          trail: true
+      count: 1
+      position:
+        type: PLAYER_RELATIVE_SINGLE
+        location:
+          distance: 3.0
+          vertical_offset: 1.0

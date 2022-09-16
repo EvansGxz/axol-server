@@ -1,0 +1,92 @@
+EndOfChaos:
+  Conditions:
+  - hasaura EclipseAuraA false
+  - hasaura ChaosAuraA true
+  Skills:
+  - projectile{oT=FinalChaoStartP;oE=FinalChaoStartE2;i=1;mr=20;vO=100;v=45;sfo=0;sso=0;syo=0} @forward{f=5}
+  - projectile{oE=FinalChaoStartE;i=1;mr=15;vO=100;v=45;sfo=0;sso=0;syo=0} @forward{f=5}
+  - orbital{oT=FinalChaosT;oH=FinalChaosOrbital;oS=FinalChaoS;points=10;hnp=true;hs=false;hp=false;interval=1;duration=50;vR=4;hR=4;r=0.5} @forward{f=0.1}
+  - orbital{oT=FinalChaosT;oH=FinalChaosOrbital;oS=FinalChaoS;points=10;hnp=true;hs=false;hp=false;interval=1;duration=50;vR=4;hR=4;r=1} @forward{f=0.1}
+  - orbital{oT=FinalChaosT;oH=FinalChaosOrbital;oS=FinalChaoS;points=10;hnp=true;hs=false;hp=false;interval=1;duration=50;vR=4;hR=4;r=1.5} @forward{f=0.1}
+  - orbital{oT=FinalChaosT;oH=FinalChaosOrbital;oS=FinalChaoS;points=10;hnp=true;hs=false;hp=false;interval=1;duration=50;vR=4;hR=4;r=2} @forward{f=0.1}
+  - orbital{oT=FinalChaosT;oH=FinalChaosOrbital;oS=FinalChaoS;points=10;hnp=true;hs=false;hp=false;interval=1;duration=50;vR=4;hR=4;r=2.5} @forward{f=0.1}
+  - orbital{oT=FinalChaosT;oH=FinalChaosOrbital;oS=FinalChaoS;points=10;hnp=true;hs=false;hp=false;interval=1;duration=50;vR=4;hR=4;r=3} @forward{f=0.1}
+  - orbital{oT=FinalChaosT;oH=FinalChaosOrbital;oS=FinalChaoS;points=10;hnp=true;hs=false;hp=false;interval=1;duration=50;vR=4;hR=4;r=3.5} @forward{f=0.1}
+  - orbital{oT=FinalChaosT;oH=FinalChaosOrbital;oS=FinalChaoS;points=10;hnp=true;hs=false;hp=false;interval=1;duration=50;vR=4;hR=4;r=4} @forward{f=0.1}
+  - orbital{oT=FinalChaosT;oH=FinalChaosOrbital;oS=FinalChaoS;points=10;hnp=true;hs=false;hp=false;interval=1;duration=50;vR=4;hR=4;r=4.5} @forward{f=0.1}
+  - orbital{oT=FinalChaosT;oH=FinalChaosOrbital;oS=FinalChaoS;points=10;hnp=true;hs=false;hp=false;interval=1;duration=50;vR=4;hR=4;r=5} @forward{f=0.1}
+  - orbital{oT=FinalChaosT;oH=FinalChaosOrbital;oS=FinalChaoS;points=10;hnp=true;hs=false;hp=false;interval=1;duration=50;vR=4;hR=4;r=5.5} @forward{f=0.1}
+  - orbital{oT=FinalChaosT;oH=FinalChaosOrbital;oS=FinalChaoS;points=10;hnp=true;hs=false;hp=false;interval=1;duration=59;vR=4;hR=4;r=6} @forward{f=0.1}
+  - orbital{oT=FinalChaosT;oH=FinalChaosOrbital;oS=FinalChaoS;points=10;hnp=true;hs=false;hp=false;interval=1;duration=50;vR=4;hR=4;r=6.5} @forward{f=0.1}
+  - orbital{oT=FinalChaosT;oH=FinalChaosOrbital;oS=FinalChaoS;points=10;hnp=true;hs=false;hp=false;interval=1;duration=50;vR=4;hR=4;r=7} @forward{f=0.1}
+  - orbital{oT=FinalChaosT;oH=FinalChaosOrbital;oS=FinalChaoS;points=10;hnp=true;hs=false;hp=false;interval=1;duration=50;vR=4;hR=4;r=7.5} @forward{f=0.1}
+FinalChaosT:
+  Skills:
+  #- effect:particles{p=reddust;a=1} @origin
+FinalChaosOrbital:
+  Skills:
+  - Aura{auraName=FinalAuraName;onTick=FinalAuraT;oE=EndChaosEnd;interval=1;duration=50;vR=4;hR=4;hnp=true;delay=70} @EntitiesNearOrigin{r=5;ignore=players}
+FinalChaoS:
+  Skills:
+  - damage{a="<modifier.damage> * 2";pkb=true;delay=75} @EntitiesNearOrigin{r=10;ignore=players}
+EndChaosEnd:
+  Skills:
+  - damage{a="<modifier.damage>";pkb=true} 
+  - sound{s=chaosimpact;v=0.1;p=0.6} @EntitiesNearOrigin{r=25}
+
+FinalAuraT:
+  Skills:
+  - effect:particles{p=reddust;a=3;size=0.5;color=#6959CD;vs=0.3;hs=0.3;y=1} 
+  - effect:particles{p=reddust;a=3;size=0.7;color=#2986cc;vs=0.3;hs=0.3;y=0} 
+  - potion{type=LEVITATION;duration=20;level=1;p=false;i=false}
+FinalChaoStartP1:
+  Skills:
+ # - effect:particleline{p=reddust;a=3;fo=true;syo=0.3} 
+FinalChaoStartP:
+  Skills:
+  - effect:particleline{p=reddust;color=#0d5cff;a=1;fo=false;syo=0;zz=true;zzs=5}  
+FinalChaoStartE:
+  Skills: 
+  - summon{t=DemonicSword3Mob;delay=20}
+FinalChaoStartE2:
+  Skills:
+  - summon{t=DemonicSword4Mob}
+
+FinalChaosSkillDown:
+  Skills:
+  - potion{type=SLOW_FALLING;duration=20;level=1;p=false;i=false} @self
+  - effect:spin{duration=20;velocity=3} @self
+  - delay 65
+  - potion{type=LEVITATION;duration=200;level=3;p=false;i=false} @self
+  - effect:spin{duration=60;velocity=5} @self
+  - delay 90
+  - remove @self
+
+
+EffectExapndCSKILLD:
+  Skills:
+  - particlering{p=reddust;a=1;r=1;points=36;color=#2986cc;hs=0.3;vs=0.1;vs=0.1} @self
+  - particlering{p=reddust;a=1;r=1.5;points=36;color=#2986cc;hs=0.3;vs=0.1} @self
+  - particlering{p=reddust;a=1;r=2;points=36;color=#2986cc;hs=0.3;vs=0.1} @self
+  - delay 1
+  - particlering{p=reddust;a=1;r=2.5;points=36;color=#2986cc;hs=0.3;vs=0.1} @self
+  - particlering{p=reddust;a=1;r=3;points=36;color=#2986cc;hs=0.3;vs=0.1} @self
+  - particlering{p=reddust;a=1;r=3.5;points=36;color=#2986cc;hs=0.3;vs=0.1} @self
+  - delay 1
+  - particlering{p=reddust;a=1;r=4;points=36;color=#2986cc;hs=0.3;vs=0.1} @self
+  - particlering{p=reddust;a=1;r=4.5;points=36;color=#2986cc;hs=0.3;vs=0.1} @self
+  - particlering{p=reddust;a=1;r=5;points=36;color=#2986cc;hs=0.3;vs=0.1} @self
+  - delay 1
+  - particlering{p=reddust;a=1;r=5.5;points=36;color=#2986cc;hs=0.3;vs=0.1} @self
+  - particlering{p=reddust;a=1;r=6;points=36;color=#2986cc;hs=0.3;vs=0.1} @self
+  - particlering{p=reddust;a=1;r=6.5;points=36;color=#2986cc;hs=0.3;vs=0.1} @self
+  - delay 1
+  - particlering{p=reddust;a=1;r=7;points=36;color=#2986cc;hs=0.3;vs=0.1} @self
+  - particlering{p=reddust;a=1;r=7.5;points=36;color=#2986cc;hs=0.3;vs=0.1} @self
+  - particlering{p=reddust;a=1;r=8;points=36;color=#2986cc;hs=0.3;vs=0.1} @self
+  - delay 1
+  - particlering{p=reddust;a=1;r=8.5;points=36;color=#2986cc;hs=0.3;vs=0.1} @self
+  - particlering{p=reddust;a=1;r=9;points=36;color=#2986cc;hs=0.3;vs=0.1} @self
+  - particlering{p=reddust;a=1;r=9.5;points=36;color=#2986cc;hs=0.3;vs=0.1} @self
+  - particlering{p=reddust;a=1;r=10;points=36;color=#2986cc;hs=0.3;vs=0.1} @self
+

@@ -1,0 +1,58 @@
+
+  
+
+
+
+
+
+
+
+
+DemonicModeFireSlashSoundV1:
+  Conditions:
+  - hasaura EclipseAuraA true
+  - hasaura ChaosAuraA false
+  Skills:
+  - sound{s=demonicclassound;v=0.25;p=1} @self
+  - delay 10
+  - sound{s=demonicclassound;v=0.25;p=1} @self
+  - delay 8
+  - sound{s=demonicclassound;v=0.25;p=1} @self
+  - delay 5
+  - sound{s=demonicclassound;v=0.25;p=1} @self
+
+
+NormalSlashsSound:
+  Conditions:
+  - hasaura EclipseAuraA false
+  - hasaura ChaosAuraA false
+  Skills:
+  - sound{s=katana1;v=0.20;p=1.3} @self
+
+
+NormalSlashsSoundTriple:
+  Conditions:
+  - hasaura EclipseAuraA false
+  - hasaura ChaosAuraA false
+  Skills:
+  - sound{s=katana1;v=0.20;p=1.3} @self
+  - delay 10
+  - sound{s=katana1;v=0.20;p=1.3} @self
+  - delay 8
+  - sound{s=katana1;v=0.20;p=1.45} @self
+  - delay 5
+  - sound{s=katana1;v=0.20;p=1.45} @self
+
+
+DemonicModeLightningSlashSoundV2:
+  Conditions:
+  - hasaura EclipseAuraA false
+  - hasaura ChaosAuraA true
+  Skills:
+  - sound{s=demonicclassound2;v=0.25;p=1.6} @self
+  - delay 10
+  - sound{s=demonicclassound2;v=0.25;p=1.6} @self
+  - delay 8
+  - sound{s=demonicclassound2;v=0.25;p=1.9} @self
+  - delay 5
+  - sound{s=demonicclassound2;v=0.25;p=1.9} @self

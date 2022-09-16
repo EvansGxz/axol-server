@@ -25,3 +25,18 @@ menu_items_overlay:
   texture: required/ui/menu_items_gems
   ascent: 37
   height: 256
+
+menu_default2:
+  texture: required/ui/menu_items_defautl_2
+  ascent: 37
+  height: 236
+
+menu_default1:
+  texture: required/ui/menu_items_defautl_1
+  ascent: 39
+  height: 247
+
+menu_default:
+  texture: required/ui/menu_items_defautl
+  ascent: 39
+  height: 247

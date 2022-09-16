@@ -1,0 +1,128 @@
+Demonic_Cut_Skill:
+  Conditions:
+  - hasaura CancelAuraDMClass false
+  - onground true
+  Skills:
+  - skill{s=Demonic_Cut1}
+  - skill{s=Demonic_Cut2}
+
+
+
+Demonic_Cut1:
+  Conditions:
+  - hasaurastacks{n=DemonicModeAuraA;s=>5} false
+  Skills:
+  - skill{s=DemonicCutDMG1} @self
+  - skill{s=DemonicCutDMGFire1} @self
+  - skill{s=DemonicCutDMGChaos1} @self
+  - skill{s=NormalSlashsSound}
+  - skill{s=FireSlashSound}
+  - skill{s=ChaosSlashSound}
+  - summon{t=Demonic_Cut} @self
+  - summon{t=Demonic_Cutv2} @forward{f=0.4}
+  - skill{s=DCS_1}
+  - skill{s=DCS_1FIRE}
+  - delay 10
+  - skill{s=DemonicCutDMGChaos2} @self
+  - skill{s=DemonicCutDMG2} @self                        
+  - skill{s=DemonicCutDMGFire2} @self
+  - skill{s=NormalSlashsSound}
+  - skill{s=FireSlashSound}
+  - skill{s=ChaosSlashSound}
+  - summon{t=Demonic_Cut2v2} @forward{f=0.4}
+  - summon{t=Demonic_Cut2} @self
+  - skill{s=DCS_2}
+  - skill{s=DCS_2FIRE}  
+Demonic_Cut2:
+  Conditions:
+  - hasaurastacks{n=DemonicModeAuraA;s=>5} true 
+  Skills:
+  - summon{t=BloodyClawsMob1} @self
+  - summon{t=BloodyClawsMob2} @self
+  - summon{t=BloodyClawsMobV11} @Forward{f=1}
+  - summon{t=BloodyClawsMobV12} @Forward{f=1}
+  - skill{s=BloodyClawsDMG1} @self
+  - skill{s=BloodyClawsDMG2} @self
+  - delay 8
+  - skill{s=DemonicCutDMG1} @self
+  - skill{s=DemonicCutDMGFire1} @self
+  - skill{s=DemonicCutDMGChaos1} @self
+  - skill{s=DemonicModeFireSlashSoundV1}
+  - skill{s=DemonicModeLightningSlashSoundV2}
+  - skill{s=NormalSlashsSoundTriple}
+  - summon{t=Demonic_Cut} @self
+  - summon{t=Demonic_Cutv2} @forward{f=0.4}
+  - skill{s=DCS_1}
+  - skill{s=DCS_1FIRE}
+  - delay 10
+  - skill{s=DemonicCutDMGChaos2} @self
+  - skill{s=DemonicCutDMG2} @self
+  - skill{s=DemonicCutDMGFire2} @self
+  - summon{t=Demonic_Cut2v2} @forward{f=0.4}
+  - summon{t=Demonic_Cut2} @self
+  - skill{s=DCS_2}
+  - skill{s=DCS_2FIRE}  
+  - delay 8
+  - skill{s=DModeBladeNormalSlashs}
+  - skill{s=DemonicMFireCondition}
+  - skill{s=DemonicMChaosCondition}
+
+
+ 
+
+FireSlashSound:
+  Conditions:
+  - hasaura EclipseAuraA true
+  - hasaura ChaosAuraA false
+  Skills:
+  - sound{s=demonicclassound;v=0.25;p=1} @self
+
+ChaosSlashSound:
+  Conditions:
+  - hasaura EclipseAuraA false
+  - hasaura ChaosAuraA true
+  Skills:
+  - sound{s=demonicclassound2;v=0.25;p=1} @self
+
+
+
+  
+DCS_1:
+  Conditions:
+  - hasaura ChaosAuraA true
+  - hasaura EclipseAuraA false
+  Skills:
+  - summon{t=Demonic_Cutv3} @forward{f=1}
+DCS_2:
+  Conditions:
+  - hasaura ChaosAuraA true
+  - hasaura EclipseAuraA false
+  Skills:
+  - summon{t=Demonic_Cut2v3} @forward{f=1}
+  
+ 
+
+
+DCS_1FIRE:
+  Conditions:
+  - hasaura EclipseAuraA true
+  - hasaura ChaosAuraA false
+  Skills:
+  - summon{t=Demonic_Cutv3Fire} @forward{f=1}
+DCS_2FIRE:
+  Conditions:
+  - hasaura EclipseAuraA true
+  - hasaura ChaosAuraA false
+  Skills:
+  - summon{t=Demonic_Cut2v3Fire} @forward{f=1}
+  
+
+## 
+# Damage Modication 
+##
+
+## 1 - Slash Damage Modifier:
+
+
+
+

@@ -1,0 +1,25 @@
+{
+  "version": "1",
+  "uuid": "6a72135c-739e-439a-96d1-2d3fb53743e1",
+  "modelId": "example_npc_fetch",
+  "startCause": "ACTIVATOR_PHYSICAL",
+  "started": "1663027571770",
+  "pauseTime": "5068",
+  "lastUpdate": "1663290115082",
+  "players": [
+    "bca68bdd-c316-4010-908e-911b2ef7edbd"
+  ],
+  "currentBranches": {
+    "main": {
+      "objectId": "farm",
+      "lastObjectProgression": "1663281582941",
+      "objectProgression": {
+        "farm": "b/7.0/20.0,a/1.0/20.0"
+      }
+    }
+  },
+  "cameraMode": "false",
+  "path": {
+    "lastObject": "main,farm"
+  }
+}

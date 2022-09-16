@@ -1,0 +1,13 @@
+# Farm goals and rewards for the wheat farming quests
+
+farm_wheat_1_goal: 25
+farm_wheat_2_goal: 50
+farm_wheat_3_goal: 100
+farm_wheat_4_goal: 150
+farm_wheat_5_goal: 250
+
+farm_wheat_1_reward: 100
+farm_wheat_2_reward: 200
+farm_wheat_3_reward: 400
+farm_wheat_4_reward: 600
+farm_wheat_5_reward: 1000

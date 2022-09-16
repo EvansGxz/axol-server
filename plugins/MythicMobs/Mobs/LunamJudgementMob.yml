@@ -1,0 +1,91 @@
+LunamSwordMob:
+  Type: ARMOR_STAND
+  Display: ''
+  Faction: LunamSwordsMobs
+  Options:
+    ApplyInvisibility: true
+    Invisible: true
+    Silent: true
+    Collidable: true
+    Invincible: true
+    MovementSpeed: -1
+    PreventRandomEquipment: true
+    PreventRandomDrop: true
+    PreventSunburn: true
+  Equipment:
+  - PDB2 HEAD
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+LunamSwordMob2:
+  Type: VILLAGER
+  Display: ''
+  Options:
+    ApplyInvisibility: true
+    Invisible: true
+    Silent: true
+    Collidable: true
+    Invincible: true
+    MovementSpeed: -1
+    PreventRandomEquipment: true
+    PreventRandomDrop: true
+    PreventSunburn: true
+  Equipment:
+  - PDB HEAD
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+
+
+LunamSwordsSummon:
+  Type: ARMOR_STAND
+  Faction: LunamSwordsMobs
+  Display: ''
+  Options:
+    ApplyInvisibility: true
+    Invisible: true
+    Silent: true
+    Collidable: true
+    Invincible: true
+    MovementSpeed: -1
+    PreventRandomEquipment: true
+    PreventRandomDrop: true
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - skill{s=LunamSwordSwordF;repeat=3;RepeatInterval=20} @self ~onSpawn
+  - remove{delay=200} @self ~onSpawn
+
+
+
+
+
+LunamStormSoulsMob:
+  Type: ARMOR_STAND
+  Display: ''
+  Faction: LunamSwordsMobs
+  Options:
+    ApplyInvisibility: true
+    Invisible: true
+    Silent: true
+    Collidable: true
+    Invincible: true
+    MovementSpeed: -1
+    PreventRandomEquipment: true
+    PreventRandomDrop: true
+    PreventSunburn: true
+    
+  Equipment:
+  - PDB2 HEAD
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - skill{s=LunamStormSouls} @self ~onSpawn

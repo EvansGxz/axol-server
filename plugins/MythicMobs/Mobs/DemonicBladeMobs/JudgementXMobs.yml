@@ -1,0 +1,71 @@
+JudgementXMob:
+  Type: armor_stand
+  Options:
+    MovementSpeed: -1
+    Collidable: false
+    Despawn: false
+    Invincible: true
+    Silent: true
+    PreventSunburn: true
+    KnockbackResistance: 1
+    Invisible: true
+    NoGravity: true
+    Marker: true
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - skill{s=JudgementSlash1} @self ~onSpawn
+  - remove{delay=20} @self ~onSpawn
+
+
+
+
+
+JudgementXMobChaos:
+  Type: armor_stand
+  Options:
+    MovementSpeed: -1
+    Collidable: false
+    Despawn: false
+    Invincible: true
+    Silent: true
+    PreventSunburn: true
+    KnockbackResistance: 1
+    Invisible: true
+    NoGravity: true
+    Marker: true
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - skill{s=JudgementChaosSlash1} @self ~onSpawn
+  - remove{delay=20} @self ~onSpawn
+
+
+
+
+
+JudgementXMobFire:
+  Type: armor_stand
+  Options:
+    MovementSpeed: -1
+    Collidable: false
+    Despawn: false
+    Invincible: true
+    Silent: true
+    PreventSunburn: true
+    KnockbackResistance: 1
+    Invisible: true
+    NoGravity: true
+    Marker: true
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Skills:
+  - skill{s=JudgementFireSlash1} @self ~onSpawn
+  - remove{delay=20} @self ~onSpawn
+

@@ -1,0 +1,12 @@
+mythicmobs-skill-id: Calcination
+name: Calcination
+material: WITHER_ROSE
+passive-type: LOGIN
+cooldown:
+  base: 25.0
+  per-level: 0
+  max: 3.0
+  min: 1.0
+damage:
+  base: 120.0
+  per-level: 0.3

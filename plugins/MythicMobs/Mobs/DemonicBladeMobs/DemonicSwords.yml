@@ -1,0 +1,54 @@
+DemonicSword2Mob:
+  Type: armor_stand
+  Display: ""
+  Options:
+    Invisible: true
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Equipment:
+  - DemonSword2 HEAD
+
+##################################
+
+DemonicSword1MobMINI:
+  Type: armor_stand
+  Display: ""
+  Options:
+    Invisible: true
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Equipment:
+  - DemonSword1MINI HEAD
+  Skills:
+  - remove{delay=50} @self ~onSpawn
+
+DemonicSword2MobMINI:
+  Type: armor_stand
+  Display: ""
+  Options:
+    Invisible: true
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Equipment:
+  - DemonSword2MINI HEAD
+  Skills:
+  - remove{delay=50} @self ~onSpawn
+DemonicSword3MobMINI:
+  Type: armor_stand
+  Display: ""
+  Options:
+    Invisible: true
+  AIGoalSelectors:
+  - 0 clear
+  AITargetSelectors:
+  - 0 clear
+  Equipment:
+  - DemonSword3MINI HEAD
+  Skills:
+  - remove{delay=50} @self ~onSpawn
