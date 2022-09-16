@@ -29,7 +29,7 @@ npc:
       age:
         age: 0
         locked: true
-    traitnames: mounttrait,spawned,scoreboardtrait,location,age,owner,type,inventory,skintrait
+    traitnames: inventory,age,skintrait,scoreboardtrait,owner,type,spawned,mounttrait,location
     navigator:
       speedmodifier: '1.0'
       avoidwater: false
@@ -61,7 +61,7 @@ npc:
         yaw: '159.303'
         pitch: '68.5504'
       spawned: true
-    traitnames: mounttrait,spawned,scoreboardtrait,location,owner,age,type,skintrait,inventory
+    traitnames: inventory,scoreboardtrait,age,skintrait,owner,type,spawned,mounttrait,location
     navigator:
       speedmodifier: '1.0'
       avoidwater: false
@@ -93,7 +93,7 @@ npc:
         yaw: '-43.4965'
         pitch: '55.3503'
       spawned: true
-    traitnames: mounttrait,spawned,scoreboardtrait,location,owner,age,type,skintrait,inventory
+    traitnames: inventory,skintrait,age,scoreboardtrait,owner,type,spawned,mounttrait,location
     navigator:
       speedmodifier: '1.0'
       avoidwater: false

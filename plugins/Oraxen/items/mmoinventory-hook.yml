@@ -1,12 +1,3 @@
-mmoinventory_gloves:
-  material: DIAMOND_HOE
-  excludeFromInventory: true
-  Pack:
-    custom_model_data: 9
-    generate_model: true
-    parent_model: item/generated
-    textures:
-    - items/mmoinventory/gloves
 mmoinventory_left_ring:
   material: DIAMOND_HOE
   excludeFromInventory: true
@@ -16,24 +7,24 @@ mmoinventory_left_ring:
     parent_model: item/generated
     textures:
     - items/mmoinventory/left_ring
-mmoinventory_helmet:
+mmoinventory_gloves:
   material: DIAMOND_HOE
   excludeFromInventory: true
   Pack:
-    custom_model_data: 1
+    custom_model_data: 9
     generate_model: true
     parent_model: item/generated
     textures:
-    - items/mmoinventory/helmet
-mmoinventory_amulet:
+    - items/mmoinventory/gloves
+mmoinventory_boots:
   material: DIAMOND_HOE
   excludeFromInventory: true
   Pack:
-    custom_model_data: 5
+    custom_model_data: 4
     generate_model: true
     parent_model: item/generated
     textures:
-    - items/mmoinventory/amulet
+    - items/mmoinventory/boots
 mmoinventory_artifact_1:
   material: DIAMOND_HOE
   excludeFromInventory: true
@@ -43,24 +34,24 @@ mmoinventory_artifact_1:
     parent_model: item/generated
     textures:
     - items/mmoinventory/artifact_1
-mmoinventory_off_hand:
+mmoinventory_amulet:
   material: DIAMOND_HOE
   excludeFromInventory: true
   Pack:
-    custom_model_data: 14
+    custom_model_data: 5
     generate_model: true
     parent_model: item/generated
     textures:
-    - items/mmoinventory/off_hand
-mmoinventory_chestplate:
+    - items/mmoinventory/amulet
+mmoinventory_helmet:
   material: DIAMOND_HOE
   excludeFromInventory: true
   Pack:
-    custom_model_data: 2
+    custom_model_data: 1
     generate_model: true
     parent_model: item/generated
     textures:
-    - items/mmoinventory/chestplate
+    - items/mmoinventory/helmet
 mmoinventory_bracelet:
   material: DIAMOND_HOE
   excludeFromInventory: true
@@ -79,15 +70,24 @@ mmoinventory_artifact_2:
     parent_model: item/generated
     textures:
     - items/mmoinventory/artifact_2
-mmoinventory_leggings:
+mmoinventory_off_hand:
   material: DIAMOND_HOE
   excludeFromInventory: true
   Pack:
-    custom_model_data: 3
+    custom_model_data: 14
     generate_model: true
     parent_model: item/generated
     textures:
-    - items/mmoinventory/leggings
+    - items/mmoinventory/off_hand
+mmoinventory_chestplate:
+  material: DIAMOND_HOE
+  excludeFromInventory: true
+  Pack:
+    custom_model_data: 2
+    generate_model: true
+    parent_model: item/generated
+    textures:
+    - items/mmoinventory/chestplate
 mmoinventory_right_ring:
   material: DIAMOND_HOE
   excludeFromInventory: true
@@ -106,12 +106,12 @@ mmoinventory_artifact_3:
     parent_model: item/generated
     textures:
     - items/mmoinventory/artifact_3
-mmoinventory_boots:
+mmoinventory_leggings:
   material: DIAMOND_HOE
   excludeFromInventory: true
   Pack:
-    custom_model_data: 4
+    custom_model_data: 3
     generate_model: true
     parent_model: item/generated
     textures:
-    - items/mmoinventory/boots
+    - items/mmoinventory/leggings

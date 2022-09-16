@@ -4,22 +4,22 @@
   "modelId": "example_npc_fetch",
   "startCause": "ACTIVATOR_PHYSICAL",
   "started": "1663027571770",
-  "pauseTime": "706972",
-  "lastUpdate": "1663190783091",
+  "pauseTime": "5068",
+  "lastUpdate": "1663290115082",
   "players": [
     "bca68bdd-c316-4010-908e-911b2ef7edbd"
   ],
   "currentBranches": {
     "main": {
       "objectId": "farm",
-      "lastObjectProgression": "1663027571775",
+      "lastObjectProgression": "1663281582941",
       "objectProgression": {
-        "farm": "b/0.0/20.0,a/0.0/20.0"
+        "farm": "b/7.0/20.0,a/1.0/20.0"
       }
     }
   },
   "cameraMode": "false",
   "path": {
-    "lastObject": "null,null"
+    "lastObject": "main,farm"
   }
 }
